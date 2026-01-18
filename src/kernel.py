@@ -70,3 +70,44 @@ def compute_quark_yukawas(
     Yu = compute_yukawa_matrix(Q, U, sigma, k, alpha, eta, eps_u)
     Yd = compute_yukawa_matrix(Q, D, sigma, k, alpha, eta, eps_d)
     return Yu, Yd
+
+
+def compute_charged_lepton_yukawa(
+    L: Tuple[int, int, int],
+    E: Tuple[int, int, int],
+    sigma: float,
+    k_e: float,
+    alpha: float,
+    eta_e: float,
+    eps_e: float
+) -> np.ndarray:
+    """Compute charged lepton Yukawa matrix (phase-sensitive regime).
+    
+    Uses variable phase parameters (k_e, eta_e) distinct from quark baseline,
+    allowing the muon mass hierarchy to be resolved through phase interference.
+    """
+    return compute_yukawa_matrix(L, E, sigma, k_e, alpha, eta_e, eps_e)
+
+
+def compute_neutrino_yukawa(
+    L: Tuple[int, int, int],
+    N: Tuple[int, int, int],
+    sigma: float,
+    k: float,
+    alpha: float,
+    eta: float,
+    eps_nu: float,
+    g_env: float
+) -> np.ndarray:
+    """Compute neutrino Yukawa matrix (metric-dominated regime).
+    
+    Uses envelope compression (g_env ≈ 0.60) which causes information loss
+    under compression, leading to emergent anarchy in PMNS angles.
+    
+    Args:
+        g_env: Envelope compression factor (typically ~0.60)
+               Compresses the effective sigma: sigma_eff = sigma * g_env
+    """
+    # Apply envelope compression
+    sigma_compressed = sigma * g_env
+    return compute_yukawa_matrix(L, N, sigma_compressed, k, alpha, eta, eps_nu)

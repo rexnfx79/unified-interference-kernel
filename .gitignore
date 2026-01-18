@@ -41,3 +41,16 @@ htmlcov/
 # Temporary
 *.tmp
 *.bak
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.synctex.gz
+*.fdb_latexmk
+*.fls
