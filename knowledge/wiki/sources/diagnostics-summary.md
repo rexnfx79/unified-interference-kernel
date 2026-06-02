@@ -35,7 +35,7 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 
 | Script | Scaled result |
 |--------|---------------|
-| `21` | 0% strict quark; CKM–\(m_c\) Pareto |
+| `21` | 100 geom: **0% strict** all kernels; CKM–\(m_c\) Pareto (corr≈0); G/C paired 53/38/9 train wins |
 | `22` | 100 geom: 1% strict/legacy (train split); holdout m_e fails |
 | `23` | 100 geom: 78.9% strict PMNS; g_env≈0.47 |
 | `24` | Cross-kernel paired lepton+ν (30 geom) |
@@ -44,4 +44,4 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 ## Reports ingested
 
 - `QA_SUMMARY.md`, `GAUSSIAN_KERNEL_FINAL_REPORT.md`, `KERNEL_COMPARISON_REPORT_v2.md`, `MINIMALITY_REPORT.md`
-- `diagnostics/results/22_*` through `25_*` (2026-06-02e)
+- `diagnostics/results/21_*` through `25_*` (2026-06-02f)

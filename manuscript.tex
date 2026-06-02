@@ -26,7 +26,7 @@
 \maketitle
 
 \begin{abstract}
-We present a framework for organizing Yukawa couplings through envelope suppression and phase interference. A single kernel form is applied across all fermion sectors, with different sectors corresponding to distinct projection regimes. Three regimes are identified: envelope-dominated (quarks), phase-sensitive (charged leptons), and metric-dominated (neutrinos). The primary finding is that the quark sector exhibits a structural CKM--$m_c$ trade-off characterized by a nondominated Pareto frontier. Secondary findings include successful reproduction of charged lepton masses (60\% survivor rate) and PMNS mixing angles (45\% survivor rate), with all survivor Z-scores below 1.0. Exploratory observations suggest consistent parameter scales across sectors ($\sigma \approx 4$--5, $\alpha \approx 2.5$--3.0) and a correlation between envelope compression and large neutrino mixing angles. These results demonstrate that the three-regime framework provides a coherent phenomenological organization of fermion flavor structure.
+We present a framework for organizing Yukawa couplings through envelope suppression and phase interference. A single kernel \emph{form} is reused across fermion sectors as a phenomenological parameterization, not as a derived QFT mechanism. The primary finding is that the quark sector exhibits a structural CKM--$m_c$ trade-off (nondominated Pareto frontier) while failing holdout generalization: pre-registered train/holdout diagnostics find \textbf{0\% strict survivors} across Gaussian, clockwork, and generalized envelopes (100 geometries). Charged-lepton and neutrino sectors show sector-specific partial success under \emph{different} optimization protocols---legacy full-objective sweeps report $\sim$60\% and $\sim$45\% survivor rates, whereas train/holdout splits yield 1\% strict lepton survivors (holdout $m_e$ structural failure) and 78.9\% strict PMNS survivors (100 geometries each). Exploratory parameter-scale clustering ($\sigma$, $\alpha$) is noted but likely reflects optimization bias. Companion-repository diagnostics refute universal kernel \emph{parameters} across sectors and operational quantum-information explanations of regime splits.
 \end{abstract}
 
 \noindent\textbf{Keywords:} flavor physics, Yukawa couplings, CKM matrix, PMNS matrix, split fermions, neutrino anarchy
@@ -39,9 +39,11 @@ The split-fermion framework \citep{ArkaniHamed2000} provided an elegant geometri
 
 We propose that a unified interference kernel, combining envelope suppression with phase interference, can organize all Yukawa couplings across fermion sectors. The key insight is that different sectors probe different \textit{projection regimes} of the same underlying kernel: quarks probe the envelope-dominated regime, charged leptons probe the phase-sensitive regime, and neutrinos probe the metric-dominated regime.
 
-This work presents comprehensive optimization results across all three fermion sectors, demonstrating that the three-regime framework successfully reproduces experimental observables with high precision. We identify consistent parameter scales across sectors, characterize Pareto boundary shapes, and observe that envelope compression correlates with large mixing angles that mimic anarchical mixing patterns.
+This work presents optimization results across all three fermion sectors, documenting what the kernel can and cannot fit with pre-registered train/holdout splits. The quark sector fails holdout generalization (0\% strict survivors); charged leptons and neutrinos show sector-specific partial success whose survivor rates depend on objective protocol (full-objective legacy vs.\ train/holdout strict). We characterize Pareto boundary shapes and note exploratory envelope-compression patterns in neutrinos without claiming a validated three-regime sampling mechanism.
 
-The paper is organized as follows: Section 2 introduces the unified interference kernel and three projection regimes. Section 3 describes the optimization methodology. Sections 4--5 present results for quarks and leptons, respectively. Section 6 discusses interpretations and implications. Section 7 concludes.
+The paper is organized as follows: Section 2 introduces the unified interference kernel and three projection regimes. Section 3 describes the optimization methodology. Sections 4--5 present results for quarks and leptons, respectively. Section 6 discusses interpretations and limitations. Section 7 concludes.
+
+This work treats the interference kernel as a \textbf{phenomenological parameterization} of Standard Model Yukawa textures. Pre-registered companion-repository diagnostics refute an operational quantum-information-theoretic explanation of sector-specific parameter splits (Fisher alignment $\approx 0.46$, frozen quark-to-lepton transfer loss $\gtrsim 800$, pooled open-system correlations $|r| \lesssim 0.01$). \textbf{Universal kernel parameters across fermion sectors are ruled out}; only the functional form is reused. For quarks, optimization on training targets ($m_c$, $|V_{us}|$, $|V_{cb}|$) does not generalize to holdout observables ($m_u$, $m_d$, $m_s$, $|V_{ub}|$). Charged-lepton and neutrino archived survivor rates must not be read as validation of a three-regime sampling hypothesis while the quark sector fails.
 
 \section{Model}
 
@@ -390,7 +392,7 @@ The clustering near $\pi$ suggests optimal phase interference occurs at this val
 \item Neutrino: $\varepsilon_\nu = 0.44$, $\varepsilon_e = 0.36$ (highest)
 \end{itemize}
 
-This progression validates the three-regime framework: envelope-dominated (low $\varepsilon$) → phase-sensitive (medium $\varepsilon$) → metric-dominated (high $\varepsilon$).
+This progression is \emph{descriptive} of fitted $\varepsilon$ values in each sector's optimization, not a validated prediction of the three-regime framework (which the quark holdout failure refutes as a cross-sector hypothesis).
 
 \begin{figure}[htbp]
 \centering
@@ -414,9 +416,9 @@ This progression validates the three-regime framework: envelope-dominated (low $
 
 \textbf{Quark Sector: Complete Failure.} The envelope-dominated regime produces charm masses 15$\times$ larger than experiment. No parameter combination achieves even 100\% accuracy. This is not a ``trade-off'' to be characterized---it is a fundamental model failure (Fig.~\ref{fig:quark_failure}).
 
-\textbf{Charged Lepton Sector: Partial Success.} The phase-sensitive regime achieves 60\% success rate at 10\% tolerance (Fig.~\ref{fig:success_threshold}), primarily driven by $m_\tau$ predictions. The muon mass shows large scatter, and the claimed ``phase parameter correlation'' is not statistically significant.
+\textbf{Charged Lepton Sector: Partial Success.} Legacy full-objective sweeps report $\sim$60\% success at 10\% tolerance (Fig.~\ref{fig:success_threshold}). Pre-registered train/holdout diagnostics (optimize $m_\mu + m_\tau$, hold out $m_e$) find 1\% strict survivors at 100 geometries---holdout $m_e$ fails even when training masses are perfect. The muon mass shows large scatter, and phase-parameter correlations are not statistically significant.
 
-\textbf{Neutrino Sector: Qualified Success.} The metric-dominated regime achieves 39\% success rate at 10\% tolerance for mixing angles. However, 50\% of optimizations failed entirely, and the claimed correlation between $g_{\text{env}}$ and mixing angles is weak ($r < 0.1$).
+\textbf{Neutrino Sector: Qualified Success.} Legacy full-objective sweeps report $\sim$39--45\% success at 10\% tolerance for mixing angles. Train/holdout strict diagnostics at 100 geometries find 78.9\% PMNS survivors; however, 50\% of legacy optimizations failed entirely, and $g_{\text{env}}$--mixing correlations remain weak ($|r| < 0.1$ on best-per-geometry records).
 
 The consistent parameter scales ($\sigma \approx 4$--5, $\alpha \approx \pi$) likely reflect optimization bias toward interior parameter values rather than physical universality.
 
@@ -452,7 +454,7 @@ This provides a natural explanation for the observation that:
 
 We note that proper anarchy tests---including independence from geometry, comparison to Haar measure, and entropy quantification---remain for future work. The present observation is that envelope compression correlates with large mixing, which is consistent with but does not rigorously demonstrate anarchical behavior.
 
-Both patterns emerge from the same universal kernel, just probed in different regimes. This unifies the understanding of quark and neutrino mixing within a single framework.
+Both patterns are discussed within the same kernel \emph{form}, but quark holdout failure breaks any claim that a single parameterized framework unifies quark and neutrino mixing phenomenology.
 
 \subsection{Comparison with Split-Fermion Models}
 
@@ -495,11 +497,11 @@ Several directions for future work emerge naturally from this framework:
 
 \textbf{CP Violation:} While this work focuses on mixing angles and masses, the framework naturally includes CP-violating phases through the complex nature of Yukawa matrices. Future work could explore CP violation predictions, comparing to experimental constraints on the CKM phase $\delta_{\text{CKM}}$ and PMNS phase $\delta_{\text{PMNS}}$.
 
-\textbf{UV Physics Connections:} The universal kernel form may emerge from UV physics models, such as string compactifications, extra-dimensional models, or flavor symmetries. Exploring connections to UV completions could provide deeper insight into the origin of the kernel structure.
+\textbf{UV Physics Connections:} \emph{Speculative.} The kernel form might emerge from UV models (string compactifications, extra dimensions, flavor symmetries), but cross-sector parameter transfer is refuted in companion diagnostics; such exploration is not supported by present data.
 
 \textbf{RGE Evolution:} Yukawa couplings evolve with energy scale according to renormalization group equations (RGEs). The kernel parameters determined at the weak scale may need to be evolved to unification scales or high scales where UV physics operates. Understanding RGE effects could constrain or guide UV completions.
 
-\textbf{Statistical Validation:} While parameter commonalities ($\sigma \approx 4$--5, $\alpha \approx \pi$) are suggestive, rigorous statistical validation could confirm whether these values represent universal scales or coincidences. Kolmogorov-Smirnov tests and other statistical methods could quantify the significance of these commonalities.
+\textbf{Statistical Validation:} \emph{Speculative.} Apparent parameter commonalities ($\sigma \approx 4$--5, $\alpha \approx \pi$) likely reflect optimization bias; rigorous tests should not be interpreted as evidence for universal scales given transfer-test refutation.
 
 \textbf{Alternative Models for Quarks:} Given the complete failure of the envelope-dominated regime for quarks, alternative functional forms should be explored. The quark sector may require fundamentally different physics than the lepton sectors.
 

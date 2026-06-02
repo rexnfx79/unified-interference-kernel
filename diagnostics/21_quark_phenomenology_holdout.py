@@ -47,8 +47,8 @@ OPTIMIZER_SETTINGS = {
     'polish': False,
 }
 
-N_SEEDS = 6
-N_GEOMETRIES = 12
+N_SEEDS = 4
+N_GEOMETRIES = 100
 GEOM_SEED = 21021
 
 STRICT_TOLERANCES = {
@@ -344,7 +344,7 @@ def format_report(
     for k, v in HOLDOUT_TARGETS.items():
         lines.append(f'  {k}: {v}')
     lines.append('')
-    lines.append(f'Geometries: {len(geometries)} (seed={GEOM_SEED})')
+    lines.append(f'Geometries: {N_GEOMETRIES} requested, {len(geometries)} generated (seed={GEOM_SEED})')
     lines.append(f'Seeds per geometry: {N_SEEDS}')
     lines.append(f'Optimizer: {OPTIMIZER_SETTINGS}')
     lines.append('')

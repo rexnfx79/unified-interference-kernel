@@ -12,97 +12,98 @@ HOLDOUT_TARGETS (evaluation only):
   md: 0.00467
   Vub: 0.00382
 
-Geometries: 12 (seed=21021)
-Seeds per geometry: 6
+Geometries: 100 requested, 100 generated (seed=21021)
+Seeds per geometry: 4
 Optimizer: {'maxiter': 120, 'popsize': 12, 'tol': 1e-06, 'mutation': (0.5, 1.0), 'recombination': 0.7, 'polish': False}
 
 --- PER-KERNEL SUMMARY (best seed per geometry) ---
 
 [gaussian]
-  Geometries solved: 12
+  Geometries solved: 100
   Strict survivors (all 7 obs within tolerances): 0 (0.0%)
-  Train loss  mean/median: 0.2351 / 0.0161
-  Holdout loss mean/median: 5805.2300 / 29.5763
-  CKM–mc Pareto points: 72, nondominated: 5
-  corr(CKM_loss, mc_rel_err): -0.1968
-  mc_rel_err median: 0.0357 (min 0.0000); CKM_loss median: 2.9797
+  Train loss  mean/median: 0.3688 / 0.0259
+  Holdout loss mean/median: 11206.8368 / 32.8044
+  CKM–mc Pareto points: 400, nondominated: 5
+  corr(CKM_loss, mc_rel_err): 0.0107
+  mc_rel_err median: 0.0413 (min 0.0000); CKM_loss median: 2.0000
   Sample Pareto front (ckm_loss, mc_rel, holdout):
-    0.7335, 0.0038, 37.4853
-    0.0087, 0.1453, 15.2239
-    0.0637, 0.0051, 6.3319
+    2.6698, 0.0001, 300.6698
     2.9601, 0.0000, 300.9601
-    2.3971, 0.0001, 300.3971
+    0.0000, 0.0010, 15.8142
+    0.0661, 0.0001, 16.3959
+    68008.2630, 0.0000, 68141.8675
 
 [clockwork]
-  Geometries solved: 12
+  Geometries solved: 100
   Strict survivors (all 7 obs within tolerances): 0 (0.0%)
-  Train loss  mean/median: 0.4677 / 0.5129
-  Holdout loss mean/median: 37802.3659 / 61051.7465
-  CKM–mc Pareto points: 72, nondominated: 7
-  corr(CKM_loss, mc_rel_err): 0.1651
-  mc_rel_err median: 0.0626 (min 0.0005); CKM_loss median: 911.6369
+  Train loss  mean/median: 0.6003 / 0.1226
+  Holdout loss mean/median: 34098.2791 / 56706.4011
+  CKM–mc Pareto points: 400, nondominated: 8
+  corr(CKM_loss, mc_rel_err): -0.0074
+  mc_rel_err median: 0.0454 (min 0.0001); CKM_loss median: 5355.9923
   Sample Pareto front (ckm_loss, mc_rel, holdout):
-    0.0376, 0.0618, 18.4039
-    0.0636, 0.0295, 20.4872
-    84.4262, 0.0038, 166.3726
-    67831.8361, 0.0005, 67883.6761
-    0.5798, 0.0065, 50.9402
+    67853.2937, 0.0001, 67973.6744
+    2.0000, 0.0004, 250.6167
+    0.4648, 0.0010, 34.6535
+    1.0026, 0.0006, 84.9093
+    12.8642, 0.0002, 109.2634
 
 [generalized_p1.5]
-  Geometries solved: 12
+  Geometries solved: 100
   Strict survivors (all 7 obs within tolerances): 0 (0.0%)
-  Train loss  mean/median: 4.9467 / 1.0000
-  Holdout loss mean/median: 11772.7451 / 205.5955
-  CKM–mc Pareto points: 72, nondominated: 5
-  corr(CKM_loss, mc_rel_err): -0.0792
-  mc_rel_err median: 0.1357 (min 0.0000); CKM_loss median: 7.6780
+  Train loss  mean/median: 32.1149 / 1.9540
+  Holdout loss mean/median: 8174.2273 / 210.1070
+  CKM–mc Pareto points: 400, nondominated: 6
+  corr(CKM_loss, mc_rel_err): -0.1121
+  mc_rel_err median: 0.2175 (min 0.0000); CKM_loss median: 13.8642
   Sample Pareto front (ckm_loss, mc_rel, holdout):
-    2.0000, 0.0002, 207.2966
-    0.7604, 0.4563, 209.9949
-    2.0000, 0.0000, 203.6390
-    1.6202, 0.0012, 13.0330
-    1.4449, 0.0157, 12.2847
+    0.1228, 0.0000, 20.3673
+    0.0121, 0.0002, 7.0803
+    0.0002, 0.0010, 6.0682
+    0.0001, 0.0049, 12.6712
+    3.0000, 0.0000, 218.9333
 
 [generalized_p2.0]
-  Geometries solved: 12
+  Geometries solved: 100
   Strict survivors (all 7 obs within tolerances): 0 (0.0%)
-  Train loss  mean/median: 3.6217 / 0.9325
-  Holdout loss mean/median: 11572.3658 / 209.3512
-  CKM–mc Pareto points: 72, nondominated: 6
-  corr(CKM_loss, mc_rel_err): -0.1742
-  mc_rel_err median: 0.0264 (min 0.0000); CKM_loss median: 6.0892
+  Train loss  mean/median: 28.9225 / 1.5202
+  Holdout loss mean/median: 8138.1061 / 214.6864
+  CKM–mc Pareto points: 400, nondominated: 7
+  corr(CKM_loss, mc_rel_err): -0.1367
+  mc_rel_err median: 0.1956 (min 0.0000); CKM_loss median: 13.8642
   Sample Pareto front (ckm_loss, mc_rel, holdout):
     2.0000, 0.0000, 203.1598
     2.0000, 0.0001, 203.4805
-    2.0000, 0.0000, 204.3220
-    0.1362, 0.0064, 10.8486
-    1.8244, 0.0030, 73.5874
+    2.2939, 0.0000, 186.5490
+    3.0000, 0.0000, 222.4703
+    0.0330, 0.0044, 48.3202
 
 [generalized_p3.0]
-  Geometries solved: 12
+  Geometries solved: 100
   Strict survivors (all 7 obs within tolerances): 0 (0.0%)
-  Train loss  mean/median: 1.5715 / 1.0000
-  Holdout loss mean/median: 4434.8417 / 210.1437
-  CKM–mc Pareto points: 72, nondominated: 4
-  corr(CKM_loss, mc_rel_err): 0.1083
-  mc_rel_err median: 0.0075 (min 0.0000); CKM_loss median: 3.0000
+  Train loss  mean/median: 25.1206 / 1.9992
+  Holdout loss mean/median: 7749.8623 / 220.0890
+  CKM–mc Pareto points: 400, nondominated: 11
+  corr(CKM_loss, mc_rel_err): -0.1305
+  mc_rel_err median: 0.1232 (min 0.0000); CKM_loss median: 12.8134
   Sample Pareto front (ckm_loss, mc_rel, holdout):
-    2.0000, 0.0000, 205.4175
     2.0000, 0.0002, 204.7471
     1.8882, 0.0002, 120.7624
-    0.0758, 0.0255, 44.6782
+    2.5568, 0.0000, 111.2336
+    0.0007, 0.0018, 9.7915
+    0.0271, 0.0007, 8.6690
 
 --- STRUCTURAL CKM–m_c TRADE-OFF ---
 Training optimizes mc + Vus + Vcb jointly. CKM_loss vs mc_rel_err shows sparse Pareto fronts (few nondominated points) — structural tension, not holdout generalization.
-  Gaussian:  corr=-0.197, strict=0.0%
-  Clockwork: corr=0.165, strict=0.0%
+  Gaussian:  corr=0.011, strict=0.0%
+  Clockwork: corr=-0.007, strict=0.0%
 
 --- PAIRED GAUSSIAN vs CLOCKWORK (same geometries) ---
-  Geometries compared: 12
-  Clockwork better train (by >5%): 4
-  Gaussian better train (by >5%): 7
-  Ties: 1
-  Mean (clock_train - gauss_train): 0.6925 (negative => clockwork lower train loss on average)
+  Geometries compared: 100
+  Clockwork better train (by >5%): 38
+  Gaussian better train (by >5%): 53
+  Ties: 9
+  Mean (clock_train - gauss_train): 0.2723 (negative => clockwork lower train loss on average)
   Interpretation: partial clockwork wins on training loss are honest; 0% strict survivors and high holdout remain.
 
 --- HONEST CONCLUSIONS ---

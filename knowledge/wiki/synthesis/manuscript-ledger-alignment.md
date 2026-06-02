@@ -10,7 +10,7 @@ related:
   - interference-kernel-manuscript
 status: active
 created: 2026-06-02
-updated: 2026-06-02e
+updated: 2026-06-02f
 ---
 
 # Manuscript ↔ Ledger Alignment
@@ -28,6 +28,7 @@ Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use wh
 | Quark sector reproduces PDG precision | **Refuted** | 0% strict survivors; \(m_c\) order-of-magnitude failures |
 | Charged lepton 60% survivor rate | **Phenomenological** (legacy full-mass opt) / **1% strict+legacy** (diag 22, 100 geom, train split) | [[analysis-summary]], `diagnostics/22_lepton_phenomenology_sweep.py` |
 | Neutrino 45% PMNS survivor rate | **Phenomenological** (legacy 480 geom) / **78.9% strict** (diag 23, 100 geom) | [[analysis-summary]], `diagnostics/23_neutrino_phenomenology_sweep.py` |
+| Quark 0% strict survivors (100 geom) | **Established** (structural failure) | `diagnostics/21_quark_phenomenology_holdout.py` (scaled 2026-06-02f) |
 | Parameter scale clustering \(\sigma,\alpha\) | **Speculative / artifact** | manuscript §limitations; optimization bias |
 | QIT / information-loss sampling narrative | **Refuted** for mechanism | diagnostics 12–19 |
 | Exploratory zeta / arithmetic hooks | **Watch only** (Path D) | [[research-strategy]] — no flavor numerology |
@@ -36,11 +37,11 @@ Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use wh
 
 | Location | Issue | Fix pointer |
 |----------|-------|-------------|
-| Abstract L29 | “coherent phenomenological organization” without quark failure upfront | Lead with quark structural trade-off + 0% strict survivors |
-| Introduction L42 | “successfully reproduces experimental observables” | Qualify: lepton/neutrino subsets only |
-| §Three-regime L393 | “validates the three-regime framework” | Already contradicted L413–421; align abstract with L413 |
-| §Neutrino–quark unification L455 | “unifies … within a single framework” | Phenomenology label only; quark failure breaks unification claim |
-| Future work L498–502 | UV / statistical validation of “universal scales” | Mark as speculative; cite transfer refutation |
+| Abstract L29 | “coherent phenomenological organization” without quark failure upfront | **Fixed** (2026-06-02f): quark 0% strict lead; dual-protocol survivor rates |
+| Introduction L42 | “successfully reproduces experimental observables” | **Fixed**: sector-specific partial success + protocol caveat |
+| §Three-regime L393 | “validates the three-regime framework” | **Fixed**: descriptive only, not validated |
+| §Neutrino–quark unification L455 | “unifies … within a single framework” | **Fixed**: quark failure breaks unification claim |
+| Future work L498–502 | UV / statistical validation of “universal scales” | **Fixed**: marked speculative; transfer refuted |
 
 ## Diagnostics cross-reference
 

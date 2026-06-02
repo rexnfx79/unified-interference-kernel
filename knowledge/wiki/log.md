@@ -1,7 +1,14 @@
-updated: 2026-06-02e
+updated: 2026-06-02f
 ---
 
 # Research Log
+
+## 2026-06-02 | implement | Scaled quark holdout + manuscript alignment
+
+- **Diagnostic 21:** scaled to 100 geom, 4 seeds (parity with 22/23); **0% strict** all kernels; Gaussian holdout median **32.8**; paired G vs C: 53/38/9 wins; ~26 min runtime
+- **Manuscript:** applied [[manuscript-honest-limitations-draft]] — abstract/intro limitations paragraph; dual-protocol survivor language; softened three-regime validation, unification, UV/statistical future work
+- **Wiki:** [[manuscript-ledger-alignment]], [[research-strategy]], [[diagnostics-summary]]
+- **Status:** Phenomenology tranche quark scale complete; joint 3-sector corpus remains
 
 ## 2026-06-02 | implement | Scaled phenomenology + cross-kernel (diag 22–25)
 
