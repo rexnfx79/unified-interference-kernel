@@ -1,0 +1,19 @@
+Regime-entropy correlation diagnostic
+threshold: 0.3
+min_samples: 30
+n_samples: 10080
+verdict: refuted
+
+entropy_vs_regime: 0.045982618386062095
+effective_rank_vs_regime: 0.0471863313920216
+off_diagonal_entropy_vs_regime: 0.04150264467934561
+entropy_vs_g_env_neutrino: -0.17602586827352737
+entropy_vs_L_ckm: 0.11125278500834966
+entropy_vs_L_mass: -0.45227491602855474
+entropy_vs_L_total: -0.12223014334149343
+
+sector_means:
+  charged_lepton: {'entropy': 0.11472984927852033, 'effective_rank': 1.1273652791773805, 'off_diagonal_entropy': 1.7855925769762493}
+  neutrino: {'entropy': 0.15771366115612576, 'effective_rank': 1.182583360733619, 'off_diagonal_entropy': 1.7855418487349417}
+  quark_down: {'entropy': 0.1451927111658444, 'effective_rank': 1.1662570742311358, 'off_diagonal_entropy': 1.785346016183085}
+  quark_up: {'entropy': 0.1459977322536859, 'effective_rank': 1.1670156453213163, 'off_diagonal_entropy': 1.7837743977850522}

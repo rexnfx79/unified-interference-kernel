@@ -1,0 +1,65 @@
+KERNEL COMPARISON RESULTS (REDUCED)
+======================================================================
+
+samples=500, geometries=5, seeds=2, maxiter=80
+
+
+Gaussian
+----------------------------------------
+Random sampling (500 samples):
+  Good mc:  2 (0.4%)
+  Good CKM: 20 (4.0%)
+  Both:     0 (0.0%)
+
+Optimization (best 3):
+  1. loss=1.7896, mc=4.1490, Vus=0.1627
+  2. loss=2.0477, mc=1.2686, Vus=0.1233
+  3. loss=4.2016, mc=7.0134, Vus=0.1123
+
+Geometric Exponential (Cabibbo-base)
+----------------------------------------
+Random sampling (500 samples):
+  Good mc:  4 (0.8%)
+  Good CKM: 4 (0.8%)
+  Both:     0 (0.0%)
+
+Optimization (best 3):
+  1. loss=4.6393, mc=1.7190, Vus=0.0108
+  2. loss=5.0113, mc=1.7467, Vus=0.0049
+  3. loss=9.9569, mc=1.2853, Vus=0.0003
+
+Exponential
+----------------------------------------
+Random sampling (500 samples):
+  Good mc:  3 (0.6%)
+  Good CKM: 11 (2.2%)
+  Both:     0 (0.0%)
+
+Optimization (best 3):
+  1. loss=1.2738, mc=3.1191, Vus=0.2064
+  2. loss=1.4914, mc=2.0133, Vus=0.1807
+  3. loss=1.4957, mc=3.2839, Vus=0.2641
+
+Clockwork
+----------------------------------------
+Random sampling (500 samples):
+  Good mc:  16 (3.2%)
+  Good CKM: 8 (1.6%)
+  Both:     0 (0.0%)
+
+Optimization (best 3):
+  1. loss=7.1433, mc=1.6045, Vus=0.1211
+  2. loss=26.2905, mc=30.8764, Vus=0.1004
+  3. loss=40.5253, mc=28.0547, Vus=0.3199
+
+Hybrid (Power-Law + Quadratic)
+----------------------------------------
+Random sampling (500 samples):
+  Good mc:  5 (1.0%)
+  Good CKM: 7 (1.4%)
+  Both:     0 (0.0%)
+
+Optimization (best 3):
+  1. loss=0.8530, mc=1.9662, Vus=0.1696
+  2. loss=2.0115, mc=3.1481, Vus=0.1651
+  3. loss=2.0876, mc=2.9046, Vus=0.1838

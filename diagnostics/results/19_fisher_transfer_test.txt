@@ -1,0 +1,30 @@
+Pre-registered Fisher transfer test (quark → lepton)
+alignment_threshold: 0.5
+frozen_loss_bad_threshold: 797.0
+cr_z: 2.0
+n_seeds: 5
+verdict: refuted
+refuted: True
+reason: Fisher alignment below threshold at transfer point with bad frozen loss
+quark_loss_total: 3429.2464754963717
+frozen_lepton_loss: 805.8432989945392
+free_lepton_loss: 775.1873717928224
+alignment_at_transfer: 0.41333829697917734
+alignment_at_free_optimum: 0.0353441480317393
+deltas_within_cr: False
+falsifier_a: False
+falsifier_b: True
+delta_sigma: -0.35219652402907586
+cr_sigma: 9.30350814104876e-06
+cr_ratio_sigma: 57.73400676395624
+delta_k: 1.3990526919818078
+cr_k: 2.9161427739008415e-06
+cr_ratio_k: 409.63747852048886
+delta_alpha: -0.15879757994248322
+cr_alpha: 2.4241898468757588e-05
+cr_ratio_alpha: 16.12614534938846
+delta_eta: -0.01109886858533482
+cr_eta: 4.0002949499245223e-07
+cr_ratio_eta: 8.774102560989334
+fisher_quark_shared_logdet: 10.15357896336258
+fisher_lepton_shared_logdet: 35.584512576000684

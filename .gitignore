@@ -22,6 +22,7 @@ figures/*.pdf
 # IDE
 .vscode/
 .idea/
+.cursor/
 *.swp
 *.swo
 *~
@@ -42,15 +43,18 @@ htmlcov/
 *.tmp
 *.bak
 
-# LaTeX
-*.aux
-*.log
-*.out
-*.toc
-*.bbl
-*.blg
-*.bcf
-*.run.xml
-*.synctex.gz
-*.fdb_latexmk
-*.fls
+# LaTeX build artifacts
+manuscript.aux
+manuscript.bbl
+manuscript.blg
+manuscript.log
+manuscript.out
+
+# LLM Wiki app state (when using knowledge/ as a project)
+knowledge/.llm-wiki/
+knowledge/.obsidian/
+
+# LLM Wiki submodule build artifacts
+tools/llm_wiki/node_modules/
+tools/llm_wiki/dist/
+tools/llm_wiki/src-tauri/target/

@@ -1,0 +1,26 @@
+Decoherence vs mixing bound diagnostic
+threshold: 0.25
+n_samples: 2592
+verdict: refuted
+max_abs_r: 0.24132157796066012
+
+neutrino_coherence_l1_vs_mix_sum: -0.22008016569167108
+neutrino_coherence_l1_vs_theta12: -0.22008016569167144
+neutrino_coherence_l1_vs_theta13: nan
+neutrino_coherence_l1_vs_theta23: nan
+neutrino_off_ratio_vs_mix_sum: -0.22008016569167108
+neutrino_off_ratio_vs_theta12: -0.22008016569167146
+neutrino_off_ratio_vs_theta13: nan
+neutrino_off_ratio_vs_theta23: nan
+pooled_coherence_l1_upper_bound_frac: 1.0
+pooled_coherence_l1_vs_mix_sum: -0.21725381088174414
+pooled_off_ratio_upper_bound_frac: 1.0
+pooled_off_ratio_vs_mix_sum: -0.21725381088174406
+quark_coherence_l1_vs_Vcb: nan
+quark_coherence_l1_vs_Vub: nan
+quark_coherence_l1_vs_Vus: -0.24132157796066012
+quark_coherence_l1_vs_mix_sum: -0.2413215779606581
+quark_off_ratio_vs_Vcb: nan
+quark_off_ratio_vs_Vub: nan
+quark_off_ratio_vs_Vus: -0.24132157796066012
+quark_off_ratio_vs_mix_sum: -0.24132157796065815

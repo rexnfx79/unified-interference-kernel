@@ -1,0 +1,44 @@
+Yukawa information inequality explorer
+verdict: weak_candidate
+cross_sector_threshold: 0.25
+
+
+[S vs mixing (off-diag proxy)]
+  quark       r=-0.0349  p=3.05e-01  n=864
+  lepton      r=+0.2577  p=1.82e-03  n=144
+  neutrino    r=+0.1340  p=2.24e-08  n=1728
+  sectors_with_|r|>=0.25: 1/3
+
+[effective_rank vs hierarchy S0/S2]
+  quark       r=+0.1063  p=1.76e-03  n=864
+  lepton      r=+0.0919  p=2.73e-01  n=144
+  neutrino    r=+0.0474  p=4.89e-02  n=1728
+  sectors_with_|r|>=0.25: 0/3
+
+[off_diag_entropy vs mixing]
+  quark       r=-0.3768  p=1.55e-30  n=864
+  lepton      r=+0.2828  p=5.94e-04  n=144
+  neutrino    r=-0.2086  p=1.95e-18  n=1728
+  sectors_with_|r|>=0.25: 2/3
+
+[S vs hierarchy S0/S2]
+  quark       r=+0.1062  p=1.78e-03  n=864
+  lepton      r=+0.0891  p=2.88e-01  n=144
+  neutrino    r=+0.0335  p=1.64e-01  n=1728
+  sectors_with_|r|>=0.25: 0/3
+
+[effective_rank vs mix_off]
+  quark       r=-0.0344  p=3.12e-01  n=864
+  lepton      r=+0.2607  p=1.60e-03  n=144
+  neutrino    r=+0.1250  p=1.86e-07  n=1728
+  sectors_with_|r|>=0.25: 1/3
+
+pooled_correlations:
+  S vs mixing (off-diag proxy): 0.03488737305392561
+  effective_rank vs hierarchy S0/S2: 0.09170091187940958
+  off_diag_entropy vs mixing: 0.006376822233189958
+  S vs hierarchy S0/S2: 0.0811119520745616
+  effective_rank vs mix_off: 0.03736726781486001
+
+best_candidate: off_diag_entropy vs mixing
+best_strong_sectors: 2

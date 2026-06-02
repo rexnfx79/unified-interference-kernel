@@ -1,0 +1,12 @@
+Open-system decoherence vs mixing diagnostic
+threshold: 0.25
+n_samples: 7776
+verdict: not_refuted
+max_abs_r: 0.2606211533826852
+
+mixing_proxy_open_vs_actual: 0.007444089477172679
+neutrino_p_vs_actual: -0.21628449193063612
+neutrino_proxy_vs_actual: 0.10259891197555399
+p_external_vs_actual_mixing: -0.11613119229347954
+quark_p_vs_actual: 0.21534322567162983
+quark_proxy_vs_actual: -0.2606211533826852

@@ -39,21 +39,44 @@ where:
 
 ```
 unified-interference-kernel/
+├── knowledge/             # LLM Wiki knowledge base (information → reality research)
+│   ├── purpose.md         # Research goals and thesis
+│   ├── wiki/              # Interlinked concept/query/synthesis pages
+│   └── raw/sources/       # Source documents for ingest
+├── tools/llm_wiki/        # LLM Wiki desktop app (git submodule)
+├── AGENTS.md              # Cursor/agent instructions for wiki maintenance
 ├── src/
 │   ├── kernel.py          # Universal kernel implementation
 │   ├── observables.py     # Observable extraction (CKM, masses, PMNS)
 │   └── optimizer.py       # Differential evolution wrapper
 ├── scripts/
 │   ├── 01_optimize_quarks.py
-│   ├── 02_optimize_charged_leptons.py
-│   └── 03_optimize_neutrinos.py
+│   ├── 02_pareto_envelope_comparison.py
+│   └── 03_true_transfer_test.py
 ├── tests/
 │   ├── test_kernel.py
 │   └── test_observables.py
 ├── data/                  # Generated optimization results
 ├── figures/               # Manuscript figures
-└── docs/                  # Additional documentation
+└── diagnostics/           # Rigorous validation scripts
 ```
+
+## Knowledge Base (Conjecture Notebook)
+
+Multi-sided map connecting math to reality — with **plausibility register** for dead ends and **QED→information** as primary pursue path.
+
+- **Framework:** [`knowledge/wiki/synthesis/multi-sided-bridge-framework.md`](knowledge/wiki/synthesis/multi-sided-bridge-framework.md)
+- **Failures / verdicts:** [`knowledge/wiki/synthesis/plausibility-register.md`](knowledge/wiki/synthesis/plausibility-register.md)
+- **Agent workflow:** [`knowledge/AGENTS.md`](knowledge/AGENTS.md)
+
+Optional: run the [LLM Wiki](https://github.com/nashsu/llm_wiki) desktop app against `knowledge/`:
+
+```bash
+cd tools/llm_wiki && npm install && npm run tauri dev
+# Open Project → select knowledge/
+```
+
+Verify wiki snapshots match repo: `python3 scripts/lint_wiki_manifest.py`
 
 ## Installation
 

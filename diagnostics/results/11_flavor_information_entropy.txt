@@ -1,0 +1,35 @@
+Flavor information entropy by sector
+
+[quark_up]
+entropy: 0.07665232887206412
+effective_rank: 1.0796666422132768
+off_diagonal_entropy: 1.7898312341884597
+trace_yydag: 5.150081014063273
+
+[quark_down]
+entropy: 0.07704277352036383
+effective_rank: 1.0800882745823712
+off_diagonal_entropy: 1.789740208126525
+trace_yydag: 4.946166274597272
+
+[charged_lepton]
+entropy: 0.16157645357494513
+effective_rank: 1.175362315374245
+off_diagonal_entropy: 1.7892074885064333
+trace_yydag: 6.183780235519758
+
+[neutrino]
+entropy: 0.09847586819479634
+effective_rank: 1.103487774921055
+off_diagonal_entropy: 1.7889015019260568
+trace_yydag: 3.332995482242156
+
+[charged_lepton_pmns]
+entropy: 0.3625693285050148
+effective_rank: 1.4370168437621944
+off_diagonal_entropy: 1.7916040546635603
+trace_yydag: 5.4906815797131125
+
+mean_quark_entropy: 0.07684755119621398
+lepton_entropy: 0.16157645357494513
+neutrino_entropy: 0.09847586819479634

@@ -1,0 +1,28 @@
+COMPREHENSIVE AUDIT REPORT
+============================================================
+
+[HIGH] 1. Interference term has limited modulation range
+   Category: KERNEL_MATH
+   The interference term |1 + ε·exp(iΦ)| can only modulate the envelope by a factor of (1+ε)/(1-ε). For typical ε=0.3, this is only 1.86x. This is insufficient to create the ~136x ratio needed for mt/mc.
+   Evidence: {'eps_0.3_ratio': 1.8571428571428574, 'eps_0.5_ratio': 3.0, 'required_ratio': 136}
+
+[HIGH] 2. fix_svd_phases breaks SVD reconstruction
+   Category: BUG
+   The fix_svd_phases function introduces a reconstruction error of 5.10e-01. This may affect CKM matrix extraction. The function modifies U rows and Vh columns independently, which breaks the U @ S @ Vh = Y relationship.
+   Evidence: {'reconstruction_error': 0.510472905363036}
+
+[MEDIUM] 3. Third left-handed position hardcoded to 0
+   Category: DESIGN
+   In kernel.py line 47, left_vec[2] is always set to 0, ignoring the third element of Q. This may be intentional (Q is a doublet with only 2 generations), but it limits the model's flexibility. The third row of the Yukawa matrix always uses position 0.
+   Evidence: {'affected_line': 'kernel.py:47'}
+
+[MEDIUM] 4. Parameter sigma frequently hits boundary
+   Category: OPTIMIZATION
+   sigma is at lower bound 0.0% of the time and at upper bound 36.0% of the time. Consider widening the bounds.
+   Evidence: {'parameter': 'sigma', 'at_low': np.float64(0.0), 'at_high': np.float64(36.0)}
+
+[MEDIUM] 5. Parameter eps_u frequently hits boundary
+   Category: OPTIMIZATION
+   eps_u is at lower bound 40.7% of the time and at upper bound 3.6% of the time. Consider widening the bounds.
+   Evidence: {'parameter': 'eps_u', 'at_low': np.float64(40.699999999999996), 'at_high': np.float64(3.5999999999999996)}
+

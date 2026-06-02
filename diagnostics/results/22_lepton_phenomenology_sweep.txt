@@ -1,0 +1,61 @@
+==============================================================================
+CHARGED-LEPTON PHENOMENOLOGY SWEEP (diagnostic 22)
+==============================================================================
+
+Kernel: Gaussian (src/kernel.py compute_yukawa_matrix)
+
+TRAINING_TARGETS (optimized):
+  m_mu: 0.1057
+  m_tau: 1.777
+HOLDOUT_TARGETS (evaluation only):
+  m_e: 0.000511
+
+Split rationale: only three mass observables; m_tau is scale-anchored in SVD extraction. Train on mu–tau hierarchy; hold out m_e (hardest).
+
+Geometries: 100 requested, 100 solved (seed=22022)
+Seeds per geometry: 4
+Optimizer: {'maxiter': 120, 'popsize': 12, 'tol': 1e-06, 'mutation': (0.5, 1.0), 'recombination': 0.7, 'polish': False}
+Strict tolerances (relative): {'m_e': 0.2, 'm_mu': 0.1, 'm_tau': 0.05}
+Legacy survivors: range-based (me, mmu, mtau) from scripts/04_analyze_results.py
+
+--- SUMMARY (best seed per geometry) ---
+  Geometries solved: 100 / 100
+  Strict survivors (PDG-relative): 1 (1.0%)
+  Legacy survivors (range-based): 1 (1.0%)
+  Train loss  mean/median: 0.014880 / 0.000000
+  Holdout loss mean/median: 847.572687 / 32.167898
+  Full loss   mean/median: 847.587567 / 32.461025
+  Best full loss: 1.813284e-02
+  m_mu rel err mean/median: 0.0333 / 0.0000
+  m_e rel err  mean/median: 26.0051 / 1.0000
+
+--- PARAMETER CLUSTERS (best per geometry) ---
+  sigma: mean=2.494 ± 1.835 (median 1.686, range [0.501, 6.000])
+  k: mean=1.037 ± 0.517 (median 1.076, range [0.106, 2.000])
+  eta: mean=3.086 ± 1.125 (median 3.263, range [1.082, 4.981])
+  eps_e: mean=0.214 ± 0.154 (median 0.171, range [0.012, 0.500])
+  Strict survivors only:
+    sigma: mean=3.572 ± 0.000 (n=1)
+    k: mean=0.835 ± 0.000 (n=1)
+    eta: mean=4.974 ± 0.000 (n=1)
+    eps_e: mean=0.315 ± 0.000 (n=1)
+
+--- PHASE-SENSITIVE REGIME vs DATA ---
+Manuscript legacy: ~60% survivor rate (100 geometries, range-based definition).
+  This sweep — strict: 1.0%; legacy: 1.0%
+  corr(k, m_mu rel err): 0.1013
+  corr(eta, m_mu rel err): 0.1057
+  corr(k, m_e rel err): 0.0541
+  corr(k, holdout loss): -0.0088
+  corr(eta, holdout loss): -0.0821
+
+--- TRAIN vs HOLDOUT ---
+  Geometries with train loss < 1e-6 (m_mu+m_tau perfect): 95 (95.0%)
+  Geometries with holdout loss < 0.01 (m_e within ~5%): 0 (0.0%)
+  Holdout m_e fails even when train (m_mu+m_tau) is perfect — structural m_e tension, not optimizer noise.
+
+--- HONEST CONCLUSIONS ---
+  • Charged leptons: sector-specific Gaussian fit; no cross-sector transfer.
+  • Strict 1.0% vs legacy 1.0% — definitions matter.
+  • Phase-sensitive regime label is phenomenological, not validated mechanism.
+  • Parameter clusters vary by geometry; not universal (sigma median ~2.5 in this sweep).

@@ -14,28 +14,23 @@ QUARK_TARGETS = {
     'mb': 4.18, 'mt': 172.5,
 }
 
-CHARGED_LEPTON_TARGETS = {
-    'me': 0.0005109989461,  # electron mass in GeV
-    'mmu': 0.1056583745,     # muon mass in GeV
-    'mtau': 1.77686,         # tau mass in GeV
+NEUTRINO_TARGETS = {
+    'theta12': 0.5903,  # radians (~33.82°), PDG 2024
+    'theta23': 0.7850,  # radians (~45°)
+    'theta13': 0.1490,  # radians (~8.54°)
 }
 
-NEUTRINO_TARGETS = {
-    # PMNS mixing angles (in radians, for PDG 2024)
-    'theta12': 0.583,       # solar angle ~33.4°
-    'theta23': 0.785,       # atmospheric angle ~45°
-    'theta13': 0.149,       # reactor angle ~8.57°
-    # Neutrino masses (in eV, typical values for normal hierarchy)
-    'm1': 0.0,              # Lightest (effectively zero)
-    'm2': 0.0086,           # sqrt(Δm21^2) ≈ 8.6 meV
-    'm3': 0.050,            # sqrt(Δm31^2) ≈ 50 meV
+LEPTON_TARGETS = {
+    'm_e': 0.000511,    # GeV, PDG 2024
+    'm_mu': 0.1057,
+    'm_tau': 1.777,
 }
 
 
 def fix_svd_phases(U, S, Vh):
     """Fix SVD phase ambiguities for consistent CKM extraction."""
-    U_fixed = U.copy()
-    Vh_fixed = Vh.copy()
+    U_fixed = np.asarray(U, dtype=complex).copy()
+    Vh_fixed = np.asarray(Vh, dtype=complex).copy()
     for i in range(U.shape[0]):
         if abs(U[i, 0]) > 1e-10:
             phase = np.angle(U[i, 0])
@@ -94,85 +89,46 @@ def compute_mass_loss(obs: Dict[str, float]) -> float:
     return float(loss)
 
 
-def compute_charged_lepton_observables(Ye: np.ndarray) -> Dict[str, float]:
-    """Compute charged lepton sector observables: masses only."""
-    Ue, Se, Veh = np.linalg.svd(Ye, full_matrices=False)
-    # No phase fixing needed for leptons (no mixing to extract)
-    # Scale by tau mass
-    scale_e = CHARGED_LEPTON_TARGETS['mtau'] / Se[0] if Se[0] > 0 else 0.0
-    me = Se[2] * scale_e  # electron (smallest singular value)
-    mmu = Se[1] * scale_e  # muon
-    mtau = Se[0] * scale_e  # tau (largest singular value)
-    return {
-        'me': float(me), 'mmu': float(mmu), 'mtau': float(mtau),
-        'scale_e': float(scale_e),
-    }
-
-
-def compute_charged_lepton_loss(obs: Dict[str, float]) -> float:
-    """Compute charged lepton loss as sum of squared log-ratio errors."""
-    loss = 0.0
-    for key in ['me', 'mmu', 'mtau']:
-        target = CHARGED_LEPTON_TARGETS[key]
-        value = obs[key]
-        if value > 0 and target > 0:
-            log_ratio = np.log(value / target)
-            loss += log_ratio ** 2
-        else:
-            loss += 100.0
-    return float(loss)
+def pmns_angles_from_unitary(U: np.ndarray) -> Tuple[float, float, float]:
+    """Extract PMNS mixing angles (radians) from unitary matrix (PDG convention)."""
+    s13 = float(np.clip(abs(U[0, 2]), 0.0, 1.0))
+    theta13 = float(np.arcsin(s13))
+    c13 = np.cos(theta13)
+    if c13 < 1e-12:
+        return 0.0, 0.0, theta13
+    s12 = float(np.clip(abs(U[0, 1]) / c13, 0.0, 1.0))
+    s23 = float(np.clip(abs(U[1, 2]) / c13, 0.0, 1.0))
+    theta12 = float(np.arcsin(s12))
+    theta23 = float(np.arcsin(s23))
+    return theta12, theta23, theta13
 
 
 def compute_neutrino_observables(Ynu: np.ndarray, Ye: np.ndarray) -> Dict[str, float]:
-    """Compute neutrino sector observables: PMNS mixing angles and masses.
-    
-    Uses envelope compression (metric-dominated regime) which causes
-    information loss and emergent anarchy in PMNS angles.
+    """
+    Compute neutrino sector observables: PMNS angles from SVD of Ynu and Ye.
+
+    U_PMNS = U_e† U_nu per manuscript methodology.
     """
     Unu, Snu, Vnuh = np.linalg.svd(Ynu, full_matrices=False)
     Ue, Se, Veh = np.linalg.svd(Ye, full_matrices=False)
-    
-    # Fix phases similar to CKM
-    Unu_fixed, _, _ = fix_svd_phases(Unu, Snu, Vnuh)
     Ue_fixed, _, _ = fix_svd_phases(Ue, Se, Veh)
-    
-    # PMNS = Ue^dagger * Unu (charged lepton mixing * neutrino mixing)
+    Unu_fixed, _, _ = fix_svd_phases(Unu, Snu, Vnuh)
     PMNS = Ue_fixed.conj().T @ Unu_fixed
-    
-    # Extract mixing angles (using standard parameterization)
-    # sin^2(theta12) = |PMNS[0,1]|^2 / (1 - |PMNS[0,2]|^2)
-    # sin^2(theta23) = |PMNS[1,2]|^2 / (1 - |PMNS[0,2]|^2)
-    # sin^2(theta13) = |PMNS[0,2]|^2
-    abs_pmns_sq = np.abs(PMNS) ** 2
-    sin2_theta13 = abs_pmns_sq[0, 2]
-    sin2_theta23 = abs_pmns_sq[1, 2] / (1 - sin2_theta13 + 1e-10)
-    sin2_theta12 = abs_pmns_sq[0, 1] / (1 - sin2_theta13 + 1e-10)
-    
-    theta12 = np.arcsin(np.sqrt(np.clip(sin2_theta12, 0, 1)))
-    theta23 = np.arcsin(np.sqrt(np.clip(sin2_theta23, 0, 1)))
-    theta13 = np.arcsin(np.sqrt(np.clip(sin2_theta13, 0, 1)))
-    
-    # Neutrino masses (scale by a reference value, e.g., m2)
-    # For simplicity, use relative masses
-    if Snu[0] > 0:
-        # Normal hierarchy: m1 < m2 < m3
-        scale_nu = NEUTRINO_TARGETS['m2'] / Snu[1] if Snu[1] > 0 else 0.0
-        m1 = Snu[2] * scale_nu
-        m2 = Snu[1] * scale_nu
-        m3 = Snu[0] * scale_nu
-    else:
-        m1, m2, m3 = 0.0, 0.0, 0.0
-        scale_nu = 0.0
-    
+    theta12, theta23, theta13 = pmns_angles_from_unitary(PMNS)
+
     return {
-        'theta12': float(theta12), 'theta23': float(theta23), 'theta13': float(theta13),
-        'm1': float(m1), 'm2': float(m2), 'm3': float(m3),
-        'scale_nu': float(scale_nu),
+        'theta12': theta12,
+        'theta23': theta23,
+        'theta13': theta13,
+        'Snu_0': float(Snu[0]),
+        'Snu_1': float(Snu[1]),
+        'Snu_2': float(Snu[2]),
+        'unitarity_violation': float(np.max(np.abs(PMNS @ PMNS.conj().T - np.eye(3)))),
     }
 
 
 def compute_pmns_loss(obs: Dict[str, float]) -> float:
-    """Compute PMNS loss as sum of relative squared errors for mixing angles."""
+    """Compute PMNS loss as sum of relative squared errors on mixing angles."""
     loss = 0.0
     for key in ['theta12', 'theta23', 'theta13']:
         target = NEUTRINO_TARGETS[key]
@@ -181,16 +137,201 @@ def compute_pmns_loss(obs: Dict[str, float]) -> float:
     return float(loss)
 
 
-def compute_neutrino_mass_loss(obs: Dict[str, float]) -> float:
-    """Compute neutrino mass loss as sum of squared log-ratio errors."""
+def compute_lepton_observables(Ye: np.ndarray) -> Dict[str, float]:
+    """Compute charged lepton masses from Yukawa matrix (tau-anchored SVD scale)."""
+    _, S, _ = np.linalg.svd(Ye, full_matrices=False)
+    scale = LEPTON_TARGETS['m_tau'] / S[0] if S[0] > 0 else 0.0
+    return {
+        'm_e': float(S[2] * scale),
+        'm_mu': float(S[1] * scale),
+        'm_tau': float(S[0] * scale),
+        'scale_e': float(scale),
+    }
+
+
+def compute_lepton_loss(obs: Dict[str, float]) -> float:
+    """Compute lepton mass loss as sum of squared log-ratio errors."""
     loss = 0.0
-    # Only fit m2 and m3 (m1 is effectively zero)
-    for key in ['m2', 'm3']:
-        target = NEUTRINO_TARGETS[key]
-        value = obs[key]
+    for key in ['m_e', 'm_mu', 'm_tau']:
+        target = LEPTON_TARGETS[key]
+        value = obs.get(key, 0.0)
         if value > 0 and target > 0:
-            log_ratio = np.log(value / target)
-            loss += log_ratio ** 2
+            loss += np.log(value / target) ** 2
         else:
             loss += 100.0
     return float(loss)
+
+
+# =============================================================================
+# LEPTON TRAIN/HOLDOUT SPLIT
+# =============================================================================
+# Charged leptons have only three observables (all masses). m_tau is scale-
+# anchored in compute_lepton_observables, so training on m_tau is redundant but
+# kept for symmetry with quark holdout reporting. Optimize mu–tau hierarchy;
+# hold out m_e (3500× gap from m_mu — hardest mass to predict).
+
+LEPTON_TRAINING_TARGETS = {
+    'm_mu': LEPTON_TARGETS['m_mu'],
+    'm_tau': LEPTON_TARGETS['m_tau'],
+}
+
+LEPTON_HOLDOUT_TARGETS = {
+    'm_e': LEPTON_TARGETS['m_e'],
+}
+
+
+def compute_lepton_training_loss(obs: Dict[str, float]) -> float:
+    """Loss on training masses only (m_mu, m_tau); log-ratio for scale invariance."""
+    loss = 0.0
+    for key, target in LEPTON_TRAINING_TARGETS.items():
+        value = obs.get(key, 0.0)
+        if value > 0 and target > 0:
+            loss += np.log(value / target) ** 2
+        else:
+            loss += 100.0
+    return float(loss)
+
+
+def compute_lepton_holdout_loss(obs: Dict[str, float]) -> float:
+    """Holdout loss on m_e only — not used in optimization."""
+    target = LEPTON_HOLDOUT_TARGETS['m_e']
+    value = obs.get('m_e', 0.0)
+    if value > 0 and target > 0:
+        return float(np.log(value / target) ** 2)
+    return 100.0
+
+
+# =============================================================================
+# TRAIN/HOLDOUT SPLIT FOR MINIMALITY VALIDATION (QUARKS)
+# =============================================================================
+
+# Training: CKM entries + charm mass (structural CKM–m_c trade-off axis).
+# Holdout: light masses + V_ub — tests whether training fit generalizes.
+TRAINING_TARGETS = {
+    'mc': 1.27,
+    'Vus': 0.22500,
+    'Vcb': 0.04182,
+}
+
+HOLDOUT_TARGETS = {
+    'ms': 0.093,
+    'mu': 0.00216,
+    'md': 0.00467,
+    'Vub': 0.00382,
+}
+
+
+def compute_training_loss(obs: Dict[str, float]) -> float:
+    """
+    Compute loss on TRAINING targets only.
+    
+    This is what we optimize. Uses relative squared error.
+    """
+    loss = 0.0
+    
+    # mc: check for validity first
+    mc = obs.get('mc', 0.0)
+    if mc < 0.01 or mc > 500:
+        return 1000.0  # Invalid solution
+    
+    for key, target in TRAINING_TARGETS.items():
+        value = obs.get(key, 0.0)
+        if target > 0 and value > 0:
+            rel_err = (value - target) / target
+            loss += rel_err ** 2
+        else:
+            loss += 100.0
+    
+    return float(loss)
+
+
+def compute_holdout_loss(obs: Dict[str, float]) -> float:
+    """
+    Compute loss on HOLDOUT targets only.
+    
+    This is NOT used in optimization - only for evaluating generalization.
+    Uses log-ratio for masses (scale-invariant) and relative error for CKM.
+    """
+    loss = 0.0
+    
+    # Light masses: use log-ratio for scale invariance
+    for key in ['ms', 'mu', 'md']:
+        target = HOLDOUT_TARGETS[key]
+        value = obs.get(key, 0.0)
+        if value > 1e-8 and target > 0:
+            loss += np.log(value / target) ** 2
+        else:
+            loss += 100.0  # Penalty for zero/negative
+    
+    # V_ub: relative squared error
+    vub = obs.get('Vub', 0.0)
+    vub_target = HOLDOUT_TARGETS['Vub']
+    if vub > 0:
+        loss += ((vub - vub_target) / vub_target) ** 2
+    else:
+        loss += 100.0
+    
+    return float(loss)
+
+
+def compute_penalized_loss(
+    obs: Dict[str, float],
+    n_extra_params: int,
+    lambda_penalty: float = 0.1
+) -> float:
+    """
+    Compute training loss with AIC-like penalty for model complexity.
+    
+    L_penalized = L_train + lambda * n_extra_params
+    
+    This discourages adding parameters unless they substantially improve fit.
+    
+    Parameters:
+        obs: Observable dictionary
+        n_extra_params: Number of extra parameters beyond base model
+        lambda_penalty: Penalty weight per extra parameter
+    
+    Returns:
+        Penalized loss value
+    """
+    train_loss = compute_training_loss(obs)
+    penalty = lambda_penalty * n_extra_params
+    return train_loss + penalty
+
+
+def compute_full_ckm_observables(Yu: np.ndarray, Yd: np.ndarray) -> Dict[str, float]:
+    """
+    Compute full CKM matrix observables including all 9 elements and Jarlskog.
+    
+    Extended version of compute_quark_observables for detailed analysis.
+    """
+    # Get basic observables
+    obs = compute_quark_observables(Yu, Yd)
+    
+    # Compute full CKM matrix
+    Uu, Su, Vuh = np.linalg.svd(Yu, full_matrices=False)
+    Ud, Sd, Vdh = np.linalg.svd(Yd, full_matrices=False)
+    
+    # Fix phases
+    Uu_fixed, _, _ = fix_svd_phases(Uu, Su, Vuh)
+    Ud_fixed, _, _ = fix_svd_phases(Ud, Sd, Vdh)
+    
+    CKM = Uu_fixed.conj().T @ Ud_fixed
+    
+    # All CKM magnitudes
+    obs['Vud'] = float(abs(CKM[0, 0]))
+    obs['Vcd'] = float(abs(CKM[1, 0]))
+    obs['Vtd'] = float(abs(CKM[2, 0]))
+    obs['Vts'] = float(abs(CKM[2, 1]))
+    obs['Vtb'] = float(abs(CKM[2, 2]))
+    obs['Vcs'] = float(abs(CKM[1, 1]))
+    
+    # Jarlskog invariant (magnitude only - sign is convention-dependent)
+    J = np.imag(CKM[0, 0] * CKM[1, 1] * np.conj(CKM[0, 1]) * np.conj(CKM[1, 0]))
+    obs['J_magnitude'] = float(abs(J))
+    
+    # Unitarity check
+    VVdag = CKM @ CKM.conj().T
+    obs['unitarity_violation'] = float(np.max(np.abs(VVdag - np.eye(3))))
+    
+    return obs

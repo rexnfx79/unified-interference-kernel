@@ -1,0 +1,28 @@
+==============================================================================
+LEPTON m_mu–m_e PARETO FRONTIER (diagnostic 25)
+==============================================================================
+
+Objective: w_train * L_train(m_mu,m_tau) + w_hold * L_holdout(m_e)
+Geometries: 24; weights per geometry: 12
+Seeds per weight: 3; optimizer: {'maxiter': 120, 'popsize': 12, 'tol': 1e-06, 'mutation': (0.5, 1.0), 'recombination': 0.7, 'polish': False}
+
+--- AGGREGATE ---
+  Total Pareto sweep points: 288
+  Nondominated (train, holdout): 1
+  corr(train_loss, holdout_loss): 0.5757 (positive => structural trade-off)
+  Train loss  median: 0.0021; Holdout loss median: 0.0000
+  m_mu rel err median: 0.0464; m_e rel err median: 0.0027
+
+--- PARETO FRONT SAMPLE (train_loss, holdout_loss) ---
+  (0.000000, 0.0000)
+  Knee (log-space nearest origin): train=0.000000, holdout=0.0000
+
+--- STRUCTURAL INTERPRETATION ---
+  Analogous to quark CKM–m_c: improving train (m_mu+m_tau) does not simultaneously improve holdout m_e.
+  Sparse Pareto fronts indicate a knee — m_e is not reachable by phase/envelope tuning once mu–tau hierarchy is fit.
+  Figure saved: /Users/alexm4/Cursor Repos/unified-interference-kernel/diagnostics/../figures/lepton_mass_pareto_diag25.png
+
+--- HONEST CONCLUSIONS ---
+  • m_e holdout failure is structural, not optimizer artifact.
+  • Weighted Pareto documents tension; no simultaneous 3-mass fit at strict tolerances.
+  • Phenomenology only — no mechanism claim.

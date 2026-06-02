@@ -1,0 +1,79 @@
+==============================================================================
+CROSS-KERNEL PAIRED LEPTON + NEUTRINO (diagnostic 24)
+==============================================================================
+
+Paired geometries: lepton N=30, neutrino N=30 (subset for cross-kernel cost; seeds=4)
+Kernels: gaussian, clockwork, generalized p ∈ [1.5, 2.0, 3.0]
+Optimizer: {'maxiter': 120, 'popsize': 12, 'tol': 1e-06, 'mutation': (0.5, 1.0), 'recombination': 0.7, 'polish': False}
+
+Lepton: optimize train (m_mu+m_tau); report train + holdout (m_e)
+Neutrino: optimize PMNS loss
+
+--- LEPTON PER-KERNEL (best seed per geometry) ---
+
+[gaussian]
+  Geometries solved: 30
+  Train loss  mean/median: 0.137303 / 0.000000
+  Holdout loss mean/median: 713.9643 / 30.9673
+
+[clockwork]
+  Geometries solved: 30
+  Train loss  mean/median: 0.000000 / 0.000000
+  Holdout loss mean/median: 371.9179 / 19.2564
+
+[generalized_p1.5]
+  Geometries solved: 30
+  Train loss  mean/median: 0.131182 / 0.000000
+  Holdout loss mean/median: 383.9223 / 24.0226
+
+[generalized_p2.0]
+  Geometries solved: 30
+  Train loss  mean/median: 0.137303 / 0.000000
+  Holdout loss mean/median: 717.3640 / 30.9673
+
+[generalized_p3.0]
+  Geometries solved: 30
+  Train loss  mean/median: 0.144663 / 0.000000
+  Holdout loss mean/median: 2352.2455 / 185.4546
+
+--- NEUTRINO PER-KERNEL (best seed per geometry) ---
+
+[gaussian]
+  Geometries solved: 25
+  PMNS loss mean/median: 0.085685 / 0.000006
+
+[clockwork]
+  Geometries solved: 24
+  PMNS loss mean/median: 0.082775 / 0.005547
+
+[generalized_p1.5]
+  Geometries solved: 24
+  PMNS loss mean/median: 0.005941 / 0.000054
+
+[generalized_p2.0]
+  Geometries solved: 25
+  PMNS loss mean/median: 0.085680 / 0.000006
+
+[generalized_p3.0]
+  Geometries solved: 26
+  PMNS loss mean/median: 0.055859 / 0.000012
+
+--- PAIRED vs GAUSSIAN (same geometries, >5% better counts as win) ---
+
+  Sector: lepton (metric: train)
+    clockwork: wins=8, gaussian wins=22, ties=0 (n=30); mean Δ=-0.1373
+    generalized_p1.5: wins=12, gaussian wins=16, ties=2 (n=30); mean Δ=-0.0061
+    generalized_p2.0: wins=0, gaussian wins=0, ties=30 (n=30); mean Δ=-0.0000
+    generalized_p3.0: wins=11, gaussian wins=18, ties=1 (n=30); mean Δ=0.0074
+
+  Sector: neutrino (metric: pmns_loss)
+    clockwork: wins=2, gaussian wins=22, ties=0 (n=24); mean Δ=0.0757
+    generalized_p1.5: wins=14, gaussian wins=10, ties=0 (n=24); mean Δ=-0.0011
+    generalized_p2.0: wins=0, gaussian wins=0, ties=25 (n=25); mean Δ=-0.0000
+    generalized_p3.0: wins=13, gaussian wins=11, ties=1 (n=25); mean Δ=-0.0429
+
+--- HONEST CONCLUSIONS ---
+  • Kernel choice can shift TRAIN/PMNS loss on some geometries — not sector resolution.
+  • Lepton holdout m_e remains poor across kernels (structural, like quark holdout).
+  • Clockwork/generalized partial wins mirror quark diag 21 — phenomenology only.
+  • No universal envelope; paired deltas are geometry-dependent.

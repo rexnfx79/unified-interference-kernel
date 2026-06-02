@@ -1,0 +1,112 @@
+==============================================================================
+QUARK PHENOMENOLOGY + HOLDOUT (diagnostic 21)
+==============================================================================
+
+TRAINING_TARGETS (optimized):
+  mc: 1.27
+  Vus: 0.225
+  Vcb: 0.04182
+HOLDOUT_TARGETS (evaluation only):
+  ms: 0.093
+  mu: 0.00216
+  md: 0.00467
+  Vub: 0.00382
+
+Geometries: 12 (seed=21021)
+Seeds per geometry: 6
+Optimizer: {'maxiter': 120, 'popsize': 12, 'tol': 1e-06, 'mutation': (0.5, 1.0), 'recombination': 0.7, 'polish': False}
+
+--- PER-KERNEL SUMMARY (best seed per geometry) ---
+
+[gaussian]
+  Geometries solved: 12
+  Strict survivors (all 7 obs within tolerances): 0 (0.0%)
+  Train loss  mean/median: 0.2351 / 0.0161
+  Holdout loss mean/median: 5805.2300 / 29.5763
+  CKM–mc Pareto points: 72, nondominated: 5
+  corr(CKM_loss, mc_rel_err): -0.1968
+  mc_rel_err median: 0.0357 (min 0.0000); CKM_loss median: 2.9797
+  Sample Pareto front (ckm_loss, mc_rel, holdout):
+    0.7335, 0.0038, 37.4853
+    0.0087, 0.1453, 15.2239
+    0.0637, 0.0051, 6.3319
+    2.9601, 0.0000, 300.9601
+    2.3971, 0.0001, 300.3971
+
+[clockwork]
+  Geometries solved: 12
+  Strict survivors (all 7 obs within tolerances): 0 (0.0%)
+  Train loss  mean/median: 0.4677 / 0.5129
+  Holdout loss mean/median: 37802.3659 / 61051.7465
+  CKM–mc Pareto points: 72, nondominated: 7
+  corr(CKM_loss, mc_rel_err): 0.1651
+  mc_rel_err median: 0.0626 (min 0.0005); CKM_loss median: 911.6369
+  Sample Pareto front (ckm_loss, mc_rel, holdout):
+    0.0376, 0.0618, 18.4039
+    0.0636, 0.0295, 20.4872
+    84.4262, 0.0038, 166.3726
+    67831.8361, 0.0005, 67883.6761
+    0.5798, 0.0065, 50.9402
+
+[generalized_p1.5]
+  Geometries solved: 12
+  Strict survivors (all 7 obs within tolerances): 0 (0.0%)
+  Train loss  mean/median: 4.9467 / 1.0000
+  Holdout loss mean/median: 11772.7451 / 205.5955
+  CKM–mc Pareto points: 72, nondominated: 5
+  corr(CKM_loss, mc_rel_err): -0.0792
+  mc_rel_err median: 0.1357 (min 0.0000); CKM_loss median: 7.6780
+  Sample Pareto front (ckm_loss, mc_rel, holdout):
+    2.0000, 0.0002, 207.2966
+    0.7604, 0.4563, 209.9949
+    2.0000, 0.0000, 203.6390
+    1.6202, 0.0012, 13.0330
+    1.4449, 0.0157, 12.2847
+
+[generalized_p2.0]
+  Geometries solved: 12
+  Strict survivors (all 7 obs within tolerances): 0 (0.0%)
+  Train loss  mean/median: 3.6217 / 0.9325
+  Holdout loss mean/median: 11572.3658 / 209.3512
+  CKM–mc Pareto points: 72, nondominated: 6
+  corr(CKM_loss, mc_rel_err): -0.1742
+  mc_rel_err median: 0.0264 (min 0.0000); CKM_loss median: 6.0892
+  Sample Pareto front (ckm_loss, mc_rel, holdout):
+    2.0000, 0.0000, 203.1598
+    2.0000, 0.0001, 203.4805
+    2.0000, 0.0000, 204.3220
+    0.1362, 0.0064, 10.8486
+    1.8244, 0.0030, 73.5874
+
+[generalized_p3.0]
+  Geometries solved: 12
+  Strict survivors (all 7 obs within tolerances): 0 (0.0%)
+  Train loss  mean/median: 1.5715 / 1.0000
+  Holdout loss mean/median: 4434.8417 / 210.1437
+  CKM–mc Pareto points: 72, nondominated: 4
+  corr(CKM_loss, mc_rel_err): 0.1083
+  mc_rel_err median: 0.0075 (min 0.0000); CKM_loss median: 3.0000
+  Sample Pareto front (ckm_loss, mc_rel, holdout):
+    2.0000, 0.0000, 205.4175
+    2.0000, 0.0002, 204.7471
+    1.8882, 0.0002, 120.7624
+    0.0758, 0.0255, 44.6782
+
+--- STRUCTURAL CKM–m_c TRADE-OFF ---
+Training optimizes mc + Vus + Vcb jointly. CKM_loss vs mc_rel_err shows sparse Pareto fronts (few nondominated points) — structural tension, not holdout generalization.
+  Gaussian:  corr=-0.197, strict=0.0%
+  Clockwork: corr=0.165, strict=0.0%
+
+--- PAIRED GAUSSIAN vs CLOCKWORK (same geometries) ---
+  Geometries compared: 12
+  Clockwork better train (by >5%): 4
+  Gaussian better train (by >5%): 7
+  Ties: 1
+  Mean (clock_train - gauss_train): 0.6925 (negative => clockwork lower train loss on average)
+  Interpretation: partial clockwork wins on training loss are honest; 0% strict survivors and high holdout remain.
+
+--- HONEST CONCLUSIONS ---
+  • Quark sector: phenomenological fit tool; 0% strict survivors at repo tolerances.
+  • Holdout masses/Vub do not track training improvements (generalization fails).
+  • No universal kernel parameters; Path A mechanism refuted (diag 12–19).
+  • Clockwork may beat Gaussian on some geometries on TRAIN only — not full sector success.

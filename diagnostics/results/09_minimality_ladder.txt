@@ -1,0 +1,36 @@
+MINIMALITY LADDER TEST RESULTS
+==================================================
+
+Configuration:
+  Seeds: 5, Geometries: 3
+  Penalty: 0.05, Threshold: 0.2
+
+Summary by level:
+  Level 0 (Base (shared Q, shared params)):
+    Train median: 0.0298
+    Holdout median: 149.86
+    Penalized median: 0.0298
+  Level 1 (Shift (delta_H for down-type)):
+    Train median: 0.5970
+    Holdout median: 832.54
+    Penalized median: 0.6470
+  Level 2 (Width (q_u != q_d)):
+    Train median: 0.1067
+    Holdout median: 315.63
+    Penalized median: 0.1567
+  Level 3 (Both (delta_H + q split)):
+    Train median: 0.1315
+    Holdout median: 421.78
+    Penalized median: 0.2315
+  Level 4 (Full (independent Q_u, Q_d)):
+    Train median: 1.0695
+    Holdout median: 477.13
+    Penalized median: 1.2195
+
+Decisions:
+  Level 1: REJECT (Holdout degraded by 455.6%)
+  Level 2: REJECT (Holdout degraded by 110.6%)
+  Level 3: REJECT (Holdout degraded by 181.5%)
+  Level 4: REJECT (Holdout degraded by 218.4%)
+
+Final recommendation: Level 0

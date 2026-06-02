@@ -1,0 +1,87 @@
+KERNEL COMPARISON RESULTS
+======================================================================
+
+
+Gaussian
+----------------------------------------
+Random sampling (5000 samples):
+  Good mc:  33 (0.7%)
+  Good CKM: 167 (3.3%)
+  Both:     0 (0.0%)
+
+Optimization (best 5):
+  1. loss=0.4838, mc=1.5539, Vus=0.2028
+  2. loss=0.5394, mc=2.3214, Vus=0.2220
+  3. loss=0.7314, mc=1.3642, Vus=0.1545
+  4. loss=0.7943, mc=2.5425, Vus=0.1718
+  5. loss=0.9678, mc=1.5365, Vus=0.1374
+
+Geometric Exponential (Cabibbo-base)
+----------------------------------------
+Random sampling (5000 samples):
+  Good mc:  34 (0.7%)
+  Good CKM: 65 (1.3%)
+  Both:     0 (0.0%)
+
+Optimization (best 5):
+  1. loss=3.4797, mc=5.7758, Vus=0.1275
+  2. loss=3.9088, mc=1.2753, Vus=0.1794
+  3. loss=4.6500, mc=1.6846, Vus=0.0403
+  4. loss=5.4109, mc=6.0956, Vus=0.0617
+  5. loss=5.5884, mc=2.4542, Vus=0.0097
+
+Exponential
+----------------------------------------
+Random sampling (5000 samples):
+  Good mc:  41 (0.8%)
+  Good CKM: 56 (1.1%)
+  Both:     0 (0.0%)
+
+Optimization (best 5):
+  1. loss=2.9020, mc=2.2518, Vus=0.1617
+  2. loss=5.2845, mc=2.0408, Vus=0.0011
+  3. loss=5.5179, mc=2.3511, Vus=0.0010
+  4. loss=5.8751, mc=4.8185, Vus=0.0280
+  5. loss=7.0938, mc=8.3258, Vus=0.1724
+
+Clockwork
+----------------------------------------
+Random sampling (5000 samples):
+  Good mc:  168 (3.4%)
+  Good CKM: 55 (1.1%)
+  Both:     1 (0.0%)
+
+Optimization (best 5):
+  1. loss=1.9039, mc=3.4401, Vus=0.1340
+  2. loss=3.7012, mc=3.0879, Vus=0.1084
+  3. loss=4.3411, mc=1.1763, Vus=0.1588
+  4. loss=5.1853, mc=1.9394, Vus=0.0008
+  5. loss=6.1194, mc=1.3411, Vus=0.0017
+
+Clockwork Dual-Phase
+----------------------------------------
+Random sampling (5000 samples):
+  Good mc:  202 (4.0%)
+  Good CKM: 57 (1.1%)
+  Both:     2 (0.0%)
+
+Optimization (best 5):
+  1. loss=0.2106, mc=1.5648, Vus=0.1839
+  2. loss=1.2597, mc=1.8074, Vus=0.2543
+  3. loss=4.6871, mc=1.0672, Vus=0.0105
+  4. loss=4.8206, mc=1.7090, Vus=0.0077
+  5. loss=4.9139, mc=1.2704, Vus=0.0020
+
+Hybrid (Power-Law + Quadratic)
+----------------------------------------
+Random sampling (5000 samples):
+  Good mc:  55 (1.1%)
+  Good CKM: 87 (1.7%)
+  Both:     0 (0.0%)
+
+Optimization (best 5):
+  1. loss=0.0478, mc=1.1879, Vus=0.2355
+  2. loss=0.1243, mc=1.4606, Vus=0.2208
+  3. loss=0.1522, mc=1.2787, Vus=0.2499
+  4. loss=0.3768, mc=2.1041, Vus=0.2214
+  5. loss=0.6259, mc=2.2398, Vus=0.2231

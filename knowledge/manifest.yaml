@@ -1,0 +1,44 @@
+# Maps wiki raw snapshots → canonical repo files. Re-run: python3 scripts/lint_wiki_manifest.py
+version: 1
+updated: 2026-06-01
+
+snapshots:
+  - raw: raw/sources/scientific-findings.md
+    canonical: SCIENTIFIC_FINDINGS.md
+    sha256: 816e858a6648763322d94fa98be8431ac0081b93db452e52dfadae814b9a7360
+
+  - raw: raw/sources/analysis-summary.md
+    canonical: ANALYSIS_SUMMARY.md
+    sha256: afb441d918ec7a1f88eaa91c735aac46639ee5165aaed1076b57dac6a74c6ede
+
+  - raw: raw/sources/boundary-analysis-report.md
+    canonical: BOUNDARY_ANALYSIS_REPORT.md
+    sha256: fa51ab6cbf021a06b0a119e8760c0ae7819b7b4b2f5eeafa7efcb577c9fa420f
+
+  - raw: raw/sources/manuscript-key-results.md
+    canonical: manuscript.tex
+    sha256: d1164a7bd9cf8f87c289651b076a25507a4fc5d67077812c341387db324d8b49
+    note: Distilled summary; canonical is full TeX
+
+  - raw: raw/sources/kernel-implementation.md
+    canonical: src/kernel.py
+    sha256: 7c11b7acdc0089b9c6f5a2cc15dde5c396a1887575a23098e2cb4c2fe13543dd
+
+  - raw: raw/sources/observables-extraction.md
+    canonical: src/observables.py
+    sha256: 29a0d4fb2bd0eba07201a02a226b2540e1a037cd6b0cb223d5d8112107a429c4
+
+  - raw: raw/sources/pareto-envelope-comparison.md
+    canonical: data/pareto_envelope_comparison_summary.txt
+    sha256: 0bd0a2a50ecdcf6f882faab43d91aaf32822d34f0ea040d05efa5fba7861f543
+
+external_sources:
+  - raw: raw/sources/bekenstein-holographic-bound.md
+    note: Curated summary; not a repo file — no hash sync
+
+  - raw: raw/sources/preskill-qit-entropy.md
+    note: Curated summary; not a repo file — no hash sync
+
+  - raw: raw/sources/split-fermion-overlap-test.md
+    canonical: diagnostics/10_split_fermion_overlap_derivation.py
+    note: Test output in diagnostics/results/10_split_fermion_overlap.txt — script hash not pinned

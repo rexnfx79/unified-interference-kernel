@@ -1,0 +1,21 @@
+MASS SCALING VERIFICATION RESULTS
+==================================================
+
+[PASS] mc scaling correct
+        mc=1.2703, target=1.27, error=0.02%
+[PASS] mu scaling correct
+        mu=0.002161, target=0.00216, error=0.03%
+[PASS] Scaling formula is correct
+        Formula mc = mt * (S[1]/S[0]) is mathematically sound
+[FAIL] Some points achieve correct mc ratio
+        0/1000 points have S[1]/S[0] within 20% of target
+[PASS] Diagonal matrices give identity CKM
+        Vus=0.0000, Vcb=0.0000, Vub=0.0000
+[PASS] Non-diagonal matrices give CKM mixing
+        Vus=0.1098, Vcb=0.1103
+[PASS] Phase fixing preserves singular values
+        S=[1.16835621 0.53764602 0.10945559], S_fixed=[1.16835621 0.53764602 0.10945559]
+[FAIL] Phase fixing preserves reconstruction
+        Max reconstruction error: 5.10e-01
+
+Total: 6/8 tests passed

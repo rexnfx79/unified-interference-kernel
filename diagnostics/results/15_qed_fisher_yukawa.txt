@@ -1,0 +1,32 @@
+QED Fisher/coherence vs mixing diagnostic
+threshold: 0.25
+n_samples: 10080
+verdict: refuted
+max_abs_r_pooled_qed: 0.01740638630970058
+
+coherence_l1_vs_mix_charged_lepton: 0.2029594975862009
+coherence_l1_vs_mix_neutrino: -0.4434428909505022
+coherence_l1_vs_mix_pooled: 0.013344284755410569
+coherence_l1_vs_mix_quark_down: -0.41257735864387973
+coherence_l1_vs_mix_quark_up: -0.46174174412039426
+distinguishability_uniform_vs_mix_charged_lepton: -0.22287437266311494
+distinguishability_uniform_vs_mix_neutrino: 0.4509793774405057
+distinguishability_uniform_vs_mix_pooled: -0.009945614129502425
+distinguishability_uniform_vs_mix_quark_down: 0.4159786335420522
+distinguishability_uniform_vs_mix_quark_up: 0.47007797838380694
+entropy_vs_mix_pooled: -0.012386409827118512
+off_diagonal_ratio_vs_mix_charged_lepton: 0.2029594975862009
+off_diagonal_ratio_vs_mix_neutrino: -0.44344289095050227
+off_diagonal_ratio_vs_mix_pooled: 0.013344284755410555
+off_diagonal_ratio_vs_mix_quark_down: -0.41257735864387973
+off_diagonal_ratio_vs_mix_quark_up: -0.4617417441203941
+qfi_mean_elements_vs_mix_charged_lepton: -0.0051538282793272385
+qfi_mean_elements_vs_mix_neutrino: 0.0326241298805302
+qfi_mean_elements_vs_mix_pooled: 0.012400482083077523
+qfi_mean_elements_vs_mix_quark_down: 0.260044597320344
+qfi_mean_elements_vs_mix_quark_up: 0.12723801197675152
+qfi_mean_singular_values_vs_mix_charged_lepton: 0.055640025269513387
+qfi_mean_singular_values_vs_mix_neutrino: 0.3369813308525815
+qfi_mean_singular_values_vs_mix_pooled: 0.01740638630970058
+qfi_mean_singular_values_vs_mix_quark_down: 0.2026048066766432
+qfi_mean_singular_values_vs_mix_quark_up: 0.1448074018860533

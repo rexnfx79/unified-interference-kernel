@@ -1,0 +1,120 @@
+======================================================================
+QA TEST REPORT
+Generated: 2026-06-01 17:21:27
+======================================================================
+
+SUMMARY
+----------------------------------------
+Tests run:    59
+Failures:     0
+Errors:       0
+Skipped:      0
+Success rate: 100.0%
+
+STATUS: ALL TESTS PASSED ✓
+
+======================================================================
+DETAILED OUTPUT
+======================================================================
+test_clockwork_at_zero_distance (test_alternative_kernels.TestKernelMathematics.test_clockwork_at_zero_distance)
+Clockwork kernel at d=0 should give envelope=1. ... ok
+test_clockwork_envelope_decay (test_alternative_kernels.TestKernelMathematics.test_clockwork_envelope_decay)
+Clockwork envelope should decay as q^(-|d|). ... ok
+test_exponential_envelope_decay (test_alternative_kernels.TestKernelMathematics.test_exponential_envelope_decay)
+Exponential envelope should decay as exp(-|d|/λ). ... ok
+test_gaussian_at_zero_distance (test_alternative_kernels.TestKernelMathematics.test_gaussian_at_zero_distance)
+Gaussian kernel at d=0 should give envelope=1. ... ok
+test_gaussian_envelope_decay (test_alternative_kernels.TestKernelMathematics.test_gaussian_envelope_decay)
+Gaussian envelope should decay as exp(-d²/(2σ²)). ... ok
+test_phase_constructive (test_alternative_kernels.TestKernelMathematics.test_phase_constructive)
+Test constructive interference (alpha=0). ... ok
+test_phase_interference (test_alternative_kernels.TestKernelMathematics.test_phase_interference)
+Test that phase interference term works correctly. ... ok
+test_power_law_envelope_decay (test_alternative_kernels.TestKernelMathematics.test_power_law_envelope_decay)
+Power-law envelope should decay as ε^(|d|/λ). ... ok
+test_clockwork_yukawa_reproducible (test_alternative_kernels.TestReproducibility.test_clockwork_yukawa_reproducible)
+Clockwork Yukawa matrices should be deterministic. ... ok
+test_observables_reproducible (test_alternative_kernels.TestReproducibility.test_observables_reproducible)
+Observable extraction should be deterministic. ... ok
+test_mc_accuracy (test_alternative_kernels.TestClockworkSolution.test_mc_accuracy)
+Test that mc is within 1% of target. ... ok
+test_svd_ratio (test_alternative_kernels.TestClockworkSolution.test_svd_ratio)
+Test that SVD ratio S[0]/S[1] is approximately 136. ... ok
+test_vcb_accuracy (test_alternative_kernels.TestClockworkSolution.test_vcb_accuracy)
+Test that Vcb is within 1% of target. ... ok
+test_vub_accuracy (test_alternative_kernels.TestClockworkSolution.test_vub_accuracy)
+Test that Vub is within 1% of target. ... ok
+test_vus_accuracy (test_alternative_kernels.TestClockworkSolution.test_vus_accuracy)
+Test that Vus is within 1% of target. ... ok
+test_large_distance (test_alternative_kernels.TestNumericalStability.test_large_distance)
+Test kernel with large distances doesn't produce NaN/Inf. ... ok
+test_large_q (test_alternative_kernels.TestNumericalStability.test_large_q)
+Test clockwork with large q. ... ok
+test_small_q (test_alternative_kernels.TestNumericalStability.test_small_q)
+Test clockwork with q close to 1. ... ok
+test_yukawa_matrix_complex (test_alternative_kernels.TestNumericalStability.test_yukawa_matrix_complex)
+Test that Yukawa matrices are complex. ... ok
+test_yukawa_matrix_shape (test_alternative_kernels.TestNumericalStability.test_yukawa_matrix_shape)
+Test that Yukawa matrices have correct shape. ... ok
+test_zero_eps (test_alternative_kernels.TestNumericalStability.test_zero_eps)
+Test with zero interference. ... ok
+test_all_kernels_registered (test_alternative_kernels.TestKernelRegistry.test_all_kernels_registered)
+Test that all 5 kernels are in the registry. ... ok
+test_bounds_match_params (test_alternative_kernels.TestKernelRegistry.test_bounds_match_params)
+Test that bounds length matches params length. ... ok
+test_kernels_have_required_fields (test_alternative_kernels.TestKernelRegistry.test_kernels_have_required_fields)
+Test that all kernels have required fields. ... ok
+test_different_seeds_different_results (test_reproducibility.TestOptimizationReproducibility.test_different_seeds_different_results)
+Test that different seeds give different results. ... ok
+test_differential_evolution_reproducible (test_reproducibility.TestOptimizationReproducibility.test_differential_evolution_reproducible)
+Test that differential_evolution gives same result with same seed. ... ok
+test_lbfgsb_reproducible (test_reproducibility.TestOptimizationReproducibility.test_lbfgsb_reproducible)
+Test that L-BFGS-B gives same result with same starting point. ... ok
+test_solution_is_local_minimum (test_reproducibility.TestSolutionStability.test_solution_is_local_minimum)
+Test that the solution is a local minimum. ... ok
+test_solution_robust_to_small_geometry_changes (test_reproducibility.TestSolutionStability.test_solution_robust_to_small_geometry_changes)
+Test that nearby geometries also have good solutions. ... ok
+test_ckm_hierarchy (test_reproducibility.TestCrossValidation.test_ckm_hierarchy)
+Test that CKM hierarchy is correct (Vus > Vcb > Vub). ... ok
+test_ckm_unitarity (test_reproducibility.TestCrossValidation.test_ckm_unitarity)
+Test that CKM matrix is approximately unitary. ... ok
+test_mass_hierarchy (test_reproducibility.TestCrossValidation.test_mass_hierarchy)
+Test that mass hierarchy is correct (mt > mc > mu). ... ok
+test_svd_singular_values_ordered (test_reproducibility.TestCrossValidation.test_svd_singular_values_ordered)
+Test that SVD singular values are in descending order. ... ok
+test_svd_singular_values_positive (test_reproducibility.TestCrossValidation.test_svd_singular_values_positive)
+Test that SVD singular values are all positive. ... ok
+unittest.case.FunctionTestCase (test_density_matrix_normalized) ... ok
+unittest.case.FunctionTestCase (test_coherence_diagonal_dominant) ... ok
+unittest.case.FunctionTestCase (test_qfi_nonnegative_perturbation) ... ok
+unittest.case.FunctionTestCase (test_compute_qed_keys) ... ok
+unittest.case.FunctionTestCase (test_include_qed_flag) ... ok
+unittest.case.FunctionTestCase (test_align_shared_params) ... ok
+unittest.case.FunctionTestCase (test_eigenvector_alignment_identical) ... ok
+unittest.case.FunctionTestCase (test_fisher_summaries_finite) ... ok
+unittest.case.FunctionTestCase (test_fisher_symmetric_psd) ... ok
+unittest.case.FunctionTestCase (test_lepton_log_masses) ... ok
+unittest.case.FunctionTestCase (test_quark_sector_fisher) ... ok
+unittest.case.FunctionTestCase (test_deltas_within_cr_bounds) ... ok
+unittest.case.FunctionTestCase (test_evaluate_verdict_falsifier_b) ... ok
+unittest.case.FunctionTestCase (test_run_fisher_transfer_smoke) ... ok
+unittest.case.FunctionTestCase (test_decoherence_rate_bounds) ... ok
+unittest.case.FunctionTestCase (test_diagonal_decoherence_trace_one) ... ok
+unittest.case.FunctionTestCase (test_external_neutrino_parameter) ... ok
+unittest.case.FunctionTestCase (test_external_quark_parameter) ... ok
+unittest.case.FunctionTestCase (test_full_decoherence_diagonal) ... ok
+unittest.case.FunctionTestCase (test_mixing_proxy_monotone_in_p) ... ok
+unittest.case.FunctionTestCase (test_neutrino_observables_from_synthetic_yukawas)
+SVD pipeline recovers planted PMNS angles. ... ok
+unittest.case.FunctionTestCase (test_pmns_angle_roundtrip)
+Known PMNS angles survive unitary extraction. ... ok
+unittest.case.FunctionTestCase (test_pmns_loss_perfect_match)
+PMNS loss is ~0 when observables match targets. ... ok
+unittest.case.FunctionTestCase (test_lepton_loss_perfect_match) ... ok
+unittest.case.FunctionTestCase (test_lepton_mass_roundtrip)
+Planted singular values reproduce PDG masses after tau anchoring. ... ok
+
+----------------------------------------------------------------------
+Ran 59 tests in 4.434s
+
+OK

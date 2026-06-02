@@ -1,0 +1,17 @@
+Experimental Fisher / PDG Jacobian diagnostic
+alignment_threshold: 0.5
+rank_regime_threshold: 0.25
+n_samples: 7920
+verdict: not_refuted
+mean_cross_sector_alignment: 0.4577807245932294
+rank_vs_regime_r: -0.7166517159936763
+logdet_vs_regime_r: -0.8557689601108465
+max_eig_vs_k_quark: -0.060210518519347035
+max_eig_vs_k_lepton: -0.04781689925889973
+max_eig_vs_k_neutrino: 0.07140559916309278
+quark_k_median: 1.575
+quark_rank_median: 1.4704727101682225
+lepton_k_median: 1.575
+lepton_rank_median: 1.0027691297241836
+neutrino_k_median: 1.575
+neutrino_rank_median: 1.0

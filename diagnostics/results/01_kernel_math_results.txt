@@ -1,0 +1,26 @@
+KERNEL MATH VERIFICATION RESULTS
+==================================================
+
+[PASS] Envelope suppression formula
+        Tested 4 cases with eps=0, k=0
+[PASS] Phase: pure alpha
+        α=0.7854, result=1.7071+0.7071j, expected=1.7071+0.7071j
+[PASS] Phase: k*(x_i+x_j)/2 term
+        k=1.0, x_left=2.0, x_right=4.0, expected phase=3.0000
+[PASS] Phase: η*(x_i-x_j) term
+        η=1.0, x_left=5.0, x_right=2.0, expected phase=3.0000
+[PASS] Phase: combined α + k + η
+        Expected phase=1.2000
+[PASS] Full kernel formula
+        Expected: 0.291203-0.025433j, Got: 0.291203-0.025433j
+[PASS] Matrix shape is 3x3
+        Got shape: (3, 3)
+[PASS] Matrix elements match kernel formula
+[FAIL] Third left position is used
+        kernel.py line 47 hardcodes left_vec[2]=0, ignoring input 5
+[PASS] Complex output with α=π/2
+        Expected: (1+1j), Got: (1+1j)
+[PASS] Real output when phase=0
+        Expected: 2.0, Got: (2+0j)
+
+Total: 10/11 tests passed

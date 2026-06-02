@@ -1,0 +1,61 @@
+Split-fermion overlap derivation test
+
+[standard Yu]
+width: 2.7776263499062526
+sigma_relation: 0.6944065874765631
+magnitude_correlation: 0.999963463343779
+mean_phase_error_rad: 1.9357208047986355e-16
+overlap_loss: 0.05373587176717893
+
+[standard Yd]
+width: 2.813390026073747
+sigma_relation: 0.7033475065184368
+magnitude_correlation: 0.9999977045602789
+mean_phase_error_rad: 1.8313476279213416e-16
+overlap_loss: 0.051319410478370416
+
+[csv_compact Yu]
+width: 4.37104586302992
+sigma_relation: 1.09276146575748
+magnitude_correlation: 0.9671609540405961
+mean_phase_error_rad: 1.0337882749565514e-16
+overlap_loss: 0.09945012483433206
+
+[csv_compact Yd]
+width: 2.8231191889699794
+sigma_relation: 0.7057797972424948
+magnitude_correlation: 0.9999966867281672
+mean_phase_error_rad: 1.5206094131808725e-16
+overlap_loss: 0.06910467330332018
+
+[kernel_comparison Yu]
+width: 2.6522231204049396
+sigma_relation: 0.6630557801012349
+magnitude_correlation: 0.9994133120452263
+mean_phase_error_rad: 1.3654427777296753e-16
+overlap_loss: 0.06958931904499614
+
+[kernel_comparison Yd]
+width: 2.7776263499062526
+sigma_relation: 0.6944065874765631
+magnitude_correlation: 0.999963463343779
+mean_phase_error_rad: 1.9357208047986355e-16
+overlap_loss: 0.05373587176717893
+
+[rigorous_validation Yu]
+width: 2.6243638861423166
+sigma_relation: 0.6560909715355792
+magnitude_correlation: 0.9981464157152581
+mean_phase_error_rad: 3.977691269510546e-15
+overlap_loss: 0.012623322606711658
+
+[rigorous_validation Yd]
+width: 2.736754113904214
+sigma_relation: 0.6841885284760535
+magnitude_correlation: 0.9998589324730639
+mean_phase_error_rad: 2.05222434012783e-16
+overlap_loss: 0.04463928340907704
+
+w_sigma_mean: 0.7367546530730507
+w_sigma_std: 0.13560254329452207
+w_sigma_rel_spread: 0.18405386749702252

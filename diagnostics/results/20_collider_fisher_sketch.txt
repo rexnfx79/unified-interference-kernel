@@ -1,0 +1,18 @@
+Collider-accessible Fisher sketch
+scope: pdg_jacobian_only_not_event_likelihood
+quark_fit_loss: 3470.4458414423925
+mixing_only_n_obs: 3
+mixing_only_logdet: -48.55167698056605
+mixing_only_eff_rank: 1.0
+mixing_only_condition: 1.8487682348604127e+18
+collider_plus_mixing_n_obs: 4
+collider_plus_mixing_logdet: -58.95015332873629
+collider_plus_mixing_eff_rank: 1.124551323219813
+collider_plus_mixing_condition: 5.054063588589252e+18
+full_pdg_n_obs: 7
+full_pdg_logdet: 12.380850775604337
+full_pdg_eff_rank: 1.2118764082029647
+full_pdg_condition: 1.630567993442755e+17
+mixing_logdet_fraction_of_full: -3.921513784515841
+verdict: too_thin_for_mechanism_test
+full_collider_fisher: out_of_repo_scope

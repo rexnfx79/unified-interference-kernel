@@ -1,0 +1,15 @@
+SVD HIERARCHY VERIFICATION RESULTS
+==================================================
+
+[PASS] SVD returns descending singular values
+        Tested 100 random matrices
+[PASS] Kernel can produce mass hierarchies
+        At least one geometry produces S[0]/S[1] > 10 and S[1]/S[2] > 10
+[FAIL] Hierarchies are sufficient magnitude
+        Max S[0]/S[1]=11.2, Max S[1]/S[2]=46551393232743960.0
+[FAIL] mc within 50% of target
+        0/1000 (0.0%) have mc within 50% of 1.27 GeV
+[PASS] Phase affects singular values
+        CV = [0.16514716 0.15907781 0.56198705], significant if > 0.1
+
+Total: 3/5 tests passed

@@ -1,0 +1,13 @@
+OPTIMIZATION SETTINGS VERIFICATION RESULTS
+==================================================
+
+[PASS] More iterations improve results
+        Loss improved by 40.1887 from 50 to 500 iterations
+[PASS] Loss landscape has local minima
+        Std=18.8965, suggests many local minima
+[PASS] Wider bounds improve results
+        Improvement: 89.4407
+[PASS] Re-optimization improves results
+        Improvement: 3.1055 (63.3%)
+
+Total: 4/4 tests passed

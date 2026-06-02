@@ -1,0 +1,9 @@
+PARETO ENVELOPE COMPARISON SUMMARY
+============================================================
+
+p values tested: [np.float64(1.0), np.float64(2.0), np.float64(3.0)]
+
+Knee locations:
+  p=1.00: No knee found
+  p=2.00: No knee found
+  p=3.00: CKM loss = 2.318462, mc = 5.417 GeV

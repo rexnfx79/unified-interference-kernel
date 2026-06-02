@@ -1,0 +1,47 @@
+---
+type: source
+title: Diagnostics Summary (Repo)
+tags: [flavor]
+related:
+  - proven-vs-conjecture-ledger
+  - plausibility-register
+  - repo-scientific-findings
+  - interference-kernel
+sources:
+  - raw/sources/diagnostics-summary.md
+authors: [Alexander Seto]
+year: 2026
+status: established
+created: 2026-06-01
+updated: 2026-06-02e
+---
+
+# Diagnostics Summary (Repo)
+
+Synthesis of `diagnostics/` reports (2026 ingest).
+
+## Headline verdicts
+
+| Result | Status |
+|--------|--------|
+| Code/math correct | **established** (56/56 tests) |
+| Gaussian kernel full quarks | **refuted** (structural CKM–\(m_c\) trade-off) |
+| Clockwork partial quark fit | **phenomenological** (\(m_c\), \(|V_{us}|\) OK; light quarks, CP fail) |
+| Shared-\(Q\) bottleneck | **refuted** (minimality ladder) |
+| Parameter universality | **refuted** (transfer test) |
+| Three-regime validation | **refuted** for quarks; partial lepton/neutrino fits |
+
+## Phenomenology tranche (21–25)
+
+| Script | Scaled result |
+|--------|---------------|
+| `21` | 0% strict quark; CKM–\(m_c\) Pareto |
+| `22` | 100 geom: 1% strict/legacy (train split); holdout m_e fails |
+| `23` | 100 geom: 78.9% strict PMNS; g_env≈0.47 |
+| `24` | Cross-kernel paired lepton+ν (30 geom) |
+| `25` | Lepton m_μ–m_e weighted Pareto |
+
+## Reports ingested
+
+- `QA_SUMMARY.md`, `GAUSSIAN_KERNEL_FINAL_REPORT.md`, `KERNEL_COMPARISON_REPORT_v2.md`, `MINIMALITY_REPORT.md`
+- `diagnostics/results/22_*` through `25_*` (2026-06-02e)

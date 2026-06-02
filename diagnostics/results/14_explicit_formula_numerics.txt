@@ -1,0 +1,11 @@
+Explicit formula numerics (Path D, educational)
+
+x  psi(x)  Li(x)  psi_minus_x  zero_correction
+100  94.045311  29.101354  -5.954689  -1.560916
+500  501.652117  101.161280  1.652117  1.239475
+1000  996.680912  177.815300  -3.319088  -0.478024
+5000  4997.959692  694.143855  -2.040308  -2.417068
+10000  10013.396693  1269.793082  13.396693  11.580021
+
+no_flavor_connection: true
+path_d_status: watch
