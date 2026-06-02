@@ -30,19 +30,21 @@ Two **non-equivalent** discrete geometry spaces appear in this repo. Do not comp
 
 | Claim | Test | Result (2026-06-02) |
 |-------|------|---------------------|
-| Larger **legacy** grid fixes strict quarks | Diagnostic **29** — 100 extension geoms (max_coord 6–8) | **0% strict**; best joint 4.28 vs legacy CSV 4.90 — marginal loss gain, no PDG match |
-| Exhaustive legacy re-baseline + shell-5 | Diagnostic **30** — unified DE on 1k + 5k shell | **Smoke only** (10+10 geoms); full run deferred (~6000 geom). Preliminary 0/20 strict |
-| Random **15-wide** triples fix strict quarks | Diagnostics **21, 27** — N=100 | **0% strict** (split); **2% strict** (joint, Gaussian) |
-| Kernel beats null/scrambled geometry | Diagnostic **31** — shuffled Q + Haar Yu/Yd | See `diagnostics/results/31_*` |
+| Exhaustive legacy + shell-5 fixes strict quarks | Diagnostic **30** — 989 + 4770 geoms, unified DE | **0/5759 strict**; Wilson 95% UB ≈ **0.07%** |
+| Shell-5 improves joint compromise only | Diag 30 joint min shell **3.06** vs 1k **5.01** | Yes; best \(m_c \approx 4.2\) GeV — still not PDG |
+| Extension sample (diag 29) | N=100 from 86k pool (rerun, penalty fix) | **92/100** solved, **0% strict**; best joint **4.28** |
+| Random **15-wide** triples | Diagnostics **21, 27** | **0% strict** (split); **2% strict** (joint, Gaussian) |
+| Kernel beats null/scrambled geometry | Diagnostic **31** | See `diagnostics/results/31_*` |
 
-## Diagnostic 29 headline numbers
+## Diagnostic 30 headline numbers
 
-- Extension pool: 86,808 geoms; sampled N=100 (seed 29029)
-- Solved 68/100; **0% strict** survivors
-- Best extension joint loss **4.28** (beats legacy CSV best **4.90**) but still no simultaneous PDG match
+- Unified protocol: DE maxiter=120, popsize=12, 4 seeds, joint 7-obs loss
+- Re-baselined 1k best: `Q=(2,4)`, `U=(0,1,4)`, `D=(2,3,4)`, joint **5.01** (legacy CSV champion re-opts to **6.29** under same protocol)
+- Shell-5 best: `Q=(1,2)`, `U=(2,4,5)`, `D=(2,3,4)`, joint **3.06**, \(m_c \approx 4.24\) GeV
+- θ* stored in `data/quark_geometry_followup_bests.json`; reproducibility diff **0**
 
 ## See also
 
-- `diagnostics/results/29_quark_geometry_extension.txt`
-- `diagnostics/results/30_quark_geometry_followup.txt` (smoke; not exhaustive)
-- `data/quark_geometry_followup_bests.json` (stored θ* for smoke bests)
+- `diagnostics/results/30_quark_geometry_followup.txt`
+- `data/quark_geometry_followup_baseline.csv`, `quark_geometry_followup_shell5.csv`
+- `diagnostics/results/29_quark_geometry_extension.txt` (superseded sample)

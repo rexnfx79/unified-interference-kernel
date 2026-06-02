@@ -1,12 +1,18 @@
-updated: 2026-06-02h
+updated: 2026-06-02i
 ---
 
 # Research Log
 
+## 2026-06-02 | implement | Geometry extension hardened follow-up (diag 30)
+
+- **Diagnostic 30:** exhaustive legacy re-baseline **989/1000** + shell-5 **4770/5000** (unified DE); **0/5759 strict**; Wilson 95% UB **~0.07%**; shell-5 joint min **3.06** vs re-baselined 1k **5.01** (legacy CSV **4.90** not comparable)
+- **Bugfix:** diag 29/30 — accept only `fun≈1000` penalty rejects, not high joint loss
+- **Artifacts:** `data/quark_geometry_followup_*.csv`, `quark_geometry_followup_bests.json`
+- **Note:** diag 29 N=100 sample superseded; [[quark-geometry-conventions]] documents legacy vs phenomenology grids
+
 ## 2026-06-02 | implement | Geometry extension + null baseline (diag 29–31)
 
-- **Diagnostic 29:** legacy grid extension (max_coord 6–8), N=100 sample — **0% strict**; best joint **4.28** vs legacy CSV **4.90**; geometry coverage not the bottleneck
-- **Diagnostic 30:** smoke only (10 baseline + 10 shell-5); full 6000-geom re-baseline **deferred** (multi-hour); preliminary 0/20 strict, Wilson UB ~0.16
+- **Diagnostic 29:** legacy grid extension (max_coord 6–8), N=100 sample — **0% strict** (see fun-filter bug; use 30); best joint **4.28** vs CSV **4.90**
 - **Diagnostic 25:** scaled to N=100 — corr **0.31** (vs **0.58** at N=24); 7 nondominated Pareto pts (vs 1); structural m_e tension persists
 - **Diagnostic 31:** Tier A4 N=30 — kernel train median **1.13** vs Haar **652**; all **0% strict**
 - **Manuscript:** Discussion §Pre-Registered Falsifiers (diag 27/28 numbers)

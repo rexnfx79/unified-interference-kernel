@@ -14,10 +14,10 @@ Seeds per geometry: 4; kernel: Gaussian (scripts/01 objective)
   strict_survivor=False
 
 --- EXTENSION SAMPLE ---
-  Solved: 68/100
+  Solved: 92/100
   Strict survivors: 0 (0.0%)
-  Joint loss min/median: 4.2798 / 11.8170
-  CKM loss min/median: 0.0259 / 0.4264
+  Joint loss min/median: 4.2798 / 14.3804
+  CKM loss min/median: 0.0259 / 0.5574
   Best extension: Q=(1, 2, 0), U=(1, 2, 4), D=(5, 6, 7)
     joint=4.2798 ckm=0.4193 mc=5.476 strict=False
   Beats legacy best joint loss: True
@@ -35,5 +35,5 @@ Seeds per geometry: 4; kernel: Gaussian (scripts/01 objective)
   geometries with max coordinate 7: 62083
 
 --- VERDICT ---
-  If strict_survivors=0 and best joint >= baseline, larger coordinate
-  grids do not fix simultaneous quark matching (consistent with diag 27).
+  Marginal joint-loss improvement possible beyond max_coord=5, but 0% strict survivors;
+  larger grids do not achieve simultaneous PDG match (consistent with diag 27).

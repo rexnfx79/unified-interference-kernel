@@ -43,8 +43,8 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 | `26` | Joint 3-sector N=100 shared L; see paired wins below |
 | `27` | Tier A2: joint 7-obs quark loss — Gaussian **2.0%** strict (2/100), gp2 **1.4%**; Pareto corr≈0.1; holdout median **0.69** (G) vs diag 21 **32.8** |
 | `28` | Tier B2: joint PMNS+Δm² — **27.8%** strict PMNS (22/79 solved) vs diag 23 **78.9%**; joint strict = PMNS strict |
-| `29` | Legacy grid extension (max_coord 6–8): N=100 sample, **0% strict**; best joint **4.28** vs CSV **4.90** |
-| `30` | Legacy exhaustive re-baseline + shell-5: **smoke only** (10+10); full 6000-geom run deferred |
+| `29` | Legacy extension pool N=100 (seed 29029): **92/100** solved, **0% strict**; best joint **4.28** vs CSV **4.90** (diag 30 shell-5 **3.06** on exhaustive legacy) |
+| `30` | **5759** legacy geoms (989+4770 solved): **0% strict**; shell-5 joint min **3.06** vs 1k **5.01**; θ* in `quark_geometry_followup_bests.json` |
 | `31` | Tier A4: null baseline N=30 — kernel **0% strict**; Haar train median **~360** vs kernel **~2.0**; shuffled Q similar to kernel |
 
 ### Diagnostic 31 — null geometry (N=30, seed 21021)
