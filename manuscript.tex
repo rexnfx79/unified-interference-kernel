@@ -323,7 +323,7 @@ The envelope width $\sigma \approx 5$ and phase parameter $\alpha \approx \pi$ e
 
 \subsection{Charged Leptons: Phase-Sensitive Regime}
 
-The phase-sensitive regime for charged leptons achieves exceptional performance, with a 60\% survivor rate (60 out of 100 geometries matching all experimental mass ranges). All survivors achieve perfect mass matches with errors $< 0.01\%$.
+The phase-sensitive regime for charged leptons achieves strong performance under \emph{legacy} full-objective optimization (all three masses in the loss): a 60\% survivor rate (60 out of 100 geometries matching all experimental mass ranges at 10\% tolerance). All legacy survivors achieve perfect mass matches with errors $< 0.01\%$. Pre-registered train/holdout diagnostics (optimize $m_\mu + m_\tau$, hold out $m_e$; diagnostic 22, 100 geometries) find only 1\% strict survivors---holdout $m_e$ fails structurally even when training masses are perfect.
 
 The best geometry achieves a total loss of $2.45 \times 10^{-11}$, with mass predictions:
 \begin{itemize}
@@ -332,7 +332,7 @@ The best geometry achieves a total loss of $2.45 \times 10^{-11}$, with mass pre
 \item $m_\tau = 1.776860$ GeV (target: 1.776860 GeV) --- perfect match
 \end{itemize}
 
-Z-scores for survivors are excellent: $Z(m_e) = 0.10$, $Z(m_\mu) = 0.27$, $Z(m_\tau) = 0.85$, all well below 1.0, indicating agreement within $1\sigma$.
+Z-scores for legacy survivors are excellent: $Z(m_e) = 0.10$, $Z(m_\mu) = 0.27$, $Z(m_\tau) = 0.85$, all well below 1.0, indicating agreement within $1\sigma$.
 
 \begin{figure}[htbp]
 \centering
@@ -345,14 +345,14 @@ The parameter sensitivity analysis (Fig.~\ref{fig:param_sensitivity}) reveals we
 
 \subsection{Neutrinos: Metric-Dominated Regime}
 
-The metric-dominated regime for neutrinos achieves a 45\% survivor rate (216 out of 480 optimizations). PMNS angle matches are excellent:
+The metric-dominated regime for neutrinos achieves a 45\% survivor rate under \emph{legacy} full-objective optimization (216 out of 480 optimizations matching all PMNS angles at 10\% tolerance). Pre-registered train/holdout strict diagnostics (diagnostic 23, 100 geometries) find 78.9\% PMNS survivors. PMNS angle matches among legacy survivors are excellent:
 \begin{itemize}
 \item $\theta_{12} = 0.569 \pm 0.023$ (target: 0.583) --- 2.40\% error
 \item $\theta_{23} = 0.783 \pm 0.006$ (target: 0.785) --- 0.21\% error
 \item $\theta_{13} = 0.1490 \pm 0.0008$ (target: 0.149) --- 0.02\% error
 \end{itemize}
 
-The best geometry achieves a PMNS loss of $1.36 \times 10^{-8}$, with angle predictions matching experimental values to within 0.02--2.40\%. Z-scores for survivors are excellent: $Z(\theta_{12}) = 0.62$, $Z(\theta_{23}) = 0.26$, $Z(\theta_{13}) = 0.05$, all well below 1.0.
+The best geometry achieves a PMNS loss of $1.36 \times 10^{-8}$, with angle predictions matching experimental values to within 0.02--2.40\%. Z-scores for legacy survivors are excellent: $Z(\theta_{12}) = 0.62$, $Z(\theta_{23}) = 0.26$, $Z(\theta_{13}) = 0.05$, all well below 1.0.
 
 \begin{figure}[htbp]
 \centering
@@ -361,7 +361,7 @@ The best geometry achieves a PMNS loss of $1.36 \times 10^{-8}$, with angle pred
 \label{fig:pred_vs_exp}
 \end{figure}
 
-The prediction vs experiment comparison (Fig.~\ref{fig:pred_vs_exp}) provides an honest assessment of model performance. The neutrino sector shows good agreement: all three mixing angles fall within 10\% of experimental values for 39\% of geometries. However, 50\% of neutrino optimizations failed entirely (producing $\theta_{23} \approx 0$), indicating the optimization landscape is challenging. The claimed correlation between $g_{\text{env}}$ and mixing angles is weak (Pearson $r < 0.1$), and the ``anarchy transition'' is not statistically significant in this dataset.
+The prediction vs experiment comparison (Fig.~\ref{fig:pred_vs_exp}) provides an honest assessment of model performance. The neutrino sector shows good agreement under legacy full-objective optimization: all three mixing angles fall within 10\% of experimental values for 39\% of geometries (Fig.~\ref{fig:success_threshold}). However, 50\% of legacy neutrino optimizations failed entirely (producing $\theta_{23} \approx 0$), indicating the optimization landscape is challenging. The claimed correlation between $g_{\text{env}}$ and mixing angles is weak (Pearson $r < 0.1$), and the ``anarchy transition'' is not statistically significant in this dataset.
 
 \subsection{Parameter Commonalities Across Sectors}
 
@@ -404,7 +404,7 @@ This progression is \emph{descriptive} of fitted $\varepsilon$ values in each se
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/fig_honest_success_threshold.png}
-\caption{Model robustness: success rate as a function of tolerance threshold. The quark sector (blue) achieves 0\% success at any threshold below 100\%, confirming complete model failure. The charged lepton sector (green) achieves 60\% success at 10\% tolerance. The neutrino sector (orange) achieves 39\% success at 10\% tolerance. This figure provides an honest assessment of model performance without arbitrary survivor definitions.}
+\caption{Model robustness: success rate as a function of tolerance threshold under \emph{legacy} full-objective optimization (all sector observables in the loss). The quark sector (blue) achieves 0\% success at any threshold below 100\%, confirming complete model failure. The charged lepton sector (green) achieves 60\% success at 10\% tolerance. The neutrino sector (orange) achieves 39\% success at 10\% tolerance. Pre-registered train/holdout diagnostics (diagnostics 21--23) report lower lepton strict rates (1\%) and higher neutrino strict PMNS rates (78.9\%) at 100 geometries; see Discussion.}
 \label{fig:success_threshold}
 \end{figure}
 

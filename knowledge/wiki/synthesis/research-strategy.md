@@ -90,9 +90,10 @@ Document **what the kernel can and cannot fit** with pre-registered splits and h
 ## Next phenomenology steps
 
 1. ~~**Scale diag 21** quark holdout to 100+ geometries (match lepton/neutrino N).~~ ✓ (2026-06-02f)
-2. **Reconcile survivor definitions:** archived 60%/45% used full-objective opt; train/holdout splits report lower legacy rates for leptons.
+2. ~~**Reconcile survivor definitions:** archived 60%/45% used full-objective opt; train/holdout splits report lower legacy rates for leptons.~~ ✓ manuscript §Results + fig caption (2026-06-02g)
 3. ~~**Joint 3-sector geometry corpus** for paired cross-kernel comparison at equal N.~~ ✓ (2026-06-02g, diag 26)
-4. ~~Manuscript §limitations: dual-report strict + legacy with objective protocol noted.~~ ✓ partial (2026-06-02f)
+4. ~~Manuscript §limitations: dual-report strict + legacy with objective protocol noted.~~ ✓ (2026-06-02g, extended to §Results)
+5. **Cross-kernel synthesis:** diag 26 shows geometry-dependent wins, no universal envelope — manuscript discussion paragraph optional
 
 ## Path D — watch only (unchanged)
 

@@ -10,7 +10,7 @@ related:
   - interference-kernel-manuscript
 status: active
 created: 2026-06-02
-updated: 2026-06-02f
+updated: 2026-06-02g
 ---
 
 # Manuscript ↔ Ledger Alignment
@@ -39,6 +39,9 @@ Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use wh
 |----------|-------|-------------|
 | Abstract L29 | “coherent phenomenological organization” without quark failure upfront | **Fixed** (2026-06-02f): quark 0% strict lead; dual-protocol survivor rates |
 | Introduction L42 | “successfully reproduces experimental observables” | **Fixed**: sector-specific partial success + protocol caveat |
+| §Results lepton L326 | 60% survivor without protocol label | **Fixed** (2026-06-02g): legacy vs train/holdout dual-report |
+| §Results neutrino L348 | 45% survivor without protocol label | **Fixed** (2026-06-02g): legacy vs diag 23 strict |
+| Fig. success_threshold L407 | 60%/39% without protocol | **Fixed** (2026-06-02g): legacy caption + pointer to Discussion |
 | §Three-regime L393 | “validates the three-regime framework” | **Fixed**: descriptive only, not validated |
 | §Neutrino–quark unification L455 | “unifies … within a single framework” | **Fixed**: quark failure breaks unification claim |
 | Future work L498–502 | UV / statistical validation of “universal scales” | **Fixed**: marked speculative; transfer refuted |
@@ -53,8 +56,9 @@ Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use wh
 | `21_quark_phenomenology_holdout.py` | Train/holdout + CKM–\(m_c\) Pareto (phenomenology tranche) |
 | `22_lepton_phenomenology_sweep.py` | 100 geom train/holdout; 1% strict; holdout m_e structural failure |
 | `23_neutrino_phenomenology_sweep.py` | 100 geom PMNS; 78.9% strict; g_env≈0.47; bootstrap weak g_env–mixing |
-| `24_cross_kernel_paired_lepton_neutrino.py` | Paired Gaussian vs clockwork vs generalized (30 geom) |
+| `24_cross_kernel_paired_lepton_neutrino.py` | Paired Gaussian vs clockwork vs generalized (30 geom; superseded by 26) |
 | `25_lepton_mass_pareto.py` | Weighted m_μ–m_e Pareto; holdout tension documented |
+| `26_joint_three_sector_cross_kernel.py` | Joint N=100 shared L; paired wins geometry-dependent; no universal envelope |
 
 ## Maintenance
 
