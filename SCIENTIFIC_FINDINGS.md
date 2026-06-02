@@ -1,5 +1,7 @@
 # Scientific Findings: Generalized Kernel Analysis
 
+> **Disclaimer (2026-06):** Headline survivor rates and claim status are maintained in [`knowledge/wiki/synthesis/manuscript-ledger-alignment.md`](knowledge/wiki/synthesis/manuscript-ledger-alignment.md) and [`knowledge/wiki/synthesis/survivor-protocol-preregistered.md`](knowledge/wiki/synthesis/survivor-protocol-preregistered.md). This document summarizes transfer-test refutation of parameter universality; it does **not** supersede the wiki ledger for sector survivor numbers.
+
 ## Executive Summary
 
 **Key Finding**: The "universal kernel" claim is NOT supported by rigorous testing.
@@ -76,7 +78,7 @@ The rigorous universality test:
 > "A universal interference kernel organizes Yukawa couplings across all fermion sectors through three projection regimes."
 
 ### Honest Claim
-> "A Gaussian × interference functional form can parameterize Yukawa matrices across fermion sectors. Each sector requires sector-specific parameter values. The quark sector requires 6 parameters, charged leptons require 5 parameters with modified phase velocity, and neutrinos require 6 parameters including envelope compression. This parameterization achieves good fits but does not constitute a predictive theory."
+> "A Gaussian × interference functional form can parameterize Yukawa matrices across fermion sectors. Each sector requires sector-specific parameter values. Pre-registered diagnostics find 0% quark strict survivors, 1% lepton strict (holdout m_e failure), and 27.8% neutrino joint strict (78.9% PMNS-only). This is a flexible parameterization, not a predictive universal theory."
 
 ---
 

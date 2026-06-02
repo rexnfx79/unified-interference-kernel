@@ -1,12 +1,12 @@
-# Unified Interference Kernel: Three Projection Regimes
+# Unified Interference Kernel: Phenomenological Flavor Parameterization
 
-Clean, minimal implementation of the interference kernel framework for flavor physics.
+Clean, minimal implementation of an interference-kernel **functional form** for organizing Yukawa couplings. This is a phenomenological parameterization, not a validated universal theory.
+
+> **Canonical status:** Survivor rates, falsifiers, and claim ledger live in [`knowledge/wiki/synthesis/manuscript-ledger-alignment.md`](knowledge/wiki/synthesis/manuscript-ledger-alignment.md) and [`knowledge/wiki/synthesis/survivor-protocol-preregistered.md`](knowledge/wiki/synthesis/survivor-protocol-preregistered.md). Prefer those over this README for headline numbers.
 
 ## Overview
 
-This repository contains a from-scratch implementation of the universal interference kernel model that organizes Yukawa couplings through envelope suppression and phase interference. The key insight is that different fermion sectors probe different **projection regimes** of the same underlying kernel.
-
-### The Kernel
+This repository implements a kernel form reused across fermion sectors:
 
 ```
 Y_ij = exp(-d²/(2σ²)) × [1 + ε exp(iΦ)]
@@ -18,22 +18,13 @@ where:
 - σ: Envelope width
 - ε: Interference strength
 
-### Three Regimes
+### Sector labels (organizational, not validated mechanism)
 
-1. **Envelope-Dominated (Quarks)**
-   - Baseline kernel parameters (σ, k, η)
-   - Sector-specific interference (ε_u, ε_d)
-   - Achieves 6σ precision on CKM mixing
+1. **Envelope-dominated setup (Quarks)** — baseline (σ, k, η) + (ε_u, ε_d). **0% strict survivors** at pre-registered PDG-relative tolerances (diag 21/27/30).
+2. **Phase-sensitive setup (Charged leptons)** — variable (k_e, η_e). Legacy full-objective ~60% at 10% tolerance; **1% strict** under train/holdout (diag 22, holdout m_e fails).
+3. **Metric-dominated setup (Neutrinos)** — envelope compression g_env on Y_ν. **27.8% joint strict** (PMNS + Δm², diag 28); **78.9% PMNS-only strict** (diag 23).
 
-2. **Phase-Sensitive (Charged Leptons)**  
-   - Phase parameters (k_e, η_e) vary from quark baseline
-   - Resolves muon mass hierarchy
-   - Achieves 6σ precision on charged lepton masses
-
-3. **Metric-Dominated (Neutrinos)**
-   - Envelope compression (g_env ≈ 0.60) required
-   - Information loss under compression → emergent anarchy
-   - Achieves 6σ precision on PMNS angles
+Universal **parameter** values across sectors are **refuted** (transfer test loss ≳ 800 frozen vs free).
 
 ## Repository Structure
 
@@ -134,47 +125,25 @@ Scans envelope compression parameter g_env.
 - **Reproducible**: All random seeds fixed, all data provenance clear
 - **Clean Architecture**: Separation of kernel physics, observables, and optimization
 
-## Theory
+## Theory (honest scope)
 
-This is an **effective field theory level** structural model. The claims are:
+Effective-field-theory-level **parameterization**. What is established vs refuted:
 
-1. A single universal kernel form can organize all Yukawa couplings
-2. Different fermion sectors correspond to different sampling regimes
-3. Neutrino anarchy emerges from metric-dominated projection (information loss)
-4. These are **structural observations** within this model class, not fundamental claims
+| Claim | Status |
+|-------|--------|
+| Single kernel **form** reused across sectors | Phenomenological |
+| Universal **parameters** across sectors | Refuted |
+| Three-regime **mechanism** validated by data | Refuted (quarks fail) |
+| Quark CKM–m_c Pareto trade-off | Structural (diag 21/27) |
+| Neutrino joint strict (PMNS + Δm²) | 27.8% (diag 28) |
+
+See `SCIENTIFIC_FINDINGS.md` and the wiki ledger for details.
 
 ## References
 
 - PDG 2024 for all experimental targets
-- Manuscript: `../Interference Lattice/manuscript.tex`
-- Original exploration repo: `../Interference Lattice/` (archived)
-
-## Status
-
-**Completed:**
-- ✅ Core kernel implementation
-- ✅ Observable extraction (CKM, masses, PMNS)
-- ✅ Optimizer wrapper
-- ✅ Comprehensive test suite
-- ✅ Quark optimization script
-- ✅ Clean repository structure
-
-**In Progress:**
-- ⏳ Charged lepton optimization script
-- ⏳ Neutrino optimization script
-- ⏳ Pareto analysis tools
-- ⏳ Figure generation scripts
-- ⏳ Statistical validation (Z-scores)
-
-**Future:**
-- Minimal manuscript (trimmed to 800-900 lines)
-- Publication-ready figures
-- Full documentation
+- Manuscript: `manuscript.tex` (phenomenological framing; quark failure upfront)
 
 ## License
 
 MIT
-
-## Contact
-
-For questions about the theory or implementation, see the manuscript in the parent directory.

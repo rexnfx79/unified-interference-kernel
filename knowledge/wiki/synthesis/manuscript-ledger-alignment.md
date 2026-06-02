@@ -11,12 +11,14 @@ related:
   - interference-kernel-manuscript
 status: active
 created: 2026-06-02
-updated: 2026-06-02h
+updated: 2026-06-02i
 ---
 
 # Manuscript ↔ Ledger Alignment
 
 Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use when revising abstract, conclusions, or limitations.
+
+**2026-06 integrity pass (2026-06-02i):** Manuscript §Results quark cherry-pick removed (diag 21/27/30 only); §Model regimes relabeled organizational; §Conclusions lead 27.8% joint ν strict; README/SCIENTIFIC_FINDINGS synced; pre-registration = repo-locked protocol note added.
 
 ## Claim table
 
@@ -50,6 +52,13 @@ Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use wh
 | Future work geometry extension | Implies larger grid fixes quarks | **Fixed**: exploratory only, not identified fix |
 | §Neutrino–quark unification L455 | “unifies … within a single framework” | **Fixed**: quark failure breaks unification claim |
 | Future work L498–502 | UV / statistical validation of “universal scales” | **Fixed**: marked speculative; transfer refuted |
+| §Results quark “Robust Fits” (2026-06-02i) | Cherry-picked best geometry contradicts Failure Analysis | **Fixed**: diag 21/27/30 preregistered numbers only |
+| §Model L115–121 (2026-06-02i) | “Key insight” / validated regimes | **Fixed**: organizational labels; mechanism not validated |
+| §Scope L475 (2026-06-02i) | “successfully organizes” | **Fixed**: partial lepton only; quark failure noted |
+| §Conclusions neutrino (2026-06-02i) | 78.9% PMNS headline | **Fixed**: lead 27.8% joint strict; 78.9% PMNS-only sub |
+| §Split-fermion L464 (2026-06-02i) | “independent of discrete geometry” | **Fixed**: Pareto persists but no strict match / not geometry-independent |
+| §Pre-Registered Falsifiers (2026-06-02i) | External prereg implied | **Fixed**: repo-locked protocol note |
+| README / SCIENTIFIC_FINDINGS (2026-06-02i) | 6σ, universal kernel, three-regime mechanism | **Fixed**: ledger pointers; preregistered survivor rates |
 
 ## Diagnostics cross-reference
 
@@ -67,7 +76,7 @@ Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use wh
 | `27_quark_joint_loss_holdout.py` | Tier A2: joint 7-obs loss; 2% strict (Gaussian); Pareto persists |
 | `28_neutrino_masses_pmns_joint.py` | Tier B2: PMNS + Δm² joint strict 27.8% vs 78.9% PMNS-only |
 | `29_quark_geometry_extension.py` | Legacy grid extension; 0% strict; marginal joint-loss gain |
-| `30_quark_geometry_followup.py` | Exhaustive legacy re-baseline + shell-5 (smoke complete; full deferred) |
+| `30_quark_geometry_followup.py` | Exhaustive legacy re-baseline + shell-5; **0/5759 strict** |
 | `31_null_geometry_baseline.py` | Tier A4: shuffled Q + Haar null vs kernel fit |
 
 ## Canonical protocol

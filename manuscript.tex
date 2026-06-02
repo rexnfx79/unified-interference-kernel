@@ -112,13 +112,13 @@ where $U$ and $V$ are unitary matrices encoding mixing angles, and $\Sigma$ is a
 
 \subsection{Three Projection Regimes}
 
-The key insight of this work is that different fermion sectors correspond to different projection regimes of the same universal kernel:
+We use three \emph{organizational labels}---envelope-dominated (quarks), phase-sensitive (charged leptons), and metric-dominated (neutrinos)---to classify sector-specific optimization setups and fitted parameter patterns. These labels are \textbf{not} validated as distinct sampling mechanisms of a universal kernel; pre-registered quark holdout diagnostics refute cross-sector mechanistic claims.
 
-\textbf{Envelope-Dominated Regime (Quarks):} The quark sector uses baseline kernel parameters $(\sigma, k, \alpha, \eta)$ with sector-specific interference strengths $(\varepsilon_u, \varepsilon_d)$ for up- and down-type quarks. The envelope suppression dominates the hierarchy, with phase interference providing subdominant corrections. This regime is optimized to reproduce CKM mixing angles and quark masses.
+\textbf{Envelope-Dominated Label (Quarks):} Baseline kernel parameters $(\sigma, k, \alpha, \eta)$ with sector-specific interference strengths $(\varepsilon_u, \varepsilon_d)$. Envelope suppression is the primary hierarchy driver in this setup; phase interference provides subdominant corrections.
 
-\textbf{Phase-Sensitive Regime (Charged Leptons):} The charged lepton sector uses variable phase parameters $(k_e, \eta_e)$ distinct from the quark baseline, while maintaining similar envelope parameters. Phase interference becomes more important, allowing for resolution of the muon mass hierarchy. This regime targets charged lepton masses with high precision.
+\textbf{Phase-Sensitive Label (Charged Leptons):} Variable phase parameters $(k_e, \eta_e)$ distinct from the quark baseline, with similar envelope parameters. This setup targets charged lepton masses under legacy full-objective or train/holdout protocols.
 
-\textbf{Metric-Dominated Regime (Neutrinos):} The neutrino sector employs envelope compression via a compression factor $g_{\text{env}}$, where the effective envelope width becomes $\sigma_{\text{eff}} = \sigma \times g_{\text{env}}$. This compression correlates with large mixing angles that mimic anarchical mixing patterns. Additionally, charged lepton Yukawa matrices use lepton-specific phase parameters $(k_e, \eta_e, \varepsilon_e)$, while neutrino Yukawa matrices use neutrino-specific parameters $(k, \eta, \varepsilon_\nu)$.
+\textbf{Metric-Dominated Label (Neutrinos):} Envelope compression via $g_{\text{env}}$ with $\sigma_{\text{eff}} = \sigma \times g_{\text{env}}$. Charged lepton Yukawa matrices use lepton-specific phase parameters $(k_e, \eta_e, \varepsilon_e)$; neutrino Yukawa matrices use $(k, \eta, \varepsilon_\nu)$. Large PMNS mixing is \emph{described} in this setup but not established as caused by compression.
 
 \begin{figure}[htbp]
 \centering
@@ -264,36 +264,21 @@ L_{\text{neutrino}} = L_{\text{mass}} + 5.0 \times L_{\text{PMNS}} + L_{\text{m1
 \end{equation}
 where $L_{\text{PMNS}}$ includes errors for $\theta_{12}, \theta_{23}, \theta_{13}$, and $L_{\text{m1,penalty}}$ ensures the lightest neutrino mass falls within acceptable bounds.
 
-The compression factor $g_{\text{env}} < 1$ correlates with large mixing angles that mimic anarchical mixing patterns. Optimal compression occurs at $g_{\text{env}} \approx 0.5$--0.6, where 45\% of geometries match experimental PMNS angles.
+The compression factor $g_{\text{env}} < 1$ correlates weakly with large mixing angles in exploratory fits. Under \emph{legacy full-objective} optimization (480 geometries, all PMNS angles in the loss), optimal compression occurs at $g_{\text{env}} \approx 0.5$--0.6 and 45\% of geometries match experimental PMNS angles at 10\% tolerance; pre-registered strict PMNS-only diagnostics (diagnostic 23, 100 geometries) report 78.9\% survivors.
 
 \section{Results: Quark Sector}
 
-\subsection{Robust Fits}
+\subsection{Pre-Registered Quark Diagnostics}
 
-We performed 1000 geometry optimizations for the quark sector, systematically exploring coordinate assignments up to maximum coordinate value 5. Each geometry was optimized with 5 random seeds to ensure robustness, with optimization runs using 200 iterations per seed.
+Quark-sector results are reported from pre-registered diagnostics only (not cherry-picked best geometries from legacy 1000-geometry archives).
 
-The best performing geometry achieves a CKM loss of 0.154872, with individual parameter matches:
-\begin{itemize}
-\item $V_{us}$: within 0.000113 of PDG target (0.22500) --- 0.05\% error
-\item $V_{cb}$: within 0.000002 of PDG target (0.04182) --- 0.005\% error
-\item $V_{ub}$: within 0.000000 of PDG target (0.00382) --- perfect match
-\end{itemize}
+\textbf{Diagnostic 21 (train/holdout, $N=100$):} Optimize $m_c$, $|V_{us}|$, $|V_{cb}|$; hold out $m_u$, $m_d$, $m_s$, $|V_{ub}|$. Across Gaussian, clockwork, and generalized envelopes: \textbf{0\% strict survivors} (0/100 per kernel). Median holdout loss $\approx 33$ (Gaussian); CKM--$m_c$ Pareto structure persists (correlation $\approx 0.01$).
 
-The 0\% strict survivor rate (no geometry matching all parameters within PDG experimental uncertainties simultaneously) represents a significant limitation of the current kernel form for the quark sector. While individual CKM parameters can be matched precisely, the model cannot simultaneously accommodate the full precision of quark data. This should be understood as a constraint on the model rather than merely a ``trade-off'': the current kernel form is effectively falsified by quark sector precision, though it remains useful for understanding structural relationships between observables.
+\textbf{Diagnostic 27 (Tier A2 joint loss, $N=100$):} All seven quark observables in the optimization objective. Gaussian kernel: \textbf{2.0\% strict survivors} (2/100); clockwork and generalized: 0\%. CKM--$m_c$ Pareto correlation $\approx 0.10$ persists---joint optimization is not the sole cause of failure. Median holdout-equivalent loss drops to $\approx 0.69$ vs.\ $\approx 33$ under the split objective, but simultaneous PDG-relative match remains negligible.
 
-The best geometry uses coordinates $Q=(3,4)$, $U=(2,3,4)$, $D=(0,1,2)$, with optimal parameters:
-\begin{itemize}
-\item $\sigma = 4.72$
-\item $k = 1.82$
-\item $\alpha = 3.92$
-\item $\eta = 1.51$
-\item $\varepsilon_u = 0.010$
-\item $\varepsilon_d = 0.010$
-\end{itemize}
+\textbf{Diagnostics 29--30 (geometry extension, unified joint protocol):} Extended grids (100 sampled extensions; 5759 legacy-re-baseline + shell-5 exhaustive) yield \textbf{0/5759 strict survivors}. Marginal joint-loss improvements do not produce simultaneous PDG match (Wilson 95\% upper bound on strict rate $\lesssim 0.001$).
 
-Notably, both $\varepsilon_u$ and $\varepsilon_d$ are at the lower bound of their allowed range, confirming that the envelope-dominated regime achieves hierarchy primarily through envelope suppression rather than phase interference.
-
-Quark mass predictions for the best geometry include $m_c = 1.56$ GeV (target: 1.27 GeV), showing reasonable agreement with experimental values. The trade-off between CKM mixing accuracy and mass accuracy is captured by the Pareto frontier analysis.
+Legacy 1000-geometry archives show individual CKM elements can be fit precisely while $m_c$ remains order-of-magnitude wrong ($m_c = 19.4 \pm 17.9$ GeV vs.\ 1.27 GeV target); pre-registered diagnostics confirm this is structural, not an artifact of geometry sampling or train/holdout splitting alone.
 
 \begin{figure}[htbp]
 \centering
@@ -425,6 +410,8 @@ The consistent parameter scales ($\sigma \approx 4$--5, $\alpha \approx \pi$) li
 
 \subsection{Pre-Registered Falsifiers}
 
+\textit{Reporting convention:} ``Pre-registered'' here denotes the repo-locked strict survivor protocol (companion repository wiki: \texttt{survivor-protocol-preregistered}), fixed geometry seeds, and Tier A/B falsifier scripts committed before result ingestion---not external clinical-trial-style preregistration on a third-party registry.
+
 Tier~A2 (diagnostic~27) optimizes all seven quark observables jointly rather than the train/holdout split of diagnostic~21. Under this objective the Gaussian kernel achieves \textbf{2.0\% strict survivors} (2/100 geometries)---not zero, but still negligible---while the CKM--$m_c$ Pareto structure persists (correlation $\approx 0.1$). The split objective is therefore not the sole cause of quark failure, though holdout masses remain poorly predicted (median holdout loss $\approx 0.69$ vs.\ $\approx 33$ under the split objective).
 
 Tier~B2 (diagnostic~28) adds $\Delta m^2$ to the neutrino optimization objective. PMNS-only strict success drops from \textbf{78.9\%} (diagnostic~23) to \textbf{27.8\%} (22/79 solved geometries); joint strict (angles + $\Delta m^2$) equals PMNS-only strict at 27.8\%. Neutrino phenomenology success is therefore largely \emph{PMNS-angle} success; mass splittings are not simultaneously fit at pre-registered tolerances.
@@ -461,7 +448,7 @@ We do \emph{not} claim that envelope compression \emph{causes} large neutrino mi
 
 Extra-dimensional split-fermion constructions with localized zero modes and point interactions have demonstrated that fermion mass hierarchies, mixing, and CP violation can arise from geometric overlap effects rather than imposed flavor symmetries, including realizations for quarks \citep{Fujimoto2013} and leptons \citep{Fujimoto2014} based on generalized boundary conditions and twisted Higgs phases. Recent work has also addressed the dynamical origin of bulk mass parameters \citep{Angelescu2019} and Gaussian wavefunction overlaps in string compactifications \citep{Abe2016}. These models operate within a higher-dimensional gauge theory framework and rely on explicit boundary-condition engineering and sector-specific bulk parameters to reproduce observed flavor structure.
 
-By contrast, the present work does not assume a literal extra spatial dimension or boundary-condition dynamics. Instead, we study an effective interference Yukawa kernel defined over an internal coordinate and show that a single kernel form produces qualitatively different flavor behavior depending on how fermions project onto it. Our analysis emphasizes kernel-level structural constraints---most notably a universal CKM--$m_c$ Pareto envelope---identified through large-scale optimization and shown to be independent of discrete geometry choices. In this sense, the present framework is complementary to split-fermion point-interaction models: while both exploit geometric localization, we focus on interference-driven projection regimes and universal constraint surfaces rather than on UV-specific boundary constructions.
+By contrast, the present work does not assume a literal extra spatial dimension or boundary-condition dynamics. Instead, we study an effective interference Yukawa kernel defined over an internal coordinate and document sector-specific fit outcomes under different optimization protocols. Our analysis emphasizes a structural CKM--$m_c$ Pareto envelope that persists across pre-registered kernel variants and geometry extensions (diagnostics 21, 27, 29--30), though it does \emph{not} yield strict simultaneous PDG match and should not be read as geometry-independent universality. In this sense, the present framework is complementary to split-fermion point-interaction models: while both exploit geometric localization, we focus on interference-driven organizational labels and documented constraint surfaces rather than on UV-specific boundary constructions.
 
 \subsection{Scope and Limitations}
 
@@ -472,7 +459,7 @@ This model operates at the effective field theory level, providing a structural 
 \item How the discrete geometry arises from fundamental physics
 \end{itemize}
 
-The model successfully organizes Yukawa couplings within this framework, but the framework itself remains phenomenological. Future work may explore connections to UV physics, but such exploration is beyond the scope of this structural analysis.
+The framework partially organizes lepton-sector Yukawa couplings under specific optimization protocols, but quark holdout failure (0\% strict survivors) limits any cross-sector organization claim. The model remains phenomenological throughout. Future work may explore connections to UV physics, but such exploration is beyond the scope of this structural analysis.
 
 \section{Conclusions and Further Study}
 
@@ -483,7 +470,7 @@ We have presented a phenomenological framework for organizing Yukawa couplings t
 
 \item \textbf{Charged Lepton Sector: Partial Success with Holdout Failure.} Legacy full-objective sweeps report $\sim$60\% success at 10\% tolerance, but train/holdout diagnostics (optimize $m_\mu + m_\tau$, hold out $m_e$) find \textbf{1\% strict survivors}---holdout $m_e$ fails structurally even when training masses are perfect.
 
-\item \textbf{Neutrino Sector: PMNS-Only Caveat.} Train/holdout strict diagnostics find \textbf{78.9\% PMNS survivors} (100 geometries); legacy archives report $\sim$39--45\% at 10\% tolerance. Joint PMNS + mass objectives (diagnostic 28) test whether this success survives when $\Delta m^2$ is included. Legacy runs show $\sim$50\% optimization failure ($\theta_{23} \approx 0$), and $g_{\text{env}}$--mixing correlations remain weak.
+\item \textbf{Neutrino Sector: Joint Strict 27.8\%.} Joint PMNS + $\Delta m^2$ objectives (diagnostic 28, Tier B2) yield \textbf{27.8\% strict survivors} (22/79 solved geometries)---the headline neutrino result when masses are included. PMNS-only train/holdout strict diagnostics (diagnostic 23) find \textbf{78.9\% PMNS survivors} (100 geometries) as a sub-result that does not survive joint mass constraints. Legacy full-objective archives report $\sim$39--45\% at 10\% tolerance; legacy runs show $\sim$50\% optimization failure ($\theta_{23} \approx 0$), and $g_{\text{env}}$--mixing correlations remain weak.
 
 \item \textbf{Parameter Commonalities: Likely Artifacts.} The apparent consistency in $\sigma \approx 4$--5 and $\alpha \approx \pi$ likely reflects optimization bias toward interior parameter values rather than physical universality.
 

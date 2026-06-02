@@ -44,6 +44,12 @@ htmlcov/
 *.tmp
 *.bak
 
+# Diagnostic run logs (stdout captures; results *.txt are canonical)
+diagnostics/results/*_run.log
+diagnostics/results/*_rerun.log
+diagnostics/results/*_baseline.log
+diagnostics/results/*_shell*.log
+
 # LaTeX build artifacts
 manuscript.aux
 manuscript.bbl
