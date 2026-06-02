@@ -2,9 +2,32 @@
 
 from __future__ import annotations
 
-from typing import Dict, List, Tuple
+from typing import Dict, List, NamedTuple, Tuple
 
 import numpy as np
+
+
+class JointThreeSectorGeometry(NamedTuple):
+    """Shared left positions L=Q across lepton, neutrino, and quark sectors."""
+
+    index: int
+    L: Tuple[int, ...]
+    E: Tuple[int, ...]
+    N: Tuple[int, ...]
+    U: Tuple[int, ...]
+    D: Tuple[int, ...]
+
+    @property
+    def lepton(self) -> Tuple[Tuple, Tuple]:
+        return (self.L, self.E)
+
+    @property
+    def neutrino(self) -> Tuple[Tuple, Tuple]:
+        return (self.L, self.N)
+
+    @property
+    def quark(self) -> Tuple[Tuple, Tuple, Tuple]:
+        return (self.L, self.U, self.D)
 
 # Legacy range-based survivors (scripts/04_analyze_results.py)
 LEGACY_LEPTON_RANGES = {
@@ -35,6 +58,39 @@ def generate_lepton_geometries(n_geom: int, seed: int) -> List[Tuple[Tuple, Tupl
         if key not in seen:
             seen.add(key)
             geometries.append(key)
+        attempts += 1
+    return geometries
+
+
+def generate_joint_three_sector_geometries(
+    n_geom: int, seed: int
+) -> List[JointThreeSectorGeometry]:
+    """Joint corpus: shared L (= quark Q) with independent right-handed triples."""
+    rng = np.random.RandomState(seed)
+    coords = list(range(15))
+    seen = set()
+    geometries: List[JointThreeSectorGeometry] = []
+    attempts = 0
+    max_attempts = max(n_geom * 50, 1000)
+    while len(geometries) < n_geom and attempts < max_attempts:
+        L = tuple(sorted(rng.choice(coords, 3, replace=False)))
+        E = tuple(sorted(rng.choice(coords, 3, replace=False)))
+        N = tuple(sorted(rng.choice(coords, 3, replace=False)))
+        U = tuple(sorted(rng.choice(coords, 3, replace=False)))
+        D = tuple(sorted(rng.choice(coords, 3, replace=False)))
+        key = (L, E, N, U, D)
+        if key not in seen:
+            seen.add(key)
+            geometries.append(
+                JointThreeSectorGeometry(
+                    index=len(geometries),
+                    L=L,
+                    E=E,
+                    N=N,
+                    U=U,
+                    D=D,
+                )
+            )
         attempts += 1
     return geometries
 

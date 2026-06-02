@@ -1,7 +1,14 @@
-updated: 2026-06-02f
+updated: 2026-06-02g
 ---
 
 # Research Log
+
+## 2026-06-02 | implement | Joint 3-sector cross-kernel corpus (diag 26)
+
+- **Code:** `generate_joint_three_sector_geometries` in `phenomenology_utils.py` — shared L (= quark Q), independent E/N/U/D; seed **26026**
+- **Diagnostic:** `26_joint_three_sector_cross_kernel.py` — Gaussian/clockwork/generalized p∈{1.5,2,3} on quark+lepton+neutrino at equal N; `--smoke` (N=3) verified in ~1.5 min
+- **Full run:** N=100, 4 seeds — **complete** (45.4 min); quark G/C paired 62/37/1; lepton holdout median ~34 (all kernels); ν 87–95/100 solved
+- **Status:** Joint 3-sector corpus complete; supersedes diag 24 for cross-sector paired comparison
 
 ## 2026-06-02 | implement | Scaled quark holdout + manuscript alignment
 

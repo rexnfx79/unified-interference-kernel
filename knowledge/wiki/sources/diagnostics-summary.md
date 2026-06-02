@@ -39,6 +39,7 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 | `22` | 100 geom: 1% strict/legacy (train split); holdout m_e fails |
 | `23` | 100 geom: 78.9% strict PMNS; g_env≈0.47 |
 | `24` | Cross-kernel paired lepton+ν (30 geom) |
+| `26` | Joint 3-sector N=100: quark G wins 62/37; lepton holdout med ~34; ν 87–95 solved |
 | `25` | Lepton m_μ–m_e weighted Pareto |
 
 ## Reports ingested

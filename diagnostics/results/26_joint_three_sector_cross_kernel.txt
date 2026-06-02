@@ -1,0 +1,112 @@
+==============================================================================
+JOINT 3-SECTOR CROSS-KERNEL PAIRED COMPARISON (diagnostic 26)
+==============================================================================
+
+Joint corpus: N=100 geometries (requested), seed=26026, seeds/kernel/geom=4
+Shared L (= quark Q) across lepton, neutrino, quark; independent E, N, U, D.
+Kernels: gaussian, clockwork, generalized p ∈ [1.5, 2.0, 3.0]
+Optimizer: {'maxiter': 120, 'popsize': 12, 'tol': 1e-06, 'mutation': (0.5, 1.0), 'recombination': 0.7, 'polish': False}
+Wall time: 45.4 min
+
+Quark/lepton: optimize train; report train + holdout.
+Neutrino: optimize PMNS loss.
+
+--- QUARK PER-KERNEL (best seed per geometry) ---
+
+[gaussian]
+  Geometries solved: 100
+  train mean/median: 0.233947 / 0.008583
+  Holdout mean/median: 11096.9527 / 28.9241
+
+[clockwork]
+  Geometries solved: 100
+  train mean/median: 0.963568 / 0.164187
+  Holdout mean/median: 32943.5545 / 35503.8367
+
+[generalized_p1.5]
+  Geometries solved: 100
+  train mean/median: 53.941324 / 1.950419
+  Holdout mean/median: 12584.4228 / 217.6802
+
+[generalized_p2.0]
+  Geometries solved: 100
+  train mean/median: 46.443581 / 1.998210
+  Holdout mean/median: 11778.1214 / 217.9804
+
+[generalized_p3.0]
+  Geometries solved: 100
+  train mean/median: 45.619610 / 1.999933
+  Holdout mean/median: 12479.9198 / 259.7026
+
+--- QUARK PAIRED vs GAUSSIAN (>5% better = win) ---
+  clockwork: wins=37, gaussian wins=62, ties=1 (n=100); mean Δ=0.7296
+  generalized_p1.5: wins=15, gaussian wins=83, ties=2 (n=100); mean Δ=53.7074
+  generalized_p2.0: wins=14, gaussian wins=83, ties=3 (n=100); mean Δ=46.2096
+  generalized_p3.0: wins=12, gaussian wins=85, ties=3 (n=100); mean Δ=45.3857
+
+--- LEPTON PER-KERNEL (best seed per geometry) ---
+
+[gaussian]
+  Geometries solved: 100
+  train mean/median: 0.057404 / 0.000000
+  Holdout mean/median: 740.4016 / 34.2813
+
+[clockwork]
+  Geometries solved: 100
+  train mean/median: 0.000000 / 0.000000
+  Holdout mean/median: 391.9162 / 25.4051
+
+[generalized_p1.5]
+  Geometries solved: 100
+  train mean/median: 0.067050 / 0.000000
+  Holdout mean/median: 331.9888 / 23.2452
+
+[generalized_p2.0]
+  Geometries solved: 100
+  train mean/median: 0.057404 / 0.000000
+  Holdout mean/median: 735.0397 / 34.2813
+
+[generalized_p3.0]
+  Geometries solved: 100
+  train mean/median: 0.066205 / 0.000000
+  Holdout mean/median: 8471.8158 / 218.0850
+
+--- LEPTON PAIRED vs GAUSSIAN (>5% better = win) ---
+  clockwork: wins=30, gaussian wins=69, ties=1 (n=100); mean Δ=-0.0574
+  generalized_p1.5: wins=41, gaussian wins=56, ties=3 (n=100); mean Δ=0.0096
+  generalized_p2.0: wins=0, gaussian wins=1, ties=99 (n=100); mean Δ=0.0000
+  generalized_p3.0: wins=50, gaussian wins=49, ties=1 (n=100); mean Δ=0.0088
+
+--- NEUTRINO PER-KERNEL (best seed per geometry) ---
+
+[gaussian]
+  Geometries solved: 87
+  pmns_loss mean/median: 0.174989 / 0.000029
+
+[clockwork]
+  Geometries solved: 79
+  pmns_loss mean/median: 0.055409 / 0.007358
+
+[generalized_p1.5]
+  Geometries solved: 83
+  pmns_loss mean/median: 0.111485 / 0.000351
+
+[generalized_p2.0]
+  Geometries solved: 87
+  pmns_loss mean/median: 0.174949 / 0.000029
+
+[generalized_p3.0]
+  Geometries solved: 95
+  pmns_loss mean/median: 0.238941 / 0.000026
+
+--- NEUTRINO PAIRED vs GAUSSIAN (>5% better = win) ---
+  clockwork: wins=17, gaussian wins=61, ties=1 (n=79); mean Δ=0.0443
+  generalized_p1.5: wins=25, gaussian wins=54, ties=4 (n=83); mean Δ=0.0057
+  generalized_p2.0: wins=0, gaussian wins=0, ties=87 (n=87); mean Δ=-0.0000
+  generalized_p3.0: wins=41, gaussian wins=44, ties=2 (n=87); mean Δ=-0.0753
+
+--- HONEST CONCLUSIONS ---
+  • Joint corpus enables cross-sector comparison at equal N with shared L.
+  • Kernel choice shifts train/PMNS on some geometries — not sector resolution.
+  • Quark holdout and lepton m_e remain poor across kernels (structural).
+  • No universal envelope; paired wins are geometry-dependent.

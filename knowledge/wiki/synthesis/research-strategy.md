@@ -13,7 +13,7 @@ related:
   - fisher-transfer-universality-test
 status: active
 created: 2026-06-01
-updated: 2026-06-02e
+updated: 2026-06-02g
 ---
 
 # Research Strategy (User Decisions)
@@ -39,7 +39,8 @@ Living record of **strategic choices** for unified-interference-kernel explorati
 | Manuscript ↔ ledger | [[manuscript-ledger-alignment]] | ✓ |
 | Lepton sector phenomenology sweep | `diagnostics/22_lepton_phenomenology_sweep.py` | ✓ scaled 100 geom |
 | Neutrino PMNS sweep | `diagnostics/23_neutrino_phenomenology_sweep.py` | ✓ scaled 100 geom |
-| Cross-kernel lepton+ν paired | `diagnostics/24_cross_kernel_paired_lepton_neutrino.py` | ✓ |
+| Cross-kernel lepton+ν paired | `diagnostics/24_cross_kernel_paired_lepton_neutrino.py` | ✓ (30 geom; superseded by 26) |
+| Joint 3-sector cross-kernel | `diagnostics/26_joint_three_sector_cross_kernel.py` | ✓ N=100 (45 min) |
 | Lepton m_μ–m_e Pareto | `diagnostics/25_lepton_mass_pareto.py` | ✓ |
 | Refactor transfer script → observables.py | `scripts/03_true_transfer_test.py` | ✓ |
 
@@ -82,14 +83,15 @@ Document **what the kernel can and cannot fit** with pre-registered splits and h
 | `21_quark_phenomenology_holdout.py` | 100 geom train/holdout; 0% strict; CKM–\(m_c\) Pareto |
 | `22_lepton_phenomenology_sweep.py` | 100 geom train/holdout; 1% strict |
 | `23_neutrino_phenomenology_sweep.py` | 100 geom PMNS; 78.9% strict |
-| `24_cross_kernel_paired_lepton_neutrino.py` | Cross-kernel paired (30 geom) |
+| `24_cross_kernel_paired_lepton_neutrino.py` | Cross-kernel paired lepton+ν (30 geom) |
+| `26_joint_three_sector_cross_kernel.py` | Joint corpus N=100; shared L; 3-sector paired |
 | `25_lepton_mass_pareto.py` | m_μ–m_e weighted Pareto |
 
 ## Next phenomenology steps
 
 1. ~~**Scale diag 21** quark holdout to 100+ geometries (match lepton/neutrino N).~~ ✓ (2026-06-02f)
 2. **Reconcile survivor definitions:** archived 60%/45% used full-objective opt; train/holdout splits report lower legacy rates for leptons.
-3. **Joint 3-sector geometry corpus** for paired cross-kernel comparison at equal N.
+3. ~~**Joint 3-sector geometry corpus** for paired cross-kernel comparison at equal N.~~ ✓ (2026-06-02g, diag 26)
 4. ~~Manuscript §limitations: dual-report strict + legacy with objective protocol noted.~~ ✓ partial (2026-06-02f)
 
 ## Path D — watch only (unchanged)
