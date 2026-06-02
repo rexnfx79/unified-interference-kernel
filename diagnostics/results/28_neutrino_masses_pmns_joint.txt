@@ -1,0 +1,32 @@
+==============================================================================
+NEUTRINO MASSES + PMNS JOINT (diagnostic 28, Tier B2)
+==============================================================================
+
+Objective: L_mass(Δm²) + 5*L_PMNS
+Reference diag 23 PMNS-only strict: 78.9%
+
+PMNS targets (rad):
+  theta12: 0.5903
+  theta23: 0.785
+  theta13: 0.149
+Mass targets (eV²):
+  dm21: 7.53e-05
+  dm31: 0.002453
+
+Geometries: 100 requested, 79 solved (seed=28028)
+Seeds per geometry: 4
+Optimizer: {'maxiter': 120, 'popsize': 12, 'tol': 1e-06, 'mutation': (0.5, 1.0), 'recombination': 0.7, 'polish': False}
+PMNS strict tol: {'theta12': 0.15, 'theta23': 0.15, 'theta13': 0.2}; mass strict tol: {'dm21': 0.3, 'dm31': 0.3}
+Optimization failures (theta23 ≈ 0): 88
+
+--- SUMMARY (best seed per geometry) ---
+  Geometries solved: 79 / 100
+  Strict PMNS only: 22 (27.8%)
+  Strict PMNS + Δm² (joint): 22 (27.8%)
+  Joint loss median: 0.500661
+  Mass loss median: 0.048693
+
+--- B2 VERDICT ---
+  PMNS-only strict dropped from 78.9% to 27.8%
+  under joint objective (same geometry count when comparable).
+  Joint strict (angles + Δm²): 27.8%.

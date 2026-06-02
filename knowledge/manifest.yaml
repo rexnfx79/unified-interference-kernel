@@ -1,6 +1,6 @@
 # Maps wiki raw snapshots → canonical repo files. Re-run: python3 scripts/lint_wiki_manifest.py
 version: 1
-updated: 2026-06-01
+updated: 2026-06-02
 
 snapshots:
   - raw: raw/sources/scientific-findings.md
@@ -17,7 +17,7 @@ snapshots:
 
   - raw: raw/sources/manuscript-key-results.md
     canonical: manuscript.tex
-    sha256: d1164a7bd9cf8f87c289651b076a25507a4fc5d67077812c341387db324d8b49
+    sha256: de2f5d3d3ebd2074a5d9440566f5fa6363fa79bf2071f4b3968fca5cd4d7d268
     note: Distilled summary; canonical is full TeX
 
   - raw: raw/sources/kernel-implementation.md
@@ -26,7 +26,7 @@ snapshots:
 
   - raw: raw/sources/observables-extraction.md
     canonical: src/observables.py
-    sha256: 29a0d4fb2bd0eba07201a02a226b2540e1a037cd6b0cb223d5d8112107a429c4
+    sha256: 4b835531a3de49a762d1a2c63de7342fd222de0ee4dd1e98f37443de57f1780f
 
   - raw: raw/sources/pareto-envelope-comparison.md
     canonical: data/pareto_envelope_comparison_summary.txt

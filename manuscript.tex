@@ -17,7 +17,8 @@
 \newcommand{\vect}[1]{\boldsymbol{#1}}
 
 % Title and author
-\title{Unified Interference Kernel: Three Projection Regimes for Fermion Flavor}
+\title{Unified Interference Kernel: Phenomenological Fits Across Fermion Sectors\\[0.4em]
+\large\textit{Projection regimes as organizational labels, not validated mechanism}}
 \author{Alexander Seto}
 \date{January 18, 2026}
 
@@ -37,7 +38,7 @@ The flavor puzzle in the Standard Model---the origin of fermion masses and mixin
 
 The split-fermion framework \citep{ArkaniHamed2000} provided an elegant geometric approach, positing that fermions are localized at different positions in an extra dimension, with Yukawa couplings determined by wavefunction overlaps. However, this approach alone cannot account for the full complexity of observed mixing patterns, particularly in the neutrino sector where mixing angles are large.
 
-We propose that a unified interference kernel, combining envelope suppression with phase interference, can organize all Yukawa couplings across fermion sectors. The key insight is that different sectors probe different \textit{projection regimes} of the same underlying kernel: quarks probe the envelope-dominated regime, charged leptons probe the phase-sensitive regime, and neutrinos probe the metric-dominated regime.
+We propose that a unified interference kernel, combining envelope suppression with phase interference, can \emph{organize} Yukawa couplings across fermion sectors as a phenomenological parameterization. We use \textit{projection regime} labels (envelope-dominated for quarks, phase-sensitive for charged leptons, metric-dominated for neutrinos) to classify optimization setups and fitted parameter patterns---not as a validated sampling mechanism. Pre-registered diagnostics find \textbf{0\% strict quark survivors}, charged-lepton holdout $m_e$ failure under train/holdout splits, and neutrino success largely confined to PMNS angles when masses are not jointly constrained.
 
 This work presents optimization results across all three fermion sectors, documenting what the kernel can and cannot fit with pre-registered train/holdout splits. The quark sector fails holdout generalization (0\% strict survivors); charged leptons and neutrinos show sector-specific partial success whose survivor rates depend on objective protocol (full-objective legacy vs.\ train/holdout strict). We characterize Pareto boundary shapes and note exploratory envelope-compression patterns in neutrinos without claiming a validated three-regime sampling mechanism.
 
@@ -444,17 +445,9 @@ The boundaries are smooth, convex frontiers (Fig.~\ref{fig:boundary_curvature}),
 
 \subsection{Large Mixing and Envelope Compression}
 
-A key observation of this framework is that large neutrino mixing correlates with envelope compression in the metric-dominated regime. The neutrino sector probes $g_{\text{env}} < 1$, compressing the effective envelope width. This compression reduces hierarchical structure, producing mixing angles that mimic anarchical mixing patterns.
+Neutrino optimizations often use envelope compression ($g_{\text{env}} < 1$ on the effective width $\sigma_{\text{eff}} = \sigma \times g_{\text{env}}$). Fitted $g_{\text{env}}$ clusters near $\sim$0.45--0.50 in pre-registered sweeps (diagnostic 23), not the $\sim$0.60 reported in legacy archives. Correlations between $g_{\text{env}}$ and PMNS angles are weak ($|r| < 0.1$ with bootstrap confidence intervals overlapping zero).
 
-This provides a natural explanation for the observation that:
-\begin{itemize}
-\item Quark mixing angles are small (hierarchical) --- envelope-dominated regime preserves structure
-\item Neutrino mixing angles are large (anarchical) --- metric-dominated regime reduces structure
-\end{itemize}
-
-We note that proper anarchy tests---including independence from geometry, comparison to Haar measure, and entropy quantification---remain for future work. The present observation is that envelope compression correlates with large mixing, which is consistent with but does not rigorously demonstrate anarchical behavior.
-
-Both patterns are discussed within the same kernel \emph{form}, but quark holdout failure breaks any claim that a single parameterized framework unifies quark and neutrino mixing phenomenology.
+We do \emph{not} claim that envelope compression \emph{causes} large neutrino mixing or that quark small mixing follows from the absence of compression. Proper anarchy tests---independence from geometry, comparison to Haar measure, entropy quantification---remain open. Quark holdout failure breaks any claim that a single parameterized framework unifies quark and neutrino mixing phenomenology.
 
 \subsection{Comparison with Split-Fermion Models}
 
@@ -475,14 +468,14 @@ The model successfully organizes Yukawa couplings within this framework, but the
 
 \section{Conclusions and Further Study}
 
-We have presented a phenomenological framework for organizing Yukawa couplings through an interference kernel with three projection regimes. \textbf{An honest assessment of the results reveals mixed success:}
+We have presented a phenomenological framework for organizing Yukawa couplings through an interference kernel, using three projection \emph{labels} for sector-specific optimization setups. \textbf{Pre-registered strict-survivor diagnostics (100 geometries, diagnostics 21--23) lead with sector failures before partial successes:}
 
 \begin{enumerate}
-\item \textbf{Quark Sector: Model Failure.} The envelope-dominated regime completely fails to reproduce quark observables. Charm mass predictions are $m_c = 19.4 \pm 17.9$ GeV versus the experimental target of 1.27 GeV (1425\% error). No geometry achieves even 100\% accuracy. This failure calls into question the universality of the three-regime framework.
+\item \textbf{Quark Sector: Model Failure.} \textbf{0\% strict survivors} at PDG-relative tolerances across Gaussian, clockwork, and generalized envelopes. Charm mass predictions remain order-of-magnitude wrong ($m_c = 19.4 \pm 17.9$ GeV vs.\ 1.27 GeV). Holdout masses and $|V_{ub}|$ do not generalize from training fits.
 
-\item \textbf{Charged Lepton Sector: Partial Success.} The phase-sensitive regime achieves 60\% success rate at 10\% tolerance, primarily driven by $m_\tau$ predictions. The muon mass shows large scatter ($m_\mu = 0.27 \pm 0.24$ GeV vs target 0.106 GeV).
+\item \textbf{Charged Lepton Sector: Partial Success with Holdout Failure.} Legacy full-objective sweeps report $\sim$60\% success at 10\% tolerance, but train/holdout diagnostics (optimize $m_\mu + m_\tau$, hold out $m_e$) find \textbf{1\% strict survivors}---holdout $m_e$ fails structurally even when training masses are perfect.
 
-\item \textbf{Neutrino Sector: Qualified Success.} The metric-dominated regime achieves 39\% success rate at 10\% tolerance for mixing angles. However, 50\% of optimizations failed entirely, and the claimed $g_{\text{env}}$--mixing correlation is statistically weak.
+\item \textbf{Neutrino Sector: PMNS-Only Caveat.} Train/holdout strict diagnostics find \textbf{78.9\% PMNS survivors} (100 geometries); legacy archives report $\sim$39--45\% at 10\% tolerance. Joint PMNS + mass objectives (diagnostic 28) test whether this success survives when $\Delta m^2$ is included. Legacy runs show $\sim$50\% optimization failure ($\theta_{23} \approx 0$), and $g_{\text{env}}$--mixing correlations remain weak.
 
 \item \textbf{Parameter Commonalities: Likely Artifacts.} The apparent consistency in $\sigma \approx 4$--5 and $\alpha \approx \pi$ likely reflects optimization bias toward interior parameter values rather than physical universality.
 
@@ -493,7 +486,7 @@ We have presented a phenomenological framework for organizing Yukawa couplings t
 
 Several directions for future work emerge naturally from this framework:
 
-\textbf{Geometry Space Extensions:} Current optimizations explore geometries up to coordinate value 5 for quarks. Extending to higher coordinate values may reveal additional geometries that achieve simultaneous matching of all observables. However, computational cost scales as the number of geometries increases.
+\textbf{Geometry Space Extensions:} Larger discrete geometry grids increase search volume but \emph{do not} address the documented quark structural failure (0\% strict survivors at 100 random geometries with train/holdout and joint objectives). Such extensions are exploratory only, not a identified fix for quark holdout failure.
 
 \textbf{CP Violation:} While this work focuses on mixing angles and masses, the framework naturally includes CP-violating phases through the complex nature of Yukawa matrices. Future work could explore CP violation predictions, comparing to experimental constraints on the CKM phase $\delta_{\text{CKM}}$ and PMNS phase $\delta_{\text{PMNS}}$.
 

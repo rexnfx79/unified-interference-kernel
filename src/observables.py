@@ -20,6 +20,15 @@ NEUTRINO_TARGETS = {
     'theta13': 0.1490,  # radians (~8.54°)
 }
 
+# Mass-squared differences (eV²), normal ordering — PDG 2024
+NEUTRINO_MASS_TARGETS = {
+    'dm21': 7.53e-5,
+    'dm31': 2.453e-3,
+}
+
+# Legacy neutrino optimization anchor (m2 fixed; scale from Snu[1])
+NEUTRINO_M2_ANCHOR_EV = 0.0086
+
 LEPTON_TARGETS = {
     'm_e': 0.000511,    # GeV, PDG 2024
     'm_mu': 0.1057,
@@ -116,6 +125,7 @@ def compute_neutrino_observables(Ynu: np.ndarray, Ye: np.ndarray) -> Dict[str, f
     PMNS = Ue_fixed.conj().T @ Unu_fixed
     theta12, theta23, theta13 = pmns_angles_from_unitary(PMNS)
 
+    masses = neutrino_masses_from_singular_values(Snu)
     return {
         'theta12': theta12,
         'theta23': theta23,
@@ -123,7 +133,35 @@ def compute_neutrino_observables(Ynu: np.ndarray, Ye: np.ndarray) -> Dict[str, f
         'Snu_0': float(Snu[0]),
         'Snu_1': float(Snu[1]),
         'Snu_2': float(Snu[2]),
+        'm1': masses['m1'],
+        'm2': masses['m2'],
+        'm3': masses['m3'],
+        'dm21': masses['dm21'],
+        'dm31': masses['dm31'],
+        'scale_nu': masses['scale_nu'],
         'unitarity_violation': float(np.max(np.abs(PMNS @ PMNS.conj().T - np.eye(3)))),
+    }
+
+
+def neutrino_masses_from_singular_values(Snu: np.ndarray) -> Dict[str, float]:
+    """Neutrino masses (eV) anchored at m2 = NEUTRINO_M2_ANCHOR_EV; Δm² from ordering."""
+    Snu = np.asarray(Snu, dtype=float)
+    if Snu[1] <= 0:
+        return {
+            'm1': 0.0, 'm2': 0.0, 'm3': 0.0,
+            'dm21': 0.0, 'dm31': 0.0, 'scale_nu': 0.0,
+        }
+    scale = NEUTRINO_M2_ANCHOR_EV / Snu[1]
+    m1 = float(Snu[2] * scale)
+    m2 = float(NEUTRINO_M2_ANCHOR_EV)
+    m3 = float(Snu[0] * scale)
+    return {
+        'm1': m1,
+        'm2': m2,
+        'm3': m3,
+        'dm21': float(m2 ** 2 - m1 ** 2),
+        'dm31': float(m3 ** 2 - m1 ** 2),
+        'scale_nu': float(scale),
     }
 
 
@@ -135,6 +173,27 @@ def compute_pmns_loss(obs: Dict[str, float]) -> float:
         rel_error = (obs[key] - target) / target
         loss += rel_error ** 2
     return float(loss)
+
+
+def compute_neutrino_mass_loss(obs: Dict[str, float]) -> float:
+    """Squared log-ratio loss on Δm²21 and Δm²31 (eV²)."""
+    loss = 0.0
+    for key in ['dm21', 'dm31']:
+        target = NEUTRINO_MASS_TARGETS[key]
+        value = obs.get(key, 0.0)
+        if value > 0 and target > 0:
+            loss += np.log(value / target) ** 2
+        else:
+            loss += 100.0
+    return float(loss)
+
+
+def compute_neutrino_joint_loss(
+    obs: Dict[str, float],
+    pmns_weight: float = 5.0,
+) -> float:
+    """Manuscript-style joint neutrino objective: mass + weighted PMNS."""
+    return compute_neutrino_mass_loss(obs) + pmns_weight * compute_pmns_loss(obs)
 
 
 def compute_lepton_observables(Ye: np.ndarray) -> Dict[str, float]:

@@ -13,7 +13,7 @@ authors: [Alexander Seto]
 year: 2026
 status: established
 created: 2026-06-01
-updated: 2026-06-02g
+updated: 2026-06-02h
 ---
 
 # Diagnostics Summary (Repo)
@@ -31,7 +31,7 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 | Parameter universality | **refuted** (transfer test) |
 | Three-regime validation | **refuted** for quarks; partial lepton/neutrino fits |
 
-## Phenomenology tranche (21–26)
+## Phenomenology tranche (21–28)
 
 | Script | Scaled result |
 |--------|---------------|
@@ -41,6 +41,10 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 | `24` | Cross-kernel paired lepton+ν (30 geom; superseded by 26) |
 | `25` | Lepton m_μ–m_e weighted Pareto |
 | `26` | Joint 3-sector N=100 shared L; see paired wins below |
+| `27` | Tier A2: joint 7-obs quark loss — Gaussian **2.0%** strict (2/100), gp2 **1.4%**; Pareto corr≈0.1; holdout median **0.69** (G) vs diag 21 **32.8** |
+| `28` | Tier B2: joint PMNS+Δm² — **27.8%** strict PMNS (22/79 solved) vs diag 23 **78.9%**; joint strict = PMNS strict |
+
+Canonical survivor protocol: [[survivor-protocol-preregistered]].
 
 ### Diagnostic 26 — paired wins vs Gaussian (N=100, >5% better)
 

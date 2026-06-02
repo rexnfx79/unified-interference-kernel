@@ -1,6 +1,6 @@
 ======================================================================
 QA TEST REPORT
-Generated: 2026-06-01 23:06:47
+Generated: 2026-06-02 09:34:10
 ======================================================================
 
 SUMMARY
@@ -115,6 +115,6 @@ unittest.case.FunctionTestCase (test_lepton_mass_roundtrip)
 Planted singular values reproduce PDG masses after tau anchoring. ... ok
 
 ----------------------------------------------------------------------
-Ran 59 tests in 4.420s
+Ran 59 tests in 4.589s
 
 OK

@@ -1,7 +1,16 @@
-updated: 2026-06-02g
+updated: 2026-06-02h
 ---
 
 # Research Log
+
+## 2026-06-02 | implement | Adversarial review follow-up (Tier A1/A2/B2)
+
+- **Protocol:** [[survivor-protocol-preregistered]] — single strict PDG-relative survivor definition; legacy rates demoted
+- **Manuscript:** title subtitle, intro regime labels, §Large Mixing causal bullets removed, conclusions lead quark 0% / lepton m_e / ν PMNS caveat, geometry extension softened
+- **Code:** `observables.py` — neutrino Δm² extraction, `compute_neutrino_mass_loss`, `compute_neutrino_joint_loss`
+- **Diagnostics:** `27_quark_joint_loss_holdout.py` → Gaussian **2%** strict, sparse Pareto persists (A2: not split artifact); `28_neutrino_masses_pmns_joint.py` → **27.8%** strict vs 78.9% PMNS-only (B2)
+- **Wiki:** [[manuscript-ledger-alignment]], [[research-strategy]], [[diagnostics-summary]], `index.md`
+- **Status:** Tier A1 locked; A2/B2 results in `diagnostics/results/27_*`, `28_*`
 
 ## 2026-06-02 | implement | Joint 3-sector cross-kernel corpus (diag 26)
 

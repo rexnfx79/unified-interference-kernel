@@ -6,6 +6,7 @@ related:
   - multi-sided-bridge-framework
   - plausibility-register
   - manuscript-ledger-alignment
+  - survivor-protocol-preregistered
   - qed-qm-information
   - hilbert-polya-conjecture
   - explicit-formula-primes-zeros
@@ -13,7 +14,7 @@ related:
   - fisher-transfer-universality-test
 status: active
 created: 2026-06-01
-updated: 2026-06-02g
+updated: 2026-06-02h
 ---
 
 # Research Strategy (User Decisions)
@@ -37,6 +38,7 @@ Living record of **strategic choices** for unified-interference-kernel explorati
 | Unified observables (`observables.py`) | CKM, PMNS, lepton masses | ✓ PMNS + lepton in library |
 | Quark train/holdout + Pareto | `diagnostics/21_quark_phenomenology_holdout.py` | ✓ scaled 100 geom |
 | Manuscript ↔ ledger | [[manuscript-ledger-alignment]] | ✓ |
+| **Survivor protocol (Tier A1)** | [[survivor-protocol-preregistered]] | ✓ 2026-06-02h |
 | Lepton sector phenomenology sweep | `diagnostics/22_lepton_phenomenology_sweep.py` | ✓ scaled 100 geom |
 | Neutrino PMNS sweep | `diagnostics/23_neutrino_phenomenology_sweep.py` | ✓ scaled 100 geom |
 | Cross-kernel lepton+ν paired | `diagnostics/24_cross_kernel_paired_lepton_neutrino.py` | ✓ (30 geom; superseded by 26) |
@@ -86,14 +88,17 @@ Document **what the kernel can and cannot fit** with pre-registered splits and h
 | `24_cross_kernel_paired_lepton_neutrino.py` | Cross-kernel paired lepton+ν (30 geom) |
 | `26_joint_three_sector_cross_kernel.py` | Joint corpus N=100; shared L; 3-sector paired |
 | `25_lepton_mass_pareto.py` | m_μ–m_e weighted Pareto |
+| `27_quark_joint_loss_holdout.py` | Tier A2: joint 7-obs quark loss vs split Pareto |
+| `28_neutrino_masses_pmns_joint.py` | Tier B2: PMNS + Δm² joint vs 78.9% PMNS-only |
 
 ## Next phenomenology steps
 
 1. ~~**Scale diag 21** quark holdout to 100+ geometries (match lepton/neutrino N).~~ ✓ (2026-06-02f)
-2. ~~**Reconcile survivor definitions:** archived 60%/45% used full-objective opt; train/holdout splits report lower legacy rates for leptons.~~ ✓ manuscript §Results + fig caption (2026-06-02g)
-3. ~~**Joint 3-sector geometry corpus** for paired cross-kernel comparison at equal N.~~ ✓ (2026-06-02g, diag 26)
-4. ~~Manuscript §limitations: dual-report strict + legacy with objective protocol noted.~~ ✓ (2026-06-02g, extended to §Results)
-5. **Cross-kernel synthesis:** diag 26 shows geometry-dependent wins, no universal envelope — manuscript discussion paragraph optional
+2. ~~**Reconcile survivor definitions**~~ ✓ [[survivor-protocol-preregistered]] (2026-06-02h)
+3. ~~**Joint 3-sector geometry corpus**~~ ✓ (2026-06-02g, diag 26)
+4. ~~Manuscript §limitations dual-report~~ ✓ (2026-06-02g/h)
+5. ~~**Tier A2/B2 falsifiers** (diag 27/28)~~ see results in [[diagnostics-summary]]
+6. Cross-kernel synthesis paragraph in manuscript Discussion (optional)
 
 ## Path D — watch only (unchanged)
 

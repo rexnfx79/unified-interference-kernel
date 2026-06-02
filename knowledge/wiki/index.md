@@ -7,6 +7,7 @@
 - [[plausibility-register]] — What failed, what is dead, what to pursue
 - [[proven-vs-conjecture-ledger]] — Know / probably true / dead (single ledger)
 - [[manuscript-ledger-alignment]] — Manuscript claims ↔ ledger status
+- [[survivor-protocol-preregistered]] — Tier A1 canonical strict-survivor protocol
 - [[knowledge-gaps-audit]] — Adversarial audit: contradictions + missing knowledge
 - [[information-reality-bridge-map]] — Legacy hub (see multi-sided for updated strategy)
 
