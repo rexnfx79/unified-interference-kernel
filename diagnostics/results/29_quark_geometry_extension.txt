@@ -1,0 +1,39 @@
+==============================================================================
+QUARK GEOMETRY SPACE EXTENSION (diagnostic 29)
+==============================================================================
+
+Baseline grid: max_coord=5 exhaustive (1000 geometries, coords 0..4)
+Extension pool: 86808 geometries with at least one new coordinate
+  (max_coord 6..8 cumulative, not in baseline)
+Sampled for optimization: 100 (seed=29029)
+Seeds per geometry: 4; kernel: Gaussian (scripts/01 objective)
+
+--- BASELINE REFERENCE (data/quark_results.csv best loss_total) ---
+  Q=(2, 4, 0), U=(2, 3, 4), D=(0, 1, 2)
+  joint=4.9044 ckm=0.3026 mc=7.337
+  strict_survivor=False
+
+--- EXTENSION SAMPLE ---
+  Solved: 68/100
+  Strict survivors: 0 (0.0%)
+  Joint loss min/median: 4.2798 / 11.8170
+  CKM loss min/median: 0.0259 / 0.4264
+  Best extension: Q=(1, 2, 0), U=(1, 2, 4), D=(5, 6, 7)
+    joint=4.2798 ckm=0.4193 mc=5.476 strict=False
+  Beats legacy best joint loss: True
+
+  Top 5 extension geometries by joint loss:
+    max_coord=7 Q=(1, 2, 0) U=(1, 2, 4) D=(5, 6, 7) joint=4.2798 ckm=0.4193 mc=5.476
+    max_coord=7 Q=(5, 6, 0) U=(1, 2, 3) D=(3, 4, 7) joint=6.9544 ckm=0.0762 mc=9.877
+    max_coord=7 Q=(1, 3, 0) U=(0, 2, 5) D=(4, 5, 7) joint=7.2820 ckm=0.3940 mc=11.723
+    max_coord=5 Q=(2, 4, 0) U=(2, 4, 5) D=(1, 2, 5) joint=7.3614 ckm=0.5839 mc=8.477
+    max_coord=7 Q=(1, 3, 0) U=(2, 3, 4) D=(0, 1, 7) joint=7.3814 ckm=0.5550 mc=5.586
+
+--- POOL COMPOSITION (extension only) ---
+  geometries with max coordinate 5: 5000
+  geometries with max coordinate 6: 19725
+  geometries with max coordinate 7: 62083
+
+--- VERDICT ---
+  If strict_survivors=0 and best joint >= baseline, larger coordinate
+  grids do not fix simultaneous quark matching (consistent with diag 27).

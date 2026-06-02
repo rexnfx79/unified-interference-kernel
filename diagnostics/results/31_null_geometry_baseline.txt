@@ -1,0 +1,28 @@
+==============================================================================
+NULL / SCRAMBLED GEOMETRY BASELINE (diagnostic 31, Tier A4)
+==============================================================================
+
+Geometries: 30 (phenomenology sampler, seed=21021)
+Kernel: Gaussian, training loss, 4 seeds; Haar: 4 samples/geom
+Strict tolerances: {'mc': 0.3, 'Vus': 0.2, 'Vcb': 0.3, 'Vub': 0.5, 'mu': 0.5, 'md': 0.5, 'ms': 0.5}
+
+--- KERNEL (GAUSSIAN, REAL Q) (n=30) ---
+  Strict survivors: 0 (0.0%)
+  Train loss min/median: 0.0000 / 1.1267
+  Holdout loss median: 266.8427
+
+--- SHUFFLED Q (n=30) ---
+  Strict survivors: 0 (0.0%)
+  Train loss min/median: 0.0000 / 5.7523
+  Holdout loss median: 243.1085
+
+--- HAAR RANDOM YU/YD (n=30) ---
+  Strict survivors: 0 (0.0%)
+  Train loss min/median: 175.4469 / 651.8863
+  Holdout loss median: 7659.5965
+
+--- A4 INTERPRETATION ---
+  All conditions 0% strict — kernel geometry does not enable PDG match.
+  Kernel train median (1.13) << Haar (652) and < shuffled Q (5.75):
+  discrete geometry carries optimization signal, but not strict survivors.
+  Null baselines do not spuriously inflate success rates.

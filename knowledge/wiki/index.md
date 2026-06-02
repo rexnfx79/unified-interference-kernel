@@ -56,6 +56,7 @@
 - [[derive-interference-kernel-from-overlaps]] — **Pursue:** 1D overlap → kernel
 - [[information-measure-for-projection-regimes]] — **Pursue:** entropy for regimes
 - [[similar-fitted-scales-vs-transfer]] — Disambiguate σ clustering vs universality refutation
+- [[quark-geometry-conventions]] — Legacy vs phenomenology geometry spaces (diag 29–31)
 - [[fisher-transfer-universality-test]] — **Refuted** — Fisher does not rescue quark→lepton transfer
 
 ## Comparisons

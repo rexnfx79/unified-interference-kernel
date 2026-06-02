@@ -64,8 +64,11 @@ Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use wh
 | `24_cross_kernel_paired_lepton_neutrino.py` | Paired Gaussian vs clockwork vs generalized (30 geom; superseded by 26) |
 | `25_lepton_mass_pareto.py` | Weighted m_μ–m_e Pareto; holdout tension documented |
 | `26_joint_three_sector_cross_kernel.py` | Joint N=100 shared L; paired wins geometry-dependent; no universal envelope |
-| `27_quark_joint_loss_holdout.py` | Tier A2: joint 7-obs loss; strict rate vs diag 21 Pareto |
-| `28_neutrino_masses_pmns_joint.py` | Tier B2: PMNS + Δm² joint strict vs 78.9% PMNS-only |
+| `27_quark_joint_loss_holdout.py` | Tier A2: joint 7-obs loss; 2% strict (Gaussian); Pareto persists |
+| `28_neutrino_masses_pmns_joint.py` | Tier B2: PMNS + Δm² joint strict 27.8% vs 78.9% PMNS-only |
+| `29_quark_geometry_extension.py` | Legacy grid extension; 0% strict; marginal joint-loss gain |
+| `30_quark_geometry_followup.py` | Exhaustive legacy re-baseline + shell-5 (smoke complete; full deferred) |
+| `31_null_geometry_baseline.py` | Tier A4: shuffled Q + Haar null vs kernel fit |
 
 ## Canonical protocol
 

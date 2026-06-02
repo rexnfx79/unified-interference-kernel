@@ -3,6 +3,16 @@ updated: 2026-06-02h
 
 # Research Log
 
+## 2026-06-02 | implement | Geometry extension + null baseline (diag 29–31)
+
+- **Diagnostic 29:** legacy grid extension (max_coord 6–8), N=100 sample — **0% strict**; best joint **4.28** vs legacy CSV **4.90**; geometry coverage not the bottleneck
+- **Diagnostic 30:** smoke only (10 baseline + 10 shell-5); full 6000-geom re-baseline **deferred** (multi-hour); preliminary 0/20 strict, Wilson UB ~0.16
+- **Diagnostic 25:** scaled to N=100 — corr **0.31** (vs **0.58** at N=24); 7 nondominated Pareto pts (vs 1); structural m_e tension persists
+- **Diagnostic 31:** Tier A4 N=30 — kernel train median **1.13** vs Haar **652**; all **0% strict**
+- **Manuscript:** Discussion §Pre-Registered Falsifiers (diag 27/28 numbers)
+- **Wiki:** [[quark-geometry-conventions]], [[diagnostics-summary]], [[manuscript-ledger-alignment]], [[research-strategy]]
+- **Tests:** Δm² unit test in `test_neutrino_observables.py`
+
 ## 2026-06-02 | implement | Adversarial review follow-up (Tier A1/A2/B2)
 
 - **Protocol:** [[survivor-protocol-preregistered]] — single strict PDG-relative survivor definition; legacy rates demoted

@@ -1,11 +1,11 @@
 ======================================================================
 QA TEST REPORT
-Generated: 2026-06-02 09:34:10
+Generated: 2026-06-02 11:53:49
 ======================================================================
 
 SUMMARY
 ----------------------------------------
-Tests run:    59
+Tests run:    60
 Failures:     0
 Errors:       0
 Skipped:      0
@@ -104,6 +104,8 @@ unittest.case.FunctionTestCase (test_external_neutrino_parameter) ... ok
 unittest.case.FunctionTestCase (test_external_quark_parameter) ... ok
 unittest.case.FunctionTestCase (test_full_decoherence_diagonal) ... ok
 unittest.case.FunctionTestCase (test_mixing_proxy_monotone_in_p) ... ok
+unittest.case.FunctionTestCase (test_neutrino_mass_splittings_from_singular_values)
+Δm²21, Δm²31 are consistent with m1,m2,m3 from SVD singular values. ... ok
 unittest.case.FunctionTestCase (test_neutrino_observables_from_synthetic_yukawas)
 SVD pipeline recovers planted PMNS angles. ... ok
 unittest.case.FunctionTestCase (test_pmns_angle_roundtrip)
@@ -115,6 +117,6 @@ unittest.case.FunctionTestCase (test_lepton_mass_roundtrip)
 Planted singular values reproduce PDG masses after tau anchoring. ... ok
 
 ----------------------------------------------------------------------
-Ran 59 tests in 4.589s
+Ran 60 tests in 5.053s
 
 OK

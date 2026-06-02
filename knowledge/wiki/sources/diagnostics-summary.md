@@ -39,10 +39,28 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 | `22` | 100 geom: 1% strict/legacy (train split); holdout m_e fails |
 | `23` | 100 geom: 78.9% strict PMNS; g_env≈0.47 |
 | `24` | Cross-kernel paired lepton+ν (30 geom; superseded by 26) |
-| `25` | Lepton m_μ–m_e weighted Pareto |
+| `25` | Lepton m_μ–m_e weighted Pareto (N=100: corr **0.31**, 7 nondominated pts; N=24 snapshot corr **0.58**, 1 pt) |
 | `26` | Joint 3-sector N=100 shared L; see paired wins below |
 | `27` | Tier A2: joint 7-obs quark loss — Gaussian **2.0%** strict (2/100), gp2 **1.4%**; Pareto corr≈0.1; holdout median **0.69** (G) vs diag 21 **32.8** |
 | `28` | Tier B2: joint PMNS+Δm² — **27.8%** strict PMNS (22/79 solved) vs diag 23 **78.9%**; joint strict = PMNS strict |
+| `29` | Legacy grid extension (max_coord 6–8): N=100 sample, **0% strict**; best joint **4.28** vs CSV **4.90** |
+| `30` | Legacy exhaustive re-baseline + shell-5: **smoke only** (10+10); full 6000-geom run deferred |
+| `31` | Tier A4: null baseline N=30 — kernel **0% strict**; Haar train median **~360** vs kernel **~2.0**; shuffled Q similar to kernel |
+
+### Diagnostic 31 — null geometry (N=30, seed 21021)
+
+| Condition | Strict | Train median | Holdout median |
+|-----------|--------|--------------|----------------|
+| Kernel (real Q) | 0% | ~2.0 | ~898 |
+| Shuffled Q | 0% | ~5.3 | ~213 |
+| Haar Yu/Yd | 0% | ~362 | ~25,595 |
+
+Pass/fail: kernel beats Haar on train loss (geometry signal real) but all 0% strict (no spurious survivor inflation).
+
+### Diagnostic 29 — legacy geometry extension (N=100 sample)
+
+- 0% strict; best extension joint **4.28** vs legacy CSV **4.90**
+- Verdict: marginal loss improvement, not PDG simultaneous match
 
 Canonical survivor protocol: [[survivor-protocol-preregistered]].
 

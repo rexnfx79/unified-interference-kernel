@@ -101,8 +101,9 @@ Legacy helpers: `phenomenology_utils.LEGACY_*_RANGES`, `check_legacy_lepton`, `c
 |------|--------|------------|
 | A2 | `diagnostics/27_quark_joint_loss_holdout.py` | Is CKM–m_c Pareto a train/holdout split artifact? Joint 7-obs loss vs diag 21 |
 | B2 | `diagnostics/28_neutrino_masses_pmns_joint.py` | Does joint PMNS + Δm² objective collapse 78.9% PMNS-only strict rate? |
+| A4 | `diagnostics/31_null_geometry_baseline.py` | Do kernel fits beat shuffled-Q / Haar-random Yukawa null baselines? |
 
-Results: `diagnostics/results/27_*`, `28_*`; summarized in [[diagnostics-summary]] and [[research-strategy]].
+Results: `diagnostics/results/27_*`, `28_*`, `31_*`; summarized in [[diagnostics-summary]] and [[research-strategy]].
 
 ## Reporting rule
 

@@ -90,6 +90,9 @@ Document **what the kernel can and cannot fit** with pre-registered splits and h
 | `25_lepton_mass_pareto.py` | m_μ–m_e weighted Pareto |
 | `27_quark_joint_loss_holdout.py` | Tier A2: joint 7-obs quark loss vs split Pareto |
 | `28_neutrino_masses_pmns_joint.py` | Tier B2: PMNS + Δm² joint vs 78.9% PMNS-only |
+| `29_quark_geometry_extension.py` | Legacy grid extension; 0% strict |
+| `30_quark_geometry_followup.py` | Exhaustive legacy re-baseline + shell-5 (smoke) |
+| `31_null_geometry_baseline.py` | Tier A4: null/scrambled geometry baseline |
 
 ## Next phenomenology steps
 
@@ -98,7 +101,10 @@ Document **what the kernel can and cannot fit** with pre-registered splits and h
 3. ~~**Joint 3-sector geometry corpus**~~ ✓ (2026-06-02g, diag 26)
 4. ~~Manuscript §limitations dual-report~~ ✓ (2026-06-02g/h)
 5. ~~**Tier A2/B2 falsifiers** (diag 27/28)~~ see results in [[diagnostics-summary]]
-6. Cross-kernel synthesis paragraph in manuscript Discussion (optional)
+6. ~~**Legacy geometry extension** (diag 29–30)~~ 0% strict; not the bottleneck
+7. ~~**Tier A4 null baseline** (diag 31)~~ see [[diagnostics-summary]]
+8. ~~Manuscript §falsifiers Discussion paragraph~~ ✓ (2026-06-02i)
+9. ~~Scale diag 25 lepton Pareto to N=100~~ ✓ (corr 0.31 vs 0.58 at N=24; 7 vs 1 Pareto pts)
 
 ## Path D — watch only (unchanged)
 

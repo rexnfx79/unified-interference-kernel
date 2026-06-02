@@ -8,9 +8,12 @@ sys.path.insert(0, '../src')
 import numpy as np
 from observables import (
     compute_neutrino_observables,
+    compute_neutrino_mass_loss,
     compute_pmns_loss,
+    neutrino_masses_from_singular_values,
     pmns_angles_from_unitary,
     NEUTRINO_TARGETS,
+    NEUTRINO_MASS_TARGETS,
 )
 
 
@@ -75,6 +78,18 @@ def test_neutrino_observables_from_synthetic_yukawas():
     print("✓ Synthetic Yukawa PMNS extraction test passed")
 
 
+def test_neutrino_mass_splittings_from_singular_values():
+    """Δm²21, Δm²31 are consistent with m1,m2,m3 from SVD singular values."""
+    snu = np.array([1.0, 0.42, 0.08])
+    masses = neutrino_masses_from_singular_values(snu)
+    assert masses["m1"] < masses["m2"] < masses["m3"]
+    assert abs(masses["dm21"] - (masses["m2"] ** 2 - masses["m1"] ** 2)) < 1e-12
+    assert abs(masses["dm31"] - (masses["m3"] ** 2 - masses["m1"] ** 2)) < 1e-12
+    obs = {**NEUTRINO_TARGETS, **masses}
+    assert compute_neutrino_mass_loss(obs) > 0  # generic Snu ≠ PDG
+    print("✓ Neutrino Δm² extraction test passed")
+
+
 def test_pmns_loss_perfect_match():
     """PMNS loss is ~0 when observables match targets."""
     obs = NEUTRINO_TARGETS.copy()
@@ -86,5 +101,6 @@ def test_pmns_loss_perfect_match():
 if __name__ == "__main__":
     test_pmns_angle_roundtrip()
     test_neutrino_observables_from_synthetic_yukawas()
+    test_neutrino_mass_splittings_from_singular_values()
     test_pmns_loss_perfect_match()
     print("\n✓ All neutrino observable tests passed!")

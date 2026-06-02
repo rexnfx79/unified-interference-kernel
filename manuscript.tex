@@ -423,6 +423,14 @@ This progression is \emph{descriptive} of fitted $\varepsilon$ values in each se
 
 The consistent parameter scales ($\sigma \approx 4$--5, $\alpha \approx \pi$) likely reflect optimization bias toward interior parameter values rather than physical universality.
 
+\subsection{Pre-Registered Falsifiers}
+
+Tier~A2 (diagnostic~27) optimizes all seven quark observables jointly rather than the train/holdout split of diagnostic~21. Under this objective the Gaussian kernel achieves \textbf{2.0\% strict survivors} (2/100 geometries)---not zero, but still negligible---while the CKM--$m_c$ Pareto structure persists (correlation $\approx 0.1$). The split objective is therefore not the sole cause of quark failure, though holdout masses remain poorly predicted (median holdout loss $\approx 0.69$ vs.\ $\approx 33$ under the split objective).
+
+Tier~B2 (diagnostic~28) adds $\Delta m^2$ to the neutrino optimization objective. PMNS-only strict success drops from \textbf{78.9\%} (diagnostic~23) to \textbf{27.8\%} (22/79 solved geometries); joint strict (angles + $\Delta m^2$) equals PMNS-only strict at 27.8\%. Neutrino phenomenology success is therefore largely \emph{PMNS-angle} success; mass splittings are not simultaneously fit at pre-registered tolerances.
+
+Both results follow the strict survivor protocol in companion diagnostics and reinforce the honest assessment above: quark failure is structural, and neutrino success requires explicit PMNS-only caveats.
+
 \subsection{Boundary Analysis}
 
 Analysis of nondominated envelopes reveals approximate decay patterns within the explored parameter domain:

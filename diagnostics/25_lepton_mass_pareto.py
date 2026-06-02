@@ -41,6 +41,7 @@ OPTIMIZER_SETTINGS = {
 N_SEEDS = 3
 N_GEOMETRIES = 24
 GEOM_SEED = 25025
+# Full scale: N=100 geometries (~4× diag 24 runtime)
 N_WEIGHTS = 12
 
 LEPTON_BOUNDS = [
@@ -258,8 +259,16 @@ def format_report(geometries: List[Tuple], all_points: List[Dict], pareto: Dict,
 
 
 def main():
-    print(f"Lepton mass Pareto sweep ({N_GEOMETRIES} geometries)...")
-    geometries = generate_lepton_geometries(N_GEOMETRIES, GEOM_SEED)
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--n-geom", type=int, default=N_GEOMETRIES)
+    parser.add_argument("--smoke", action="store_true", help="N=5 geometries")
+    args = parser.parse_args()
+    n_geom = 5 if args.smoke else args.n_geom
+
+    print(f"Lepton mass Pareto sweep ({n_geom} geometries)...")
+    geometries = generate_lepton_geometries(n_geom, GEOM_SEED)
     all_points: List[Dict] = []
     for geom_idx, (L, E) in enumerate(geometries):
         pts = pareto_sweep_geometry(L, E, geom_idx)
