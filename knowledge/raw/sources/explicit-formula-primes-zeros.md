@@ -39,9 +39,9 @@ Left side encodes **primes** (local factors); right side encodes **zeros**. This
 | Zeros = eigenvalues of a known self-adjoint \(H\) | **Open** ([[hilbert-polya-conjecture]]) |
 | Zero sum predicts SM Yukawa phases | **Dead** ([[why-not-zeta-flavor-numerology]]) |
 
-## Measurable physics contact
+## Empirical anchor (not SM collider physics)
 
-- **Primes** are “measured” by arithmetic computation (\(\psi(x)\), \(\pi(x)\)) — not collider observables.
+- **Primes** are verified by arithmetic computation (\(\psi(x)\), \(\pi(x)\)) — not collider observables.
 - **Zeros** are computed to high precision (Odlyzko tables); frequencies enter prime oscillations.
 - **No SM hook** unless a QFT operator’s spectral measure equals the Weil spectral side.
 
@@ -49,9 +49,9 @@ Left side encodes **primes** (local factors); right side encodes **zeros**. This
 
 At \(x = 10^4\): \(\psi(x) \approx x\) with \(O(10^2)\) correction; truncated 10-zero sum captures **part** of oscillatory side (qualitative). Output: `diagnostics/results/14_explicit_formula_numerics.txt`.
 
-## Tier 5 falsifier (T5.2 preview)
+## Tier 5.2 (blocked)
 
-Stable matching of dominant oscillation frequencies in \(\psi(x)-x\) to \(\{\gamma_n\}\) **without** fitting extra phases per interval — pre-register before scaling zero count.
+See [[adversarial-review-tier5-trace-formula]] — holdout \(\psi(x)\) + wrong-frequency null required; naive frequency matching is tautological.
 
 ## Guardrails
 

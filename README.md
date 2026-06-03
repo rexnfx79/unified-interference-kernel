@@ -2,7 +2,7 @@
 
 Clean, minimal implementation of an interference-kernel **functional form** for organizing Yukawa couplings. This is a phenomenological parameterization, not a validated universal theory.
 
-> **Canonical status:** Survivor rates and claim ledger: [`manuscript-ledger-alignment.md`](knowledge/wiki/synthesis/manuscript-ledger-alignment.md), [`survivor-protocol-preregistered.md`](knowledge/wiki/synthesis/survivor-protocol-preregistered.md). **Quark geometry search closed** — [`research-strategy.md`](knowledge/wiki/synthesis/research-strategy.md). **Next steps:** [`future-work.md`](knowledge/wiki/synthesis/future-work.md).
+> **Canonical status:** [`manuscript-ledger-alignment.md`](knowledge/wiki/synthesis/manuscript-ledger-alignment.md), [`survivor-protocol-preregistered.md`](knowledge/wiki/synthesis/survivor-protocol-preregistered.md). **Tier 0 publication package complete** (2026-06-02o). Reproduce: `./scripts/reproduce_phenomenology_tranche.sh`. **Next:** Tier 1 CP audit — [`future-work.md`](knowledge/wiki/synthesis/future-work.md).
 
 ## Overview
 
@@ -54,7 +54,7 @@ unified-interference-kernel/
 
 ## Knowledge Base (Conjecture Notebook)
 
-Multi-sided map connecting math to reality — with **plausibility register** for dead ends and **QED→information** as primary pursue path.
+Multi-sided map connecting math to reality — **phenomenology tranche complete**; flavor mechanism paths refuted; arithmetic bridges **watch-only** ([`conjecture-to-physics-avenues.md`](knowledge/wiki/synthesis/conjecture-to-physics-avenues.md)).
 
 - **Framework:** [`knowledge/wiki/synthesis/multi-sided-bridge-framework.md`](knowledge/wiki/synthesis/multi-sided-bridge-framework.md)
 - **Failures / verdicts:** [`knowledge/wiki/synthesis/plausibility-register.md`](knowledge/wiki/synthesis/plausibility-register.md)
@@ -68,6 +68,14 @@ cd tools/llm_wiki && npm install && npm run tauri dev
 ```
 
 Verify wiki snapshots match repo: `python3 scripts/lint_wiki_manifest.py`
+
+### Reproduce headline phenomenology
+
+```bash
+./scripts/reproduce_phenomenology_tranche.sh
+```
+
+Checks frozen reports (diagnostics 21–23, 27–28, 30, 32–33) and SVD phase unit test.
 
 ## Installation
 

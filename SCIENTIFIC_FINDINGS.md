@@ -1,6 +1,15 @@
 # Scientific Findings: Generalized Kernel Analysis
 
-> **Disclaimer (2026-06):** Headline survivor rates and claim status are maintained in [`knowledge/wiki/synthesis/manuscript-ledger-alignment.md`](knowledge/wiki/synthesis/manuscript-ledger-alignment.md) and [`knowledge/wiki/synthesis/survivor-protocol-preregistered.md`](knowledge/wiki/synthesis/survivor-protocol-preregistered.md). This document summarizes transfer-test refutation of parameter universality; it does **not** supersede the wiki ledger for sector survivor numbers.
+> **Disclaimer (2026-06):** Headline survivor rates and claim status are maintained in [`knowledge/wiki/synthesis/manuscript-ledger-alignment.md`](knowledge/wiki/synthesis/manuscript-ledger-alignment.md) and [`knowledge/wiki/synthesis/survivor-protocol-preregistered.md`](knowledge/wiki/synthesis/survivor-protocol-preregistered.md). This document summarizes transfer-test refutation of parameter universality; it does **not** supersede the wiki ledger for sector survivor numbers. Reproduce frozen diagnostics: `./scripts/reproduce_phenomenology_tranche.sh`.
+
+### Phenomenology tranche (strict protocol, 100 geometries unless noted)
+
+| Sector | Headline rate | Diagnostic |
+|--------|---------------|------------|
+| Quark | **0%** strict (0/5759 exhaustive) | 21, 30 |
+| Lepton | **1%** strict train/holdout | 22 |
+| Neutrino | **27.8%** joint strict (PMNS + Δm²) | 28 |
+| Neutrino | **78.9%** PMNS-only strict (sub-result) | 23 |
 
 ## Executive Summary
 

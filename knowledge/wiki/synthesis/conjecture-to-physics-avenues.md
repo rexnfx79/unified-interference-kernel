@@ -16,13 +16,13 @@ updated: 2026-06-02n
 
 # Conjecture-to-Physics Avenues (Post-Phenomenology)
 
-**Goal:** Connect **unproven but widely assumed** mathematical structure (RH, Hilbert–Polya, quantum chaos universality, trace formulas) to **measurable physics** — without reviving refuted flavor numerology.
+**Goal:** Connect **unproven but widely assumed** mathematical structure (RH, Hilbert–Polya, quantum chaos universality, trace formulas) to **independent empirical anchors** (computable primes, zero tables, QFT where hooked) — without reviving refuted flavor numerology. See [[adversarial-review-tier5-trace-formula]] before coding T5.2.
 
 **Context:** SM flavor phenomenology in this repo is **closed** for mechanism (Tiers 2–3). Arithmetic→CKM direct bridges are **dead**. The viable program is **parallel tracks**: honest flavor paper (Tier 0) + **independent** B↔A and C→B programs that could eventually constrain effective readouts.
 
 ## Taxonomy
 
-| Class | Examples | Physics contact |
+| Class | Examples | Empirical anchor (not collider unless stated) |
 |-------|----------|-----------------|
 | **Established** | QM on Hilbert spaces; Bekenstein bound; GUE stats of many quantum systems | Laboratory QFT, black-hole thermodynamics |
 | **Established conditional** | Montgomery pair correlation of zeta zeros **if RH** | No SM observable; constrains HP candidate operators |
@@ -38,7 +38,7 @@ updated: 2026-06-02n
 
 **Conjecture stack:** RH (zeros on line) + Hilbert–Polya (\(\zeta\) zeros = spectrum of self-adjoint \(H\)).
 
-**Physics that is already real:** Prime distribution is **measured** via arithmetic tests; explicit formula
+**Empirical anchor today:** Prime distribution is **computed** from definitions and compared to analytic formulas; explicit formula
 
 \[
 \psi(x) = x - \sum_\rho x^\rho/\rho - \cdots
@@ -49,7 +49,7 @@ links primes to **zero heights** (imaginary parts \(E_n\)). This is not SM flavo
 | Step | Repo action | Falsifier |
 |------|-------------|-----------|
 | Ingest | [[trace-formula-bridge-ladder]] — explicit formula, Selberg, Montgomery, Connes | **Done** (2026-06-02n) |
-| Numeric | Extend `diagnostics/14_explicit_formula_numerics.py`: prime-sum oscillation vs zero heights (not vs CKM) | No stable frequency match without fitting many free phases |
+| Numeric | diag 34 **only if** non-circular — see [[adversarial-review-tier5-trace-formula]] | Holdout \(\psi(x)\) beats wrong-frequency null; else **no-go** |
 | Theory | Document **Selberg ↔ Riemann** analogy as template for “spectrum ↔ arithmetic” | Claiming Selberg proves flavor |
 
 **Why first:** Direction is clear (A↔B). No 3×3 scale mismatch. Aligns with Path D **watch** without flavor numerology.

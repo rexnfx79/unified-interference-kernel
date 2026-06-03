@@ -11,7 +11,7 @@ related:
   - diagnostics-summary
 status: active
 created: 2026-06-02
-updated: 2026-06-02n
+updated: 2026-06-02o
 ---
 
 # Future Work (Post-Phenomenology Tranche)
@@ -19,15 +19,15 @@ updated: 2026-06-02n
 Forward-looking plan after diagnostics **21–31**, geometry closure (**29–30**), and observables phase-fix (**2026-06-02j**).  
 **Closed paths:** [[research-strategy]] dead-ends table — do not reopen without a new falsifier.
 
-## Tier 0 — Close the phenomenology paper (recommended next)
+## Tier 0 — Close the phenomenology paper (**complete** 2026-06-02o)
 
-| Item | Deliverable | Falsifier / done when |
-|------|-------------|------------------------|
-| **P0.1** Manuscript final pass | Abstract, Results, Conclusions match [[manuscript-ledger-alignment]] + [[survivor-protocol-preregistered]] | External reader can reproduce headline rates from diag 21–28, 30 |
-| **P0.2** Quark sector as **structural negative result** | CKM–\(m_c\) Pareto + 0/5759 strict (diag 30) + holdout failure (diag 21) | No cherry-picked “best geometry” without protocol label |
-| **P0.3** Neutrino dual headline | **27.8%** joint strict (diag 28) primary; **78.9%** PMNS-only (diag 23) sub-result | Joint vs PMNS-only never conflated |
-| **P0.4** Lepton honesty | **1%** strict train/holdout (diag 22); legacy ~60% labeled historical | Holdout \(m_e\) failure stated |
-| **P0.5** Artifact bundle | `diagnostics/results/30_*`, bests JSON, protocol page linked in README | One command reproduces report |
+| Item | Deliverable | Status |
+|------|-------------|--------|
+| **P0.1** Manuscript final pass | Abstract, Results, Conclusions ↔ [[manuscript-ledger-alignment]] | **Done** — abstract leads 27.8% joint ν; diag 32–33 in Further Study |
+| **P0.2** Quark structural negative | CKM–\(m_c\) Pareto + 0/5759 strict (diag 30) | **Done** |
+| **P0.3** Neutrino dual headline | 27.8% joint (diag 28) primary; 78.9% PMNS-only (diag 23) sub | **Done** |
+| **P0.4** Lepton honesty | 1% strict (diag 22); legacy ~60% labeled | **Done** |
+| **P0.5** Artifact bundle | `scripts/reproduce_phenomenology_tranche.sh` + frozen reports | **Done** |
 
 **Non-goals:** Universal kernel parameters; three-regime “validation”; geometry extension as quark fix.
 
@@ -89,7 +89,7 @@ See [[conjecture-to-physics-avenues]] for ranked tracks and falsifiers.
 | Item | Hypothesis | Falsifier |
 |------|------------|-----------|
 | **T5.1** | Trace-formula bridge ingested (Selberg, explicit formula, Montgomery, Connes) | **Done** — [[trace-formula-bridge-ladder]] |
-| **T5.2** | Explicit formula links primes to zero heights structurally | Extend diag 14 → diag 34: no stable frequency match without many free phases |
+| **T5.2** | Explicit formula (non-circular test) | **Blocked pending redesign** — [[adversarial-review-tier5-trace-formula]]: holdout \(\psi\) + wrong-frequency null; not FFT tautology |
 | **T5.3** | Kernel bilinear phase = 1D self-adjoint operator phase | Jacobi inverse (diag 35): residual ≫ kernel fit or >6 BC params/sector |
 | **T5.4** | Large-N geometry loss landscape shows RMT universality | Diag 36?: spacings = Poisson/random |
 | **T5.5** | Primes appear in standard QED sums | One standard observable = prime sum without redefinition — [[can-primes-enter-via-qed-spectral-sums]] |
@@ -106,6 +106,8 @@ See [[conjecture-to-physics-avenues]] for ranked tracks and falsifiers.
 
 | Date | Decision |
 |------|----------|
+| 2026-06-02o | Tier 0 publication package complete — manuscript + reproduce script |
+| 2026-06-02o | Tier 5 adversarial review — T5.2 blocked pending redesign |
 | 2026-06-02n | Tier 5.1 wiki ingest complete — [[trace-formula-bridge-ladder]] |
 | 2026-06-02n | Tier 5 conjecture↔physics program — [[conjecture-to-physics-avenues]] |
 | 2026-06-02m | Tier 3 theory bridges **closed** (diag 33); split-fermion→kernel remains post-hoc |

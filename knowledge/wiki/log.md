@@ -1,7 +1,18 @@
-updated: 2026-06-02n
+updated: 2026-06-02o
 ---
 
 # Research Log
+
+## 2026-06-02 | implement | Tier 0 publication package
+
+- **Manuscript:** abstract 27.8% joint ν lead; 0/5759 quark; Further Study closed diag 32–33; reproduce script cited
+- **Wiki:** [[manuscript-ledger-alignment]], [[future-work]] Tier 0 complete; README + reproduce path
+- **Review fixes:** [[adversarial-review-tier5-trace-formula]]; T5.2 blocked; ladder status active
+
+## 2026-06-02 | review | Adversarial Tier 5 trace-formula program
+
+- **Query:** [[adversarial-review-tier5-trace-formula]] — T5.2 tautology risk; “physics” framing overstated; Tier 0 priority
+- **Wiki fixes:** [[trace-formula-bridge-ladder]] status→active; Selberg arrow analogy-only
 
 ## 2026-06-02 | ingest | Tier 5.1 trace-formula bridge (wiki)
 

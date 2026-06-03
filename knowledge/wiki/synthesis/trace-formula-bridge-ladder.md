@@ -10,7 +10,7 @@ related:
   - hilbert-polya-conjecture
   - conjecture-to-physics-avenues
   - multi-sided-bridge-framework
-status: established
+status: active
 created: 2026-06-02
 updated: 2026-06-02n
 ---
@@ -18,6 +18,8 @@ updated: 2026-06-02n
 # Trace Formula Bridge Ladder
 
 **Tier 5.1 ingest hub.** Connects proved trace/explicit identities to open operator conjectures — **decoupled from SM flavor**.
+
+**Adversarial review:** [[adversarial-review-tier5-trace-formula]] — T5.2 must not tautologically confirm the explicit formula.
 
 ## Ladder
 
@@ -29,7 +31,7 @@ graph BT
   HP[[hilbert-polya-conjecture<br/>zeros = spectrum of H]]
   CN[[connes-spectral-triple<br/>NC trace program]]
 
-  SF -->|analogy| EF
+  SF -.->|analogy only| EF
   EF --> MO
   MO -.-> HP
   CN -.-> HP
@@ -38,7 +40,7 @@ graph BT
 
 ## Status matrix
 
-| Node | Mathematics | “Physics” contact | Flavor repo |
+| Node | Mathematics | Empirical anchor (not collider) | Flavor repo |
 |------|-------------|-------------------|-------------|
 | Selberg | **Proved** for cofinite \(\Gamma\) | Quantum chaos / hyperbolic billiards | None |
 | Explicit formula | **Proved** (conditional on zero-free region) | Computable \(\psi(x)\), \(\pi(x)\) | diag 14 only |

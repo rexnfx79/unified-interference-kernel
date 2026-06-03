@@ -14,7 +14,7 @@ related:
   - fisher-transfer-universality-test
 status: active
 created: 2026-06-01
-updated: 2026-06-02k
+updated: 2026-06-02o
 ---
 
 # Research Strategy (User Decisions)
@@ -25,15 +25,15 @@ Living record of **strategic choices** for unified-interference-kernel explorati
 
 Full tiered plan: **[[future-work]]** (2026-06-02k). Phenomenology tranche **21–31 complete**; combinatorial quark search **closed**.
 
-## Active priorities (2026-06-02k)
+## Active priorities (2026-06-02o)
 
 | Priority | Action | Rationale |
 |----------|--------|-----------|
-| **1** | **Tier 0** — publication package per [[future-work]] | Ledger-aligned manuscript + artifact paths |
-| **2** | **Tier 1** — post phase-fix audit (small N) + CP observables | Confirm refutations; then CP/Jarlskog |
-| **3** | ~~**Tier 2** diag 32~~ | **Complete — falsified** (0% strict; holdout worse than Gaussian) |
-| **4** | **Tier 5** — conjecture↔physics ([[conjecture-to-physics-avenues]]) | HP / explicit formula / Jacobi inverse; **not** flavor numerology |
-| **5** | **Tier 4** — repo hygiene | Parallel |
+| **1** | **Tier 1** — CP + post phase-fix audit per [[future-work]] | Tier 0 **complete** |
+| **2** | **Tier 5** — conjecture↔physics (wiki watch; T5.2 blocked) | [[adversarial-review-tier5-trace-formula]] |
+| **3** | **Tier 4** — repo hygiene | Parallel |
+
+**Closed:** Tier 2 (diag 32), Tier 3 (diag 33), phenomenology tranche 21–31.
 
 ## Closed — quark search dead ends (do not fund without new falsifier)
 
