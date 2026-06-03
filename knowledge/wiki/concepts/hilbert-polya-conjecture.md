@@ -16,7 +16,7 @@ approach: spectral
 status: conjecture
 plausibility: watch
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-02n
 ---
 
 # Hilbert–Polya Conjecture
@@ -46,9 +46,9 @@ There exists a **self-adjoint operator** \(H\) on a Hilbert space such that non-
 
 ## Research Directions (Independent of Flavor)
 
-1. Sturm–Liouville / Jacobi constructions
-2. [[connes-spectral-triple]] — noncommutative geometry
-3. Trace formula analogies (Selberg ↔ Riemann explicit formula)
+1. Sturm–Liouville / Jacobi constructions — [[does-phase-structure-imply-spectral-operator]]
+2. [[connes-spectral-triple]] — noncommutative geometry (T5.1 ingest)
+3. [[selberg-trace-formula]] ↔ [[explicit-formula-primes-zeros]] — [[trace-formula-bridge-ladder]]
 
 **Do not** compare zero spacings to 3×3 Yukawa matrices — [[zeta-zero-spacing-yukawa-structure]] is dead.
 

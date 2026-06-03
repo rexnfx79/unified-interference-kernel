@@ -88,10 +88,11 @@ See [[conjecture-to-physics-avenues]] for ranked tracks and falsifiers.
 
 | Item | Hypothesis | Falsifier |
 |------|------------|-----------|
-| **T5.1** | Explicit formula links primes to zero heights structurally | Extend diag 14: no stable frequency/phase match without many free parameters |
-| **T5.2** | Kernel bilinear phase = 1D self-adjoint operator phase | Jacobi inverse (diag 35): residual ≫ kernel fit or >6 BC params/sector |
-| **T5.3** | Large-N geometry loss landscape shows RMT universality | Diag 34: spacings = Poisson/random |
-| **T5.4** | Primes appear in standard QED sums | One standard observable = prime sum without redefinition — [[can-primes-enter-via-qed-spectral-sums]] |
+| **T5.1** | Trace-formula bridge ingested (Selberg, explicit formula, Montgomery, Connes) | **Done** — [[trace-formula-bridge-ladder]] |
+| **T5.2** | Explicit formula links primes to zero heights structurally | Extend diag 14 → diag 34: no stable frequency match without many free phases |
+| **T5.3** | Kernel bilinear phase = 1D self-adjoint operator phase | Jacobi inverse (diag 35): residual ≫ kernel fit or >6 BC params/sector |
+| **T5.4** | Large-N geometry loss landscape shows RMT universality | Diag 36?: spacings = Poisson/random |
+| **T5.5** | Primes appear in standard QED sums | One standard observable = prime sum without redefinition — [[can-primes-enter-via-qed-spectral-sums]] |
 
 **Non-goals:** RH→CKM numerology; 3×3 GUE; revived QIT→flavor mechanism.
 
@@ -105,6 +106,7 @@ See [[conjecture-to-physics-avenues]] for ranked tracks and falsifiers.
 
 | Date | Decision |
 |------|----------|
+| 2026-06-02n | Tier 5.1 wiki ingest complete — [[trace-formula-bridge-ladder]] |
 | 2026-06-02n | Tier 5 conjecture↔physics program — [[conjecture-to-physics-avenues]] |
 | 2026-06-02m | Tier 3 theory bridges **closed** (diag 33); split-fermion→kernel remains post-hoc |
 | 2026-06-02k | Phenomenology tranche **complete**; forward work = publication + optional P1/P2 |

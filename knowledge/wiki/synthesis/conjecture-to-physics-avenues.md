@@ -48,7 +48,7 @@ links primes to **zero heights** (imaginary parts \(E_n\)). This is not SM flavo
 
 | Step | Repo action | Falsifier |
 |------|-------------|-----------|
-| Ingest | Strengthen [[explicit-formula-primes-zeros]], [[montgomery-pair-correlation]], Connes program | — |
+| Ingest | [[trace-formula-bridge-ladder]] — explicit formula, Selberg, Montgomery, Connes | **Done** (2026-06-02n) |
 | Numeric | Extend `diagnostics/14_explicit_formula_numerics.py`: prime-sum oscillation vs zero heights (not vs CKM) | No stable frequency match without fitting many free phases |
 | Theory | Document **Selberg ↔ Riemann** analogy as template for “spectrum ↔ arithmetic” | Claiming Selberg proves flavor |
 
@@ -103,7 +103,7 @@ Useful for motivation; not a near-term proof path unless Bridges 1–3 produce *
 
 | ID | Deliverable | Track |
 |----|-------------|-------|
-| **T5.1** | Wiki ingest: trace formula, Montgomery, Connes (sources + ledger) | B↔A |
+| **T5.1** | Wiki ingest: trace formula, Montgomery, Connes (sources + ledger) | **Done** — [[trace-formula-bridge-ladder]] |
 | **T5.2** | `diagnostics/34_explicit_formula_spectral_audit.py` — prime oscillations vs zero heights | B↔A |
 | **T5.3** | `diagnostics/35_jacobi_inverse_kernel_phase.py` — 3-site \(H\) vs kernel phases | B→D |
 | **T5.4** | Optional: optimization-landscape RMT (large-N geometry sample) | B meta |

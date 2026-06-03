@@ -5,6 +5,7 @@
 - [[research-strategy]] — User decisions: Path A+D, mechanism goal, SM-only, code-only
 - [[future-work]] — Post-tranche plan: publication (Tier 0), conjecture bridges (Tier 5)
 - [[conjecture-to-physics-avenues]] — RH / HP / trace formula vs measurable physics (ranked)
+- [[trace-formula-bridge-ladder]] — Selberg → explicit formula → Montgomery → HP / Connes
 - [[multi-sided-bridge-framework]] — Three approaches (arithmetic, Hilbert, QED/info) + gap-crossing protocol
 - [[plausibility-register]] — What failed, what is dead, what to pursue
 - [[proven-vs-conjecture-ledger]] — Know / probably true / dead (single ledger)
@@ -19,6 +20,7 @@
 - [[p-adic-analysis]] — Ultrametric / adelic programs (deprioritized unless new hook)
 - [[riemann-zeta-function]] — Zeta and zeros
 - [[explicit-formula-primes-zeros]] — Rigorous prime↔zero link (not flavor)
+- [[selberg-trace-formula]] — Geodesics ↔ Laplacian template (proved)
 
 ## Concepts — Approach B (Spectral / Hilbert)
 
@@ -55,7 +57,7 @@
 - [[does-phase-structure-imply-spectral-operator]] — Phase from operator?
 - [[what-proves-information-creates-reality]] — Proof criteria
 - [[zeta-zero-spacing-yukawa-structure]] — **Dead** as proposed (3×3 insufficient)
-- [[derive-interference-kernel-from-overlaps]] — **Pursue:** 1D overlap → kernel
+- [[derive-interference-kernel-from-overlaps]] — **Refuted:** overlap post-hoc (diag 33)
 - [[information-measure-for-projection-regimes]] — **Pursue:** entropy for regimes
 - [[similar-fitted-scales-vs-transfer]] — Disambiguate σ clustering vs universality refutation
 - [[quark-geometry-conventions]] — Legacy vs phenomenology geometry spaces (diag 29–31)
@@ -69,8 +71,9 @@
 
 ## Sources (external + repo)
 
-- [[montgomery-pair-correlation]] — Pair correlation scope (not full GUE)
-- [[connes-spectral-triple]] — NC geometry / Hilbert–Polya
+- [[montgomery-pair-correlation]] — Pair correlation (conditional on RH; T5.1)
+- [[connes-spectral-triple]] — NC geometry / Hilbert–Polya (T5.1)
+- [[selberg-trace-formula]] — Curated Selberg ingest
 - [[bekenstein-holographic-bound]] — Curated Bekenstein bound
 - [[preskill-qit-entropy]] — Curated QIT entropy
 - [[analysis-summary]] — Survivor rates / Z-scores

@@ -62,3 +62,5 @@ The zero distribution is a **deep arithmetic spectral fingerprint**. If physics 
 - Edwards, *Riemann's Zeta Function*
 - [[montgomery-pair-correlation]] — curated pair correlation scope
 - [[connes-spectral-triple]] — NC geometry / Hilbert–Polya program
+- [[selberg-trace-formula]] — proved geodesic↔spectrum template
+- [[trace-formula-bridge-ladder]] — B↔A synthesis hub

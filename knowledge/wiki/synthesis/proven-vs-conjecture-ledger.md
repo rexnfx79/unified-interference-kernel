@@ -10,7 +10,7 @@ related:
   - manuscript-key-results
 status: open
 created: 2026-06-01
-updated: 2026-06-02j
+updated: 2026-06-02n
 ---
 
 # Proven vs Conjecture Ledger
@@ -26,6 +26,10 @@ Single reference for **know** / **probably true** / **dead**. Status labels matc
 | Kernel formula implemented correctly | [[kernel-implementation]], 56/56 QA |
 | SVD → CKM + anchored quark masses | [[yukawa-observables-pipeline]], [[observables-extraction]] |
 | Zeta zeros show GUE-like pair statistics (partial theorems + numerics) | [[riemann-zeta-function]], [[random-matrix-theory]] |
+| Riemann explicit formula (primes ↔ zeros) | [[explicit-formula-primes-zeros]], diag 14 |
+| Selberg trace formula (geodesics ↔ Laplacian on hyperbolic surface) | [[selberg-trace-formula]] |
+| Montgomery pair correlation for zero spacings (**if RH**) | [[montgomery-pair-correlation]] |
+| Weil explicit formula / NC trace template | [[connes-spectral-triple]] (framework) |
 | Split-fermion overlap mechanism (literature) | [[split-fermion-localization]] |
 | Bekenstein bound (info ↔ geometry) | [[quantum-information]] |
 
@@ -49,6 +53,8 @@ Single reference for **know** / **probably true** / **dead**. Status labels matc
 | Phase structure from self-adjoint \(H\) | [[does-phase-structure-imply-spectral-operator]] |
 | Primes via spectral/trace routes (not direct flavor) | [[can-primes-enter-via-qed-spectral-sums]] |
 | Hilbert–Polya operator exists | [[hilbert-polya-conjecture]] |
+| Connes spectral triple yields concrete \(H\) with zero spectrum | [[connes-spectral-triple]] |
+| RH (all zeros on critical line) | Standard number theory — **open** |
 
 ## Speculative / philosophical
 

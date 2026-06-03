@@ -3,6 +3,12 @@ updated: 2026-06-02n
 
 # Research Log
 
+## 2026-06-02 | ingest | Tier 5.1 trace-formula bridge (wiki)
+
+- **Synthesis:** [[trace-formula-bridge-ladder]] — Selberg → explicit formula → Montgomery → HP / Connes
+- **New:** [[selberg-trace-formula]] concept + raw/source ingests; expanded [[explicit-formula-primes-zeros]], [[montgomery-pair-correlation]], [[connes-spectral-triple]]
+- **Ledger:** [[proven-vs-conjecture-ledger]] — explicit formula, Selberg, Montgomery (conditional), Connes framework
+
 ## 2026-06-02 | strategy | Conjecture-to-physics program (Tier 5)
 
 - **Wiki:** [[conjecture-to-physics-avenues]] — ranked B↔A trace formula, Jacobi inverse, landscape RMT; dead ends explicit

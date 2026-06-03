@@ -114,7 +114,7 @@ When two islands look connected, run this checklist before adding a bridge edge:
 
 **Flavor phenomenology tranche (repo):** complete — see [[future-work]] Tier 0–3. Do not resume geometry grids or flavor numerology.
 
-**Conjecture program (Tier 5):** see [[conjecture-to-physics-avenues]].
+**Conjecture program (Tier 5):** see [[conjecture-to-physics-avenues]]; B↔A hub [[trace-formula-bridge-ladder]] (T5.1 complete).
 
 1. **B ↔ A:** Explicit formula / trace formulas — primes ↔ zero heights (diag 14 extension); Hilbert–Polya **independent of flavor**
 2. **B → D (falsifiable):** Jacobi / Sturm–Liouville inverse for kernel phases — [[does-phase-structure-imply-spectral-operator]]; split-fermion magnitude path **refuted** (diag 33)

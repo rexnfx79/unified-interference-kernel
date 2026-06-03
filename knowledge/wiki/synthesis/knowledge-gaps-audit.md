@@ -76,7 +76,7 @@ These are **pertinent to connecting math with reality** but absent as concept pa
 | Missing topic | Why needed |
 |---------------|------------|
 | [[explicit-formula-primes-zeros]] | Rigorous prime↔zero bridge (not flavor) |
-| Selberg trace formula | Geometric analog of explicit formula |
+| [[selberg-trace-formula]] | **Ingested** (T5.1) — geometric analog of explicit formula |
 | [[connes-spectral-triple]] | Modern Hilbert–Polya program — **ingested** |
 | [[montgomery-pair-correlation]] | Pair correlation scope — **ingested** |
 
