@@ -8,17 +8,16 @@ related:
   - split-fermion-localization
   - interference-kernel
   - hilbert-spaces-qm
-status: open
+status: refuted
 created: 2026-06-01
-updated: 2026-06-01
-status: deprioritized
+updated: 2026-06-02m
 ---
 
 # Derive Interference Kernel from Overlaps
 
-## Status: **deprioritized** (user strategic decision)
+## Status: **refuted** for mechanism (diag 33)
 
-Split-fermion → kernel is **off the pursue list** per [[research-strategy]]. Numeric results below are **historical**; primary path is QED→information (Path A).
+Split-fermion → kernel does **not** predict kernel parameters from geometry. Magnitude matching remains a **width fit** per geometry. See `diagnostics/33_tier3_theory_bridges.py`.
 
 ## Question
 
@@ -36,10 +35,20 @@ Extended test (`diagnostics/10_split_fermion_overlap_derivation.py`): 4 geometri
 
 **Verdict:** magnitude match is post-hoc fit quality, not mechanism. w/σ instability and no sector-parameter prediction → **deprioritize**.
 
-## Falsifiers (met)
+## Diagnostic 33 (N=50, seed 33033)
 
-- w/σ ratio not stable across geometries — **failed**
-- Cannot predict sector parameter splits without optimization — **open failure**
+| Falsifier | Threshold | Fixed-params result |
+|-----------|-----------|---------------------|
+| \(w/\sigma\) stable | rel spread < 0.15 | **pass** (0.067) |
+| Geometry predicts \(w/\sigma\) | linear R² ≥ 0.5 | **fail** (0.045) |
+| All magnitude correlations | r ≥ 0.99 | **fail** (min 0.985) |
+
+**Verdict:** envelope post-hoc; do not claim derivation.
+
+## Falsifiers (historical diag 10 + diag 33)
+
+- w/σ ratio stable at fixed \(\sigma\) — **pass** at N=50 (diag 33); was unstable in early 4-geometry compact cases
+- Predict \(\sigma,k,\eta\) from geometry without optimization — **failed** (R²≈0.05)
 
 ## Related
 

@@ -112,10 +112,12 @@ When two islands look connected, run this checklist before adding a bridge edge:
 
 ## Recommended Research Order
 
+**Flavor phenomenology tranche (repo):** complete — see [[future-work]] Tier 0–2. Do not resume geometry grids.
+
 1. **C → B:** QED/QM on Hilbert spaces → information measures ([[qed-qm-information]])
 2. **B → A:** Operator programs for zeta (Hilbert–Polya) — independent of flavor
 3. **A:** Primes/p-adics — only if step 1–2 produce a **specific** hook (adelic boundary conditions, etc.)
-4. **D last:** Test whether [[interference-kernel]] emerges as effective limit — do **not** start from kernel to prove reality
+4. **D last:** Test whether [[interference-kernel]] emerges as effective limit — do **not** start from kernel to prove reality; quark sector **refuted** at strict protocol
 
 ## Mermaid: Three Approaches + Effective Layer
 

@@ -14,12 +14,38 @@ related:
   - fisher-transfer-universality-test
 status: active
 created: 2026-06-01
-updated: 2026-06-02h
+updated: 2026-06-02k
 ---
 
 # Research Strategy (User Decisions)
 
 Living record of **strategic choices** for unified-interference-kernel exploration. Code-only; SM flavor physics only.
+
+## Future work (canonical)
+
+Full tiered plan: **[[future-work]]** (2026-06-02k). Phenomenology tranche **21–31 complete**; combinatorial quark search **closed**.
+
+## Active priorities (2026-06-02k)
+
+| Priority | Action | Rationale |
+|----------|--------|-----------|
+| **1** | **Tier 0** — publication package per [[future-work]] | Ledger-aligned manuscript + artifact paths |
+| **2** | **Tier 1** — post phase-fix audit (small N) + CP observables | Confirm refutations; then CP/Jarlskog |
+| **3** | ~~**Tier 2** diag 32~~ | **Complete — falsified** (0% strict; holdout worse than Gaussian) |
+| **4** | **Tier 4** — repo hygiene only | Tier 3 **closed** (diag 33); no theory-bridge hook |
+
+## Closed — quark search dead ends (do not fund without new falsifier)
+
+| Approach | Evidence | Pointer |
+|----------|----------|---------|
+| Legacy geometry extension (coords 5–8, 86k pool) | 0% strict; N=100 sample 0% strict (diag 29 rerun) | `29`, `30` |
+| Exhaustive max_coord=5 re-baseline + shell-5 | 0/5759 strict; shell joint min 3.06 vs 1k 5.01 | `30` |
+| Independent \(Q_u, Q_d\) / minimality relaxations | All levels **worsen holdout** (+110–456%) | `09`, [[MINIMALITY_REPORT]] |
+| Envelope sweep only (G / clockwork / \(p\)) | 0% strict split (diag 21); joint 2% on **phenomenology** triples only (diag 27) | `21`, `27` |
+| Shared-\(Q\) as bottleneck | Refuted | `09` |
+| More DE seeds / CSV-era optimizer parity | Re-baseline shifts bests; does not create strict survivors | `30` |
+
+Re-open **only** with: new matrix-level ansatz (rank > 1), pre-registered holdout rule, and [[quark-geometry-conventions]] convention stated explicitly.
 
 ## Primary track (2026-06-02c): **Phenomenology**
 
@@ -91,20 +117,13 @@ Document **what the kernel can and cannot fit** with pre-registered splits and h
 | `27_quark_joint_loss_holdout.py` | Tier A2: joint 7-obs quark loss vs split Pareto |
 | `28_neutrino_masses_pmns_joint.py` | Tier B2: PMNS + Δm² joint vs 78.9% PMNS-only |
 | `29_quark_geometry_extension.py` | Legacy grid extension; 0% strict |
-| `30_quark_geometry_followup.py` | Exhaustive legacy re-baseline + shell-5 (smoke) |
+| `30_quark_geometry_followup.py` | 989+4770 legacy re-baseline; 0/5759 strict |
 | `31_null_geometry_baseline.py` | Tier A4: null/scrambled geometry baseline |
+| `32_quark_tier2_ansatz.py` | Tier 2: rank2 sum, FN texture, dual-phase, power-law |
 
-## Next phenomenology steps
+## Phenomenology tranche — completed
 
-1. ~~**Scale diag 21** quark holdout to 100+ geometries (match lepton/neutrino N).~~ ✓ (2026-06-02f)
-2. ~~**Reconcile survivor definitions**~~ ✓ [[survivor-protocol-preregistered]] (2026-06-02h)
-3. ~~**Joint 3-sector geometry corpus**~~ ✓ (2026-06-02g, diag 26)
-4. ~~Manuscript §limitations dual-report~~ ✓ (2026-06-02g/h)
-5. ~~**Tier A2/B2 falsifiers** (diag 27/28)~~ see results in [[diagnostics-summary]]
-6. ~~**Legacy geometry extension** (diag 29–30)~~ 0% strict; not the bottleneck
-7. ~~**Tier A4 null baseline** (diag 31)~~ see [[diagnostics-summary]]
-8. ~~Manuscript §falsifiers Discussion paragraph~~ ✓ (2026-06-02i)
-9. ~~Scale diag 25 lepton Pareto to N=100~~ ✓ (corr 0.31 vs 0.58 at N=24; 7 vs 1 Pareto pts)
+All items through diag **31**, geometry closure, and phase-fix are **done**. See [[future-work]] for next tiers.
 
 ## Path D — watch only (unchanged)
 
@@ -116,6 +135,9 @@ Promotion requires non–ρ_Y Path A hook — **not found** (diag 17–20). See 
 - Universal kernel **parameters**
 - QIT→flavor mechanism from sector-local statistics
 - Manuscript overclaims without [[manuscript-ledger-alignment]] check
+- Further **legacy quark geometry** combinatorics (29–30 closed)
+- **Split \(Q_u,Q_d\)** or minimality ladder re-runs without new ansatz + falsifier
+- CP / Jarlskog targets until observables audit passes (post phase-fix)
 
 ## Success criteria (phenomenology tranche)
 

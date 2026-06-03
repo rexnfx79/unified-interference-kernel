@@ -10,7 +10,7 @@ related:
   - manuscript-key-results
 status: open
 created: 2026-06-01
-updated: 2026-06-02c
+updated: 2026-06-02j
 ---
 
 # Proven vs Conjecture Ledger
@@ -45,7 +45,7 @@ Single reference for **know** / **probably true** / **dead**. Status labels matc
 
 | Claim | Pointer |
 |-------|---------|
-| Interference kernel from 1D overlap integrals | [[derive-interference-kernel-from-overlaps]], [[split-fermion-overlap-test]] — **partial:** r=0.99996 one geometry |
+| Interference kernel from 1D overlap integrals | [[derive-interference-kernel-from-overlaps]] — **refuted (mechanism):** diag 33 geometry→\(w/\sigma\) R²≈0.05; magnitude fit only |
 | Phase structure from self-adjoint \(H\) | [[does-phase-structure-imply-spectral-operator]] |
 | Primes via spectral/trace routes (not direct flavor) | [[can-primes-enter-via-qed-spectral-sums]] |
 | Hilbert–Polya operator exists | [[hilbert-polya-conjecture]] |
@@ -76,6 +76,9 @@ Single reference for **know** / **probably true** / **dead**. Status labels matc
 | Fisher transfer quark → lepton (CR + alignment falsifiers) | [[fisher-transfer-universality-test]] — diag 19: loss 805.8, align 0.41 |
 | External open-system \(p\) predicts CKM/PMNS mixing (pooled) | Diag 18: pooled \|r\| ≈ 0.007 |
 | Path A QIT→flavor operational mechanism (pooled) | Diagnostics 12–19 — no surviving route |
+| Legacy quark geometry extension (coords 5–8) | Diag 29–30 — 0/5759 strict on unified protocol |
+| Independent \(Q_u, Q_d\) as quark fix | Diag 09 — holdout degrades at all minimality levels |
+| Tier-2 texture/rank2 kernels as quark fix | Diag 32 — 0% strict; holdout worse than Gaussian |
 
 ## Probably true (working hypotheses — not proven here)
 

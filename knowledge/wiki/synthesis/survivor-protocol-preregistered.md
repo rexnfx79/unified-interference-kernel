@@ -66,7 +66,9 @@ Match diagnostics **21–23** and **26–28**:
 | `polish` | False |
 | DE seed | `seed + geom_idx * 100` per attempt |
 
-**Kernels (quark):** Gaussian, clockwork, generalized envelope at **p ∈ {1.5, 2.0, 3.0}** — bounds from `alternative_kernels.KERNELS` and `kernel_generalized` (diag 21).
+**Kernels (quark, Tier A1):** Gaussian, clockwork, generalized envelope at **p ∈ {1.5, 2.0, 3.0}** — bounds from `alternative_kernels.KERNELS` and `kernel_generalized` (diag 21).
+
+**Kernels (quark, Tier 2 — diag 32):** `alternative_kernels.TIER2_QUARK_KERNELS`: `gaussian` (baseline), `rank2_clockwork_sum`, `clockwork_dual_phase`, `fn_texture`, `fn_texture_split`, `power_law`. Geometries: `generate_quark_geometries`, seed **32032**, N=100. Holdout accept: median holdout improves **>20%** vs Gaussian (diag 09 rule). P2.3 scheme/RGE readout deferred.
 
 **Kernels (lepton / neutrino):** Gaussian; neutrino adds **g_env ∈ [0.45, 0.75]** on effective σ for Y_ν.
 

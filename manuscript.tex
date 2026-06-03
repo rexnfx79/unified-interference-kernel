@@ -479,27 +479,28 @@ We have presented a phenomenological framework for organizing Yukawa couplings t
 
 \subsection{Further Study}
 
-Several directions for future work emerge naturally from this framework:
+Future work is organized by what the pre-registered diagnostic tranche (21--31) has already closed versus what remains testable.
 
-\textbf{Geometry Space Extensions:} Larger discrete geometry grids increase search volume but \emph{do not} address the documented quark structural failure (0\% strict survivors at 100 random geometries with train/holdout and joint objectives). Such extensions are exploratory only, not a identified fix for quark holdout failure.
+\textbf{Closed within this kernel class (do not repeat without a new ansatz).}
+Exhaustive legacy geometry re-optimization (1000 coordinates $0$--$4$ plus 4770 shell-5 geometries, 5759 total) yields \textbf{0\% strict survivors} at PDG-relative tolerances (diagnostic~30). Random extension samples from larger coordinate pools (diagnostic~29) and independent $Q_u,Q_d$ relaxations (minimality ladder, diagnostic~09) likewise fail holdout or strict criteria. Envelope-only kernel comparisons (Gaussian, clockwork, generalized $p$; diagnostics~21, 27) do not restore simultaneous quark agreement. These are \emph{structural} negative results, not sampling gaps.
 
-\textbf{CP Violation:} While this work focuses on mixing angles and masses, the framework naturally includes CP-violating phases through the complex nature of Yukawa matrices. Future work could explore CP violation predictions, comparing to experimental constraints on the CKM phase $\delta_{\text{CKM}}$ and PMNS phase $\delta_{\text{PMNS}}$.
+\textbf{Near-term (publication and reproducibility).}
+(1)~Finalize a sector-honest manuscript: quark failure and CKM--$m_c$ Pareto as primary negative results; neutrino \textbf{27.8\%} joint strict (PMNS + $\Delta m^2$, diagnostic~28) as the mass-inclusive headline with \textbf{78.9\%} PMNS-only strict (diagnostic~23) reported separately; charged-lepton \textbf{1\%} strict under train/holdout (diagnostic~22) with legacy full-objective rates labeled historical.
+(2)~Document the repo-locked survivor protocol and diagnostic artifacts so headline rates are reproducible.
+(3)~After repairing SVD phase conventions in the observables pipeline, re-audit a \emph{small} geometry subset to confirm that refutation conclusions are stable under consistent CKM extraction.
 
-\textbf{UV Physics Connections:} \emph{Speculative.} The kernel form might emerge from UV models (string compactifications, extra dimensions, flavor symmetries), but cross-sector parameter transfer is refuted in companion diagnostics; such exploration is not supported by present data.
+\textbf{Testable extensions (pre-register before large runs).}
+\textbf{CP violation:} Extract $\delta_{\text{CKM}}$, Jarlskog invariant $J$, and PMNS CP phases from the repaired unitary pipeline; compare to PDG without claiming success until strict-survivor rates are reported under the same protocol.
+\textbf{Beyond rank-1 overlaps:} If a rank-2 or texture-based Yukawa construction is introduced, it must be evaluated with the same train/holdout split and holdout-improvement rule as the minimality ladder; geometry grid expansion alone is not a identified path forward.
+\textbf{Flavor-symmetry priors:} Froggatt--Nielsen or texture zeros may shrink the search space but require the same falsifiers; partial clockwork gains on training loss did not generalize.
 
-\textbf{RGE Evolution:} Yukawa couplings evolve with energy scale according to renormalization group equations (RGEs). The kernel parameters determined at the weak scale may need to be evolved to unification scales or high scales where UV physics operates. Understanding RGE effects could constrain or guide UV completions.
+\textbf{Deprioritized or speculative.}
+\textbf{Universal parameters} across sectors remain refuted (transfer and Fisher diagnostics).
+\textbf{UV completions and RGE evolution} may motivate effective parameters but do not explain quark holdout failure within the present readout.
+\textbf{Information-theoretic sampling} of Yukawa matrices (diagnostics~12--19) showed no operational mechanism for mixing.
+Arithmetic or zeta-based flavor links stay outside scope unless a non-numerology hook appears (Path~D, watch only).
 
-\textbf{Statistical Validation:} \emph{Speculative.} Apparent parameter commonalities ($\sigma \approx 4$--5, $\alpha \approx \pi$) likely reflect optimization bias; rigorous tests should not be interpreted as evidence for universal scales given transfer-test refutation.
-
-\textbf{Alternative Models for Quarks:} Given the complete failure of the envelope-dominated regime for quarks, alternative functional forms should be explored. The quark sector may require fundamentally different physics than the lepton sectors.
-
-\textbf{Optimization Landscape Analysis:} The 50\% failure rate for neutrino optimizations suggests a challenging optimization landscape. Understanding why half of optimizations fail could improve model reliability.
-
-\textbf{Statistical Rigor:} Future work should include proper statistical tests (Kolmogorov-Smirnov, correlation significance) rather than visual inspection of scatter plots. Claims of ``distinct regions'' or ``correlations'' require quantitative validation.
-
-\textbf{Honest Reporting:} This work demonstrates the importance of honest assessment in phenomenological modeling. Dressing up model failures as ``insights'' (e.g., ``forbidden gaps'') obscures the actual state of knowledge. Future work should clearly distinguish between model successes and failures.
-
-In summary, while the neutrino sector shows promising agreement with experiment, the complete failure of the quark sector means the ``universal kernel'' hypothesis is not supported. The framework may still be useful for the lepton sectors alone, but claims of cross-sector universality should be abandoned until the quark sector can be successfully modeled.
+In summary, the useful forward path is \emph{honest partial phenomenology} (neutrino joint fits, lepton limitations, quark structural failure) plus \emph{new quark matrix ans\"atze} tested under pre-registered holdout rules---not larger discrete geometry catalogs or revived universal-kernel claims.
 
 \section*{Acknowledgments}
 

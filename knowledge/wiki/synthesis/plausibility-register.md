@@ -8,7 +8,7 @@ related:
   - why-not-zeta-flavor-numerology
 status: open
 created: 2026-06-01
-updated: 2026-06-02b
+updated: 2026-06-02m
 strategy: research-strategy
 ---
 
@@ -29,6 +29,9 @@ Living record of **what failed**, what is **implausible**, and what remains **wo
 | "Universal" kernel parameters across sectors | **dead** (refuted) | Transfer test loss 797.5 frozen vs 779.0 free — [[repo-scientific-findings]] |
 | Gaussian kernel **full** quark sector | **dead** (refuted) | Structural CKM–\(m_c\) rank trade-off — [[diagnostics-summary]] |
 | Shared-\(Q\) constraint as quark bottleneck | **dead** (refuted) | Minimality ladder: all relaxations worsen holdout — [[diagnostics-summary]] |
+| Legacy quark **geometry extension** (more discrete coords) | **dead** (refuted) | 0/5759 strict (diag 30); 0% on 86k sample (diag 29) — [[quark-geometry-conventions]] |
+| Independent \(Q_u, Q_d\) without new ansatz | **dead** (refuted) | Level 4 holdout +218% (diag 09) |
+| Tier-2 ansätze (rank2 sum, FN texture, dual-phase, power-law) | **dead** (refuted) | Diag 32: 0% strict N=100; holdout ≫ Gaussian |
 | Three-regime framework validated for quarks | **dead** (refuted) | 0% strict survivors; \(m_c \sim 15\times\) experimental — [[manuscript-key-results]] |
 | Clockwork kernel complete quark solution | **dead** (refuted) | Light masses, \(V_{ub}\), Jarlskog fail — [[diagnostics-summary]] |
 | Berry–Keating \(H=xp\) as **proven** Hilbert–Polya operator | **dead** (as proof) | Not self-adjoint on standard domain; semiclassical heuristic only |
@@ -42,7 +45,7 @@ Living record of **what failed**, what is **implausible**, and what remains **wo
 | [[spectral-interpretation-of-flavor]] via Hilbert–Polya | **deprioritize** | Requires unknown \(H\) *and* projection story *and* 3-generation embedding |
 | [[interference-kernel]] ← [[riemann-zeta-function]] | **deprioritize** | Only via shared RMT statistics — insufficient |
 | Metric regime = information loss → anarchy | **watch** | Tested in `diagnostics/12_regime_entropy_correlation.py` — see [[information-measure-for-projection-regimes]] |
-| Split-fermion overlaps → derive [[interference-kernel]] | **deprioritize** | High numeric correlation (r≈0.99) but w/σ unstable; no parameter prediction — [[derive-interference-kernel-from-overlaps]]; user marks likely dead end |
+| Split-fermion overlaps → derive [[interference-kernel]] | **dead** (mechanism) | Diag 33 N=50: geometry→\(w/\sigma\) R² **0.045**; magnitude fit only — [[derive-interference-kernel-from-overlaps]] |
 | [[it-from-bit]] → concrete mass formula | **watch** | Philosophical north star, not constructive |
 
 ## Medium Plausibility (Active Exploration)
@@ -83,6 +86,7 @@ Living record of **what failed**, what is **implausible**, and what remains **wo
 | 2026-06 | QFI/coherence on ρ_Y vs mixing (pooled) | **Refuted** — diagnostic 15, max \|r\|=0.017, n=10,080 |
 | 2026-06 | Decoherence proxy vs CKM/PMNS | **Refuted** — diagnostic 16, max \|r\|=0.241, n=2,592 |
 | 2026-06 | Split-fermion→kernel pursue path | **Deprioritized** — user strategy; overlap r≈0.99 kept as historical |
+| 2026-06-02m | Tier 3 split-fermion→kernel (diag 33) | **Mechanism refuted** — stable \(w/\sigma\) at fixed \(\sigma\) but not geometry-predictable; Path D watch-only |
 | 2026-06 | Experimental Fisher cross-sector (`diagnostics/17_*`) | Alignment 0.46 < 0.50 — **mechanism weak**; rank–regime \|r\|=0.72 confounded |
 | 2026-06 | Open-system decoherence pooled (`diagnostics/18_*`) | Pooled \|r\|=0.007 — **refuted**; quark-local \|r\|=0.26 exploratory |
 | 2026-06 | Fisher transfer test (`diagnostics/19_*`) | **Refuted** — frozen loss 805.8, alignment 0.41; free-fit Δθ ≫ CR |

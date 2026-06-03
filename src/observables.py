@@ -37,18 +37,28 @@ LEPTON_TARGETS = {
 
 
 def fix_svd_phases(U, S, Vh):
-    """Fix SVD phase ambiguities for consistent CKM extraction."""
+    """
+    Fix SVD phase ambiguities for consistent CKM / PMNS extraction.
+
+    Uses column j of U and row j of Vh paired phases so that
+    U_fixed @ diag(S) @ Vh_fixed == U @ diag(S) @ Vh (thin SVD).
+    """
     U_fixed = np.asarray(U, dtype=complex).copy()
     Vh_fixed = np.asarray(Vh, dtype=complex).copy()
-    for i in range(U.shape[0]):
-        if abs(U[i, 0]) > 1e-10:
-            phase = np.angle(U[i, 0])
-            U_fixed[i, :] *= np.exp(-1j * phase)
-    for j in range(Vh.shape[1]):
-        if abs(Vh[0, j]) > 1e-10:
-            phase = np.angle(Vh[0, j])
-            Vh_fixed[:, j] *= np.exp(-1j * phase)
+    n = min(U_fixed.shape[1], Vh_fixed.shape[0])
+    for j in range(n):
+        if abs(U_fixed[0, j]) > 1e-10:
+            phase = np.angle(U_fixed[0, j])
+            U_fixed[:, j] *= np.exp(-1j * phase)
+            Vh_fixed[j, :] *= np.exp(1j * phase)
     return U_fixed, S, Vh_fixed
+
+
+def svd_reconstruction_error(U, S, Vh) -> float:
+    """Max |Y - U_fixed diag(S) Vh_fixed|; should be ~0 if phase fix is consistent."""
+    Y = U @ np.diag(S) @ Vh
+    Uf, Sf, Vhf = fix_svd_phases(U, S, Vh)
+    return float(np.max(np.abs(Y - Uf @ np.diag(Sf) @ Vhf)))
 
 
 def compute_quark_observables(Yu: np.ndarray, Yd: np.ndarray) -> Dict[str, float]:

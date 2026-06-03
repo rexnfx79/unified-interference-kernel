@@ -3,6 +3,7 @@
 ## Synthesis (Start Here)
 
 - [[research-strategy]] — User decisions: Path A+D, mechanism goal, SM-only, code-only
+- [[future-work]] — Post-tranche plan: publication, CP audit, optional rank-2 quark ansatz
 - [[multi-sided-bridge-framework]] — Three approaches (arithmetic, Hilbert, QED/info) + gap-crossing protocol
 - [[plausibility-register]] — What failed, what is dead, what to pursue
 - [[proven-vs-conjecture-ledger]] — Know / probably true / dead (single ledger)

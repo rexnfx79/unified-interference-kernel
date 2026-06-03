@@ -2,7 +2,7 @@
 
 Clean, minimal implementation of an interference-kernel **functional form** for organizing Yukawa couplings. This is a phenomenological parameterization, not a validated universal theory.
 
-> **Canonical status:** Survivor rates, falsifiers, and claim ledger live in [`knowledge/wiki/synthesis/manuscript-ledger-alignment.md`](knowledge/wiki/synthesis/manuscript-ledger-alignment.md) and [`knowledge/wiki/synthesis/survivor-protocol-preregistered.md`](knowledge/wiki/synthesis/survivor-protocol-preregistered.md). Prefer those over this README for headline numbers.
+> **Canonical status:** Survivor rates and claim ledger: [`manuscript-ledger-alignment.md`](knowledge/wiki/synthesis/manuscript-ledger-alignment.md), [`survivor-protocol-preregistered.md`](knowledge/wiki/synthesis/survivor-protocol-preregistered.md). **Quark geometry search closed** — [`research-strategy.md`](knowledge/wiki/synthesis/research-strategy.md). **Next steps:** [`future-work.md`](knowledge/wiki/synthesis/future-work.md).
 
 ## Overview
 

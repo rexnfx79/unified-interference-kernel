@@ -11,7 +11,7 @@ related:
   - interference-kernel-manuscript
 status: active
 created: 2026-06-02
-updated: 2026-06-02i
+updated: 2026-06-02k
 ---
 
 # Manuscript ↔ Ledger Alignment
@@ -49,7 +49,8 @@ Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use wh
 | Title / intro (2026-06-02h) | “Three Projection Regimes” overclaims mechanism | **Fixed**: subtitle + organizational labels; quark 0% lead |
 | §Large Mixing L445–455 | Causal bullets quark small / ν large mixing | **Fixed**: removed causal bullets; weak g_env correlation only |
 | §Conclusions L478–485 | 60%/39% legacy rates headline | **Fixed**: 0% quark strict, 1% lepton holdout, 78.9% ν PMNS caveat |
-| Future work geometry extension | Implies larger grid fixes quarks | **Fixed**: exploratory only, not identified fix |
+| Future work geometry extension | Implies larger grid fixes quarks | **Fixed** (2026-06-02k): **closed** — 0/5759 strict (diag 30); see [[future-work]] |
+| §Further Study (2026-06-02k) | Stale / speculative bullets | **Fixed**: tiered future work; closed vs testable vs deprioritized |
 | §Neutrino–quark unification L455 | “unifies … within a single framework” | **Fixed**: quark failure breaks unification claim |
 | Future work L498–502 | UV / statistical validation of “universal scales” | **Fixed**: marked speculative; transfer refuted |
 | §Results quark “Robust Fits” (2026-06-02i) | Cherry-picked best geometry contradicts Failure Analysis | **Fixed**: diag 21/27/30 preregistered numbers only |

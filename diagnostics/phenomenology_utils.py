@@ -43,6 +43,26 @@ LEGACY_NEUTRINO_RANGES = {
 }
 
 
+def generate_quark_geometries(n_geom: int, seed: int) -> List[Tuple[Tuple, Tuple, Tuple]]:
+    """Unique (Q, U, D) sorted triples — phenomenology convention (diag 21/32)."""
+    rng = np.random.RandomState(seed)
+    coords = list(range(15))
+    seen = set()
+    geometries: List[Tuple[Tuple, Tuple, Tuple]] = []
+    attempts = 0
+    max_attempts = max(n_geom * 50, 1000)
+    while len(geometries) < n_geom and attempts < max_attempts:
+        Q = tuple(sorted(rng.choice(coords, 3, replace=False)))
+        U = tuple(sorted(rng.choice(coords, 3, replace=False)))
+        D = tuple(sorted(rng.choice(coords, 3, replace=False)))
+        key = (Q, U, D)
+        if key not in seen:
+            seen.add(key)
+            geometries.append(key)
+        attempts += 1
+    return geometries
+
+
 def generate_lepton_geometries(n_geom: int, seed: int) -> List[Tuple[Tuple, Tuple]]:
     """Unique (L, E) triple pairs sampled from a fixed coordinate grid."""
     rng = np.random.RandomState(seed)

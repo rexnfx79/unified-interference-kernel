@@ -1,0 +1,46 @@
+==============================================================================
+TIER 3 THEORY BRIDGES (diagnostic 33)
+==============================================================================
+
+Geometries: N=50, seed=33033
+DEFAULT kernel params: {'sigma': 4.0, 'k': 1.4, 'alpha': 2.5, 'eta': 2.0, 'eps_u': 0.15, 'eps_d': 0.15}
+
+Track A falsifiers:
+  w/σ rel spread < 0.15
+  geometry predicts w/σ with R² ≥ 0.5
+  magnitude correlation ≥ 0.99 all fits
+
+--- TRACK A — fixed params (diag 10 style) ---
+  N fits: 100
+  w/σ mean=0.6800 std=0.0456 rel_spread=0.0670
+  |corr| mag: min=0.9847 median=0.9996
+  phase err max=7.60e-15
+  geometry → w/σ linear R²=0.0451
+  stable w/σ (<0.15 rel spread): True
+  predictable w/σ (R²≥0.5): False
+  all mag r≥0.99: False
+
+  One-geometry optimized params (train loss=1.0000): σ=3.547 k=0.588
+--- TRACK A — same geom, optimized σ,k,α,η,ε ---
+  N fits: 100
+  w/σ mean=0.6606 std=0.0925 rel_spread=0.1401
+  |corr| mag: min=0.9536 median=0.9980
+  phase err max=2.15e-13
+  geometry → w/σ linear R²=0.1209
+  stable w/σ (<0.15 rel spread): True
+  predictable w/σ (R²≥0.5): False
+  all mag r≥0.99: False
+
+--- TRACK B — Path D (no flavor link) ---
+  GUE testable at 3×3: False
+  Only 2 unfolded spacings per matrix; GUE comparison not statistically meaningful.
+  Yukawa spacing mean=0.4981 vs random 0.4738 (n=400)
+  Explicit formula / primes: see diagnostics/14_explicit_formula_numerics.py (educational)
+  Flavor numerology: REFUTED — [[why-not-zeta-flavor-numerology]]
+
+--- TRACK A — Path A (QIT→flavor) ---
+  CLOSED — diagnostics 12–19; not re-run.
+
+--- VERDICT ---
+  Split-fermion → kernel remains POST-HOC fit (w/σ unstable or not predictable from geometry) — Tier 3 Track A does not justify mechanism claims.
+  Path D: no operational hook to Yukawa/CKM in this repo; remain watch-only.

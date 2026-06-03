@@ -371,6 +371,37 @@ def compute_yukawas_fn_texture(Q, U, D, epsilon, offset, k, alpha, eta, eps_u, e
     return Yu, Yd
 
 
+def compute_yukawas_rank2_clockwork_sum(
+    Q,
+    U,
+    D,
+    q1,
+    k1,
+    alpha1,
+    eta1,
+    eps1_u,
+    eps1_d,
+    q2,
+    k2,
+    alpha2,
+    eta2,
+    eps2_u,
+    eps2_d,
+    blend,
+):
+    """
+    Rank-2 style ansatz: Y = w Y^(1) + (1-w) Y^(2) with independent clockwork layers.
+
+    Each layer is rank-1 in overlap form; the sum can raise effective rank.
+    """
+    Yu1, Yd1 = compute_yukawas_clockwork(Q, U, D, q1, k1, alpha1, eta1, eps1_u, eps1_d)
+    Yu2, Yd2 = compute_yukawas_clockwork(Q, U, D, q2, k2, alpha2, eta2, eps2_u, eps2_d)
+    w = float(np.clip(blend, 0.0, 1.0))
+    Yu = w * Yu1 + (1.0 - w) * Yu2
+    Yd = w * Yd1 + (1.0 - w) * Yd2
+    return Yu, Yd
+
+
 def compute_yukawas_fn_texture_split(
     Q, U, D,
     epsilon, offset_u, offset_d,
@@ -607,7 +638,32 @@ KERNELS = {
             (0.01, 1.5),
         ],
     },
+    'rank2_clockwork_sum': {
+        'name': 'Rank-2 clockwork sum',
+        'formula': 'Y = w Y^(q1) + (1-w) Y^(q2) (two clockwork layers)',
+        'compute_yukawas': compute_yukawas_rank2_clockwork_sum,
+        'params': [
+            'q1', 'k1', 'alpha1', 'eta1', 'eps1_u', 'eps1_d',
+            'q2', 'k2', 'alpha2', 'eta2', 'eps2_u', 'eps2_d',
+            'blend',
+        ],
+        'bounds': [
+            (1.5, 8.0), (0.01, 3.0), (0.0, 2 * np.pi), (0.5, 6.0), (0.01, 1.0), (0.01, 1.0),
+            (1.5, 8.0), (0.01, 3.0), (0.0, 2 * np.pi), (0.5, 6.0), (0.01, 1.0), (0.01, 1.0),
+            (0.05, 0.95),
+        ],
+    },
 }
+
+# Tier 2 pre-registered comparison set (diagnostic 32)
+TIER2_QUARK_KERNELS = [
+    'gaussian',
+    'rank2_clockwork_sum',
+    'clockwork_dual_phase',
+    'fn_texture',
+    'fn_texture_split',
+    'power_law',
+]
 
 # =============================================================================
 # MINIMALITY LADDER REGISTRY

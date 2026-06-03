@@ -13,7 +13,7 @@ authors: [Alexander Seto]
 year: 2026
 status: established
 created: 2026-06-01
-updated: 2026-06-02h
+updated: 2026-06-02m
 ---
 
 # Diagnostics Summary (Repo)
@@ -46,6 +46,8 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 | `29` | Legacy extension pool N=100 (seed 29029): **92/100** solved, **0% strict**; best joint **4.28** vs CSV **4.90** (diag 30 shell-5 **3.06** on exhaustive legacy) |
 | `30` | **5759** legacy geoms (989+4770 solved): **0% strict**; shell-5 joint min **3.06** vs 1k **5.01**; θ* in `quark_geometry_followup_bests.json` |
 | `31` | Tier A4: null baseline N=30 — kernel **0% strict**; Haar train median **~360** vs kernel **~2.0**; shuffled Q similar to kernel |
+| `32` | Tier 2: rank2 sum, FN texture, dual-phase, power-law — **0% strict**; holdout worse than Gaussian; effective rank ≈1 |
+| `33` | Tier 3: split-fermion overlap N=50 — \(w/\sigma\) stable at fixed \(\sigma\) (rel spread **0.067**); geometry→\(w/\sigma\) R² **0.045**; Path D 3×3 GUE **not testable** |
 
 ### Diagnostic 31 — null geometry (N=30, seed 21021)
 

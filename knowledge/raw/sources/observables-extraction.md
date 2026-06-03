@@ -43,6 +43,6 @@ Tests: `tests/test_neutrino_observables.py`.
 
 ## Known limitation (diagnostics)
 
-`fix_svd_phases` can break exact SVD reconstruction (~0.5% CKM error reported in Gaussian diagnostic) — implementation caveat, not primary quark-sector failure mode.
+`fix_svd_phases` (2026-06-02j): column/row paired phases preserve \(Y=U\Sigma V^\dagger\); prior row-wise bug fixed — see `tests/test_observables.py`.
 
 See wiki: [[observables-extraction]], [[yukawa-observables-pipeline]], [[neutrino-observables-gap]].

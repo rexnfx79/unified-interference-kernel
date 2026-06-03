@@ -1,0 +1,44 @@
+==============================================================================
+QUARK TIER-2 ANSATZ (diagnostic 32)
+==============================================================================
+
+Pre-registered: TIER2_QUARK_KERNELS in alternative_kernels.py
+Geometries: N=100, seed=32032 (phenomenology triples)
+Optimizer: {'maxiter': 120, 'popsize': 12, 'tol': 1e-06, 'mutation': (0.5, 1.0), 'recombination': 0.7, 'polish': False}, seeds/geom=4
+Objective: training loss (mc, Vus, Vcb) — same split as diag 21
+Holdout accept rule: median holdout improves >20% vs gaussian
+Strict tolerances: {'mc': 0.3, 'Vus': 0.2, 'Vcb': 0.3, 'Vub': 0.5, 'mu': 0.5, 'md': 0.5, 'ms': 0.5}
+
+Reference diag 21: gaussian 0% strict at N=100
+Baseline gaussian holdout median: 25.4671
+
+--- PER-KERNEL ---
+
+[gaussian] solved=100 strict=0 (0.0%)
+  train_median=0.0014 holdout_median=25.4671 holdout_min=2.0367 holdout_improve=0.0% accept=False
+  mean effective rank Yu=1.047 Yd=1.407
+
+[rank2_clockwork_sum] solved=100 strict=0 (0.0%)
+  train_median=0.6281 holdout_median=53497.7760 holdout_min=10.5491 holdout_improve=-209965.8% accept=False
+  mean effective rank Yu=1.070 Yd=1.615
+
+[clockwork_dual_phase] solved=100 strict=0 (0.0%)
+  train_median=0.9078 holdout_median=58086.8817 holdout_min=10.2236 holdout_improve=-227985.6% accept=False
+  mean effective rank Yu=1.067 Yd=1.542
+
+[fn_texture] solved=100 strict=0 (0.0%)
+  train_median=0.0044 holdout_median=131.8056 holdout_min=9.1697 holdout_improve=-417.6% accept=False
+  mean effective rank Yu=1.044 Yd=1.230
+
+[fn_texture_split] solved=100 strict=0 (0.0%)
+  train_median=0.0083 holdout_median=138.7691 holdout_min=12.0074 holdout_improve=-444.9% accept=False
+  mean effective rank Yu=1.044 Yd=1.236
+
+[power_law] solved=100 strict=0 (0.0%)
+  train_median=0.2118 holdout_median=48538.1892 holdout_min=10.7779 holdout_improve=-190491.4% accept=False
+  mean effective rank Yu=1.058 Yd=1.631
+
+--- VERDICT ---
+  0% strict on all Tier-2 kernels at N=100 — P2.1/P2.2 falsified at strict protocol.
+  No kernel beats Gaussian holdout by >20% — no generalization gain from Tier-2 ansätze.
+  P2.3 (scheme/RGE readout): not tested in this diagnostic.

@@ -1,7 +1,34 @@
-updated: 2026-06-02i
+updated: 2026-06-02m
 ---
 
 # Research Log
+
+## 2026-06-02 | implement | Tier 3 theory bridges (diag 33)
+
+- **Code:** `src/split_fermion_overlap.py`; `diagnostics/33_tier3_theory_bridges.py` — N=50, seed 33033
+- **Track A:** \(w/\sigma\) rel spread 0.067 (stable at fixed params); geometry→\(w/\sigma\) R² **0.045** — mechanism **refuted**
+- **Track B:** 3×3 GUE spacing not testable; Path D watch-only
+- **Wiki:** [[future-work]], [[derive-interference-kernel-from-overlaps]], [[diagnostics-summary]], [[plausibility-register]]
+
+## 2026-06-02 | implement | Tier 2 quark ansatz (diag 32)
+
+- **Code:** `compute_yukawas_rank2_clockwork_sum`, `TIER2_QUARK_KERNELS` in `alternative_kernels.py`; `generate_quark_geometries` in `phenomenology_utils.py`
+- **Diagnostic:** `32_quark_tier2_ansatz.py` — N=100, seed 32032, holdout >20% vs Gaussian rule
+- **Smoke:** 0/10 strict all kernels; rank2/FN worsen holdout vs Gaussian on small sample
+- **Full N=100:** 0% strict all kernels; Gaussian holdout median 25.5; rank2/FN/power-law holdout ≫ baseline — **Tier 2 falsified**
+
+## 2026-06-02 | implement | Future work tier plan (post-tranche)
+
+- **Wiki:** [[future-work]] — Tier 0 publication, Tier 1 CP/post-fix audit, Tier 2 rank-2 pre-reg, Tier 3 theory (deprioritized)
+- **Manuscript:** §Further Study rewritten — closed geometry/split-Q/envelope paths; honest forward items
+- **Strategy:** [[research-strategy]] points to [[future-work]]; phenomenology checklist collapsed to “complete”
+
+## 2026-06-02 | implement | Strategy closure + observables phase fix
+
+- **Strategy:** [[research-strategy]] — quark dead-ends table, active priorities (honest phenomenology; no more geometry grids)
+- **Code:** `fix_svd_phases` — column/row paired phases; preserves \(Y=U\Sigma V^\dagger\); `test_fix_svd_phases_preserves_reconstruction`
+- **Register:** [[plausibility-register]] — geometry extension + split \(Q_u,Q_d\) marked dead
+- **Diag 29:** penalty-fix rerun documented in [[diagnostics-summary]]
 
 ## 2026-06-02 | implement | Geometry extension hardened follow-up (diag 30)
 

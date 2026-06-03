@@ -7,7 +7,13 @@ sys.path.insert(0, '../src')
 
 import numpy as np
 from kernel import compute_quark_yukawas
-from observables import compute_quark_observables, compute_ckm_loss, compute_mass_loss, QUARK_TARGETS
+from observables import (
+    compute_quark_observables,
+    compute_ckm_loss,
+    compute_mass_loss,
+    fix_svd_phases,
+    QUARK_TARGETS,
+)
 
 
 def test_observable_extraction():
@@ -53,6 +59,19 @@ def test_loss_functions():
     assert ckm_loss_perturbed > ckm_loss, "Loss should increase for perturbed values"
     
     print("✓ Loss function test passed")
+
+
+def test_fix_svd_phases_preserves_reconstruction():
+    """Phase fixing must not break Y = U diag(S) Vh."""
+    Y = np.array([
+        [1.0 + 0.5j, 0.1 - 0.1j, 0.01],
+        [0.2j, 0.5 + 0.3j, 0.05 - 0.02j],
+        [0.01 + 0.01j, 0.02, 0.1 - 0.05j],
+    ], dtype=complex)
+    U, S, Vh = np.linalg.svd(Y, full_matrices=False)
+    U_fixed, S_fixed, Vh_fixed = fix_svd_phases(U, S, Vh)
+    err = np.max(np.abs(Y - U_fixed @ np.diag(S_fixed) @ Vh_fixed))
+    assert err < 1e-10, f"SVD reconstruction error after phase fix: {err:.2e}"
 
 
 def test_unitarity():
