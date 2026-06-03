@@ -11,7 +11,7 @@ related:
   - diagnostics-summary
 status: active
 created: 2026-06-02
-updated: 2026-06-02m
+updated: 2026-06-02n
 ---
 
 # Future Work (Post-Phenomenology Tranche)
@@ -82,6 +82,19 @@ Pre-register in [[survivor-protocol-preregistered]] extension **before** large r
 
 See [[multi-sided-bridge-framework]] for bridge order: QED/info → spectral → arithmetic last.
 
+## Tier 5 — Conjecture ↔ physics (new program)
+
+See [[conjecture-to-physics-avenues]] for ranked tracks and falsifiers.
+
+| Item | Hypothesis | Falsifier |
+|------|------------|-----------|
+| **T5.1** | Explicit formula links primes to zero heights structurally | Extend diag 14: no stable frequency/phase match without many free parameters |
+| **T5.2** | Kernel bilinear phase = 1D self-adjoint operator phase | Jacobi inverse (diag 35): residual ≫ kernel fit or >6 BC params/sector |
+| **T5.3** | Large-N geometry loss landscape shows RMT universality | Diag 34: spacings = Poisson/random |
+| **T5.4** | Primes appear in standard QED sums | One standard observable = prime sum without redefinition — [[can-primes-enter-via-qed-spectral-sums]] |
+
+**Non-goals:** RH→CKM numerology; 3×3 GUE; revived QIT→flavor mechanism.
+
 ## Tier 4 — Repo hygiene (parallel)
 
 - Lint wiki links; sync [[diagnostics-summary]] when new diagnostics land
@@ -92,6 +105,7 @@ See [[multi-sided-bridge-framework]] for bridge order: QED/info → spectral →
 
 | Date | Decision |
 |------|----------|
+| 2026-06-02n | Tier 5 conjecture↔physics program — [[conjecture-to-physics-avenues]] |
 | 2026-06-02m | Tier 3 theory bridges **closed** (diag 33); split-fermion→kernel remains post-hoc |
 | 2026-06-02k | Phenomenology tranche **complete**; forward work = publication + optional P1/P2 |
 | 2026-06-02j | Geometry extension **closed** (0/5759 strict) |

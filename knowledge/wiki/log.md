@@ -1,7 +1,13 @@
-updated: 2026-06-02m
+updated: 2026-06-02n
 ---
 
 # Research Log
+
+## 2026-06-02 | strategy | Conjecture-to-physics program (Tier 5)
+
+- **Wiki:** [[conjecture-to-physics-avenues]] — ranked B↔A trace formula, Jacobi inverse, landscape RMT; dead ends explicit
+- **Strategy:** [[future-work]] Tier 5, [[research-strategy]] priority 4, [[multi-sided-bridge-framework]] order updated
+- **Git:** pushed `7c6b923` (Tier 2–3 closure, SVD fix, diagnostics 32–33)
 
 ## 2026-06-02 | implement | Tier 3 theory bridges (diag 33)
 

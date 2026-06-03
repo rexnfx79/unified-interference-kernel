@@ -32,7 +32,8 @@ Full tiered plan: **[[future-work]]** (2026-06-02k). Phenomenology tranche **21�
 | **1** | **Tier 0** — publication package per [[future-work]] | Ledger-aligned manuscript + artifact paths |
 | **2** | **Tier 1** — post phase-fix audit (small N) + CP observables | Confirm refutations; then CP/Jarlskog |
 | **3** | ~~**Tier 2** diag 32~~ | **Complete — falsified** (0% strict; holdout worse than Gaussian) |
-| **4** | **Tier 4** — repo hygiene only | Tier 3 **closed** (diag 33); no theory-bridge hook |
+| **4** | **Tier 5** — conjecture↔physics ([[conjecture-to-physics-avenues]]) | HP / explicit formula / Jacobi inverse; **not** flavor numerology |
+| **5** | **Tier 4** — repo hygiene | Parallel |
 
 ## Closed — quark search dead ends (do not fund without new falsifier)
 

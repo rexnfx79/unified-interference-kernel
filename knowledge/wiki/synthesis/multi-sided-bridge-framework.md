@@ -13,7 +13,7 @@ related:
   - it-from-bit
 status: open
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-02n
 ---
 
 # Multi-Sided Bridge Framework
@@ -112,12 +112,16 @@ When two islands look connected, run this checklist before adding a bridge edge:
 
 ## Recommended Research Order
 
-**Flavor phenomenology tranche (repo):** complete — see [[future-work]] Tier 0–2. Do not resume geometry grids.
+**Flavor phenomenology tranche (repo):** complete — see [[future-work]] Tier 0–3. Do not resume geometry grids or flavor numerology.
 
-1. **C → B:** QED/QM on Hilbert spaces → information measures ([[qed-qm-information]])
-2. **B → A:** Operator programs for zeta (Hilbert–Polya) — independent of flavor
-3. **A:** Primes/p-adics — only if step 1–2 produce a **specific** hook (adelic boundary conditions, etc.)
-4. **D last:** Test whether [[interference-kernel]] emerges as effective limit — do **not** start from kernel to prove reality; quark sector **refuted** at strict protocol
+**Conjecture program (Tier 5):** see [[conjecture-to-physics-avenues]].
+
+1. **B ↔ A:** Explicit formula / trace formulas — primes ↔ zero heights (diag 14 extension); Hilbert–Polya **independent of flavor**
+2. **B → D (falsifiable):** Jacobi / Sturm–Liouville inverse for kernel phases — [[does-phase-structure-imply-spectral-operator]]; split-fermion magnitude path **refuted** (diag 33)
+3. **B (meta):** Large-N optimization landscape vs RMT — not 3×3 Yukawa spacing
+4. **C → B:** QED on Hilbert space (established); QIT→flavor mechanism **closed** (diag 12–19)
+5. **A ↔ C:** Primes in QED sums — **watch** until standard observable hook ([[can-primes-enter-via-qed-spectral-sums]])
+6. **D:** Phenomenology paper only — kernel is readout, not fundamental
 
 ## Mermaid: Three Approaches + Effective Layer
 
