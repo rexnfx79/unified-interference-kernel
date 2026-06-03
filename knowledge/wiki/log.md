@@ -3,6 +3,12 @@ updated: 2026-06-02o
 
 # Research Log
 
+## 2026-06-02 | implement | Tier 1 CP + phase-fix audit (diag 36)
+
+- **Code:** `delta_CKM`, `J`, `delta_PMNS`, `J_PMNS` in `observables.py`; `tests/test_cp_observables.py`
+- **Diag 36:** N=15 — 0/15 strict repaired & legacy; masses unchanged; CKM legacy vs repaired differs
+- **Verdict:** Quark refutation **stable** after SVD phase fix (P1.1 pass)
+
 ## 2026-06-02 | implement | Tier 0 publication package
 
 - **Manuscript:** abstract 27.8% joint ν lead; 0/5759 quark; Further Study closed diag 32–33; reproduce script cited

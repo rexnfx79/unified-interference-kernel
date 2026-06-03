@@ -2,7 +2,7 @@
 
 Clean, minimal implementation of an interference-kernel **functional form** for organizing Yukawa couplings. This is a phenomenological parameterization, not a validated universal theory.
 
-> **Canonical status:** [`manuscript-ledger-alignment.md`](knowledge/wiki/synthesis/manuscript-ledger-alignment.md), [`survivor-protocol-preregistered.md`](knowledge/wiki/synthesis/survivor-protocol-preregistered.md). **Tier 0 publication package complete** (2026-06-02o). Reproduce: `./scripts/reproduce_phenomenology_tranche.sh`. **Next:** Tier 1 CP audit — [`future-work.md`](knowledge/wiki/synthesis/future-work.md).
+> **Canonical status:** [`manuscript-ledger-alignment.md`](knowledge/wiki/synthesis/manuscript-ledger-alignment.md), [`survivor-protocol-preregistered.md`](knowledge/wiki/synthesis/survivor-protocol-preregistered.md). **Tier 0–1 complete** (2026-06-02o). Reproduce: `./scripts/reproduce_phenomenology_tranche.sh`. **Next:** [`future-work.md`](knowledge/wiki/synthesis/future-work.md) Tier 5 (blocked T5.2) or optional CP sweeps.
 
 ## Overview
 

@@ -21,6 +21,8 @@ Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use wh
 
 **Tier 0 pass (2026-06-02o):** Abstract neutrino headline = **27.8% joint** (diag 28) with **78.9% PMNS-only** (diag 23) qualified; quark **0/5759** (diag 30); Further Study lists diag **32–33** closed; reproduce via `scripts/reproduce_phenomenology_tranche.sh`.
 
+**Tier 1 pass (2026-06-02o):** `observables.py` CP fields + diag **36** — 0/15 strict after phase fix; quark refutation narrative **stable**.
+
 ## Claim table
 
 | Manuscript claim (section / line theme) | Ledger status | Repo evidence |
@@ -65,6 +67,7 @@ Historical fixes (2026-06-02i–k): quark cherry-pick, three-regime validation, 
 | `30` | **0/5759** strict geometry closure |
 | `32` | Tier-2 ansätze falsified |
 | `33` | Split-fermion / Path D — no mechanism hook |
+| `36` | Phase-fix audit — 0% strict stable; CP readout added |
 
 ## Canonical protocol
 

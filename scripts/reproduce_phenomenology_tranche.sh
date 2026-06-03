@@ -14,7 +14,8 @@ for f in diagnostics/results/21_quark_phenomenology_holdout.txt \
          diagnostics/results/28_neutrino_masses_pmns_joint.txt \
          diagnostics/results/30_quark_geometry_followup.txt \
          diagnostics/results/32_quark_tier2_ansatz.txt \
-         diagnostics/results/33_tier3_theory_bridges.txt; do
+         diagnostics/results/33_tier3_theory_bridges.txt \
+         diagnostics/results/36_tier1_phase_fix_audit.txt; do
   if [[ -f "$f" ]]; then
     echo "  OK  $f"
   else
@@ -24,7 +25,8 @@ done
 
 echo ""
 echo "=== Observables pipeline (SVD phase fix) ==="
-PYTHONPATH=src "$PY" -m pytest tests/test_observables.py::test_fix_svd_phases_preserves_reconstruction -q
+PYTHONPATH=src "$PY" -m pytest tests/test_observables.py::test_fix_svd_phases_preserves_reconstruction \
+  tests/test_cp_observables.py -q
 
 echo ""
 echo "Protocol: knowledge/wiki/synthesis/survivor-protocol-preregistered.md"

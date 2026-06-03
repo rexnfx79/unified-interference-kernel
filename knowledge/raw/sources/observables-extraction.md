@@ -35,7 +35,11 @@ Tests: `tests/test_neutrino_observables.py`.
 
 ## Extended observables
 
-`compute_full_ckm_observables` — all 9 \(|V_{ij}|\), Jarlskog magnitude, unitarity violation metric.
+`compute_quark_observables` — CKM magnitudes, masses, `delta_CKM`, `J`, `J_abs`.
+
+`compute_neutrino_observables` — PMNS angles, Δm², `delta_PMNS`, `J_PMNS`.
+
+`compute_full_ckm_observables` — all 9 \(|V_{ij}|\), CP fields, unitarity violation metric.
 
 ## Information measures (related)
 

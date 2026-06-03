@@ -14,6 +14,12 @@ QUARK_TARGETS = {
     'mb': 4.18, 'mt': 172.5,
 }
 
+# CP observables — PDG 2024 (order of magnitude for audits; sign convention via pipeline)
+QUARK_CP_TARGETS = {
+    'J': 3.08e-5,
+    'delta_CKM': 1.20,
+}
+
 NEUTRINO_TARGETS = {
     'theta12': 0.5903,  # radians (~33.82°), PDG 2024
     'theta23': 0.7850,  # radians (~45°)
@@ -24,6 +30,11 @@ NEUTRINO_TARGETS = {
 NEUTRINO_MASS_TARGETS = {
     'dm21': 7.53e-5,
     'dm31': 2.453e-3,
+}
+
+# PMNS CP phase — normal-ordering global-fit scale (radians); convention-dependent
+NEUTRINO_CP_TARGETS = {
+    'delta_PMNS': 3.49,
 }
 
 # Legacy neutrino optimization anchor (m2 fixed; scale from Snu[1])
@@ -61,8 +72,68 @@ def svd_reconstruction_error(U, S, Vh) -> float:
     return float(np.max(np.abs(Y - Uf @ np.diag(Sf) @ Vhf)))
 
 
+def fix_svd_phases_legacy(U, S, Vh):
+    """Pre-2026-06-02j row/column phase convention (breaks Y reconstruction). Audit only."""
+    U_fixed = np.asarray(U, dtype=complex).copy()
+    Vh_fixed = np.asarray(Vh, dtype=complex).copy()
+    for i in range(U_fixed.shape[0]):
+        if abs(U_fixed[i, 0]) > 1e-10:
+            phase = np.angle(U_fixed[i, 0])
+            U_fixed[i, :] *= np.exp(-1j * phase)
+    for j in range(Vh_fixed.shape[1]):
+        if abs(Vh_fixed[0, j]) > 1e-10:
+            phase = np.angle(Vh_fixed[0, j])
+            Vh_fixed[:, j] *= np.exp(-1j * phase)
+    return U_fixed, S, Vh_fixed
+
+
+def jarlskog_invariant(V: np.ndarray) -> float:
+    """Jarlskog J = Im(V_ud V_cs V_us* V_cd*) in PDG index convention."""
+    V = np.asarray(V, dtype=complex)
+    return float(np.imag(V[0, 0] * V[1, 1] * np.conj(V[0, 1]) * np.conj(V[1, 0])))
+
+
+def cp_phase_delta_from_unitary(V: np.ndarray) -> float:
+    """
+    CP phase delta (radians) from unitary V in PDG parameterization.
+
+    Primary: delta = -arg(V_ub) when |V_ub| > 0 (V_ub = s13 e^{-i delta}).
+    Fallback: arcsin(J / (c12 s12 c23 s23 s13^2 c13^2)) when arg is ill-defined.
+    """
+    V = np.asarray(V, dtype=complex)
+    s13 = float(np.clip(np.abs(V[0, 2]), 0.0, 1.0))
+    if s13 < 1e-12:
+        return 0.0
+    if abs(V[0, 2]) > 1e-12:
+        return float(np.arctan2(np.sin(-np.angle(V[0, 2])), np.cos(-np.angle(V[0, 2]))))
+    c13 = np.cos(np.arcsin(s13))
+    s12 = float(np.clip(np.abs(V[0, 1]) / c13, 0.0, 1.0))
+    s23 = float(np.clip(np.abs(V[1, 2]) / c13, 0.0, 1.0))
+    c12 = float(np.sqrt(max(1.0 - s12 ** 2, 0.0)))
+    c23 = float(np.sqrt(max(1.0 - s23 ** 2, 0.0)))
+    denom = c12 * s12 * c23 * s23 * (s13 ** 2) * (c13 ** 2)
+    if denom < 1e-20:
+        return 0.0
+    sin_d = float(np.clip(jarlskog_invariant(V) / denom, -1.0, 1.0))
+    return float(np.arcsin(sin_d))
+
+
+def ckm_matrix_from_yukawas(
+    Yu: np.ndarray,
+    Yd: np.ndarray,
+    *,
+    phase_fix=fix_svd_phases,
+) -> np.ndarray:
+    """CKM = Uu† Ud with chosen SVD phase convention."""
+    Uu, Su, Vuh = np.linalg.svd(Yu, full_matrices=False)
+    Ud, Sd, Vdh = np.linalg.svd(Yd, full_matrices=False)
+    Uu_f, _, _ = phase_fix(Uu, Su, Vuh)
+    Ud_f, _, _ = phase_fix(Ud, Sd, Vdh)
+    return Uu_f.conj().T @ Ud_f
+
+
 def compute_quark_observables(Yu: np.ndarray, Yd: np.ndarray) -> Dict[str, float]:
-    """Compute quark sector observables: CKM mixing and masses."""
+    """Compute quark sector observables: CKM mixing, masses, and CP (J, delta)."""
     Uu, Su, Vuh = np.linalg.svd(Yu, full_matrices=False)
     Ud, Sd, Vdh = np.linalg.svd(Yd, full_matrices=False)
     Uu_fixed, _, _ = fix_svd_phases(Uu, Su, Vuh)
@@ -77,10 +148,14 @@ def compute_quark_observables(Yu: np.ndarray, Yd: np.ndarray) -> Dict[str, float
     mc = Su[1] * scale_u
     md = Sd[2] * scale_d
     ms = Sd[1] * scale_d
+    J = jarlskog_invariant(CKM)
     return {
         'Vus': float(Vus), 'Vcb': float(Vcb), 'Vub': float(Vub),
         'mu': float(mu), 'mc': float(mc), 'md': float(md), 'ms': float(ms),
         'scale_u': float(scale_u), 'scale_d': float(scale_d),
+        'delta_CKM': cp_phase_delta_from_unitary(CKM),
+        'J': J,
+        'J_abs': float(abs(J)),
     }
 
 
@@ -134,12 +209,16 @@ def compute_neutrino_observables(Ynu: np.ndarray, Ye: np.ndarray) -> Dict[str, f
     Unu_fixed, _, _ = fix_svd_phases(Unu, Snu, Vnuh)
     PMNS = Ue_fixed.conj().T @ Unu_fixed
     theta12, theta23, theta13 = pmns_angles_from_unitary(PMNS)
+    J_pmns = jarlskog_invariant(PMNS)
 
     masses = neutrino_masses_from_singular_values(Snu)
     return {
         'theta12': theta12,
         'theta23': theta23,
         'theta13': theta13,
+        'delta_PMNS': cp_phase_delta_from_unitary(PMNS),
+        'J_PMNS': J_pmns,
+        'J_PMNS_abs': float(abs(J_pmns)),
         'Snu_0': float(Snu[0]),
         'Snu_1': float(Snu[1]),
         'Snu_2': float(Snu[2]),
@@ -369,38 +448,37 @@ def compute_penalized_loss(
 
 
 def compute_full_ckm_observables(Yu: np.ndarray, Yd: np.ndarray) -> Dict[str, float]:
-    """
-    Compute full CKM matrix observables including all 9 elements and Jarlskog.
-    
-    Extended version of compute_quark_observables for detailed analysis.
-    """
-    # Get basic observables
+    """Full CKM magnitudes, CP phase, Jarlskog, and unitarity metric."""
     obs = compute_quark_observables(Yu, Yd)
-    
-    # Compute full CKM matrix
-    Uu, Su, Vuh = np.linalg.svd(Yu, full_matrices=False)
-    Ud, Sd, Vdh = np.linalg.svd(Yd, full_matrices=False)
-    
-    # Fix phases
-    Uu_fixed, _, _ = fix_svd_phases(Uu, Su, Vuh)
-    Ud_fixed, _, _ = fix_svd_phases(Ud, Sd, Vdh)
-    
-    CKM = Uu_fixed.conj().T @ Ud_fixed
-    
-    # All CKM magnitudes
+    CKM = ckm_matrix_from_yukawas(Yu, Yd)
     obs['Vud'] = float(abs(CKM[0, 0]))
     obs['Vcd'] = float(abs(CKM[1, 0]))
     obs['Vtd'] = float(abs(CKM[2, 0]))
     obs['Vts'] = float(abs(CKM[2, 1]))
     obs['Vtb'] = float(abs(CKM[2, 2]))
     obs['Vcs'] = float(abs(CKM[1, 1]))
-    
-    # Jarlskog invariant (magnitude only - sign is convention-dependent)
-    J = np.imag(CKM[0, 0] * CKM[1, 1] * np.conj(CKM[0, 1]) * np.conj(CKM[1, 0]))
-    obs['J_magnitude'] = float(abs(J))
-    
-    # Unitarity check
-    VVdag = CKM @ CKM.conj().T
-    obs['unitarity_violation'] = float(np.max(np.abs(VVdag - np.eye(3))))
-    
+    obs['J_magnitude'] = obs['J_abs']
+    obs['unitarity_violation'] = float(np.max(np.abs(CKM @ CKM.conj().T - np.eye(3))))
     return obs
+
+
+def compute_quark_observables_legacy_phases(Yu: np.ndarray, Yd: np.ndarray) -> Dict[str, float]:
+    """Same readout as compute_quark_observables but with pre-fix SVD phases (audit)."""
+    CKM = ckm_matrix_from_yukawas(Yu, Yd, phase_fix=fix_svd_phases_legacy)
+    Uu, Su, _ = np.linalg.svd(Yu, full_matrices=False)
+    Ud, Sd, _ = np.linalg.svd(Yd, full_matrices=False)
+    scale_u = QUARK_TARGETS['mt'] / Su[0] if Su[0] > 0 else 0.0
+    scale_d = QUARK_TARGETS['mb'] / Sd[0] if Sd[0] > 0 else 0.0
+    J = jarlskog_invariant(CKM)
+    return {
+        'Vus': float(abs(CKM[0, 1])),
+        'Vcb': float(abs(CKM[1, 2])),
+        'Vub': float(abs(CKM[0, 2])),
+        'mu': float(Su[2] * scale_u),
+        'mc': float(Su[1] * scale_u),
+        'md': float(Sd[2] * scale_d),
+        'ms': float(Sd[1] * scale_d),
+        'delta_CKM': cp_phase_delta_from_unitary(CKM),
+        'J': J,
+        'J_abs': float(abs(J)),
+    }

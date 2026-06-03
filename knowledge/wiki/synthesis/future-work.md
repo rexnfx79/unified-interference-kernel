@@ -31,15 +31,15 @@ Forward-looking plan after diagnostics **21–31**, geometry closure (**29–30*
 
 **Non-goals:** Universal kernel parameters; three-regime “validation”; geometry extension as quark fix.
 
-## Tier 1 — Observables & CP (post phase-fix)
+## Tier 1 — Observables & CP (**complete** 2026-06-02o)
 
-| Item | Deliverable | Falsifier |
-|------|-------------|-----------|
-| **P1.1** Post-fix audit | Re-run **small** diag-21 subset (N=10–20) with repaired `fix_svd_phases`; table old vs new CKM/masses | If strict rate jumps ≫0% without new physics, prior refutations need revision |
-| **P1.2** CP observables | Add \(\delta_{\text{CKM}}\), Jarlskog \(J\) to `observables.py` + unit tests | Compare to PDG; report whether Pareto persists |
-| **P1.3** PMNS CP | \(\delta_{\text{PMNS}}\) from joint unitary; same protocol | Only after P1.1 shows stable magnitudes |
+| Item | Deliverable | Status |
+|------|-------------|--------|
+| **P1.1** Post-fix audit | `diagnostics/36_tier1_phase_fix_audit.py` — N=15, seed 21021 | **Done** — 0/15 strict (repaired & legacy); refutation stable |
+| **P1.2** CP observables | `delta_CKM`, `J`, `J_abs` in `observables.py`; `tests/test_cp_observables.py` | **Done** |
+| **P1.3** PMNS CP | `delta_PMNS`, `J_PMNS` in `compute_neutrino_observables` | **Done** |
 
-Do **not** scale CP sweeps until P1.1 confirms refutation narrative survives phase convention.
+Report: `diagnostics/results/36_tier1_phase_fix_audit.txt`. CKM magnitudes can shift under legacy phases (median rel diff ~0.6); **masses unchanged**; Pareto corr ~0.52 on N=15 sample. Do **not** scale full CP optimization sweeps without new falsifiers.
 
 ## Tier 2 — New quark ansatz (**complete — falsified**)
 
@@ -106,6 +106,7 @@ See [[conjecture-to-physics-avenues]] for ranked tracks and falsifiers.
 
 | Date | Decision |
 |------|----------|
+| 2026-06-02o | Tier 1 complete — phase audit diag 36 + CP observables |
 | 2026-06-02o | Tier 0 publication package complete — manuscript + reproduce script |
 | 2026-06-02o | Tier 5 adversarial review — T5.2 blocked pending redesign |
 | 2026-06-02n | Tier 5.1 wiki ingest complete — [[trace-formula-bridge-ladder]] |

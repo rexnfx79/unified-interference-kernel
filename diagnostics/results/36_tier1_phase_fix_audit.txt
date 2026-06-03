@@ -1,0 +1,31 @@
+========================================================================
+TIER 1 PHASE-FIX AUDIT (diagnostic 36)
+========================================================================
+N=15, seed=21021, kernel=gaussian, train/holdout=diag 21
+
+Geometries solved: 15/15
+Strict survivors (repaired phases): 0/15
+Strict survivors (legacy phases):   0/15
+SVD reconstruction error (repaired, max): 4.97e-16
+
+--- Legacy vs repaired relative diff (same Yukawa) ---
+  Vus: max=0.9733 median=0.6367
+  Vcb: max=0.8130 median=0.5670
+  Vub: max=0.9513 median=0.6215
+  mc: max=0.0000 median=0.0000
+  mu: max=0.0000 median=0.0000
+  md: max=0.0000 median=0.0000
+  ms: max=0.0000 median=0.0000
+
+--- CKM–mc Pareto (repaired pipeline) ---
+  ckm_mc_corr: 0.5219
+  mc_rel median: 0.0216
+
+--- CP snapshot (repaired; PDG targets) ---
+  PDG |J| ~ 3.080e-05, delta_CKM ~ 1.20 rad
+  |J| median=1.330e-05 max=3.713e-04
+  delta_CKM median=0.000 (not optimized; order-of-magnitude audit only)
+
+--- VERDICT (P1.1) ---
+  PASS: 0% strict survivors — quark refutation stable under repaired SVD phases.
+  Strict count unchanged by phase convention on this sample.

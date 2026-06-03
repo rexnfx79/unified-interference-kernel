@@ -12,7 +12,9 @@ from observables import (
     compute_ckm_loss,
     compute_mass_loss,
     fix_svd_phases,
+    jarlskog_invariant,
     QUARK_TARGETS,
+    QUARK_CP_TARGETS,
 )
 
 
@@ -26,7 +28,10 @@ def test_observable_extraction():
     obs = compute_quark_observables(Yu, Yd)
     
     # Check all expected keys present
-    expected_keys = ['Vus', 'Vcb', 'Vub', 'mu', 'mc', 'md', 'ms', 'scale_u', 'scale_d']
+    expected_keys = [
+        'Vus', 'Vcb', 'Vub', 'mu', 'mc', 'md', 'ms', 'scale_u', 'scale_d',
+        'delta_CKM', 'J', 'J_abs',
+    ]
     for key in expected_keys:
         assert key in obs, f"Missing key: {key}"
         assert not np.isnan(obs[key]), f"{key} is NaN"
@@ -85,7 +90,9 @@ def test_unitarity():
     # Get full CKM matrix
     Uu, Su, Vuh = np.linalg.svd(Yu, full_matrices=False)
     Ud, Sd, Vdh = np.linalg.svd(Yd, full_matrices=False)
-    CKM = Uu.conj().T @ Ud
+    Uu_fixed, _, _ = fix_svd_phases(Uu, Su, Vuh)
+    Ud_fixed, _, _ = fix_svd_phases(Ud, Sd, Vdh)
+    CKM = Uu_fixed.conj().T @ Ud_fixed
     
     # Check unitarity: V V† = I
     identity = CKM @ CKM.conj().T
