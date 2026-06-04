@@ -14,7 +14,7 @@ related:
   - fisher-transfer-universality-test
 status: active
 created: 2026-06-01
-updated: 2026-06-02o
+updated: 2026-06-02r
 ---
 
 # Research Strategy (User Decisions)
@@ -25,15 +25,15 @@ Living record of **strategic choices** for unified-interference-kernel explorati
 
 Full tiered plan: **[[future-work]]** (2026-06-02k). Phenomenology tranche **21–31 complete**; combinatorial quark search **closed**.
 
-## Active priorities (2026-06-02o)
+## Active priorities (2026-06-02r)
 
 | Priority | Action | Rationale |
 |----------|--------|-----------|
-| **1** | **Tier 4** hygiene / manuscript PDF | Tier 0–1 + Tier 5.2–5.3 **complete** |
-| **2** | Optional T5.4 landscape RMT or scaled CP sweeps | New falsifier required |
-| **3** | **Tier 4** — repo hygiene | Parallel |
+| **1** | Rebuild **manuscript.pdf**; optional arXiv hygiene | Tier 0–1 + Tier 5 (diag 34–38) **complete** |
+| **2** | New falsifier only (no scaled CP grids) | Diag 36 stable 0/15; protocol forbids blind CP sweeps |
+| **3** | External ingest / UV story (optional) | Not blocked on repo code |
 
-**Closed:** Tier 2 (diag 32), Tier 3 (diag 33), phenomenology tranche 21–31.
+**Closed:** Tier 2–3, phenomenology 21–31, Tier 5 (34–38), Tier 4 wiki/ledger sync.
 
 ## Closed — quark search dead ends (do not fund without new falsifier)
 

@@ -78,7 +78,7 @@ graph TB
 | [[random-matrix-theory]] | [[interference-kernel]] | Shared GUE → same physics | **dead** — [[why-not-zeta-flavor-numerology]] |
 | [[interference-kernel]] | [[projection-regimes]] | Sector regimes | **phenomenology** |
 | [[interference-kernel]] cross-sector | parameter transfer | Universal parameters | **refuted** — [[repo-scientific-findings]] |
-| [[prime-numbers-and-physics]] | [[qed-qm-information]] | Primes in QED sums | **watch** — [[can-primes-enter-via-qed-spectral-sums]] |
+| [[prime-numbers-and-physics]] | [[qed-qm-information]] | Primes in QED sums | **watch** — diag 38 fail; [[can-primes-enter-via-qed-spectral-sums]] closed |
 | [[p-adic-analysis]] | [[interference-kernel]] | Ultrametric hierarchy | **deprioritize** |
 | [[it-from-bit]] | [[information-creates-reality]] | Ontological priority of bits | **philosophical** |
 

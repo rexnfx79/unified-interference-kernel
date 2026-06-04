@@ -1,0 +1,26 @@
+========================================================================
+TIER 5.4 LANDSCAPE RMT (diagnostic 37)
+========================================================================
+N_geom=60, seed=37037, Gaussian train-loss minima
+Hessian unfolded NN spacings pooled (n_geom with Hessian=56)
+
+--- Empirical (Hessian at minima) ---
+  n=193, median_s=0.2161, frac(s<0.1)=0.4197
+
+--- Nulls ---
+  GOE(6) synthetic: median_s=1.0435, frac_small=0.0000
+  Poisson i.i.d.:  median_s=0.7245, frac_small=0.1036
+
+--- Ensemble train-loss spacings (geometry index; not local RMT) ---
+  n=58, median_s=0.0824, frac_small=0.5000
+
+--- Pre-registered ---
+  GUE-like: frac_small<=0.03 and closer to GOE than Poisson
+  Poisson falsifier: frac_small>=0.06 or closer to Poisson
+  gue_like=False, poisson_like=True
+
+--- VERDICT ---
+  FAIL GUE universality — spacings Poisson-like or not closer to GOE than Poisson.
+  Do not market as quantum chaos / GUE link to Yukawa or zeros.
+verdict: poisson_like
+no_flavor_connection: true

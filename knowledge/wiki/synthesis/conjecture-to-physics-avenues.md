@@ -77,13 +77,13 @@ links primes to **zero heights** (imaginary parts \(E_n\)). This is not SM flavo
 | Construct | Tridiagonal \(H\) on 3-node discretization; match \(Y_{ij}\) magnitudes + phases | Best-fit residual ≫ optimized kernel |
 | Predict | Sector splits \((k,\eta)_u \neq (k,\eta)_d\) from **same** \(H\) with different BCs | BC story needs >6 free params per sector |
 
-### 4. Primes in QED spectral sums (A ↔ C) — **low until hook**
+### 4. Primes in QED spectral sums (A ↔ C) — **closed fail (diag 38)**
 
-**Query:** [[can-primes-enter-via-qed-spectral-sums]] — standard QED sums use integer mode indices, not primes.
+**Query:** [[can-primes-enter-via-qed-spectral-sums]] — integer mode sums converge; prime-only surrogates do not.
 
-**Upgrade path:** Exhibit one **standard** observable whose renormalization or vacuum sum equals a **known** prime-sum **without** redefining the spectrum.
+**Upgrade path:** ~~Exhibit standard observable = prime-sum without redefinition~~ — **not met**.
 
-**Until then:** **watch** only.
+**Verdict:** **watch** only via indirect HP / explicit-formula routes (diag 34 arithmetic only).
 
 ### 5. p-adic / adelic hierarchy (A → D) — **deprioritize**
 
@@ -107,7 +107,8 @@ Useful for motivation; not a near-term proof path unless Bridges 1–3 produce *
 | **T5.1** | Wiki ingest: trace formula, Montgomery, Connes (sources + ledger) | **Done** — [[trace-formula-bridge-ladder]] |
 | **T5.2** | diag 34 — holdout + null control | **Complete** (PASS, arithmetic) |
 | **T5.3** | diag 35 — Jacobi / Hermitian inverse | **Complete** (FAIL) |
-| **T5.4** | Optional: optimization-landscape RMT (large-N geometry sample) | B meta |
+| **T5.4** | ~~Optimization-landscape RMT~~ | **Closed fail** — diag 37 Poisson-like Hessian spacings |
+| **T5.5** | QED prime spectral audit | **Closed fail** — diag 38; integer sums OK, prime-only not |
 
 Pre-register falsifiers in [[survivor-protocol-preregistered]] before large runs.
 

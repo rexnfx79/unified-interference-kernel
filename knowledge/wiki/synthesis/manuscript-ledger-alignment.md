@@ -12,7 +12,7 @@ related:
   - future-work
 status: active
 created: 2026-06-02
-updated: 2026-06-02o
+updated: 2026-06-02r
 ---
 
 # Manuscript ↔ Ledger Alignment
@@ -40,7 +40,11 @@ Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use wh
 | QIT / information-loss sampling narrative | **Refuted** for mechanism | diagnostics 12–19 |
 | Rank-2 / FN texture quark ansätze | **Refuted** | diag 32 — 0% strict; holdout worse |
 | Split-fermion → kernel derivation | **Refuted** (mechanism) | diag 33 — geometry does not predict \(w/\sigma\) |
-| Exploratory zeta / arithmetic hooks | **Watch only** (Path D) | [[research-strategy]], [[adversarial-review-tier5-trace-formula]] |
+| Exploratory zeta / arithmetic hooks | **Watch only** (Path D) | Diag 34 PASS arithmetic only; 35–38 FAIL; [[adversarial-review-tier5-trace-formula]] |
+| Explicit formula / zero heights → ψ(x) | **Established** (arithmetic) | Diag 34 — not flavor |
+| Jacobi inverse 3×3 Yukawa phase | **Refuted** | Diag 35 |
+| Landscape RMT at training minima | **Refuted** (Poisson-like) | Diag 37 |
+| Primes as QED mode indices | **Refuted** | Diag 38 |
 
 ## Overclaims to soften (manuscript.tex)
 
@@ -68,6 +72,10 @@ Historical fixes (2026-06-02i–k): quark cherry-pick, three-regime validation, 
 | `32` | Tier-2 ansätze falsified |
 | `33` | Split-fermion / Path D — no mechanism hook |
 | `36` | Phase-fix audit — 0% strict stable; CP readout added |
+| `34` | Explicit formula holdout — PASS (arithmetic only) |
+| `35` | Jacobi inverse — FAIL |
+| `37` | Landscape RMT — FAIL (Poisson-like) |
+| `38` | QED prime spectral — FAIL |
 
 ## Canonical protocol
 

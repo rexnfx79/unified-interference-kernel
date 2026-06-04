@@ -51,6 +51,8 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 | `36` | Tier 1: phase-fix audit N=15 — **0/15 strict** (repaired & legacy); masses invariant under phase fix; CKM differs legacy vs repaired |
 | `34` | Tier 5.2: explicit formula audit — PASS (true zeros < 60% null RMSE); arithmetic identity only |
 | `35` | Tier 5.3: Jacobi inverse — FAIL (rel residual **0.55** gen, **0.71** tri vs bar 0.12) |
+| `37` | Tier 5.4: landscape RMT N=60 — FAIL GUE (Hessian frac(s<0.1)=**0.42**; closer to Poisson); meta only |
+| `38` | Tier 5.5: QED prime spectral — FAIL (prime-only rel_err **0.67–0.93** vs ζ targets; integer OK); Euler ≠ mode sum |
 
 ### Diagnostic 31 — null geometry (N=30, seed 21021)
 

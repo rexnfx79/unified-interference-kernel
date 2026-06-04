@@ -485,17 +485,19 @@ Future work is organized by what the pre-registered diagnostic tranche (21--31) 
 Exhaustive legacy geometry re-optimization (1000 coordinates $0$--$4$ plus 4770 shell-5 geometries, 5759 total) yields \textbf{0\% strict survivors} at PDG-relative tolerances (diagnostic~30). Random extension samples from larger coordinate pools (diagnostic~29), independent $Q_u,Q_d$ relaxations (minimality ladder, diagnostic~09), rank-2 and texture Yukawa ans\"atze (diagnostic~32), and split-fermion overlap derivations of the kernel envelope (diagnostic~33) likewise fail holdout or strict criteria. Envelope-only kernel comparisons (Gaussian, clockwork, generalized $p$; diagnostics~21, 27) do not restore simultaneous quark agreement. These are \emph{structural} negative results, not sampling gaps.
 
 \textbf{Publication package (completed in companion repository).}
-Sector-honest manuscript text, repo-locked survivor protocol, frozen diagnostic reports (diagnostics~21--23, 27--28, 30--33), and SVD phase-convention repair with unit tests (\texttt{fix\_svd\_phases} preserves $Y=U\Sigma V^\dagger$). Reproduce headline artifacts via \texttt{scripts/reproduce\_phenomenology\_tranche.sh}.
+Sector-honest manuscript text, repo-locked survivor protocol, frozen diagnostic reports (diagnostics~21--23, 27--28, 30--33, 34--38), and SVD phase-convention repair with unit tests (\texttt{fix\_svd\_phases} preserves $Y=U\Sigma V^\dagger$). Reproduce headline artifacts via \texttt{scripts/reproduce\_phenomenology\_tranche.sh}. Legacy optimizer CSVs are documented in \texttt{data/README.md}.
 
-\textbf{Testable extensions (pre-register before large runs).}
-\textbf{CP violation:} Extract $\delta_{\text{CKM}}$, Jarlskog invariant $J$, and PMNS CP phases from the repaired unitary pipeline; compare to PDG without claiming success until strict-survivor rates are reported under the same protocol.
-\textbf{Post phase-fix audit:} Re-run a \emph{small} quark geometry subset (diagnostic~21 scale) to confirm refutation conclusions under consistent CKM extraction.
+\textbf{Tier 5 conjecture$\leftrightarrow$physics audits (closed).}
+Non-circular explicit-formula holdout (diagnostic~34) confirms zero heights are specific to $\psi(x)$ but is \emph{arithmetic only}, not a flavor mechanism. Jacobi/tridiagonal inverse-kernel tests (diagnostic~35) fail to reduce Yukawas to a 3-site self-adjoint phase model. Optimization-landscape RMT (diagnostic~37) finds Poisson-like Hessian spacings, not GUE universality. Standard QED spectral sums (diagnostic~38) use integer mode indices; prime-only surrogates disagree by 67--93\% with textbook $\zeta$-series targets. No Hilbert--Polya or zeta$\to$CKM claim is supported.
+
+\textbf{CP readout (completed; no large sweeps).}
+$\delta_{\text{CKM}}$, $J$, and PMNS CP phases are implemented in the observables pipeline; post phase-fix audit (diagnostic~36, $N{=}15$) finds \textbf{0/15 strict} quark survivors---refutation stable. Full CP optimization grids are deprioritized without a new falsifier.
 
 \textbf{Deprioritized or speculative.}
 \textbf{Universal parameters} across sectors remain refuted (transfer and Fisher diagnostics).
 \textbf{UV completions and RGE evolution} may motivate effective parameters but do not explain quark holdout failure within the present readout.
 \textbf{Information-theoretic sampling} of Yukawa matrices (diagnostics~12--19) showed no operational mechanism for mixing.
-Arithmetic or zeta-based flavor links stay outside scope unless a non-numerology hook appears (Path~D, watch only).
+Arithmetic--flavor numerology and 3$\times$3 GUE Yukawa tests remain closed (diagnostics~33--35, 38); watch-only routes are indirect (trace formulas, hypothetical HP spectrum).
 
 In summary, the useful forward path is \emph{honest partial phenomenology} (neutrino joint fits, lepton limitations, quark structural failure) and reproducible reporting---not larger discrete geometry catalogs, revived universal-kernel claims, or arithmetic--flavor numerology without a non-circular spectral hook.
 

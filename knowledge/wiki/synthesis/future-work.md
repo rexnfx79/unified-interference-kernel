@@ -11,7 +11,7 @@ related:
   - diagnostics-summary
 status: active
 created: 2026-06-02
-updated: 2026-06-02o
+updated: 2026-06-02r
 ---
 
 # Future Work (Post-Phenomenology Tranche)
@@ -82,7 +82,7 @@ Pre-register in [[survivor-protocol-preregistered]] extension **before** large r
 
 See [[multi-sided-bridge-framework]] for bridge order: QED/info → spectral → arithmetic last.
 
-## Tier 5 — Conjecture ↔ physics (new program)
+## Tier 5 — Conjecture ↔ physics (**complete** 2026-06-02r)
 
 See [[conjecture-to-physics-avenues]] for ranked tracks and falsifiers.
 
@@ -91,21 +91,28 @@ See [[conjecture-to-physics-avenues]] for ranked tracks and falsifiers.
 | **T5.1** | Trace-formula bridge ingested (Selberg, explicit formula, Montgomery, Connes) | **Done** — [[trace-formula-bridge-ladder]] |
 | **T5.2** | Explicit formula non-circular audit | **Done** — diag 34 PASS (specificity + truncation); arithmetic only |
 | **T5.3** | Kernel bilinear phase = 1D self-adjoint operator phase | **Done — fail** — diag 35: rel residual gen **0.55**, tri **0.71** (bar 0.12) |
-| **T5.4** | Large-N geometry loss landscape shows RMT universality | Diag 36?: spacings = Poisson/random |
-| **T5.5** | Primes appear in standard QED sums | One standard observable = prime sum without redefinition — [[can-primes-enter-via-qed-spectral-sums]] |
+| **T5.4** | Large-N geometry loss landscape shows RMT universality | **Done — fail** — diag 37: Hessian frac(s<0.1)=**0.42** (Poisson ~0.10, GOE ~0); not GUE |
+| **T5.5** | Primes appear in standard QED sums | **Done — fail** — diag 38: integer sums converge; prime-only rel_err **0.67–0.93**; Euler product ≠ mode index |
 
 **Non-goals:** RH→CKM numerology; 3×3 GUE; revived QIT→flavor mechanism.
 
-## Tier 4 — Repo hygiene (parallel)
+## Tier 4 — Repo hygiene (**in progress**)
 
-- Lint wiki links; sync [[diagnostics-summary]] when new diagnostics land
-- `scripts/reproduce_phenomenology_tranche.sh` — lists frozen reports + SVD phase unit test
-- Archive legacy `data/quark_results.csv` with optimizer-protocol README note
+| Item | Status |
+|------|--------|
+| Wiki link lint | **Done** — `scripts/lint_wiki_links.py` |
+| [[diagnostics-summary]] sync (diag 34–38) | **Done** |
+| `reproduce_phenomenology_tranche.sh` (34–38) | **Done** |
+| Legacy CSV protocol | **Done** — `data/README.md` |
+| Manuscript Tier 5 + CP closure text | **Done** — `manuscript.tex` §Further Study |
+| Rebuild `manuscript.pdf` | Run `pdflatex manuscript.tex` after pull |
 
 ## Decision log
 
 | Date | Decision |
 |------|----------|
+| 2026-06-02r | Tier 5.5 — diag 38 FAIL (no prime-index QED sum; watch only) |
+| 2026-06-02q | Tier 5.4 — diag 37 FAIL (landscape Hessian spacings Poisson-like, not GUE) |
 | 2026-06-02p | Tier 5.2–5.3 — diag 34 PASS (explicit formula); diag 35 FAIL (Jacobi inverse) |
 | 2026-06-02o | Tier 1 complete — phase audit diag 36 + CP observables |
 | 2026-06-02o | Tier 0 publication package complete — manuscript + reproduce script |

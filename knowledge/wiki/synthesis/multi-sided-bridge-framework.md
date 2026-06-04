@@ -120,7 +120,7 @@ When two islands look connected, run this checklist before adding a bridge edge:
 2. **B → D (falsifiable):** Jacobi / Sturm–Liouville inverse for kernel phases — [[does-phase-structure-imply-spectral-operator]]; split-fermion magnitude path **refuted** (diag 33)
 3. **B (meta):** Large-N optimization landscape vs RMT — not 3×3 Yukawa spacing
 4. **C → B:** QED on Hilbert space (established); QIT→flavor mechanism **closed** (diag 12–19)
-5. **A ↔ C:** Primes in QED sums — **watch** until standard observable hook ([[can-primes-enter-via-qed-spectral-sums]])
+5. **A ↔ C:** Primes in QED sums — **watch** (diag 38: no prime-index hook; Euler product ≠ mode sum)
 6. **D:** Phenomenology paper only — kernel is readout, not fundamental
 
 ## Mermaid: Three Approaches + Effective Layer

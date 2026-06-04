@@ -1,0 +1,47 @@
+========================================================================
+TIER 5.5 QED PRIME SPECTRAL AUDIT (diagnostic 38)
+========================================================================
+Question: do standard QED sums use prime indices without redefinition?
+N_max=200000; pass threshold rel_err < 0.01 (prime-only vs target)
+
+--- Observables (integer index = textbook; prime-only = falsifier test) ---
+  schwinger_g2_sum:
+    target=1
+    integer partial: 0.999995  rel_err=5.0000e-06
+    prime-only:      0.33022955  rel_err=6.6977e-01
+  zeta2_sum:
+    target=1.6449341
+    integer partial: 1.6449291  rel_err=3.0396e-06
+    prime-only:      0.45224704  rel_err=7.2507e-01
+    euler product:   1.6449334  rel_err=3.8017e-07
+  zeta4_sum:
+    target=1.0823232
+    integer partial: 1.0823232  rel_err=2.0516e-16
+    prime-only:      0.07699314  rel_err=9.2886e-01
+    euler product:   1.0823232  rel_err=5.0263e-14
+  zeta3_sum:
+    target=1.2020569
+    integer partial: 1.2020569  rel_err=1.0399e-11
+    prime-only:      0.17476264  rel_err=8.5461e-01
+  casimir_prime_vs_integer_ratio:
+    target=0
+    integer partial: 0  rel_err=0.0000e+00
+    prime-only:      0.085479613  rel_err=inf
+  vacuum_pol_zeta4:
+    target=1.0823232
+    integer partial: 1.0823232  rel_err=2.0516e-16
+    prime-only:      0.07699314  rel_err=9.2886e-01
+
+--- Classification ---
+  euler_product: analytic identity for ζ(s); not prime-index mode sum in QED.
+  prime-only: replaces n with primes in same summand — NOT standard unless rel_err passes.
+
+  integer partials converge: True
+  any prime-only pass: False
+
+--- VERDICT ---
+  FAIL — no standard observable equals a prime-only sum without redefinition.
+  Primes enter only via Euler product / voluntary reindexing, not QED mode sums.
+  Keep A↔C bridge at watch; no HP→flavor or zeta→CKM claim.
+verdict: fail_no_prime_index
+flavor_connection: false

@@ -147,6 +147,14 @@ Effective-field-theory-level **parameterization**. What is established vs refute
 
 See `SCIENTIFIC_FINDINGS.md` and the wiki ledger for details.
 
+## Reproduce headline diagnostics
+
+```bash
+./scripts/reproduce_phenomenology_tranche.sh
+```
+
+Frozen reports include phenomenology tranche (21–23, 27–28, 30–33), Tier 1 phase audit (36), and Tier 5 conjecture audits (34–38). Legacy CSV protocol: `data/README.md`.
+
 ## References
 
 - PDG 2024 for all experimental targets

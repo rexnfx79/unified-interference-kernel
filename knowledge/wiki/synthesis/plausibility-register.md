@@ -8,7 +8,7 @@ related:
   - why-not-zeta-flavor-numerology
 status: open
 created: 2026-06-01
-updated: 2026-06-02m
+updated: 2026-06-02r
 strategy: research-strategy
 ---
 
@@ -36,6 +36,7 @@ Living record of **what failed**, what is **implausible**, and what remains **wo
 | Clockwork kernel complete quark solution | **dead** (refuted) | Light masses, \(V_{ub}\), Jarlskog fail — [[diagnostics-summary]] |
 | Berry–Keating \(H=xp\) as **proven** Hilbert–Polya operator | **dead** (as proof) | Not self-adjoint on standard domain; semiclassical heuristic only |
 | Primes **directly** determine electron mass ratios | **dead** | No QED calculation supports this; numerology |
+| Primes as **mode indices** in standard QED sums | **dead** (refuted) | Diag 38: integer sums converge; prime-only rel_err **0.67–0.93** — [[can-primes-enter-via-qed-spectral-sums]] |
 | p-adic QM as **leading** SM flavor explanation | **deprioritize** | Adelic programs lack confirmed predictive wins vs split fermions / RG |
 
 ## Low Plausibility (Track, Don't Bet On)

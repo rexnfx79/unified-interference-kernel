@@ -1,7 +1,25 @@
-updated: 2026-06-02o
+updated: 2026-06-02r
 ---
 
 # Research Log
+
+## 2026-06-02 | implement | Tier 4 hygiene + manuscript sync
+
+- **data/README.md** — legacy CSV vs canonical survivor protocol
+- **manuscript.tex** — Further Study: Tier 5 (34–38) closed, CP/diag 36 done
+- **Wiki/strategy:** Tier 5 complete; [[future-work]], [[manuscript-ledger-alignment]], README reproduce block
+
+## 2026-06-02 | implement | Tier 5.5 QED prime spectral audit (diag 38)
+
+- **Code:** `src/qed_spectral_sums.py`; `38_tier5_qed_prime_spectral_audit.py`
+- **Verdict:** FAIL — Schwinger/ζ sums converge on integer n; prime-only surrogates **67–93%** off; Euler product analytic only
+- **Wiki:** [[can-primes-enter-via-qed-spectral-sums]], [[future-work]], [[diagnostics-summary]]
+
+## 2026-06-02 | implement | Tier 5.4 landscape RMT (diag 37)
+
+- **Diag 37:** `37_tier5_landscape_rmt.py` — N=60 Gaussian minima, pooled Hessian unfolded spacings
+- **Verdict:** FAIL GUE — frac(s<0.1)=**0.42** vs Poisson **0.10**, GOE **0**; do not link to CKM/zeros
+- **Wiki:** [[future-work]], [[diagnostics-summary]]
 
 ## 2026-06-02 | implement | Tier 5.2–5.3 (diag 34–35)
 
