@@ -29,8 +29,8 @@ Full tiered plan: **[[future-work]]** (2026-06-02k). Phenomenology tranche **21�
 
 | Priority | Action | Rationale |
 |----------|--------|-----------|
-| **1** | **Tier 5** — conjecture↔physics (T5.2 blocked) or **Tier 4** hygiene | Tier 0–1 **complete** |
-| **2** | Optional scaled CP strict sweeps | Only with new pre-registered falsifier |
+| **1** | **Tier 4** hygiene / manuscript PDF | Tier 0–1 + Tier 5.2–5.3 **complete** |
+| **2** | Optional T5.4 landscape RMT or scaled CP sweeps | New falsifier required |
 | **3** | **Tier 4** — repo hygiene | Parallel |
 
 **Closed:** Tier 2 (diag 32), Tier 3 (diag 33), phenomenology tranche 21–31.

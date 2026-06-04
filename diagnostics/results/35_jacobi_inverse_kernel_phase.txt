@@ -1,0 +1,15 @@
+========================================================================
+TIER 5.3 JACOBI INVERSE KERNEL PHASE (diagnostic 35)
+========================================================================
+Geometry Q=(0, 1, 0), U=(0, 3, 6), D=(0, 3, 7)
+Optimized Yu train loss context: theta from DE
+
+Target ||Yu||_F = 0.9076
+Relative residual H_gen fit:  0.5481
+Relative residual H_tri fit:  0.7124
+Pass bar (both < 0.12): gen=False tri=False
+
+--- VERDICT ---
+  FAIL — neither Hermitian ansatz matches kernel Yu at pre-registered tolerance.
+  Bilinear kernel phase is not reducible to this 3-parameter H proxy.
+verdict: fail

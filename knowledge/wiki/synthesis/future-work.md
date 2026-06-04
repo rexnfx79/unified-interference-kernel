@@ -89,8 +89,8 @@ See [[conjecture-to-physics-avenues]] for ranked tracks and falsifiers.
 | Item | Hypothesis | Falsifier |
 |------|------------|-----------|
 | **T5.1** | Trace-formula bridge ingested (Selberg, explicit formula, Montgomery, Connes) | **Done** — [[trace-formula-bridge-ladder]] |
-| **T5.2** | Explicit formula (non-circular test) | **Blocked pending redesign** — [[adversarial-review-tier5-trace-formula]]: holdout \(\psi\) + wrong-frequency null; not FFT tautology |
-| **T5.3** | Kernel bilinear phase = 1D self-adjoint operator phase | Jacobi inverse (diag 35): residual ≫ kernel fit or >6 BC params/sector |
+| **T5.2** | Explicit formula non-circular audit | **Done** — diag 34 PASS (specificity + truncation); arithmetic only |
+| **T5.3** | Kernel bilinear phase = 1D self-adjoint operator phase | **Done — fail** — diag 35: rel residual gen **0.55**, tri **0.71** (bar 0.12) |
 | **T5.4** | Large-N geometry loss landscape shows RMT universality | Diag 36?: spacings = Poisson/random |
 | **T5.5** | Primes appear in standard QED sums | One standard observable = prime sum without redefinition — [[can-primes-enter-via-qed-spectral-sums]] |
 
@@ -106,6 +106,7 @@ See [[conjecture-to-physics-avenues]] for ranked tracks and falsifiers.
 
 | Date | Decision |
 |------|----------|
+| 2026-06-02p | Tier 5.2–5.3 — diag 34 PASS (explicit formula); diag 35 FAIL (Jacobi inverse) |
 | 2026-06-02o | Tier 1 complete — phase audit diag 36 + CP observables |
 | 2026-06-02o | Tier 0 publication package complete — manuscript + reproduce script |
 | 2026-06-02o | Tier 5 adversarial review — T5.2 blocked pending redesign |

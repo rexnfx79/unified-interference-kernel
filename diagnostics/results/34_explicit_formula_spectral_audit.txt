@@ -1,0 +1,23 @@
+========================================================================
+TIER 5.2 EXPLICIT FORMULA SPECTRAL AUDIT (diagnostic 34)
+========================================================================
+Non-circular: holdout x + wrong-frequency null (not FFT peak matching).
+Zeros used: 50 (RH critical line); holdout 2500 <= x <= 12000
+
+--- Holdout RMSE |psi_computed - psi_model| ---
+  Holdout K=10: 7.5252
+  Holdout K=50: 8.2106
+  All x K=10: 6.7177
+  All x K=50: 6.3836
+  Null mean (K=10 random gamma): 19.1315 (20 seeds)
+
+--- Pre-registered falsifiers ---
+  Specificity (true < 0.6 * null): True
+  Enrichment all-x (K_large < K_small/1.05): True
+  Full-range sanity (RMSE < 15): True
+
+--- VERDICT ---
+  PASS — zero heights are specific and truncations behave as expected.
+  Interpretation: arithmetic identity check only; NOT HP proof or flavor hook.
+verdict: pass
+no_flavor_connection: true

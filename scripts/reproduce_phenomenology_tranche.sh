@@ -15,7 +15,9 @@ for f in diagnostics/results/21_quark_phenomenology_holdout.txt \
          diagnostics/results/30_quark_geometry_followup.txt \
          diagnostics/results/32_quark_tier2_ansatz.txt \
          diagnostics/results/33_tier3_theory_bridges.txt \
-         diagnostics/results/36_tier1_phase_fix_audit.txt; do
+         diagnostics/results/36_tier1_phase_fix_audit.txt \
+         diagnostics/results/34_explicit_formula_spectral_audit.txt \
+         diagnostics/results/35_jacobi_inverse_kernel_phase.txt; do
   if [[ -f "$f" ]]; then
     echo "  OK  $f"
   else

@@ -7,9 +7,9 @@ related:
   - hilbert-polya-conjecture
   - spectral-interpretation-of-flavor
   - does-phase-structure-imply-spectral-operator
-status: open
+status: refuted
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-02p
 ---
 
 # Does Phase Structure Imply a Spectral Operator?
@@ -32,9 +32,15 @@ Can the phase \(\Phi_{ij} = \alpha + k(x_i+x_j)/2 + \eta(x_i-x_j)\) in the [[int
 | Berry–Keating type \(xp\) + localization | High | Links to [[riemann-zeta-function]] |
 | Inverse problem: Yukawa → \(H\) numerically | Medium | Falsifiable |
 
+## Diagnostic 35 (2026-06-02p)
+
+3×3 Hermitian / tridiagonal inverse fit to optimized \(Y_u\): relative Frobenius residual **0.55** (gen), **0.71** (tri) vs bar **0.12**.
+
+**Verdict:** bilinear kernel phase is **not** reducible to a minimal 3-site self-adjoint proxy.
+
 ## Success Criteria
 
-- Derive at least one of \(\{k, \eta, \alpha\}\) from operator data, not fit
+- Derive at least one of \(\{k, \eta, \alpha\}\) from operator data, not fit — **not met**
 - Predict sector parameter relations that survive [[repo-scientific-findings]]-style transfer tests
 
 ## Related

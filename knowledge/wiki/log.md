@@ -3,6 +3,12 @@ updated: 2026-06-02o
 
 # Research Log
 
+## 2026-06-02 | implement | Tier 5.2–5.3 (diag 34–35)
+
+- **T5.2:** `34_explicit_formula_spectral_audit.py` — PASS: true zeros beat random-frequency null; `src/explicit_formula.py`
+- **T5.3:** `35_jacobi_inverse_kernel_phase.py` — FAIL: Yukawa not reducible to 3-site Hermitian/tridiagonal proxy
+- **Wiki:** [[future-work]], [[diagnostics-summary]], [[conjecture-to-physics-avenues]]
+
 ## 2026-06-02 | implement | Tier 1 CP + phase-fix audit (diag 36)
 
 - **Code:** `delta_CKM`, `J`, `delta_PMNS`, `J_PMNS` in `observables.py`; `tests/test_cp_observables.py`

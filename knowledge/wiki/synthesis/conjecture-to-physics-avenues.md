@@ -49,7 +49,8 @@ links primes to **zero heights** (imaginary parts \(E_n\)). This is not SM flavo
 | Step | Repo action | Falsifier |
 |------|-------------|-----------|
 | Ingest | [[trace-formula-bridge-ladder]] — explicit formula, Selberg, Montgomery, Connes | **Done** (2026-06-02n) |
-| Numeric | diag 34 **only if** non-circular — see [[adversarial-review-tier5-trace-formula]] | Holdout \(\psi(x)\) beats wrong-frequency null; else **no-go** |
+| Numeric | `diagnostics/34_explicit_formula_spectral_audit.py` | **Done** — true zeros beat random null; NOT HP/flavor |
+| Inverse | `diagnostics/35_jacobi_inverse_kernel_phase.py` | **Done** — FAIL; kernel not reducible to 3-site H proxy |
 | Theory | Document **Selberg ↔ Riemann** analogy as template for “spectrum ↔ arithmetic” | Claiming Selberg proves flavor |
 
 **Why first:** Direction is clear (A↔B). No 3×3 scale mismatch. Aligns with Path D **watch** without flavor numerology.
@@ -104,8 +105,8 @@ Useful for motivation; not a near-term proof path unless Bridges 1–3 produce *
 | ID | Deliverable | Track |
 |----|-------------|-------|
 | **T5.1** | Wiki ingest: trace formula, Montgomery, Connes (sources + ledger) | **Done** — [[trace-formula-bridge-ladder]] |
-| **T5.2** | `diagnostics/34_explicit_formula_spectral_audit.py` — prime oscillations vs zero heights | B↔A |
-| **T5.3** | `diagnostics/35_jacobi_inverse_kernel_phase.py` — 3-site \(H\) vs kernel phases | B→D |
+| **T5.2** | diag 34 — holdout + null control | **Complete** (PASS, arithmetic) |
+| **T5.3** | diag 35 — Jacobi / Hermitian inverse | **Complete** (FAIL) |
 | **T5.4** | Optional: optimization-landscape RMT (large-N geometry sample) | B meta |
 
 Pre-register falsifiers in [[survivor-protocol-preregistered]] before large runs.

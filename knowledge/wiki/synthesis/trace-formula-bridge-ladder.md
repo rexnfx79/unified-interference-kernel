@@ -61,8 +61,8 @@ graph BT
 
 | ID | Script | Builds on |
 |----|--------|-----------|
-| T5.2 | `diagnostics/34_*` | diag 14 — frequency stability of \(\psi(x)-x\) vs \(\gamma_n\) |
-| T5.3 | `diagnostics/35_*` | Jacobi inverse — **different** bridge (B→D), not this ladder |
+| T5.2 | `diagnostics/34_explicit_formula_spectral_audit.py` | **PASS** — null control; not flavor |
+| T5.3 | `diagnostics/35_jacobi_inverse_kernel_phase.py` | **FAIL** — B→D inverse |
 
 ## Canonical ingests (T5.1)
 

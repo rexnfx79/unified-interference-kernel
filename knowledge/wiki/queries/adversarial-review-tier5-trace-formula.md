@@ -16,7 +16,7 @@ updated: 2026-06-02n
 # Adversarial Review — Tier 5 Trace Formula Program
 
 **Scope:** T5.1 ingest ([[trace-formula-bridge-ladder]]), proposed T5.2 (`diagnostics/34_*`), and the goal “connect assumed-true conjectures to physical reality.”  
-**Verdict:** T5.1 is **useful documentation** but must not be read as progress toward SM physics. **Do not ship T5.2** without redesign — current falsifier risks **vacuity** or **confirming known mathematics**.
+**Verdict:** T5.1 is **useful documentation** but must not be read as progress toward SM physics. **T5.2 shipped (diag 34)** with holdout + null control — PASS is **arithmetic specificity only**, not HP. **T5.3 (diag 35) FAIL** — kernel not a minimal operator reduction.
 
 ## Executive summary
 

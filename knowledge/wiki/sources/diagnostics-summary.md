@@ -49,6 +49,8 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 | `32` | Tier 2: rank2 sum, FN texture, dual-phase, power-law — **0% strict**; holdout worse than Gaussian; effective rank ≈1 |
 | `33` | Tier 3: split-fermion overlap N=50 — \(w/\sigma\) stable at fixed \(\sigma\) (rel spread **0.067**); geometry→\(w/\sigma\) R² **0.045**; Path D 3×3 GUE **not testable** |
 | `36` | Tier 1: phase-fix audit N=15 — **0/15 strict** (repaired & legacy); masses invariant under phase fix; CKM differs legacy vs repaired |
+| `34` | Tier 5.2: explicit formula audit — PASS (true zeros < 60% null RMSE); arithmetic identity only |
+| `35` | Tier 5.3: Jacobi inverse — FAIL (rel residual **0.55** gen, **0.71** tri vs bar 0.12) |
 
 ### Diagnostic 31 — null geometry (N=30, seed 21021)
 

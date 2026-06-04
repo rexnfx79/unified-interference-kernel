@@ -88,6 +88,8 @@ Living record of **what failed**, what is **implausible**, and what remains **wo
 | 2026-06 | Split-fermion→kernel pursue path | **Deprioritized** — user strategy; overlap r≈0.99 kept as historical |
 | 2026-06-02m | Tier 3 split-fermion→kernel (diag 33) | **Mechanism refuted** — stable \(w/\sigma\) at fixed \(\sigma\) but not geometry-predictable; Path D watch-only |
 | 2026-06-02o | Tier 5.2 explicit-formula FFT test | **Blocked** — tautology risk; [[adversarial-review-tier5-trace-formula]] |
+| 2026-06-02p | Tier 5.2 diag 34 (holdout+null) | **Pass** — arithmetic identity; not HP |
+| 2026-06-02p | Tier 5.3 Jacobi inverse diag 35 | **Fail** — kernel not 3-site H proxy |
 | 2026-06 | Experimental Fisher cross-sector (`diagnostics/17_*`) | Alignment 0.46 < 0.50 — **mechanism weak**; rank–regime \|r\|=0.72 confounded |
 | 2026-06 | Open-system decoherence pooled (`diagnostics/18_*`) | Pooled \|r\|=0.007 — **refuted**; quark-local \|r\|=0.26 exploratory |
 | 2026-06 | Fisher transfer test (`diagnostics/19_*`) | **Refuted** — frozen loss 805.8, alignment 0.41; free-fit Δθ ≫ CR |
