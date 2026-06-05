@@ -54,6 +54,8 @@
 - [[adversarial-review-tier5-trace-formula]] — Tier 5 go/no-go; T5.2 redesign required
 - [[qm-to-information-what-is-measurable]] — Reverse direction from QED
 - [[can-primes-enter-via-qed-spectral-sums]] — Do QED sums naturally involve primes?
+- [[neutrino-loss-landscape-n1]] — N1: quark vs neutrino joint loss landscape (diag 39)
+- [[neutrino-geometry-predictor-n4]] — N4: geometry → joint strict (diag 40)
 - [[can-p-adics-encode-flavor-hierarchy]] — p-adic vs real hierarchy
 - [[does-phase-structure-imply-spectral-operator]] — Phase from operator?
 - [[what-proves-information-creates-reality]] — Proof criteria

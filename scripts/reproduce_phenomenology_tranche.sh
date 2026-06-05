@@ -19,7 +19,9 @@ for f in diagnostics/results/21_quark_phenomenology_holdout.txt \
          diagnostics/results/34_explicit_formula_spectral_audit.txt \
          diagnostics/results/35_jacobi_inverse_kernel_phase.txt \
          diagnostics/results/37_tier5_landscape_rmt.txt \
-         diagnostics/results/38_tier5_qed_prime_spectral_audit.txt; do
+         diagnostics/results/38_tier5_qed_prime_spectral_audit.txt \
+         diagnostics/results/39_joint_loss_landscape_cartography.txt \
+         diagnostics/results/40_n4_geometry_strict_predictor.txt; do
   if [[ -f "$f" ]]; then
     echo "  OK  $f"
   else

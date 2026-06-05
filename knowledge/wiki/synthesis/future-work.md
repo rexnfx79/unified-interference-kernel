@@ -31,6 +31,14 @@ Forward-looking plan after diagnostics **21–31**, geometry closure (**29–30*
 
 **Non-goals:** Universal kernel parameters; three-regime “validation”; geometry extension as quark fix.
 
+## Neutrino-forward exploration (N-series)
+
+| ID | Status | Pointer |
+|----|--------|---------|
+| **N1** | **Positive** (diag 39) | [[neutrino-loss-landscape-n1]] — ν joint basins shallower than quark |
+| **N2** | Open | Haar PMNS null vs post-fit |
+| **N4** | **Weak–moderate** (diag 40) | [[neutrino-geometry-predictor-n4]] — CV AUC **0.66**; uni best **0.57** |
+
 ## Tier 1 — Observables & CP (**complete** 2026-06-02o)
 
 | Item | Deliverable | Status |

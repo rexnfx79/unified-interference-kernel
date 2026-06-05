@@ -53,6 +53,8 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 | `35` | Tier 5.3: Jacobi inverse — FAIL (rel residual **0.55** gen, **0.71** tri vs bar 0.12) |
 | `37` | Tier 5.4: landscape RMT N=60 — FAIL GUE (Hessian frac(s<0.1)=**0.42**; closer to Poisson); meta only |
 | `38` | Tier 5.5: QED prime spectral — FAIL (prime-only rel_err **0.67–0.93** vs ζ targets; integer OK); Euler ≠ mode sum |
+| `39` | N1 landscape cartography N=50 — **differentiated** (4/5 metrics \(p<0.05\)); ν strict **34%** vs quark **0%**; shallower ν basins |
+| `40` | N4 geometry predictor N=100 seed 28028 — CV AUC **0.66**; falsifier rejected; `overlap_count` best uni **0.57** |
 
 ### Diagnostic 31 — null geometry (N=30, seed 21021)
 

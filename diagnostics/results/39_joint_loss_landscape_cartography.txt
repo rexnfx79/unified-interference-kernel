@@ -1,0 +1,36 @@
+========================================================================
+N1 JOINT LOSS LANDSCAPE CARTOGRAPHY (diagnostic 39)
+========================================================================
+N_geom=50 per sector; quark seed 39139, nu seed 39140
+Kernel: Gaussian (quark); Gaussian+g_env (neutrino, diag 28 protocol)
+Objectives: joint quark (diag 27) vs joint PMNS+dm^2 (diag 28)
+
+  quark solved: 50, strict rate: 0.0%
+  neutrino solved: 38, strict rate: 34.2%
+
+--- Medians ---
+  best_loss: quark=28.37  neutrino=0.3944
+  log10_condition: quark=4.348  neutrino=4.149
+  frac_negative_hessian: quark=0.1667  neutrino=0.1429
+  ruggedness: quark=1576  neutrino=21.36
+  grad_norm: quark=766.4  neutrino=4.542
+  mass_part: quark=22.27  neutrino=0.01241
+  mix_part: quark=0.7557  neutrino=0.06317
+
+--- Mann-Whitney (quark vs neutrino) ---
+  best_loss: p=8.2947e-13  significant=True
+  log10_condition: p=2.2672e-01  significant=False
+  frac_negative_hessian: p=1.5355e-06  significant=True
+  ruggedness: p=4.4725e-13  significant=True
+  grad_norm: p=8.8832e-15  significant=True
+
+--- Pre-registered N1 ---
+  significant metrics (p<0.05): 4 / 5
+  falsifier (indistinguishable): False
+  differentiated landscape + strict gap: True
+
+--- VERDICT ---
+  N1 POSITIVE — neutrino joint landscape differs from quark (>=3 metrics, strict gap).
+  Suggests asymmetric optimization geometry; NOT a universal-kernel proof.
+verdict: differentiated
+n_significant_metrics: 4

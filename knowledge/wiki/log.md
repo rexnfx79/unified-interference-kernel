@@ -1,7 +1,17 @@
-updated: 2026-06-02r
+updated: 2026-06-02t
 ---
 
 # Research Log
+
+## 2026-06-02 | explore | N4 geometry strict predictor (diag 40)
+
+- **Diag 40:** diag 28 pool — CV AUC **0.658**, best uni **0.572** (`overlap_count`); falsifier rejected
+- **Wiki:** [[neutrino-geometry-predictor-n4]]
+
+## 2026-06-02 | explore | N1 joint loss landscape (diag 39)
+
+- **Diag 39:** quark vs neutrino joint loss cartography — 4/5 metrics differ (\(p<0.05\)); ν strict 34% vs quark 0%
+- **Wiki:** [[neutrino-loss-landscape-n1]]
 
 ## 2026-06-02 | implement | Tier 4 hygiene + manuscript sync
 

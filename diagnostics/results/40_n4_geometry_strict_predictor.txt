@@ -1,0 +1,55 @@
+========================================================================
+N4 GEOMETRY → JOINT STRICT PREDICTOR (diagnostic 40)
+========================================================================
+Pool: diag 28 protocol (joint ν), seed=28028, N=100
+Labels: joint_strict (0 if unsolved); solved 79/100
+Strict positive rate: 24.0% (24/100)
+
+--- Model ---
+  Logistic regression, standardized geometry features only (no post-fit params)
+  L2 λ=0.01; 5-fold CV AUC
+
+--- AUC ---
+  CV AUC (full model):     0.6579
+  In-sample AUC:           0.7911
+  Best univariate AUC:     0.5724 (overlap_count)
+  CV AUC (solved only):    0.6015
+  Best uni (solved only):  0.5394 (overlap_count)
+
+--- Univariate AUC (all geoms) ---
+  overlap_count  0.5724
+  mean_L         0.5041
+  union_count    0.4276
+  min_cross      0.4271
+  spread_N       0.4104
+  mean_pair_N    0.4104
+  spread_L       0.3725
+  mean_pair_L    0.3725
+  mean_N         0.3629
+  centroid_gap   0.3624
+  coord_span     0.2862
+  max_cross      0.2418
+
+--- Standardized coefficients (in-sample) ---
+  spread_L       -0.2594
+  spread_N       -0.0528
+  mean_L         +0.0740
+  mean_N         -0.4763
+  centroid_gap   -0.6278
+  overlap_count  -0.1816
+  union_count    +0.1816
+  mean_pair_L    -0.2594
+  mean_pair_N    -0.0528
+  min_cross      +0.1044
+  max_cross      -1.1080
+  coord_span     +0.4665
+
+--- Pre-registered N4 ---
+  falsifier AUC <= 0.55: False
+  pursue AUC >= 0.65: True
+
+--- VERDICT ---
+  N4 PURSUE — geometry features predict joint strict with CV AUC above bar.
+verdict: predictive
+cv_auc: 0.6578947368421053
+best_univariate: overlap_count 0.5723684210526315
