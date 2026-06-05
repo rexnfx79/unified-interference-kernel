@@ -1,7 +1,12 @@
-updated: 2026-06-02t
+updated: 2026-06-02u
 ---
 
 # Research Log
+
+## 2026-06-02 | explore | N2 Haar PMNS null (diag 41)
+
+- **Diag 41:** post-fit angles reject Haar (3/3 KS); PDG distance ≪ Haar null
+- **Wiki:** [[neutrino-haar-null-n2]]
 
 ## 2026-06-02 | explore | N4 geometry strict predictor (diag 40)
 

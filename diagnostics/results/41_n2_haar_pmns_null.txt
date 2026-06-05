@@ -1,0 +1,34 @@
+========================================================================
+N2 HAAR PMNS NULL (diagnostic 41)
+========================================================================
+Post-fit pool: diag 28 protocol, seed=28028, N=100
+Haar null samples: 5000
+Post-fit solved: 79
+Post-fit strict: 24 (30.4% of solved)
+
+--- Median angles (rad) ---
+                post-fit    Haar      PDG
+  theta12       0.4879      0.7949      0.5903
+  theta23       0.7559      0.7812      0.7850
+  theta13       0.1495      0.5679      0.1490
+
+--- KS test (post-fit vs Haar) ---
+  theta12: D=0.6707, p=5.6888e-35
+  theta23: D=0.4457, p=1.3603e-14
+  theta13: D=0.9408, p=2.0458e-93
+
+--- PDG relative distance ---
+  post-fit mean: 0.2650, median: 0.2402
+  Haar mean:     3.1518, median: 2.9294
+  Mann-Whitney (post closer): p=3.4069e-51
+  strict-only median dist: 0.0080 (n=24)
+
+--- Pre-registered N2 ---
+  KS rejections (p<0.05): 3/3
+  haar_like (falsifier): False
+  n2_positive: True
+
+--- VERDICT ---
+  N2 POSITIVE — post-fit angles deviate from Haar and/or cluster near PDG.
+  Kernel optimization selects non-generic PMNS; not proof of mechanism.
+verdict: structured

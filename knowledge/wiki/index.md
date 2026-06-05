@@ -56,6 +56,7 @@
 - [[can-primes-enter-via-qed-spectral-sums]] — Do QED sums naturally involve primes?
 - [[neutrino-loss-landscape-n1]] — N1: quark vs neutrino joint loss landscape (diag 39)
 - [[neutrino-geometry-predictor-n4]] — N4: geometry → joint strict (diag 40)
+- [[neutrino-haar-null-n2]] — N2: Haar PMNS null vs post-fit (diag 41)
 - [[can-p-adics-encode-flavor-hierarchy]] — p-adic vs real hierarchy
 - [[does-phase-structure-imply-spectral-operator]] — Phase from operator?
 - [[what-proves-information-creates-reality]] — Proof criteria

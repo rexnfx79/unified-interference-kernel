@@ -36,7 +36,7 @@ Forward-looking plan after diagnostics **21–31**, geometry closure (**29–30*
 | ID | Status | Pointer |
 |----|--------|---------|
 | **N1** | **Positive** (diag 39) | [[neutrino-loss-landscape-n1]] — ν joint basins shallower than quark |
-| **N2** | Open | Haar PMNS null vs post-fit |
+| **N2** | **Positive** (diag 41) | [[neutrino-haar-null-n2]] — 3/3 KS reject Haar; PDG dist **0.24** vs Haar **2.93** |
 | **N4** | **Weak–moderate** (diag 40) | [[neutrino-geometry-predictor-n4]] — CV AUC **0.66**; uni best **0.57** |
 
 ## Tier 1 — Observables & CP (**complete** 2026-06-02o)
