@@ -9,11 +9,12 @@ related:
   - diagnostics-summary
   - manuscript-key-results
   - information-measure-for-projection-regimes
+  - chiral-projection-thesis
 island: true
 bridge_tags: [flavor, information]
 status: phenomenological
 created: 2026-06-01
-updated: 2026-06-02e
+updated: 2026-06-12
 approach: effective
 plausibility: watch
 ---
@@ -51,6 +52,10 @@ plausibility: watch
 Each regime *might* correspond to different information compression — but **`diagnostics/12_regime_entropy_correlation.py` refuted** correlation between regime labels and \(S(\rho_Y)\), effective rank, or off-diagonal entropy (n = 10,080, max \|r\| = 0.047). See [[information-measure-for-projection-regimes]].
 
 [[repo-scientific-findings]]: parameters do not transfer — each regime requires **sector-specific** tuning. Any fundamental theory must explain *why* the projection map differs per sector, with falsifiable predictions.
+
+## Distinction from chiral projection
+
+[[chiral-projection-thesis]] uses "projection" for **oriented reconstruction** of a parity-symmetric parent (possible mirror sector). Repo regimes are **sector-local readouts within one chiral universe** — not \(U_L\) vs \(U_R\) branches. Do not conflate; see [[adversarial-review-chiral-projection-thesis]].
 
 ## Open Question
 

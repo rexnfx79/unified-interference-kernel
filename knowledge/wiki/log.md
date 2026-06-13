@@ -1,7 +1,13 @@
-updated: 2026-06-02u
+updated: 2026-06-12
 ---
 
 # Research Log
+
+## 2026-06-12 | ingest | Chiral projection thesis + diag 42
+
+- **Wiki:** [[chiral-projection-thesis]], [[adversarial-review-chiral-projection-thesis]], [[chiral-projection-formalization-program]]
+- **Diag 42:** quark portal audit N=20 — simple portals fail \(J\) falsifier; Schur overfits holdout
+- **Register:** mirror sector **watch**; orientation map **philosophical**; kernel bridge **dead**
 
 ## 2026-06-02 | explore | N2 Haar PMNS null (diag 41)
 

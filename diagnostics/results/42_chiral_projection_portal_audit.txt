@@ -1,0 +1,11 @@
+Diagnostic 42: Chiral projection portal audit
+N_geom=20, seeds=3
+
+Median metrics (lower train/hold/j_err better; j_sign = fraction correct sign):
+  baseline      train=1.4927  hold=348.1671  j_err=1.0000  j_sign=0.600
+  parity_pi     train=1.3709  hold=361.9340  j_err=1.0000  j_sign=0.500
+  mirror_eta    train=1.5842  hold=362.0306  j_err=1.0000  j_sign=0.583
+  schur_6x6     train=1.0001  hold=502.6855  j_err=1.0000  j_sign=0.600
+
+Verdict: FALSIFIER PASS (quark CP): portal ansätze do not beat baseline on this audit
+  baseline median j_err=1.0000, best portal schur_6x6=1.0000

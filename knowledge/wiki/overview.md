@@ -7,7 +7,7 @@ related:
   - plausibility-register
   - qed-qm-information
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-06-12
 ---
 
 # Overview
@@ -35,6 +35,7 @@ This wiki connects **math to reality** by tracking **multiple independent approa
 | Universal kernel parameters | **refuted** ([[repo-scientific-findings]]) |
 | Gaussian kernel full quarks | **refuted** ([[diagnostics-summary]]) |
 | Split-fermion → kernel derivation | **deprioritize** — historical r≈0.99 ([[split-fermion-overlap-test]]) |
+| Chiral projection / mirror sector | **philosophical** / **watch** — diag 42 killed simple quark portals ([[chiral-projection-thesis]]) |
 
 ## Repo Role
 

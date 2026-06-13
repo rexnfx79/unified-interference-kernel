@@ -8,7 +8,7 @@ related:
   - why-not-zeta-flavor-numerology
 status: open
 created: 2026-06-01
-updated: 2026-06-02r
+updated: 2026-06-12
 strategy: research-strategy
 ---
 
@@ -38,6 +38,8 @@ Living record of **what failed**, what is **implausible**, and what remains **wo
 | Primes **directly** determine electron mass ratios | **dead** | No QED calculation supports this; numerology |
 | Primes as **mode indices** in standard QED sums | **dead** (refuted) | Diag 38: integer sums converge; prime-only rel_err **0.67–0.93** — [[can-primes-enter-via-qed-spectral-sums]] |
 | p-adic QM as **leading** SM flavor explanation | **deprioritize** | Adelic programs lack confirmed predictive wins vs split fermions / RG |
+| Chiral projection → [[interference-kernel]] / [[projection-regimes]] | **dead** | Category error; regime info link refuted (12–16); diag 42 portal CP fail — [[chiral-projection-formalization-program]] |
+| Simple quark mirror portal (parity-\(\pi\), Schur add-on) | **dead** (quark CP) | Diag 42: median \(J\) err unchanged; Schur overfits holdout — [[adversarial-review-chiral-projection-thesis]] |
 
 ## Low Plausibility (Track, Don't Bet On)
 
@@ -48,6 +50,9 @@ Living record of **what failed**, what is **implausible**, and what remains **wo
 | Metric regime = information loss → anarchy | **watch** | Tested in `diagnostics/12_regime_entropy_correlation.py` — see [[information-measure-for-projection-regimes]] |
 | Split-fermion overlaps → derive [[interference-kernel]] | **dead** (mechanism) | Diag 33 N=50: geometry→\(w/\sigma\) R² **0.045**; magnitude fit only — [[derive-interference-kernel-from-overlaps]] |
 | [[it-from-bit]] → concrete mass formula | **watch** | Philosophical north star, not constructive |
+| [[chiral-projection-thesis]] mirror sector (Tier A) | **watch** | Standard BSM; not novel — lab portals required |
+| [[chiral-projection-thesis]] orientation map \(\Pi_\Omega\) (Tier B) | **philosophical** | Needs formal map + in-sector observable — [[adversarial-review-chiral-projection-thesis]] |
+| Holographic two-reconstruction → mirror sector | **deprioritize** | Metaphor; AdS/CFT mismatch for observed universe |
 
 ## Medium Plausibility (Active Exploration)
 
@@ -96,6 +101,7 @@ Living record of **what failed**, what is **implausible**, and what remains **wo
 | 2026-06 | Fisher transfer test (`diagnostics/19_*`) | **Refuted** — frozen loss 805.8, alignment 0.41; free-fit Δθ ≫ CR |
 | 2026-06 | Path A QIT→flavor mechanism | **Deprioritized** — no surviving falsifier-passing route (12–19) |
 | 2026-06 | Collider Fisher sketch (`diagnostics/20_*`) | **Too thin** — event likelihood out of scope; mixing-only under-identifies kernel |
+| 2026-06-12 | Chiral projection quark portal audit (diag 42) | **Refuted** — simple portals do not improve \(J\); Schur overfits holdout — [[chiral-projection-formalization-program]] |
 
 ## How to Use
 

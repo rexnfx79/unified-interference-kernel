@@ -37,6 +37,7 @@
 - [[quantum-information]] — Entropy, channels, entanglement
 - [[it-from-bit]] — Philosophical north star (not constructive alone)
 - [[holographic-principle]] — Bekenstein ingested; AdS/CFT stub
+- [[chiral-projection-thesis]] — Oriented reconstruction / mirror sector (philosophical)
 
 ## Concepts — Effective Readout (Repo)
 
@@ -66,6 +67,8 @@
 - [[similar-fitted-scales-vs-transfer]] — Disambiguate σ clustering vs universality refutation
 - [[quark-geometry-conventions]] — Legacy vs phenomenology geometry spaces (diag 29–31)
 - [[fisher-transfer-universality-test]] — **Refuted** — Fisher does not rescue quark→lepton transfer
+- [[adversarial-review-chiral-projection-thesis]] — Gap-crossing review; category errors blocked
+- [[chiral-projection-formalization-program]] — Six formalizations; diag 42 portal falsifier
 
 ## Comparisons
 
