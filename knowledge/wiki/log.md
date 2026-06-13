@@ -3,6 +3,11 @@ updated: 2026-06-12
 
 # Research Log
 
+## 2026-06-12 | implement | Diag 43 joint 6×6 three-sector fit
+
+- **Diag 43:** L3 FAIL — 6×6 Schur joint holdout sum **1387** vs independent **670** (N=30, diag 26 corpus)
+- **Wiki:** [[chiral-projection-formalization-program]] L3 failed
+
 ## 2026-06-12 | ingest | Chiral projection thesis + diag 42
 
 - **Wiki:** [[chiral-projection-thesis]], [[adversarial-review-chiral-projection-thesis]], [[chiral-projection-formalization-program]]

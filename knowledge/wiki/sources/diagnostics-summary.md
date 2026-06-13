@@ -57,6 +57,7 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 | `40` | N4 geometry predictor N=100 seed 28028 — CV AUC **0.66**; falsifier rejected; `overlap_count` best uni **0.57** |
 | `41` | N2 Haar PMNS null — **structured** (3/3 KS vs Haar); post-fit PDG dist median **0.24** vs Haar **2.93** |
 | `42` | Chiral projection portal audit N=20 — **FAIL** quark \(J\) falsifier; Schur train **1.00** vs hold **503** (overfit) |
+| `43` | Joint 6×6 3-sector N=30 — **L3 FAIL**; holdout sum **1387** vs independent **670**; Schur overfit |
 
 ### Diagnostic 31 — null geometry (N=30, seed 21021)
 

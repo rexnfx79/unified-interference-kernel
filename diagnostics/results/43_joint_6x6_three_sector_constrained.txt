@@ -1,0 +1,21 @@
+Diagnostic 43: Joint 3-sector 6×6 constrained fit (diag 26 corpus)
+N_geom=30, seed=26026, seeds/model=2
+Wall time: 2.8 min
+
+Param counts: independent=18, joint_shared=9, joint_6x6=12
+
+--- Median train / holdout sums (quark train + lepton train + ν joint) ---
+  independent:  train=3.5000  holdout_sum=669.5116  (n=25)
+  joint_shared: train=27.8036  holdout_sum=521.6885  (n=20)
+  joint_6x6:    train=18.5902  holdout_sum=1386.9802  (n=21)
+
+--- Pre-registered ---
+  L3 (6x6 holdout < 0.95× independent): False
+  L3 falsifier (6x6 holdout >= independent): True
+  P6 param reduction (12 < 18): True
+  P6 train match (6x6 train <= 1.1× ind): False
+
+--- VERDICT ---
+  L3 FAIL — joint 6×6 does not beat independent sector fits on holdout sum.
+  Chiral projection F2 joint parent not supported at this constraint level.
+verdict: l3_fail

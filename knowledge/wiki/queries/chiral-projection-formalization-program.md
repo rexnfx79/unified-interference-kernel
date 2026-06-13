@@ -86,7 +86,7 @@ Shared base \(L=Q\) (diag 26); fibre holonomy \(\mathrm{Hol}_s\) per sector. Env
 | P3 | Shared \(L=Q\) required | Joint geometry (diag 26) |
 | P4 | \(\alpha\) clusters near \(\pi\) | Complex-\(x\) fit (diag 45) |
 | P5 | \(g_{\mathrm{env}} = f(\mathrm{Hol}_\nu)\) | \(r<0.3\) after holonomy fit |
-| P6 | 6×6 parent reduces total joint params | Diag 43 (planned) |
+| P6 | 6×6 parent reduces total joint params | Diag 43: **params reduced** but holdout **worse** |
 
 ## Diagnostic 42 — quark portal audit
 
@@ -106,6 +106,21 @@ Shared base \(L=Q\) (diag 26); fibre holonomy \(\mathrm{Hol}_s\) per sector. Env
 
 **Implication:** projection geometry, if real, must be non-perturbative (constrained Schur), neutrino-dominated, or geometric (F3/F4), not additive tail on kernel.
 
+## Diagnostic 43 — joint 3-sector 6×6 constrained fit
+
+**Script:** `diagnostics/43_joint_6x6_three_sector_constrained.py`  
+**Corpus:** diag 26 joint geometries (seed 26026), N=30.
+
+| Model | Params | Median train sum | Median holdout sum | n solved |
+|-------|--------|------------------|--------------------|----------|
+| independent | 18 | 3.50 | **669.5** | 25 |
+| joint_shared | 9 | 27.80 | 521.7 | 20 |
+| joint_6x6 Schur | 12 | 18.59 | **1387.0** | 21 |
+
+**Pre-registered:** L3 falsifier if 6×6 holdout sum ≥ independent; P6 if no param reduction with train match.
+
+**Verdict:** **L3 FAIL** — Schur joint does not beat independent on holdout (overfit pattern like diag 42). P6 partial (fewer params, lower train, worse holdout).
+
 ## Proof ladder
 
 | Level | Criterion | Status |
@@ -113,7 +128,7 @@ Shared base \(L=Q\) (diag 26); fibre holonomy \(\mathrm{Hol}_s\) per sector. Env
 | L0 | Parent Lagrangian; anomalies cancel | Literature (mirror matter) |
 | L1 | One parent \((k,\eta,\alpha)\) → all sectors | **Not met** (transfer refuted) |
 | L2 | Portal improves \(J\) + holdout | **Failed** (diag 42) |
-| L3 | Joint 3-sector 6×6 beats independent | **Planned** (diag 43) |
+| L3 | Joint 3-sector 6×6 beats independent | **Failed** (diag 43) |
 | L4 | Lab portals (n–n', \(\gamma\)–\(\gamma'\)) | External |
 | L5 | Cosmology (\(N_{\mathrm{eff}}\), DM) | External |
 
@@ -121,7 +136,7 @@ Shared base \(L=Q\) (diag 26); fibre holonomy \(\mathrm{Hol}_s\) per sector. Env
 
 | Diag | Test | Formalization |
 |------|------|---------------|
-| 43 | Joint 3-sector 6×6 constrained fit (diag 26 corpus) | F2, F4 |
+| ~~43~~ | Joint 3-sector 6×6 constrained fit | **Done FAIL** — diag 43 |
 | 44 | Neutrino-first portal only | F1, F5 |
 | 45 | Complex-coordinate kernel | F3 |
 | 46 | Holonomy \(g_{\mathrm{env}}\) parametrization | F4 |

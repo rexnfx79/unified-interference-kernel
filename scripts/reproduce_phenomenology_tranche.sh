@@ -22,7 +22,9 @@ for f in diagnostics/results/21_quark_phenomenology_holdout.txt \
          diagnostics/results/38_tier5_qed_prime_spectral_audit.txt \
          diagnostics/results/39_joint_loss_landscape_cartography.txt \
          diagnostics/results/40_n4_geometry_strict_predictor.txt \
-         diagnostics/results/41_n2_haar_pmns_null.txt; do
+         diagnostics/results/41_n2_haar_pmns_null.txt \
+         diagnostics/results/42_chiral_projection_portal_audit.txt \
+         diagnostics/results/43_joint_6x6_three_sector_constrained.txt; do
   if [[ -f "$f" ]]; then
     echo "  OK  $f"
   else
