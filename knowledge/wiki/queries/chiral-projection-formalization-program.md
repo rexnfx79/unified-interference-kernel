@@ -12,7 +12,7 @@ related:
   - plausibility-register
 status: open
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-06-15
 ---
 
 # Chiral Projection Formalization Program
@@ -82,7 +82,7 @@ Shared base \(L=Q\) (diag 26); fibre holonomy \(\mathrm{Hol}_s\) per sector. Env
 | ID | Statement | Kill |
 |----|-----------|------|
 | P1 | Portal with \(\Phi_{-}\) improves quark \(J\) | Diag 42: **killed** (simple portals) |
-| P2 | \(\varepsilon_{\nu} \gg \varepsilon_{q}\) | Diag 44 (planned) |
+| P2 | \(\varepsilon_{\nu} \gg \varepsilon_{q}\) | Diag 44: **killed** — median ratio **1.00** |
 | P3 | Shared \(L=Q\) required | Joint geometry (diag 26) |
 | P4 | \(\alpha\) clusters near \(\pi\) | Complex-\(x\) fit (diag 45) |
 | P5 | \(g_{\mathrm{env}} = f(\mathrm{Hol}_\nu)\) | \(r<0.3\) after holonomy fit |
@@ -121,6 +121,24 @@ Shared base \(L=Q\) (diag 26); fibre holonomy \(\mathrm{Hol}_s\) per sector. Env
 
 **Verdict:** **L3 FAIL** — Schur joint does not beat independent on holdout (overfit pattern like diag 42). P6 partial (fewer params, lower train, worse holdout).
 
+## Diagnostic 44 — neutrino-first portal audit
+
+**Script:** `diagnostics/44_neutrino_first_portal_audit.py`  
+**Corpus:** diag 28 neutrino geometries (seed 28028), N=100; leaky joint geom N=30.
+
+| Model | n | Median joint loss | Joint strict % |
+|-------|---|-------------------|----------------|
+| baseline | 77 | 0.3339 | 31.2% |
+| mirror_eta | 77 | **0.3157** | 35.1% |
+| parity_pi | 77 | 0.3318 | 33.8% |
+| schur_nu | 77 | 0.3218 | 39.0% |
+
+**P2 leaky:** median \(\varepsilon_{\nu,p}/\varepsilon_{q,p} = 1.00\) (threshold > 5) — **FAIL**.
+
+**Pre-registered:** joint_med < 0.85× baseline (0.284) — best 0.316 (**FAIL**, only ~5% gain).
+
+**Verdict:** **FALSIFIER PASS** — neutrino-first portal does not meet 15% joint-loss bar. Schur raises strict to 39% (exploratory) but does not pass pre-registered flavor criterion. **Close P-series flavor hooks** unless diag 45/46 adds new constraint.
+
 ## Proof ladder
 
 | Level | Criterion | Status |
@@ -129,6 +147,7 @@ Shared base \(L=Q\) (diag 26); fibre holonomy \(\mathrm{Hol}_s\) per sector. Env
 | L1 | One parent \((k,\eta,\alpha)\) → all sectors | **Not met** (transfer refuted) |
 | L2 | Portal improves \(J\) + holdout | **Failed** (diag 42) |
 | L3 | Joint 3-sector 6×6 beats independent | **Failed** (diag 43) |
+| L2b | Neutrino-first portal beats diag 28 joint | **Failed** (diag 44) |
 | L4 | Lab portals (n–n', \(\gamma\)–\(\gamma'\)) | External |
 | L5 | Cosmology (\(N_{\mathrm{eff}}\), DM) | External |
 
@@ -137,7 +156,7 @@ Shared base \(L=Q\) (diag 26); fibre holonomy \(\mathrm{Hol}_s\) per sector. Env
 | Diag | Test | Formalization |
 |------|------|---------------|
 | ~~43~~ | Joint 3-sector 6×6 constrained fit | **Done FAIL** — diag 43 |
-| 44 | Neutrino-first portal only | F1, F5 |
+| ~~44~~ | Neutrino-first portal only | **Done FAIL** — diag 44 |
 | 45 | Complex-coordinate kernel | F3 |
 | 46 | Holonomy \(g_{\mathrm{env}}\) parametrization | F4 |
 | 47 | Literal split-fermion oriented overlap | F1 |

@@ -8,7 +8,7 @@ related:
   - why-not-zeta-flavor-numerology
 status: open
 created: 2026-06-01
-updated: 2026-06-12
+updated: 2026-06-15
 strategy: research-strategy
 ---
 
@@ -40,6 +40,8 @@ Living record of **what failed**, what is **implausible**, and what remains **wo
 | p-adic QM as **leading** SM flavor explanation | **deprioritize** | Adelic programs lack confirmed predictive wins vs split fermions / RG |
 | Chiral projection → [[interference-kernel]] / [[projection-regimes]] | **dead** | Category error; regime info link refuted (12–16); diag 42 portal CP fail — [[chiral-projection-formalization-program]] |
 | Simple quark mirror portal (parity-\(\pi\), Schur add-on) | **dead** (quark CP) | Diag 42: median \(J\) err unchanged; Schur overfits holdout — [[adversarial-review-chiral-projection-thesis]] |
+| Neutrino-first mirror portal (F1/F5) | **dead** (flavor) | Diag 44: joint_med ratio 0.95 vs 0.85 bar; P2 \(\varepsilon_\nu/\varepsilon_q\approx 1\) — [[chiral-projection-formalization-program]] |
+| Joint 6×6 three-sector Schur parent (F2) | **dead** (flavor) | Diag 43 L3 fail — holdout sum 1387 vs 670 independent — [[chiral-projection-formalization-program]] |
 
 ## Low Plausibility (Track, Don't Bet On)
 
@@ -51,7 +53,7 @@ Living record of **what failed**, what is **implausible**, and what remains **wo
 | Split-fermion overlaps → derive [[interference-kernel]] | **dead** (mechanism) | Diag 33 N=50: geometry→\(w/\sigma\) R² **0.045**; magnitude fit only — [[derive-interference-kernel-from-overlaps]] |
 | [[it-from-bit]] → concrete mass formula | **watch** | Philosophical north star, not constructive |
 | [[chiral-projection-thesis]] mirror sector (Tier A) | **watch** | Standard BSM; not novel — lab portals required |
-| [[chiral-projection-thesis]] orientation map \(\Pi_\Omega\) (Tier B) | **philosophical** | Needs formal map + in-sector observable — [[adversarial-review-chiral-projection-thesis]] |
+| Geometry features → joint strict (N4 in-sample) | **deprioritize** | N3 holdout AUC **0.53** — does not generalize — [[neutrino-holdout-geometry-n3]] |
 | Holographic two-reconstruction → mirror sector | **deprioritize** | Metaphor; AdS/CFT mismatch for observed universe |
 
 ## Medium Plausibility (Active Exploration)
@@ -102,6 +104,8 @@ Living record of **what failed**, what is **implausible**, and what remains **wo
 | 2026-06 | Path A QIT→flavor mechanism | **Deprioritized** — no surviving falsifier-passing route (12–19) |
 | 2026-06 | Collider Fisher sketch (`diagnostics/20_*`) | **Too thin** — event likelihood out of scope; mixing-only under-identifies kernel |
 | 2026-06-12 | Chiral projection quark portal audit (diag 42) | **Refuted** — simple portals do not improve \(J\); Schur overfits holdout — [[chiral-projection-formalization-program]] |
+| 2026-06-15 | N3 holdout geometry predictor (diag 45) | **Refuted** — test AUC 0.53; N4 in-sample signal does not generalize |
+| 2026-06-15 | Joint 6×6 three-sector (diag 43) | **Refuted** — L3 holdout fail — [[chiral-projection-formalization-program]] |
 
 ## How to Use
 

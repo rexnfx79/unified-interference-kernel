@@ -13,7 +13,7 @@ authors: [Alexander Seto]
 year: 2026
 status: established
 created: 2026-06-01
-updated: 2026-06-12
+updated: 2026-06-15
 ---
 
 # Diagnostics Summary (Repo)
@@ -57,7 +57,9 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 | `40` | N4 geometry predictor N=100 seed 28028 — CV AUC **0.66**; falsifier rejected; `overlap_count` best uni **0.57** |
 | `41` | N2 Haar PMNS null — **structured** (3/3 KS vs Haar); post-fit PDG dist median **0.24** vs Haar **2.93** |
 | `42` | Chiral projection portal audit N=20 — **FAIL** quark \(J\) falsifier; Schur train **1.00** vs hold **503** (overfit) |
-| `43` | Joint 6×6 3-sector N=30 — **L3 FAIL**; holdout sum **1387** vs independent **670**; Schur overfit |
+| `43` | Joint 6×6 three-sector N=30 — **FAIL** L3; holdout sum **1387** vs independent **670** |
+| `44` | Neutrino-first portal N=100 — **FAIL** joint_med **0.316** vs 0.85×bar **0.284**; P2 ratio **1.0**; schur strict **39%** exploratory |
+| `45` | N3 holdout geometry predictor — **FAIL** test AUC **0.529**; train CV **0.572**; in-sample **0.85** overfit |
 
 ### Diagnostic 31 — null geometry (N=30, seed 21021)
 

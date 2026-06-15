@@ -1,0 +1,23 @@
+Diagnostic 44: Neutrino-first chiral projection portal
+N_geom=100 (seed=28028), leaky N=30 (seed=26026)
+Wall time: 73.1 min
+
+--- Median joint loss / joint strict % ---
+  baseline      n= 77  joint_med=0.3339  strict=31.2%
+  mirror_eta    n= 77  joint_med=0.3157  strict=35.1%
+  parity_pi     n= 77  joint_med=0.3318  strict=33.8%
+  schur_nu      n= 77  joint_med=0.3218  strict=39.0%
+
+Baseline reference: joint_med=0.3339  strict=31.2%
+Best portal model: mirror_eta (joint_med=0.3157)
+
+--- P2 leaky (eps_nu vs eps_q, both free) ---
+  n=21  median eps_nu_p=0.4846  eps_q_p=0.4992
+  median eps_nu/eps_q=1.00  (P2 threshold > 5.0)
+  P2 structure: False
+
+--- Pre-registered ---
+  Flavor PASS (joint_med < 0.85× baseline, strict within -5.0pp): False
+
+VERDICT: FALSIFIER PASS — neutrino-first portal does not beat diag 28 baseline
+verdict: falsifier_pass

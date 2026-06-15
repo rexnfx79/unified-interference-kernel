@@ -6,7 +6,7 @@ related:
   - neutrino-loss-landscape-n1
   - future-work
   - diagnostics-summary
-status: established
+status: deprioritized
 created: 2026-06-02
 updated: 2026-06-02
 ---
@@ -49,5 +49,7 @@ Geometry carries **weak–moderate** signal for joint strict success, not a shar
 
 ## Follow-ups
 
-- Holdout geometry **blocks** (train on 70 geoms, test on 30 disjoint draws).
-- **N2** Haar PMNS null.
+- ~~**N3** holdout blocks~~ — **done FAIL** (diag 45): [[neutrino-holdout-geometry-n3]]
+- **N2** Haar PMNS null — done (diag 41)
+
+**Downgrade:** CV AUC **0.658** is in-sample only; holdout test **0.529** (N3). Do not cite N4 as predictive without external replication.

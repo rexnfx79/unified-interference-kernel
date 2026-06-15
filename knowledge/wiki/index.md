@@ -56,8 +56,10 @@
 - [[qm-to-information-what-is-measurable]] — Reverse direction from QED
 - [[can-primes-enter-via-qed-spectral-sums]] — Do QED sums naturally involve primes?
 - [[neutrino-loss-landscape-n1]] — N1: quark vs neutrino joint loss landscape (diag 39)
-- [[neutrino-geometry-predictor-n4]] — N4: geometry → joint strict (diag 40)
+- [[neutrino-geometry-predictor-n4]] — N4: geometry → joint strict in-sample (diag 40; downgraded after N3)
+- [[neutrino-holdout-geometry-n3]] — **Refuted:** N3 holdout AUC 0.53 (diag 45)
 - [[neutrino-haar-null-n2]] — N2: Haar PMNS null vs post-fit (diag 41)
+- [[neutrino-holdout-geometry-n3]] — **Refuted:** holdout AUC 0.53 (diag 45)
 - [[can-p-adics-encode-flavor-hierarchy]] — p-adic vs real hierarchy
 - [[does-phase-structure-imply-spectral-operator]] — Phase from operator?
 - [[what-proves-information-creates-reality]] — Proof criteria

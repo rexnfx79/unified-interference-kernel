@@ -8,6 +8,16 @@ updated: 2026-06-12
 - **Diag 43:** L3 FAIL — 6×6 Schur joint holdout sum **1387** vs independent **670** (N=30, diag 26 corpus)
 - **Wiki:** [[chiral-projection-formalization-program]] L3 failed
 
+## 2026-06-15 | explore | N3 holdout geometry predictor (diag 45)
+
+- **Diag 45:** train 70 / test 50 disjoint — holdout AUC **0.529**; N4 signal does not generalize
+- **Wiki:** [[neutrino-holdout-geometry-n3]]; N4 downgraded
+
+## 2026-06-15 | implement | Neutrino-first portal audit (diag 44)
+
+- **Diag 44:** N=100 ν geom — portal FAIL 15% joint-loss bar; P2 \(\varepsilon_\nu/\varepsilon_q\approx 1\); schur strict 39% vs 31% baseline (exploratory)
+- **Wiki:** [[chiral-projection-formalization-program]], [[plausibility-register]]
+
 ## 2026-06-12 | ingest | Chiral projection thesis + diag 42
 
 - **Wiki:** [[chiral-projection-thesis]], [[adversarial-review-chiral-projection-thesis]], [[chiral-projection-formalization-program]]

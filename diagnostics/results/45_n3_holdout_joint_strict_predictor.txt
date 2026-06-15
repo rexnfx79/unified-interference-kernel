@@ -1,0 +1,46 @@
+========================================================================
+N3 HOLDOUT GEOMETRY -> JOINT STRICT PREDICTOR (diagnostic 45)
+========================================================================
+Train: seed=28028, N=70
+Test:  seed=28029, N=50 (disjoint from train keys)
+Wall time: 68.2 min
+
+--- Label rates ---
+  Train joint strict: 21.4% (15/70)
+  Test  joint strict: 18.0% (9/50)
+  Test  PMNS strict:  20.0% (10/50)
+
+--- AUC (joint strict primary) ---
+  Train 5-fold CV:       0.5721  (N4 reference CV: 0.658)
+  Train in-sample:       0.8521
+  **Holdout test AUC**:  0.5285
+  Holdout test (PMNS):   0.4825
+  Best uni train:        0.5836 (overlap_count)
+  Best uni test:         0.7222 (spread_N)
+
+--- Coefficients (train-fit, standardized) ---
+  spread_L         -0.5869
+  spread_N         -0.3353
+  mean_L           -0.0935
+  mean_N           -0.6602
+  centroid_gap     -0.6781
+  overlap_count    -0.0311
+  union_count      +0.0311
+  mean_pair_L      -0.5869
+  mean_pair_N      -0.3353
+  min_cross        -0.0727
+  max_cross        -1.7315
+  coord_span       +1.3693
+  spread_ratio     +0.0323
+  cross_span_ratio -0.1867
+
+--- Pre-registered N3 ---
+  FAIL  holdout AUC <= 0.55: True
+  PURSUE holdout AUC >= 0.66: False
+  Beat N4 CV (0.658): False
+
+--- VERDICT ---
+  N3 falsifier NOT rejected — holdout geometry does not predict joint strict.
+verdict: falsifier_pass
+holdout_test_auc: 0.5284552845528455
+train_cv_auc: 0.5721212121212121

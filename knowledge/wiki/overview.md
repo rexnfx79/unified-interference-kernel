@@ -35,7 +35,7 @@ This wiki connects **math to reality** by tracking **multiple independent approa
 | Universal kernel parameters | **refuted** ([[repo-scientific-findings]]) |
 | Gaussian kernel full quarks | **refuted** ([[diagnostics-summary]]) |
 | Split-fermion → kernel derivation | **deprioritize** — historical r≈0.99 ([[split-fermion-overlap-test]]) |
-| Chiral projection / mirror sector | **philosophical** / **watch** — diag 42 killed simple quark portals ([[chiral-projection-thesis]]) |
+| Chiral projection / mirror sector | **philosophical** only — diags 42–44 killed flavor hooks ([[chiral-projection-thesis]]) |
 
 ## Repo Role
 
