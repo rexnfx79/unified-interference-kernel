@@ -43,6 +43,7 @@ Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use wh
 | N4 geometry → strict (in-sample) | **Deprioritize** | CV 0.66; N3 holdout fails |
 | N3 geometry holdout predictor | **Refuted** | diag 45 test AUC 0.53 |
 | P-series mirror portals | **Refuted** (flavor) | diags 42–44 |
+| N5 PMNS CP under joint objective | **Established** (descriptive) | Median \(|\Delta\delta| \approx 3.5\) rad — diag 46 |
 | Quark 0% strict survivors (100 geom) | **Established** (structural failure) | diag 21; diag 27 joint 2% on phenomenology triples only |
 | Parameter scale clustering \(\sigma,\alpha\) | **Speculative / artifact** | manuscript §limitations |
 | QIT / information-loss sampling narrative | **Refuted** for mechanism | diagnostics 12–19 |

@@ -48,6 +48,7 @@ Forward-looking plan after diagnostics **21–31**, geometry closure (**29–30*
 | **N2** | **Positive** (diag 41) | [[neutrino-haar-null-n2]] — 3/3 KS reject Haar; PDG dist **0.24** vs Haar **2.93** |
 | **N3** | **Refuted** (diag 45) | [[neutrino-holdout-geometry-n3]] — holdout AUC **0.53**; N4 does not generalize |
 | **N4** | **Weak in-sample only** (diag 40) | [[neutrino-geometry-predictor-n4]] — CV **0.66**; downgraded after N3 holdout fail |
+| **N5** | **Established** (descriptive) (diag 46) | [[neutrino-pmns-cp-n5]] — joint objective misaligns CP: median \(|\Delta\delta_{\mathrm{PMNS}}| \approx 3.5\) rad |
 
 ## Tier 1 — Observables & CP (**complete** 2026-06-02o)
 

@@ -39,6 +39,7 @@ This wiki connects **math to reality** by tracking **multiple independent approa
 | Split-fermion → kernel derivation | **deprioritize** — historical r≈0.99 ([[split-fermion-overlap-test]]) |
 | Chiral projection / mirror sector | **philosophical** only — P-series 42–44 dead |
 | Flavor mechanism code program | **closed** (2026-06-15) — deliverable = phenomenology paper |
+| N5 PMNS CP (joint objective) | **descriptive** — \(|\Delta\delta_{\mathrm{PMNS}}| \approx 3.5\) rad ([[neutrino-pmns-cp-n5]]) |
 
 ## Repo Role
 
@@ -49,3 +50,4 @@ Parent repo implements [[interference-kernel]] fits — **effective readout laye
 - Arithmetic islands: [[prime-numbers-and-physics]], [[p-adic-analysis]]
 - Quantum islands: [[qed-qm-information]], [[quantum-information]], [[it-from-bit]]
 - Adversarial: [[plausibility-register]], [[why-not-zeta-flavor-numerology]], [[knowledge-gaps-audit]]
+- Neutrino N-series: [[neutrino-loss-landscape-n1]], [[neutrino-haar-null-n2]], [[neutrino-holdout-geometry-n3]], [[neutrino-pmns-cp-n5]]
