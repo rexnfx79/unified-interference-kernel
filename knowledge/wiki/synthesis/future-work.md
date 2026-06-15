@@ -27,6 +27,7 @@ Forward-looking plan after diagnostics **21–31**, geometry closure (**29–30*
 | N-series prediction (N3/N4 holdout) | **Closed** |
 | P-series chiral projection flavor hooks | **Closed** |
 | **Deliverable** | Manuscript + [[manuscript-ledger-alignment]] + `manuscript.pdf` |
+| **Tangents** | [[tangent-research-seeds]] — ranked seeds (F methodology + C quark negative top; A conditional) |
 
 ## Tier 0 — Close the phenomenology paper (**complete** 2026-06-02o)
 

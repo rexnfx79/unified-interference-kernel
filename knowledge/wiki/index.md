@@ -3,7 +3,8 @@
 ## Synthesis (Start Here)
 
 - [[research-strategy]] — User decisions: Path A+D, mechanism goal, SM-only, code-only
-- [[future-work]] — Post-tranche plan: publication (Tier 0), conjecture bridges (Tier 5)
+- [[future-work]] — Post-tranche plan: publication (Tier 0), program closure
+- [[tangent-research-seeds]] — Novel findings → ranked tangent directions (post-closure)
 - [[conjecture-to-physics-avenues]] — RH / HP / trace formula vs measurable physics (ranked)
 - [[trace-formula-bridge-ladder]] — Selberg → explicit formula → Montgomery → HP / Connes
 - [[multi-sided-bridge-framework]] — Three approaches (arithmetic, Hilbert, QED/info) + gap-crossing protocol
@@ -71,6 +72,7 @@
 - [[quark-geometry-conventions]] — Legacy vs phenomenology geometry spaces (diag 29–31)
 - [[fisher-transfer-universality-test]] — **Refuted** — Fisher does not rescue quark→lepton transfer
 - [[adversarial-review-chiral-projection-thesis]] — Gap-crossing review; category errors blocked
+- [[adversarial-review-tangent-research-seeds]] — Post-closure seed ranking; demote A/B, elevate F/C
 - [[chiral-projection-formalization-program]] — Six formalizations; diag 42 portal falsifier
 
 ## Comparisons

@@ -27,7 +27,7 @@ Living record of **strategic choices** for unified-interference-kernel explorati
 
 ## Future work (canonical)
 
-Full tiered plan: **[[future-work]]**. Phenomenology tranche **21–31 complete**; N/P-series **closed** (diags 39–46).
+Full tiered plan: **[[future-work]]**. Phenomenology tranche **21–31 complete**; N/P-series **closed** (diags 39–46). Tangent directions: **[[tangent-research-seeds]]**.
 
 ## Active priorities (2026-06-15)
 

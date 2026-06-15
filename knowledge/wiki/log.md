@@ -3,6 +3,15 @@ updated: 2026-06-12
 
 # Research Log
 
+## 2026-06-15 | query | Adversarial review — tangent seeds
+
+- **Wiki:** [[adversarial-review-tangent-research-seeds]] — demote N2/A/B; elevate F/C; tighten Seed A falsifier
+- **Updated:** [[tangent-research-seeds]], [[future-work]]
+
+## 2026-06-15 | synthesis | Tangent research seeds
+
+- **Wiki:** [[tangent-research-seeds]] — novel findings 1–8, ranked seeds A–F, closure boundaries
+
 ## 2026-06-12 | implement | Diag 43 joint 6×6 three-sector fit
 
 - **Diag 43:** L3 FAIL — 6×6 Schur joint holdout sum **1387** vs independent **670** (N=30, diag 26 corpus)

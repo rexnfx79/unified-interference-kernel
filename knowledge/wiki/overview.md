@@ -14,7 +14,7 @@ updated: 2026-06-15
 
 This wiki connects **math to reality** by tracking **multiple independent approaches** and documenting **where they fail**. Strategic choices: [[research-strategy]].
 
-**Program status (2026-06-15):** In-repo **flavor mechanism search closed**. Deliverable track: **manuscript + ledger sync**. See [[future-work]].
+**Program status (2026-06-15):** In-repo **flavor mechanism search closed**. Deliverable track: **manuscript + ledger sync**. Tangent seeds: [[tangent-research-seeds]].
 
 ## Start Here
 
