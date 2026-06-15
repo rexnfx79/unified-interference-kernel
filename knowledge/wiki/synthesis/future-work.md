@@ -11,13 +11,22 @@ related:
   - diagnostics-summary
 status: active
 created: 2026-06-02
-updated: 2026-06-02r
+updated: 2026-06-15
 ---
 
 # Future Work (Post-Phenomenology Tranche)
 
-Forward-looking plan after diagnostics **21–31**, geometry closure (**29–30**), and observables phase-fix (**2026-06-02j**).  
+Forward-looking plan after diagnostics **21–31**, geometry closure (**29–30**), observables phase-fix (**2026-06-02j**), N/P-series (**39–46**), and chiral projection audits (**42–44**).  
 **Closed paths:** [[research-strategy]] dead-ends table — do not reopen without a new falsifier.
+
+## Program closure (2026-06-15)
+
+| Track | Verdict |
+|-------|---------|
+| Flavor mechanism (QIT, split-fermion, zeta, portals) | **Closed** |
+| N-series prediction (N3/N4 holdout) | **Closed** |
+| P-series chiral projection flavor hooks | **Closed** |
+| **Deliverable** | Manuscript + [[manuscript-ledger-alignment]] + `manuscript.pdf` |
 
 ## Tier 0 — Close the phenomenology paper (**complete** 2026-06-02o)
 
@@ -114,12 +123,17 @@ See [[conjecture-to-physics-avenues]] for ranked tracks and falsifiers.
 | `reproduce_phenomenology_tranche.sh` (34–38) | **Done** |
 | Legacy CSV protocol | **Done** — `data/README.md` |
 | Manuscript Tier 5 + CP closure text | **Done** — `manuscript.tex` §Further Study |
-| Rebuild `manuscript.pdf` | Run `pdflatex manuscript.tex` after pull |
+| Rebuild `manuscript.pdf` | **Pending** — `pdflatex` not on PATH; run locally after pull |
+| Manuscript N/P-series + closure text | **Done** (2026-06-15) |
+| `reproduce_phenomenology_tranche.sh` (34–46) | **Done** |
 
 ## Decision log
 
 | Date | Decision |
 |------|----------|
+| 2026-06-15 | **Program closure** — mechanism + N/P-series closed; manuscript sync diags 39–46 |
+| 2026-06-15 | N3 holdout FAIL — N4 downgraded; geometry not predictive |
+| 2026-06-15 | P-series 42–44 FAIL — chiral projection flavor hooks dead |
 | 2026-06-02r | Tier 5.5 — diag 38 FAIL (no prime-index QED sum; watch only) |
 | 2026-06-02q | Tier 5.4 — diag 37 FAIL (landscape Hessian spacings Poisson-like, not GUE) |
 | 2026-06-02p | Tier 5.2–5.3 — diag 34 PASS (explicit formula); diag 35 FAIL (Jacobi inverse) |

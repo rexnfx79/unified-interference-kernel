@@ -14,18 +14,32 @@ related:
   - fisher-transfer-universality-test
 status: active
 created: 2026-06-01
-updated: 2026-06-02r
+updated: 2026-06-15
 ---
 
 # Research Strategy (User Decisions)
 
 Living record of **strategic choices** for unified-interference-kernel exploration. Code-only; SM flavor physics only.
 
+## Program status (2026-06-15)
+
+**In-repo flavor mechanism exploration is closed.** N-series (prediction) and P-series (chiral portals) falsified. Forward work = **manuscript deliverable** + ledger hygiene. Re-open code only with a **new pre-registered falsifier**.
+
 ## Future work (canonical)
 
-Full tiered plan: **[[future-work]]** (2026-06-02k). Phenomenology tranche **21–31 complete**; combinatorial quark search **closed**.
+Full tiered plan: **[[future-work]]**. Phenomenology tranche **21–31 complete**; N/P-series **closed** (diags 39–46).
 
-## Active priorities (2026-06-02r)
+## Active priorities (2026-06-15)
+
+| Priority | Action | Rationale |
+|----------|--------|-----------|
+| **1** | **Manuscript ↔ ledger sync** + rebuild `manuscript.pdf` | TeX lagged diags 39–46; strict denominators |
+| **2** | N5 PMNS CP descriptive (diag 46) | **Done** — |Δδ| ≈ 3.5 rad under joint loss |
+| **3** | Optional arXiv / artifact bundle | Externalize qualified partial phenomenology |
+
+**Closed:** mechanism search, N-series prediction, P-series flavor hooks, Tier 2–5 flavor bridges.
+
+## Active priorities (2026-06-02r) — superseded
 
 | Priority | Action | Rationale |
 |----------|--------|-----------|

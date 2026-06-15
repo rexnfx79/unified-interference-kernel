@@ -12,12 +12,14 @@ related:
   - future-work
 status: active
 created: 2026-06-02
-updated: 2026-06-02r
+updated: 2026-06-15
 ---
 
 # Manuscript ↔ Ledger Alignment
 
 Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use when revising abstract, conclusions, or limitations.
+
+**Tier 0 pass (2026-06-15):** Abstract uses **honest denominators** (22/100 joint ν, 71/100 PMNS-only attempted); Table strict rates; Further Study lists diags **39–46**, N/P-series closure. PDF rebuild requires local `pdflatex`.
 
 **Tier 0 pass (2026-06-02o):** Abstract neutrino headline = **27.8% joint** (diag 28) with **78.9% PMNS-only** (diag 23) qualified; quark **0/5759** (diag 30); Further Study lists diag **32–33** closed; reproduce via `scripts/reproduce_phenomenology_tranche.sh`.
 
@@ -34,7 +36,13 @@ Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use wh
 | Quark sector reproduces PDG precision | **Refuted** | 0% strict survivors; 0/5759 exhaustive (diag 30); \(m_c\) failures |
 | Charged lepton 60% survivor rate | **Historical** (legacy) / **1% strict** (diag 22) | [[analysis-summary]], `diagnostics/22_lepton_phenomenology_sweep.py` |
 | Neutrino 45% PMNS survivor rate | **Historical** (legacy) / **78.9% PMNS-only strict** (diag 23) | `diagnostics/23_neutrino_phenomenology_sweep.py` |
-| Neutrino **27.8% joint** strict (PMNS + Δm²) | **Established** (headline) | `diagnostics/28_neutrino_masses_pmns_joint.py` |
+| Neutrino **27.8% joint** strict (PMNS + Δm²) | **Established** (conditional) | 22/79 solved; **22/100** attempted — diag 28 |
+| Neutrino PMNS-only strict | **Established** (protocol-specific) | 71/90 solved; **71/100** attempted — diag 23 |
+| N1 landscape differentiation | **Established** (characterization) | diag 39 |
+| N2 anti-Haar PMNS structure | **Established** (characterization) | diag 41 |
+| N4 geometry → strict (in-sample) | **Deprioritize** | CV 0.66; N3 holdout fails |
+| N3 geometry holdout predictor | **Refuted** | diag 45 test AUC 0.53 |
+| P-series mirror portals | **Refuted** (flavor) | diags 42–44 |
 | Quark 0% strict survivors (100 geom) | **Established** (structural failure) | diag 21; diag 27 joint 2% on phenomenology triples only |
 | Parameter scale clustering \(\sigma,\alpha\) | **Speculative / artifact** | manuscript §limitations |
 | QIT / information-loss sampling narrative | **Refuted** for mechanism | diagnostics 12–19 |

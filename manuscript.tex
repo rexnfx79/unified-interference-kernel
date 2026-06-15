@@ -27,7 +27,7 @@
 \maketitle
 
 \begin{abstract}
-We present a framework for organizing Yukawa couplings through envelope suppression and phase interference. A single kernel \emph{form} is reused across fermion sectors as a phenomenological parameterization, not as a derived QFT mechanism. The primary finding is that the quark sector exhibits a structural CKM--$m_c$ trade-off (nondominated Pareto frontier) while failing holdout generalization: pre-registered train/holdout diagnostics find \textbf{0\% strict survivors} across Gaussian, clockwork, and generalized envelopes (100 geometries). Charged-lepton and neutrino sectors show sector-specific partial success under \emph{different} optimization protocols---legacy full-objective sweeps report $\sim$60\% and $\sim$45\% survivor rates, whereas train/holdout splits yield 1\% strict lepton survivors (holdout $m_e$ structural failure), \textbf{27.8\% joint strict} neutrino survivors (PMNS + $\Delta m^2$, diagnostic 28), and \textbf{78.9\% PMNS-only strict} survivors (diagnostic 23, 100 geometries each)---the latter does not survive joint mass constraints. Exploratory parameter-scale clustering ($\sigma$, $\alpha$) is noted but likely reflects optimization bias. Companion-repository diagnostics refute universal kernel \emph{parameters} across sectors and operational quantum-information explanations of regime splits.
+We present a framework for organizing Yukawa couplings through envelope suppression and phase interference. A single kernel \emph{form} is reused across fermion sectors as a phenomenological parameterization, not as a derived QFT mechanism. The primary finding is that the quark sector exhibits a structural CKM--$m_c$ trade-off (nondominated Pareto frontier) while failing holdout generalization: pre-registered train/holdout diagnostics find \textbf{0\% strict survivors} across Gaussian, clockwork, and generalized envelopes (100 geometries). Charged-lepton and neutrino sectors show sector-specific partial success under \emph{different} optimization protocols---legacy full-objective sweeps report $\sim$60\% and $\sim$45\% survivor rates, whereas train/holdout splits yield \textbf{1\% strict} lepton survivors (1/100 geometries, holdout $m_e$ structural failure), \textbf{22\% joint strict} neutrino survivors on attempted geometries (22/100; 27.8\% of 79 solved under joint PMNS+$\Delta m^2$, diagnostic~28), and \textbf{71\% PMNS-only strict} on attempted geometries (71/100; 78.9\% of 90 solved, diagnostic~23)---the latter uses a PMNS-only objective and does not survive joint mass constraints. Exploratory parameter-scale clustering ($\sigma$, $\alpha$) is noted but likely reflects optimization bias. Companion-repository diagnostics refute universal kernel \emph{parameters} across sectors and operational quantum-information explanations of regime splits.
 \end{abstract}
 
 \noindent\textbf{Keywords:} flavor physics, Yukawa couplings, CKM matrix, PMNS matrix, split fermions, neutrino anarchy
@@ -470,12 +470,29 @@ We have presented a phenomenological framework for organizing Yukawa couplings t
 
 \item \textbf{Charged Lepton Sector: Partial Success with Holdout Failure.} Legacy full-objective sweeps report $\sim$60\% success at 10\% tolerance, but train/holdout diagnostics (optimize $m_\mu + m_\tau$, hold out $m_e$) find \textbf{1\% strict survivors}---holdout $m_e$ fails structurally even when training masses are perfect.
 
-\item \textbf{Neutrino Sector: Joint Strict 27.8\%.} Joint PMNS + $\Delta m^2$ objectives (diagnostic 28, Tier B2) yield \textbf{27.8\% strict survivors} (22/79 solved geometries)---the headline neutrino result when masses are included. PMNS-only train/holdout strict diagnostics (diagnostic 23) find \textbf{78.9\% PMNS survivors} (100 geometries) as a sub-result that does not survive joint mass constraints. Legacy full-objective archives report $\sim$39--45\% at 10\% tolerance; legacy runs show $\sim$50\% optimization failure ($\theta_{23} \approx 0$), and $g_{\text{env}}$--mixing correlations remain weak.
+\item \textbf{Neutrino Sector: Joint Strict (conditional on solvability).} Joint PMNS + $\Delta m^2$ objectives (diagnostic~28) yield \textbf{22/100} (22\%) strict survivors on attempted geometries and \textbf{22/79} (27.8\%) among solved geometries (21 fail optimization with $\theta_{23}\approx 0$). PMNS-only diagnostics (diagnostic~23) yield \textbf{71/100} (71\%) strict on attempted geometries and \textbf{71/90} (78.9\%) among solved---under a \emph{different} objective that does not include $\Delta m^2$ in the loss. Table~\ref{tab:strict_rates} summarizes denominators. Legacy archives report $\sim$39--45\% at 10\% tolerance; $g_{\text{env}}$--mixing correlations remain weak ($|r| < 0.1$).
 
 \item \textbf{Parameter Commonalities: Likely Artifacts.} The apparent consistency in $\sigma \approx 4$--5 and $\alpha \approx \pi$ likely reflects optimization bias toward interior parameter values rather than physical universality.
 
 \item \textbf{Three-Regime Framework: Not Validated.} With the quark sector failing completely, the claim of a ``universal kernel'' sampled differently by each sector is not supported by the data.
 \end{enumerate}
+
+\begin{table}[ht]
+\centering
+\caption{Pre-registered strict-survivor rates with explicit denominators (100-geometry corpora unless noted). ``Solved'' means differential-evolution converged with $\theta_{23} > 0$.}
+\label{tab:strict_rates}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Sector / diagnostic & Strict & Solved & Attempted \\
+\midrule
+Quark holdout (21) & 0/100 & 100/100 & 0\% \\
+Lepton train/holdout (22) & 1/100 & 100/100 & 1\% \\
+PMNS-only (23) & 71/90 & 90/100 & 71\% \\
+Joint PMNS + $\Delta m^2$ (28) & 22/79 & 79/100 & 22\% \\
+Quark exhaustive (30) & 0/5759 & --- & 0\% \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Further Study}
 
@@ -484,22 +501,29 @@ Future work is organized by what the pre-registered diagnostic tranche (21--31) 
 \textbf{Closed within this kernel class (do not repeat without a new ansatz).}
 Exhaustive legacy geometry re-optimization (1000 coordinates $0$--$4$ plus 4770 shell-5 geometries, 5759 total) yields \textbf{0\% strict survivors} at PDG-relative tolerances (diagnostic~30). Random extension samples from larger coordinate pools (diagnostic~29), independent $Q_u,Q_d$ relaxations (minimality ladder, diagnostic~09), rank-2 and texture Yukawa ans\"atze (diagnostic~32), and split-fermion overlap derivations of the kernel envelope (diagnostic~33) likewise fail holdout or strict criteria. Envelope-only kernel comparisons (Gaussian, clockwork, generalized $p$; diagnostics~21, 27) do not restore simultaneous quark agreement. These are \emph{structural} negative results, not sampling gaps.
 
-\textbf{Publication package (completed in companion repository).}
-Sector-honest manuscript text, repo-locked survivor protocol, frozen diagnostic reports (diagnostics~21--23, 27--28, 30--33, 34--38), and SVD phase-convention repair with unit tests (\texttt{fix\_svd\_phases} preserves $Y=U\Sigma V^\dagger$). Reproduce headline artifacts via \texttt{scripts/reproduce\_phenomenology\_tranche.sh}. Legacy optimizer CSVs are documented in \texttt{data/README.md}.
+\textbf{Neutrino-forward characterization (N-series; closed for prediction).}
+Joint loss landscapes differ from quarks (diagnostic~39, N1): neutrino basins are shallower and smoother. Post-fit PMNS angles reject a Haar null (diagnostic~41, N2). Pre-fit geometry features show weak in-sample association with joint strict success (diagnostic~40, N4; CV AUC $\approx 0.66$) but \textbf{fail holdout} on disjoint geometry draws (diagnostic~45, N3; test AUC $\approx 0.53$)---geometry is not a generalizable classifier of success.
+
+\textbf{Chiral projection / mirror-sector portals (P-series; closed for flavor).}
+Additive and Schur-complement mirror portals do not improve quark Jarlskog targets (diagnostic~42), fail joint three-sector 6$\times$6 holdout (diagnostic~43), and do not meet pre-registered joint-loss improvement for neutrino-first portals (diagnostic~44). Mirror-sector speculation remains philosophical; no in-repo flavor mechanism survives.
+
+\textbf{Publication package (companion repository).}
+Sector-honest manuscript text, repo-locked survivor protocol, frozen diagnostic reports (diagnostics~21--23, 27--28, 30--33, 34--46), and SVD phase-convention repair with unit tests (\texttt{fix\_svd\_phases} preserves $Y=U\Sigma V^\dagger$). Reproduce headline artifacts via \texttt{scripts/reproduce\_phenomenology\_tranche.sh}. Legacy optimizer CSVs are documented in \texttt{data/README.md}.
 
 \textbf{Tier 5 conjecture$\leftrightarrow$physics audits (closed).}
 Non-circular explicit-formula holdout (diagnostic~34) confirms zero heights are specific to $\psi(x)$ but is \emph{arithmetic only}, not a flavor mechanism. Jacobi/tridiagonal inverse-kernel tests (diagnostic~35) fail to reduce Yukawas to a 3-site self-adjoint phase model. Optimization-landscape RMT (diagnostic~37) finds Poisson-like Hessian spacings, not GUE universality. Standard QED spectral sums (diagnostic~38) use integer mode indices; prime-only surrogates disagree by 67--93\% with textbook $\zeta$-series targets. No Hilbert--Polya or zeta$\to$CKM claim is supported.
 
-\textbf{CP readout (completed; no large sweeps).}
-$\delta_{\text{CKM}}$, $J$, and PMNS CP phases are implemented in the observables pipeline; post phase-fix audit (diagnostic~36, $N{=}15$) finds \textbf{0/15 strict} quark survivors---refutation stable. Full CP optimization grids are deprioritized without a new falsifier.
+\textbf{CP readout (descriptive; no large sweeps).}
+$\delta_{\text{CKM}}$, $J$, and PMNS CP phases are implemented in the observables pipeline; post phase-fix audit (diagnostic~36, $N{=}15$) finds \textbf{0/15 strict} quark survivors---refutation stable. PMNS CP descriptive audit on the diagnostic~28 pool (diagnostic~46, N5) finds median $\delta_{\text{PMNS}} \approx 0.004$\,rad vs.\ PDG $\approx 3.49$\,rad (median $|\Delta\delta| \approx 3.5$\,rad) under the joint mass+PMNS objective---CP is \emph{not} aligned without CP-specific targets. Full CP optimization grids remain deprioritized without a new falsifier.
 
-\textbf{Deprioritized or speculative.}
+\textbf{Mechanism program (closed in-repo).}
 \textbf{Universal parameters} across sectors remain refuted (transfer and Fisher diagnostics).
-\textbf{UV completions and RGE evolution} may motivate effective parameters but do not explain quark holdout failure within the present readout.
 \textbf{Information-theoretic sampling} of Yukawa matrices (diagnostics~12--19) showed no operational mechanism for mixing.
-Arithmetic--flavor numerology and 3$\times$3 GUE Yukawa tests remain closed (diagnostics~33--35, 38); watch-only routes are indirect (trace formulas, hypothetical HP spectrum).
+Arithmetic--flavor numerology and 3$\times$3 GUE Yukawa tests remain closed (diagnostics~33--35, 38).
+\textbf{UV completions and RGE evolution} may motivate effective parameters but do not explain quark holdout failure within the present readout.
+Watch-only non-flavor routes: trace formulas, hypothetical Hilbert--Polya spectrum (diagnostics~34--35).
 
-In summary, the useful forward path is \emph{honest partial phenomenology} (neutrino joint fits, lepton limitations, quark structural failure) and reproducible reporting---not larger discrete geometry catalogs, revived universal-kernel claims, or arithmetic--flavor numerology without a non-circular spectral hook.
+In summary, the forward path is \emph{honest partial phenomenology} (qualified neutrino joint fits, lepton limitations, quark structural failure) and reproducible reporting---not larger discrete geometry catalogs, revived universal-kernel claims, mirror-portal extensions, geometry-based survivor prediction, or arithmetic--flavor numerology without a non-circular spectral hook.
 
 \section*{Acknowledgments}
 

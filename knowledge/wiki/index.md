@@ -60,6 +60,7 @@
 - [[neutrino-holdout-geometry-n3]] — **Refuted:** N3 holdout AUC 0.53 (diag 45)
 - [[neutrino-haar-null-n2]] — N2: Haar PMNS null vs post-fit (diag 41)
 - [[neutrino-holdout-geometry-n3]] — **Refuted:** holdout AUC 0.53 (diag 45)
+- [[neutrino-pmns-cp-n5]] — N5: PMNS CP descriptive (diag 46)
 - [[can-p-adics-encode-flavor-hierarchy]] — p-adic vs real hierarchy
 - [[does-phase-structure-imply-spectral-operator]] — Phase from operator?
 - [[what-proves-information-creates-reality]] — Proof criteria

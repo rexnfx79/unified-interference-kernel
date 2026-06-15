@@ -7,12 +7,14 @@ related:
   - plausibility-register
   - qed-qm-information
 created: 2026-06-01
-updated: 2026-06-12
+updated: 2026-06-15
 ---
 
 # Overview
 
 This wiki connects **math to reality** by tracking **multiple independent approaches** and documenting **where they fail**. Strategic choices: [[research-strategy]].
+
+**Program status (2026-06-15):** In-repo **flavor mechanism search closed**. Deliverable track: **manuscript + ledger sync**. See [[future-work]].
 
 ## Start Here
 
@@ -26,7 +28,7 @@ This wiki connects **math to reality** by tracking **multiple independent approa
 
 | Path | Verdict |
 |------|---------|
-| QED/QM → information measures → mechanism | **pursue** (Path A) |
+| QED/QM → information measures → mechanism | **deprioritize** (diag 12–19 closed) |
 | Hilbert–Polya / explicit formula / Connes | **watch** (Path D, SM-decoupled) |
 | Primes via quantum spectra / info | **watch** |
 | Hilbert space → split fermions → [[interference-kernel]] | **deprioritize** (likely dead end) |
@@ -35,7 +37,8 @@ This wiki connects **math to reality** by tracking **multiple independent approa
 | Universal kernel parameters | **refuted** ([[repo-scientific-findings]]) |
 | Gaussian kernel full quarks | **refuted** ([[diagnostics-summary]]) |
 | Split-fermion → kernel derivation | **deprioritize** — historical r≈0.99 ([[split-fermion-overlap-test]]) |
-| Chiral projection / mirror sector | **philosophical** only — diags 42–44 killed flavor hooks ([[chiral-projection-thesis]]) |
+| Chiral projection / mirror sector | **philosophical** only — P-series 42–44 dead |
+| Flavor mechanism code program | **closed** (2026-06-15) — deliverable = phenomenology paper |
 
 ## Repo Role
 

@@ -60,6 +60,7 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 | `43` | Joint 6×6 three-sector N=30 — **FAIL** L3; holdout sum **1387** vs independent **670** |
 | `44` | Neutrino-first portal N=100 — **FAIL** joint_med **0.316** vs 0.85×bar **0.284**; P2 ratio **1.0**; schur strict **39%** exploratory |
 | `45` | N3 holdout geometry predictor — **FAIL** test AUC **0.529**; train CV **0.572**; in-sample **0.85** overfit |
+| `46` | N5 PMNS CP descriptive — median \(\|\Delta\delta_{\mathrm{PMNS}}\|\) **3.49** rad vs PDG under joint objective |
 
 ### Diagnostic 31 — null geometry (N=30, seed 21021)
 

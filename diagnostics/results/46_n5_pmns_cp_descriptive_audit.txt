@@ -1,0 +1,7 @@
+N5 PMNS CP descriptive audit (diagnostic 46)
+Pool: diag 28 joint objective, seed=28028, N=100
+Solved: 79/100
+PDG delta_PMNS target: 3.490 rad
+Median delta_PMNS: 0.004 rad
+Median |J_PMNS|: 0.017404
+Median |delta - target|: 3.486 rad

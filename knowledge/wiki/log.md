@@ -8,6 +8,12 @@ updated: 2026-06-12
 - **Diag 43:** L3 FAIL — 6×6 Schur joint holdout sum **1387** vs independent **670** (N=30, diag 26 corpus)
 - **Wiki:** [[chiral-projection-formalization-program]] L3 failed
 
+## 2026-06-15 | deliverable | Manuscript sync + program closure
+
+- **manuscript.tex:** strict-rate table; honest ν denominators; Further Study N/P-series 39–46
+- **Wiki:** [[research-strategy]], [[overview]], [[future-work]], [[manuscript-ledger-alignment]] closure 2026-06-15
+- **Diag 46:** N5 PMNS CP — median |Δδ| **3.49 rad** under joint objective
+
 ## 2026-06-15 | explore | N3 holdout geometry predictor (diag 45)
 
 - **Diag 45:** train 70 / test 50 disjoint — holdout AUC **0.529**; N4 signal does not generalize
