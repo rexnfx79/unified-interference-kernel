@@ -4,7 +4,7 @@
 
 - [[research-strategy]] — User decisions: Path A+D, mechanism goal, SM-only, code-only
 - [[future-work]] — Post-tranche plan: publication (Tier 0), program closure
-- [[tangent-research-seeds]] — Novel findings → ranked tangent directions (post-closure)
+- [[tangent-research-seeds]] — Post-closure findings, adversarial review, ranked tangent directions
 - [[conjecture-to-physics-avenues]] — RH / HP / trace formula vs measurable physics (ranked)
 - [[trace-formula-bridge-ladder]] — Selberg → explicit formula → Montgomery → HP / Connes
 - [[multi-sided-bridge-framework]] — Three approaches (arithmetic, Hilbert, QED/info) + gap-crossing protocol
@@ -12,6 +12,7 @@
 - [[proven-vs-conjecture-ledger]] — Know / probably true / dead (single ledger)
 - [[manuscript-ledger-alignment]] — Manuscript claims ↔ ledger status
 - [[survivor-protocol-preregistered]] — Tier A1 canonical strict-survivor protocol
+- [[phenomenology-methodology-export]] — Exportable EFT-fit methodology (Seed F)
 - [[knowledge-gaps-audit]] — Adversarial audit: contradictions + missing knowledge
 - [[information-reality-bridge-map]] — Legacy hub (see multi-sided for updated strategy)
 
@@ -62,6 +63,9 @@
 - [[neutrino-haar-null-n2]] — N2: Haar PMNS null vs post-fit (diag 41)
 - [[neutrino-holdout-geometry-n3]] — **Refuted:** holdout AUC 0.53 (diag 45)
 - [[neutrino-pmns-cp-n5]] — N5: PMNS CP descriptive (diag 46)
+- [[neutrino-cp-invariant-n6]] — N6: signed \(J_{\mathrm{PMNS}}\) invariant CP audit (diag 47)
+- [[neutrino-cp-weighted-objective-n7]] — N7: fixed signed-\(J\) CP objective; CP pass, strict-rate fail (diag 48)
+- [[neutrino-cp-weight-pareto-n8]] — N8: fixed CP-weight Pareto smoke (diag 49)
 - [[can-p-adics-encode-flavor-hierarchy]] — p-adic vs real hierarchy
 - [[does-phase-structure-imply-spectral-operator]] — Phase from operator?
 - [[what-proves-information-creates-reality]] — Proof criteria
@@ -72,7 +76,6 @@
 - [[quark-geometry-conventions]] — Legacy vs phenomenology geometry spaces (diag 29–31)
 - [[fisher-transfer-universality-test]] — **Refuted** — Fisher does not rescue quark→lepton transfer
 - [[adversarial-review-chiral-projection-thesis]] — Gap-crossing review; category errors blocked
-- [[adversarial-review-tangent-research-seeds]] — Post-closure seed ranking; demote A/B, elevate F/C
 - [[chiral-projection-formalization-program]] — Six formalizations; diag 42 portal falsifier
 
 ## Comparisons

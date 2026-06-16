@@ -8,6 +8,7 @@ related:
   - diagnostics-summary
   - yukawa-observables-pipeline
   - projection-regimes
+  - phenomenology-methodology-export
 status: established
 created: 2026-06-02
 updated: 2026-06-02

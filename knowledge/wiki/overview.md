@@ -18,11 +18,11 @@ This wiki connects **math to reality** by tracking **multiple independent approa
 
 ## Start Here
 
-1. [[research-strategy]] — user decisions: Path A+D, mechanism goal, SM-only, code-only
-2. [[multi-sided-bridge-framework]] — how to approach from arithmetic, Hilbert space, and QED/information
-3. [[proven-vs-conjecture-ledger]] — single page: know / probably true / dead
-4. [[plausibility-register]] — dead ends, deprioritized paths, what to pursue
-5. [[qed-qm-information]] — **primary pursue** direction (Path A)
+1. [[research-strategy]] — program closure; deliverable = phenomenology paper
+2. [[phenomenology-methodology-export]] — exportable protocol (Seed F)
+3. [[manuscript-ledger-alignment]] — TeX claims ↔ evidence
+4. [[proven-vs-conjecture-ledger]] — know / probably true / dead
+5. [[tangent-research-seeds]] — post-closure tangent directions (adversarial review inline)
 
 ## Current Strategic Picture
 
@@ -43,7 +43,7 @@ This wiki connects **math to reality** by tracking **multiple independent approa
 
 ## Repo Role
 
-Parent repo implements [[interference-kernel]] fits — **effective readout layer**. Proven pipeline: [[yukawa-observables-pipeline]] (56/56 QA). **Primary exploration:** Path A mechanism tests (`diagnostics/12_*`, `13_*`). Path D watch track (`diagnostics/14_*`, [[explicit-formula-primes-zeros]]).
+Parent repo implements [[interference-kernel]] fits — **effective readout layer**. Proven pipeline: [[yukawa-observables-pipeline]] (56/56 QA). **Primary deliverable (2026-06-15):** phenomenology manuscript + [[phenomenology-methodology-export]]. Flavor mechanism diagnostics **12–19 closed**. Path D watch track ([[explicit-formula-primes-zeros]], diags 34–38) — non-flavor.
 
 ## Navigation
 

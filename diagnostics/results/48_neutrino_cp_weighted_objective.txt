@@ -1,0 +1,33 @@
+==============================================================================
+NEUTRINO CP-WEIGHTED OBJECTIVE (diagnostic 48)
+==============================================================================
+
+Objective: L_mass + 5*L_PMNS + 1*L_CP(signed J_PMNS)
+Mode: FULL
+Geometries requested: 100
+Geometries solved: 79
+Target signed J_PMNS: -0.01145960
+
+--- SUMMARY ---
+PMNS strict: 22/79
+Joint strict: 20/79
+Median CP-joint loss: 0.417096
+Median baseline joint loss: 0.415478
+Median mass loss: 0.053054
+Median PMNS loss: 0.054178
+Median CP loss: 0.001748
+Median signed J_PMNS: -0.01145851
+Median |J_PMNS|: 0.01145851
+Median signed-J rel err: 0.0418
+Median |J|-magnitude rel err: 0.0418
+CP sign-match rate: 0.975
+
+--- DIAG 47 BASELINE COMPARISON ---
+diag47 signed-J rel err: 1.0712
+diag47 |J| rel err: 0.8435
+diag47 mass median: 0.026755
+diag47 PMNS median: 0.057684
+Improves signed-J vs diag47: True
+Improves |J| vs diag47: True
+Passes signed-J <50% bar: True
+Passes joint strict >=24/100 bar: False

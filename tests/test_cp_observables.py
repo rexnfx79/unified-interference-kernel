@@ -10,7 +10,11 @@ import numpy as np
 from observables import (
     QUARK_CP_TARGETS,
     NEUTRINO_CP_TARGETS,
+    NEUTRINO_TARGETS,
     jarlskog_invariant,
+    jarlskog_from_angles_delta,
+    target_pmns_jarlskog,
+    compute_pmns_cp_loss,
     cp_phase_delta_from_unitary,
     pmns_angles_from_unitary,
     compute_quark_observables,
@@ -54,6 +58,41 @@ def test_jarlskog_pdg_order_of_magnitude():
     J = jarlskog_invariant(V)
     assert 1e-6 < abs(J) < 1e-3
     assert abs(abs(J) - QUARK_CP_TARGETS["J"]) / QUARK_CP_TARGETS["J"] < 5.0
+
+
+def test_pmns_jarlskog_target_and_rephase_invariance():
+    """J_PMNS is the safe CP target because row/column rephasings leave it fixed."""
+    delta = NEUTRINO_CP_TARGETS["delta_PMNS"]
+    U = _mixing_matrix(
+        NEUTRINO_TARGETS["theta12"],
+        NEUTRINO_TARGETS["theta23"],
+        NEUTRINO_TARGETS["theta13"],
+        delta,
+    )
+    expected = jarlskog_from_angles_delta(
+        NEUTRINO_TARGETS["theta12"],
+        NEUTRINO_TARGETS["theta23"],
+        NEUTRINO_TARGETS["theta13"],
+        delta,
+    )
+    assert abs(jarlskog_invariant(U) - expected) < 1e-12
+    assert abs(target_pmns_jarlskog() - expected) < 1e-12
+
+    row_phases = np.exp(1j * np.array([0.17, -1.2, 2.4]))
+    col_phases = np.exp(1j * np.array([0.4, 0.9, -2.1]))
+    U_rephased = np.diag(row_phases) @ U @ np.diag(col_phases)
+
+    assert abs(jarlskog_invariant(U_rephased) - expected) < 1e-12
+    for got, want in zip(pmns_angles_from_unitary(U_rephased), pmns_angles_from_unitary(U)):
+        assert abs(got - want) < 1e-12
+    assert abs(cp_phase_delta_from_unitary(U_rephased) - delta) > 0.1
+
+
+def test_pmns_cp_loss_targets_signed_jarlskog():
+    obs = {"J_PMNS": target_pmns_jarlskog()}
+    assert compute_pmns_cp_loss(obs) == 0.0
+    flipped = {"J_PMNS": -target_pmns_jarlskog()}
+    assert compute_pmns_cp_loss(flipped) > 1.0
 
 
 def test_cp_phase_roundtrip_ckm():

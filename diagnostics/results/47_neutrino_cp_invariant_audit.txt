@@ -1,0 +1,41 @@
+==============================================================================
+NEUTRINO CP INVARIANT AUDIT (diagnostic 47)
+==============================================================================
+
+Scope: 47A convention audit + 47B signed J_PMNS audit on diag-28 protocol.
+No CP-targeted optimization is performed.
+Mode: FULL
+
+--- 47A CONVENTION AUDIT ---
+Target delta_PMNS: 3.490000 rad
+Target signed J_PMNS: -0.01145960
+Max |J rephase drift|: 3.123e-17
+Max angle rephase drift: 2.220e-16
+Median raw-delta rephase error: 1.521633 rad
+Max raw-delta rephase error: 3.127986 rad
+J invariant pass: True
+Angles invariant pass: True
+Raw delta unstable under rephase: True
+
+--- 47B DIAG-28 POOL AUDIT ---
+Geometries requested: 100
+Geometries solved: 79
+PMNS strict: 24/79
+Joint strict: 24/79
+Median joint loss: 0.335682
+Median mass loss: 0.026755
+Median PMNS loss: 0.057684
+Target signed J_PMNS: -0.01145960
+Median signed J_PMNS: -0.00573614
+Median |J_PMNS|: 0.01740432
+Median signed-J rel err: 1.0712
+Median |J|-magnitude rel err: 0.8435
+CP sign-match rate: 0.633
+Median raw delta_PMNS: 0.004363 rad
+Median raw-delta circular error: 1.268885 rad
+|J| within 50% bar: False
+Signed J within 50% bar: False
+
+--- INTERPRETATION ---
+Both CP magnitude and signed invariant miss the 50% audit bar.
+Use signed J_PMNS, not raw delta_PMNS, as the next CP optimization target.

@@ -31,11 +31,14 @@ Full tiered plan: **[[future-work]]**. Phenomenology tranche **21–31 complete*
 
 ## Active priorities (2026-06-15)
 
-| Priority | Action | Rationale |
-|----------|--------|-----------|
-| **1** | **Manuscript ↔ ledger sync** + rebuild `manuscript.pdf` | TeX lagged diags 39–46; strict denominators |
-| **2** | N5 PMNS CP descriptive (diag 46) | **Done** — |Δδ| ≈ 3.5 rad under joint loss |
-| **3** | Optional arXiv / artifact bundle | Externalize qualified partial phenomenology |
+| Priority | Action | Status |
+|----------|--------|--------|
+| **1** | **Seed F — methodology export** | **In progress** — [[phenomenology-methodology-export]], `BUILD_MANUSCRIPT.md`, `scripts/bundle_submission_artifacts.sh` |
+| **2** | Rebuild `manuscript.pdf` locally | **Blocked** — `pdflatex` not on agent PATH; see `BUILD_MANUSCRIPT.md` |
+| **3** | Optional arXiv / artifact bundle | **Ready** — run `scripts/bundle_submission_artifacts.sh` |
+| **4** | Seed C — quark Pareto discussion | **Next** — analytic negative in manuscript (already in Further Study) |
+
+**Done:** N5 PMNS CP descriptive (diag 46); manuscript ↔ ledger sync; N2 caveat in TeX.
 
 **Closed:** mechanism search, N-series prediction, P-series flavor hooks, Tier 2–5 flavor bridges.
 

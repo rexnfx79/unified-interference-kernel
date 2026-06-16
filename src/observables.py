@@ -93,6 +93,29 @@ def jarlskog_invariant(V: np.ndarray) -> float:
     return float(np.imag(V[0, 0] * V[1, 1] * np.conj(V[0, 1]) * np.conj(V[1, 0])))
 
 
+def jarlskog_from_angles_delta(
+    theta12: float,
+    theta23: float,
+    theta13: float,
+    delta: float,
+) -> float:
+    """PDG-convention Jarlskog invariant from three angles and Dirac phase."""
+    s12, c12 = np.sin(theta12), np.cos(theta12)
+    s23, c23 = np.sin(theta23), np.cos(theta23)
+    s13, c13 = np.sin(theta13), np.cos(theta13)
+    return float(c12 * s12 * c23 * s23 * (c13 ** 2) * s13 * np.sin(delta))
+
+
+def target_pmns_jarlskog() -> float:
+    """Signed PMNS Jarlskog target from current PMNS angle and delta targets."""
+    return jarlskog_from_angles_delta(
+        NEUTRINO_TARGETS['theta12'],
+        NEUTRINO_TARGETS['theta23'],
+        NEUTRINO_TARGETS['theta13'],
+        NEUTRINO_CP_TARGETS['delta_PMNS'],
+    )
+
+
 def cp_phase_delta_from_unitary(V: np.ndarray) -> float:
     """
     CP phase delta (radians) from unitary V in PDG parameterization.
@@ -283,6 +306,25 @@ def compute_neutrino_joint_loss(
 ) -> float:
     """Manuscript-style joint neutrino objective: mass + weighted PMNS."""
     return compute_neutrino_mass_loss(obs) + pmns_weight * compute_pmns_loss(obs)
+
+
+def compute_pmns_cp_loss(obs: Dict[str, float]) -> float:
+    """Relative squared loss on the signed, rephasing-invariant PMNS Jarlskog."""
+    target = target_pmns_jarlskog()
+    denom = abs(target)
+    value = obs.get('J_PMNS', 0.0)
+    if denom <= 0:
+        return 100.0
+    return float(((value - target) / denom) ** 2)
+
+
+def compute_neutrino_cp_joint_loss(
+    obs: Dict[str, float],
+    pmns_weight: float = 5.0,
+    cp_weight: float = 1.0,
+) -> float:
+    """Joint neutrino objective with signed-J CP target added."""
+    return compute_neutrino_joint_loss(obs, pmns_weight) + cp_weight * compute_pmns_cp_loss(obs)
 
 
 def compute_lepton_observables(Ye: np.ndarray) -> Dict[str, float]:

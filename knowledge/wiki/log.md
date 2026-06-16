@@ -3,10 +3,35 @@ updated: 2026-06-12
 
 # Research Log
 
-## 2026-06-15 | query | Adversarial review — tangent seeds
+## 2026-06-16 | implement | Diag 49 CP-weight Pareto smoke
 
-- **Wiki:** [[adversarial-review-tangent-research-seeds]] — demote N2/A/B; elevate F/C; tighten Seed A falsifier
-- **Updated:** [[tangent-research-seeds]], [[future-work]]
+- **Code:** `diagnostics/49_neutrino_cp_weight_pareto_scan.py` — fixed grid \(w_{\mathrm{CP}}\in\{0,0.05,0.10,0.15,0.20,0.25,0.50,1.00\}\)
+- **Smoke N=5:** weights \(\geq 0.05\) restore CP; \(w=0.10\) selected for focused full N run
+- **Wiki:** [[neutrino-cp-weight-pareto-n8]]
+
+## 2026-06-15 | implement | Diag 48 CP-weighted objective
+
+- **Code:** `diagnostics/48_neutrino_cp_weighted_objective.py`; signed-\(J\) CP loss in `src/observables.py`
+- **Full N=100:** \(w=1\) signed-\(J\) rel err **0.0418**, joint strict **20/100**; \(w=0.25\) signed-\(J\) rel err **0.1118**, joint strict **21/100**
+- **Verdict:** CP fixed, no-degradation bar still failed (needs \(\geq 22/100\)); lower weight is a near miss, not a pass
+- **Wiki:** [[neutrino-cp-weighted-objective-n7]]
+
+## 2026-06-15 | implement | Diag 47 CP invariant audit
+
+- **Code:** `diagnostics/47_neutrino_cp_invariant_audit.py`; PMNS \(J\) target helpers in `src/observables.py`
+- **Full N=100:** raw \(\delta_{\mathrm{PMNS}}\) rephase error median **1.52 rad**; \(J\) invariant drift **3e-17**; signed-\(J\) rel err **1.07**, \(|J|\) rel err **0.84**
+- **Wiki:** [[neutrino-cp-invariant-n6]] — use signed \(J_{\mathrm{PMNS}}\), not raw \(\delta\), for any CP objective
+
+## 2026-06-15 | deliverable | Seed F methodology export
+
+- **Wiki:** [[phenomenology-methodology-export]] — portable EFT-fit protocol template
+- **Scripts:** `scripts/bundle_submission_artifacts.sh`, `scripts/reproduce_phenomenology_tranche.ps1`
+- **Docs:** `BUILD_MANUSCRIPT.md`; ledger diags 39–46; overview Start Here fixed; N2 caveat in `manuscript.tex`
+
+## 2026-06-15 | synthesis | Tangent research seeds (merged review)
+
+- **Wiki:** [[tangent-research-seeds]] — findings 1–8, adversarial review inline, ranked seeds A–F, closure boundaries
+- **Updated:** [[future-work]], [[overview]], [[research-strategy]], [[index]]
 
 ## 2026-06-15 | synthesis | Tangent research seeds
 

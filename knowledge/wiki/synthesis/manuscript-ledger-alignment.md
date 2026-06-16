@@ -19,7 +19,7 @@ updated: 2026-06-15
 
 Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use when revising abstract, conclusions, or limitations.
 
-**Tier 0 pass (2026-06-15):** Abstract uses **honest denominators** (22/100 joint ν, 71/100 PMNS-only attempted); Table strict rates; Further Study lists diags **39–46**, N/P-series closure. PDF rebuild requires local `pdflatex`.
+**Tier 0 pass (2026-06-15):** Abstract uses **honest denominators** (22/100 joint ν, 71/100 PMNS-only attempted); Table strict rates; Further Study lists diags **39–46**, N/P-series closure. **Methodology export:** [[phenomenology-methodology-export]]; submission bundle `scripts/bundle_submission_artifacts.sh`. PDF rebuild requires local `pdflatex` — see `BUILD_MANUSCRIPT.md`.
 
 **Tier 0 pass (2026-06-02o):** Abstract neutrino headline = **27.8% joint** (diag 28) with **78.9% PMNS-only** (diag 23) qualified; quark **0/5759** (diag 30); Further Study lists diag **32–33** closed; reproduce via `scripts/reproduce_phenomenology_tranche.sh`.
 
@@ -39,7 +39,7 @@ Maps **manuscript.tex** claims to [[proven-vs-conjecture-ledger]] status. Use wh
 | Neutrino **27.8% joint** strict (PMNS + Δm²) | **Established** (conditional) | 22/79 solved; **22/100** attempted — diag 28 |
 | Neutrino PMNS-only strict | **Established** (protocol-specific) | 71/90 solved; **71/100** attempted — diag 23 |
 | N1 landscape differentiation | **Established** (characterization) | diag 39 |
-| N2 anti-Haar PMNS structure | **Established** (characterization) | diag 41 |
+| N2 anti-Haar PMNS structure | **Established** (descriptive) | diag 41 — expected under PDG-targeted loss; not mechanistic |
 | N4 geometry → strict (in-sample) | **Deprioritize** | CV 0.66; N3 holdout fails |
 | N3 geometry holdout predictor | **Refuted** | diag 45 test AUC 0.53 |
 | P-series mirror portals | **Refuted** (flavor) | diags 42–44 |
@@ -85,6 +85,16 @@ Historical fixes (2026-06-02i–k): quark cherry-pick, three-regime validation, 
 | `35` | Jacobi inverse — FAIL |
 | `37` | Landscape RMT — FAIL (Poisson-like) |
 | `38` | QED prime spectral — FAIL |
+| `39` | N1 landscape cartography — ν shallower than quark (characterization) |
+| `40` | N4 geometry → strict in-sample — deprioritize (CV 0.66) |
+| `41` | N2 anti-Haar PMNS — descriptive under PDG loss; not mechanistic |
+| `42` | P-series quark portals — FAIL (Jarlskog) |
+| `43` | Joint 6×6 three-sector — FAIL L3 holdout |
+| `44` | Neutrino-first portal — FAIL 15% bar |
+| `45` | N3 geometry holdout predictor — FAIL (AUC 0.53) |
+| `46` | N5 PMNS CP descriptive — \|Δδ\| ≈ 3.5 rad under joint loss |
+| `47` | N6 CP invariant audit — raw δ rephase-unstable; signed-J rel err ≈ 1.07 |
+| `48` | N7 CP-weighted objective — CP fixed; \(w=0.25\) improves strict to 21/100 but still misses 22/100 bar |
 
 ## Canonical protocol
 

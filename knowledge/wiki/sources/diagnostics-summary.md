@@ -61,6 +61,8 @@ Synthesis of `diagnostics/` reports (2026 ingest).
 | `44` | Neutrino-first portal N=100 — **FAIL** joint_med **0.316** vs 0.85×bar **0.284**; P2 ratio **1.0**; schur strict **39%** exploratory |
 | `45` | N3 holdout geometry predictor — **FAIL** test AUC **0.529**; train CV **0.572**; in-sample **0.85** overfit |
 | `46` | N5 PMNS CP descriptive — median \(\|\Delta\delta_{\mathrm{PMNS}}\|\) **3.49** rad vs PDG under joint objective |
+| `47` | N6 CP invariant audit — raw \(\delta\) rephase-unstable; signed-\(J\) rel err **1.07**, \(|J|\) rel err **0.84** |
+| `48` | N7 CP-weighted objective — \(w=1\): signed-\(J\) rel err **0.0418**, strict **20/100**; \(w=0.25\): rel err **0.1118**, strict **21/100** (near miss) |
 
 ### Diagnostic 31 — null geometry (N=30, seed 21021)
 

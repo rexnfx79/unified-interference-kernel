@@ -51,6 +51,7 @@ diagnostics/results/*_baseline.log
 diagnostics/results/*_shell*.log
 
 # LaTeX build artifacts
+submission_bundle/
 manuscript.aux
 manuscript.bbl
 manuscript.blg

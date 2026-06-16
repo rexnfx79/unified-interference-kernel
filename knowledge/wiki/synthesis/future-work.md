@@ -26,8 +26,8 @@ Forward-looking plan after diagnostics **21–31**, geometry closure (**29–30*
 | Flavor mechanism (QIT, split-fermion, zeta, portals) | **Closed** |
 | N-series prediction (N3/N4 holdout) | **Closed** |
 | P-series chiral projection flavor hooks | **Closed** |
-| **Deliverable** | Manuscript + [[manuscript-ledger-alignment]] + `manuscript.pdf` |
-| **Tangents** | [[tangent-research-seeds]] — ranked seeds (F methodology + C quark negative top; A conditional) |
+| **Deliverable** | Manuscript + [[manuscript-ledger-alignment]] + `manuscript.pdf` + [[phenomenology-methodology-export]] |
+| **Tangents** | [[tangent-research-seeds]] — findings + adversarial review; F/C top, A conditional |
 
 ## Tier 0 — Close the phenomenology paper (**complete** 2026-06-02o)
 
@@ -37,7 +37,9 @@ Forward-looking plan after diagnostics **21–31**, geometry closure (**29–30*
 | **P0.2** Quark structural negative | CKM–\(m_c\) Pareto + 0/5759 strict (diag 30) | **Done** |
 | **P0.3** Neutrino dual headline | 27.8% joint (diag 28) primary; 78.9% PMNS-only (diag 23) sub | **Done** |
 | **P0.4** Lepton honesty | 1% strict (diag 22); legacy ~60% labeled | **Done** |
-| **P0.5** Artifact bundle | `scripts/reproduce_phenomenology_tranche.sh` + frozen reports | **Done** |
+| **P0.5** Artifact bundle | `scripts/reproduce_phenomenology_tranche.sh` + `scripts/bundle_submission_artifacts.sh` | **Done** |
+| **P0.6** Methodology export | [[phenomenology-methodology-export]] + `BUILD_MANUSCRIPT.md` | **Done** (2026-06-15) |
+| **P0.7** PDF build | Local `pdflatex manuscript.tex` | **Pending** — requires TeX install |
 
 **Non-goals:** Universal kernel parameters; three-regime “validation”; geometry extension as quark fix.
 
@@ -50,6 +52,9 @@ Forward-looking plan after diagnostics **21–31**, geometry closure (**29–30*
 | **N3** | **Refuted** (diag 45) | [[neutrino-holdout-geometry-n3]] — holdout AUC **0.53**; N4 does not generalize |
 | **N4** | **Weak in-sample only** (diag 40) | [[neutrino-geometry-predictor-n4]] — CV **0.66**; downgraded after N3 holdout fail |
 | **N5** | **Established** (descriptive) (diag 46) | [[neutrino-pmns-cp-n5]] — joint objective misaligns CP: median \(|\Delta\delta_{\mathrm{PMNS}}| \approx 3.5\) rad |
+| **N6** | **Established** (audit) (diag 47) | [[neutrino-cp-invariant-n6]] — raw \(\delta\) rephase-unstable; invariant CP still misaligned: signed-\(J\) rel err **1.07**, \(|J|\) rel err **0.84** |
+| **N7** | **Mixed / near miss** (diag 48) | [[neutrino-cp-weighted-objective-n7]] — \(w=1\): signed-\(J\) rel err **0.0418**, strict **20/100**; \(w=0.25\): signed-\(J\) rel err **0.1118**, strict **21/100 < 22/100** |
+| **N8** | **Smoke positive** (diag 49) | [[neutrino-cp-weight-pareto-n8]] — fixed-grid smoke favors \(w=0.10\); full N focused run pending |
 
 ## Tier 1 — Observables & CP (**complete** 2026-06-02o)
 
